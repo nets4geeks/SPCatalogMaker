@@ -21,7 +21,7 @@ coming soon ...
 Schema contains an ontology-driven model of security pattern, including context and security characteristics
 (components and functions of computer systems, security concerns and threats).
 
-* [OWL File](schemas/SecurityPatternCatalogNaiveSchema.owl)
+* [OWL File](schema/SecurityPatternCatalogNaiveSchema.owl)
 
 Extra information about Schema:
 
