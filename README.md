@@ -7,14 +7,8 @@ SPCatalogMaker is a toolset for creation and maintenance of well-organized catal
 
 SPCatalogMaker consists of:
 
-* a small application (Maker) to build an ontology and RDF dataset from a set of source files;
-* an ontology-driven model (Schema) that describes concepts and instances for depiction of the security-specific knowledge.
-
-
-## Maker
-
-coming soon ...
-
+* an ontology-driven model (Schema) that describes concepts and instances for depiction of the security-specific knowledge;
+* a small application (Maker) to build an ontology and RDF dataset from a set of source files.
 
 ## Schema
 
@@ -28,3 +22,10 @@ Extra information about Schema:
 * [Common description](schema_description.pdf)
 * [Components and functions](schema_functions_components.pdf)
 * [Threats, attacks and vulnerabilities](schema_threats.pdf)
+
+
+## Maker
+
+coming soon ...
+
+
