@@ -1,0 +1,34 @@
+Prefix(:=<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern2#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern2>
+Import(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema>)
+
+Declaration(NamedIndividual(:pattern2))
+
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :pattern2 (:pattern2)
+
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :pattern2)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :pattern2 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_IIoTApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction> :pattern2 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_Permissions_Management>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasDomain> :pattern2 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#domain_InternetOfThings>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> :pattern2 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authorization>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :pattern2 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_PriviledgeEscalation>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :pattern2 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_SecurityPattern>)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textIntent> :pattern2 "Another test pattern without a description"^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textName> :pattern2 "Another pattern"^^xsd:string)
+
+
+)

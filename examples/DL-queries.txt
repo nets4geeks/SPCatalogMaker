@@ -1,0 +1,11 @@
+
+DL examples:
+---------------
+
+SecurityPattern and hasSecurityConcern value concern_Authentication
+
+SecurityPattern and hasThreat value threat_ManInTheMiddle
+
+SecurityPattern and hasThreat some (hasThreatImpact value ti_GainPrivileges)
+SecurityPattern and hasThreat some (hasSecurityObjective value SO_Confidentiality)
+

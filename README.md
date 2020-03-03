@@ -1,5 +1,4 @@
 
-
 # Security Pattern Catalog Maker
 
 SPCatalogMaker is a toolset for creation and maintenance of well-organized catalogs of security patterns
@@ -7,8 +6,8 @@ SPCatalogMaker is a toolset for creation and maintenance of well-organized catal
 
 SPCatalogMaker consists of:
 
-* an ontology-driven model (Schema) that describes concepts and instances for depiction of the security-specific knowledge;
-* a small application (Maker) to build an ontology and RDF dataset from a set of source files.
+* an ontology-driven model (**Schema**) that describes concepts and instances for depiction of the security-specific knowledge;
+* a small application (**Maker**) to build an ontology and RDF dataset from a set of source files.
 
 ## Schema
 
@@ -26,6 +25,19 @@ Extra information about Schema:
 
 ## Maker
 
-coming soon ...
+To maintaince a catalog you should create pieces of an ontology in the *catalog* folder, as examples show there.
+For example, use **Protege** and include (*Direct imports*) the schema ontology (*schema/SecurityPatternCatalogNaiveSchema.owl*).
+
+Maker allows to create a single OWL file from your pieces (by default *out/SecurityPatternCatalog.owl*),
+and an inferred (i.e. processed with an automatic reasoner) RDF dataset (by default *out/SecurityPatternCatalogReasoned.ttl*). 
+
+You can load the resulting OWL ontology in **Protege** and execute DL quieries, and it is possible to use the RDF file 
+to make the SPARQL requests with the **Apache Jena** toolset (see the *examples* folder).
+
+To compile Maker, you need **Java** and **Maven**. Simply clone the repository and run **./maker_compile**.
+
+To make the datasets, run **./maker_run**.
+
+For advanced configuration use the *maker.properties* file.
 
 

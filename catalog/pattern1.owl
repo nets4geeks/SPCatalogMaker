@@ -1,0 +1,48 @@
+Prefix(:=<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern1>
+Import(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema>)
+
+Declaration(NamedIndividual(:pattern1))
+
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :pattern1 (:pattern1)
+
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :pattern1)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_IaaSService>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_VirtualNetwork>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_TenantManagement>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasArchitecturalLayer> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#al_DistributionLayer>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasConstraintLevel> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#cl_MechanismLevel>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasDomain> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#domain_CloudComputing>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasLifecycleStage> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#lc_ArchitectureAndDesign>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasResponseType> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#rt_Avoidance>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authentication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureCommunictations>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficFiltration>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityLevel> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#sl_CommunicationAndDataSecurity>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasTemplate> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#template_POSA>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManInTheMiddle>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ProtocolAnalysis>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_SessionManipulation>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :pattern1 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_SecurityPattern>)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textIntent> :pattern1 "It's a toy pattern that describes some challenge (nothing real, make up), saying, in the cloud computing field."^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textName> :pattern1 "Pattern 1"^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReviewContext> :pattern1 "IaaS service serves virtual networks for applications (VMs, containers) and implements an advanced scheme of distributed networking."^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReviewProblem> :pattern1 "There are couple of problems with the network implementation, related to authentication and security."^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReviewSolution> :pattern1 "There is a perfect solution to this challenge. It includes blah-blah-blah."^^xsd:string)
+
+
+)
