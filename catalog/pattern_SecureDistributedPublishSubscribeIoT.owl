@@ -1,0 +1,82 @@
+Prefix(:=<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT>
+Import(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema>)
+
+Declaration(NamedIndividual(:pattern_Authenticator))
+Declaration(NamedIndividual(:pattern_Authorizer))
+Declaration(NamedIndividual(:pattern_Broker))
+Declaration(NamedIndividual(:pattern_EnterpriseServiceBus))
+Declaration(NamedIndividual(:pattern_IoTSegmentation))
+Declaration(NamedIndividual(:pattern_RoleBasedAccessControl))
+Declaration(NamedIndividual(:pattern_SecureChannel))
+Declaration(NamedIndividual(:pattern_SecureDistributedPublishSubscribeIoT))
+Declaration(NamedIndividual(:pattern_SecurePS))
+Declaration(NamedIndividual(:pattern_SecurePublishSubscirbe))
+Declaration(NamedIndividual(:pattern_SecurityLoggerAuditor))
+Declaration(NamedIndividual(:patterngroup_SecureMiddleware))
+
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :pattern_SecureDistributedPublishSubscribeIoT (:pattern_SecureDistributedPublishSubscribeIoT)
+
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityPattern> :pattern_SecureDistributedPublishSubscribeIoT)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_FogApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_IIoTApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_IoTApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_DistributeEventInformation>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_DistributeSensorData>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasArchitecturalLayer> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#al_ClientLayer>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasArchitecturalLayer> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#al_DistributionLayer>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasConstraintLevel> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#cl_MechanismLevel>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasDomain> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#domain_InternetOfThings>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasGroup> :pattern_SecureDistributedPublishSubscribeIoT :patterngroup_SecureMiddleware)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasLifecycleStage> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#lc_ArchitectureAndDesign>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasResponseType> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#rt_Avoidance>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AccessControl>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EventLogging>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageIntegrity>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureCommunictations>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityLevel> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#sl_CommunicationAndDataSecurity>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasTemplate> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#template_POSA>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ContentSpoofing>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Flooding>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_IdentitySpoofing>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :pattern_SecureDistributedPublishSubscribeIoT <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_PriviledgeEscalation>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isChildOf> :pattern_SecureDistributedPublishSubscribeIoT :pattern_SecurePublishSubscirbe)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> :pattern_SecureDistributedPublishSubscribeIoT :pattern_Authorizer)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> :pattern_SecureDistributedPublishSubscribeIoT :pattern_Broker)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> :pattern_SecureDistributedPublishSubscribeIoT :pattern_EnterpriseServiceBus)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> :pattern_SecureDistributedPublishSubscribeIoT :pattern_IoTSegmentation)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> :pattern_SecureDistributedPublishSubscribeIoT :pattern_SecureChannel)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> :pattern_SecureDistributedPublishSubscribeIoT :pattern_SecurePS)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#usesPattern> :pattern_SecureDistributedPublishSubscribeIoT :pattern_Authenticator)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#usesPattern> :pattern_SecureDistributedPublishSubscribeIoT :pattern_RoleBasedAccessControl)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#usesPattern> :pattern_SecureDistributedPublishSubscribeIoT :pattern_SecureChannel)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#usesPattern> :pattern_SecureDistributedPublishSubscribeIoT :pattern_SecurityLoggerAuditor)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textAuthor> :pattern_SecureDistributedPublishSubscribeIoT "Eduardo B. Fernandez"^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textAuthor> :pattern_SecureDistributedPublishSubscribeIoT "Hironori Washizaki"^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textAuthor> :pattern_SecureDistributedPublishSubscribeIoT "Nobukazu Yoshioka"^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textIntent> :pattern_SecureDistributedPublishSubscribeIoT "In an IoT system, decouple the publishers of events from those interested in the events (subscribers). Subscription and publication are performed securely."^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textName> :pattern_SecureDistributedPublishSubscribeIoT "Secure Distributed Publish/Subscribe (P/S) pattern for IoT"^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReference> :pattern_SecureDistributedPublishSubscribeIoT "E.B.Fernandez, N. Yoshioka, H. Washizaki, “Secure Distributed Publish/Subscribe (P/S) for IoT, 2020. Procs. Asian PLoP'20, March 4 6, Taipei, Taiwan. 9 pages."^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReviewContext> :pattern_SecureDistributedPublishSubscribeIoT "Information exchange between IoT/IIoT devices (e.g. smart thermostats or sprinkler systems, different sensors) with minimal security control and cloud/fog applications."^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReviewProblem> :pattern_SecureDistributedPublishSubscribeIoT "In addition of the standard P/S functions it is possible to use secure channels for protected communications, access control for restricting the actions of publishers and subscribers, security logging, and digital signatures."^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReviewProblem> :pattern_SecureDistributedPublishSubscribeIoT "Subscribers (S) register and receive messages of their interest sent by a publisher (P). The main concerns are how to organize the interactions between them securely, avoiding rogue participants, insecure communications, unwanted P/S operations."^^xsd:string)
+DataPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textURL> :pattern_SecureDistributedPublishSubscribeIoT "https://www.researchgate.net/publication/339103887_Secure_Distributed_PublishSubscribe_PS_pattern_for_IoT"^^xsd:string)
+
+
+)

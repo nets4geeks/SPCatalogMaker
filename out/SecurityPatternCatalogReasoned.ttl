@@ -1093,6 +1093,126 @@
                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textName> "Another pattern" .
 
 
+###  http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_Authenticator
+<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_Authenticator> rdf:type owl:NamedIndividual ,
+                                                                                                                                     owl:Thing ;
+                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isUsedBy> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
+
+
+###  http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_Authorizer
+<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_Authorizer> rdf:type owl:NamedIndividual ,
+                                                                                                                                  owl:Thing ;
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
+
+
+###  http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_Broker
+<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_Broker> rdf:type owl:NamedIndividual ,
+                                                                                                                              owl:Thing ;
+                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
+
+
+###  http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_EnterpriseServiceBus
+<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_EnterpriseServiceBus> rdf:type owl:NamedIndividual ,
+                                                                                                                                            owl:Thing ;
+                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
+
+
+###  http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_IoTSegmentation
+<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_IoTSegmentation> rdf:type owl:NamedIndividual ,
+                                                                                                                                       owl:Thing ;
+                                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
+
+
+###  http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_RoleBasedAccessControl
+<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_RoleBasedAccessControl> rdf:type owl:NamedIndividual ,
+                                                                                                                                              owl:Thing ;
+                                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isUsedBy> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
+
+
+###  http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureChannel
+<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureChannel> rdf:type owl:NamedIndividual ,
+                                                                                                                                     owl:Thing ;
+                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isUsedBy> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> ;
+                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
+
+
+###  http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT
+<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> rdf:type owl:NamedIndividual ,
+                                                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityPattern> ,
+                                                                                                                                                            owl:Thing ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_CloudApplication> ,
+                                                                                                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_FogApplication> ,
+                                                                                                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_IIoTApplication> ,
+                                                                                                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_IoTApplication> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_DistributeEventInformation> ,
+                                                                                                                                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_DistributeSensorData> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasArchitecturalLayer> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#al_ClientLayer> ,
+                                                                                                                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#al_DistributionLayer> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasConstraintLevel> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#cl_MechanismLevel> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasDomain> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#domain_InternetOfThings> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasGroup> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#patterngroup_SecureMiddleware> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasLifecycleStage> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#lc_ArchitectureAndDesign> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasResponseType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#rt_Avoidance> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AccessControl> ,
+                                                                                                                                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EventLogging> ,
+                                                                                                                                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageIntegrity> ,
+                                                                                                                                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureCommunictations> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityLevel> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#sl_CommunicationAndDataSecurity> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasTemplate> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#template_POSA> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ContentSpoofing> ,
+                                                                                                                                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Flooding> ,
+                                                                                                                                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_IdentitySpoofing> ,
+                                                                                                                                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception> ,
+                                                                                                                                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_PriviledgeEscalation> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_SecurityPattern> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isChildOf> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecurePublishSubscirbe> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_Authorizer> ,
+                                                                                                                                                                                                                        <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_Broker> ,
+                                                                                                                                                                                                                        <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_EnterpriseServiceBus> ,
+                                                                                                                                                                                                                        <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_IoTSegmentation> ,
+                                                                                                                                                                                                                        <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureChannel> ,
+                                                                                                                                                                                                                        <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecurePS> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#usesPattern> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_Authenticator> ,
+                                                                                                                                                                                                                          <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_RoleBasedAccessControl> ,
+                                                                                                                                                                                                                          <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureChannel> ,
+                                                                                                                                                                                                                          <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecurityLoggerAuditor> ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textAuthor> "Eduardo B. Fernandez" ,
+                                                                                                                                                                                                                         "Hironori Washizaki" ,
+                                                                                                                                                                                                                         "Nobukazu Yoshioka" ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textIntent> "In an IoT system, decouple the publishers of events from those interested in the events (subscribers). Subscription and publication are performed securely." ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textName> "Secure Distributed Publish/Subscribe (P/S) pattern for IoT" ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReference> "E.B.Fernandez, N. Yoshioka, H. Washizaki, “Secure Distributed Publish/Subscribe (P/S) for IoT, 2020. Procs. Asian PLoP'20, March 4 6, Taipei, Taiwan. 9 pages." ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReviewContext> "Information exchange between IoT/IIoT devices (e.g. smart thermostats or sprinkler systems, different sensors) with minimal security control and cloud/fog applications." ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReviewProblem> "In addition of the standard P/S functions it is possible to use secure channels for protected communications, access control for restricting the actions of publishers and subscribers, security logging, and digital signatures." ,
+                                                                                                                                                                                                                                "Subscribers (S) register and receive messages of their interest sent by a publisher (P). The main concerns are how to organize the interactions between them securely, avoiding rogue participants, insecure communications, unwanted P/S operations." ;
+                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textURL> "https://www.researchgate.net/publication/339103887_Secure_Distributed_PublishSubscribe_PS_pattern_for_IoT" .
+
+
+###  http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecurePS
+<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecurePS> rdf:type owl:NamedIndividual ,
+                                                                                                                                owl:Thing ;
+                                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
+
+
+###  http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecurePublishSubscirbe
+<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecurePublishSubscirbe> rdf:type owl:NamedIndividual ,
+                                                                                                                                              owl:Thing ;
+                                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isParentOf> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
+
+
+###  http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecurityLoggerAuditor
+<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecurityLoggerAuditor> rdf:type owl:NamedIndividual ,
+                                                                                                                                             owl:Thing ;
+                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isUsedBy> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
+
+
+###  http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#patterngroup_SecureMiddleware
+<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#patterngroup_SecureMiddleware> rdf:type owl:NamedIndividual ,
+                                                                                                                                             owl:Thing ;
+                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isGroupOf> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
+
+
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_AccessControl
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_AccessControl> rdf:type owl:NamedIndividual ,
                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
@@ -3247,7 +3367,8 @@
                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
                                                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
-                                                                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> .
+                                                                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ;
+                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_EnvironmentManipulation
@@ -3306,7 +3427,8 @@
                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
                                                                                     owl:Thing ;
                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Availability> ;
-                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ResourceConsumption> .
+                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ResourceConsumption> ;
+                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Footprinting
@@ -3337,7 +3459,8 @@
                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Authentication> ,
                                                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ;
                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_GainPrivileges> ,
-                                                                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> .
+                                                                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ;
+                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_InformationGathering
@@ -3384,7 +3507,8 @@
                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
                                                                                         owl:Thing ;
                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ;
-                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> .
+                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ;
+                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManInTheMiddle
@@ -3438,7 +3562,8 @@
                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_AccessControl> ,
                                                                                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Authorization> ;
                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_GainPrivileges> ;
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern2#pattern2> .
+                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern2#pattern2> ,
+                                                                                                                                                             <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern_SecureDistributedPublishSubscribeIoT#pattern_SecureDistributedPublishSubscribeIoT> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ProtocolAnalysis

@@ -18,6 +18,9 @@ Declaration(NamedIndividual(:pattern1))
 #   Named Individuals
 ############################
 
+# Individual: <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/common#pattern1> (<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/common#pattern1>)
+
+
 # Individual: :pattern1 (:pattern1)
 
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :pattern1)

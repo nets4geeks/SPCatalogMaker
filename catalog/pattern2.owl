@@ -18,6 +18,8 @@ Declaration(NamedIndividual(:pattern2))
 #   Named Individuals
 ############################
 
+# Individual: <http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/common#pattern2> (<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/common#pattern2>)
+
 # Individual: :pattern2 (:pattern2)
 
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :pattern2)
