@@ -22,7 +22,6 @@ Extra information about Schema:
 * [Components and functions](schema_functions_components.pdf)
 * [Threats, attacks and vulnerabilities](schema_threats.pdf)
 
-
 ## Maker
 
 To maintaince a catalog you should create pieces of an ontology in the *catalog* folder, as examples show there.
