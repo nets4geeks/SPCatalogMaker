@@ -119,15 +119,25 @@ Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSc
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isUsedBy>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#usesPattern>))
+Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionDynamics>))
+Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionStructure>))
 Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textAKAName>))
 Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textAuthor>))
+Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textConsequences>))
+Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textContext>))
+Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textImplementation>))
 Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textIntent>))
+Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textKnownUses>))
 Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textName>))
 Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textPDF>))
+Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textProblem>))
 Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReference>))
 Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReviewContext>))
 Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReviewProblem>))
 Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReviewSolution>))
+Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolution>))
+Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionDynamics>))
+Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionStructure>))
 Declaration(DataProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textURL>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern1#pattern1>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/ExampleOfSecurityPatternCatalog/pattern2#pattern2>))
@@ -240,34 +250,34 @@ Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveS
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_WEBbrowser>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Workstation>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AccessControl>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackDetection>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackPrevention>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Audit>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authentication>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authorization>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Containment>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Coordination>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Awareness>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_CommunicationsProtection>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ConfigurationManagement>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ContingencyPlanning>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EnvironmentalProtection>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EventLogging>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Identification>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationHiding>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_KeyDistribution>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthentication>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthenticity>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IdentificationAndAuthentication>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IncidentResponse>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationIntegrity>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Maintenance>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MediaProtection>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageIntegrity>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Monitoring>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProcessIsolation>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Realibility>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ResourceManagement>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RightsManagement>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Sandboxing>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PersonnelSecurity>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PhysicalProtection>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Planning>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProgramManagement>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RiskAssessment>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureCommunictations>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureDataStream>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemAdministration>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemIntegration>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityArchitecture>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityPolicy>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityAssessment>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ServicesAcquisition>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemIntegrity>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemProtection>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficFiltration>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficMonitoring>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Training>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#domain_CloudComputing>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#domain_ECommerce>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#domain_EdgeComputing>))
@@ -455,6 +465,16 @@ AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogN
 #   Data Properties
 ############################
 
+# Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionDynamics> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionDynamics>)
+
+AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionDynamics> "Downloadable URL(s) of a solution dynamics diagram(s).")
+DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionDynamics> xsd:string)
+
+# Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionStructure> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionStructure>)
+
+AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionStructure> "Downloadable URL(s) of a solution structure diagram(s).")
+DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionStructure> xsd:string)
+
 # Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textAKAName> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textAKAName>)
 
 AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textAKAName> "Pattern’s alternative name(s)"@en)
@@ -465,10 +485,30 @@ DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#text
 AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textAuthor> "Pattern’s author(s)"@en)
 DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textAuthor> xsd:string)
 
+# Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textConsequences> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textConsequences>)
+
+AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textConsequences> "This section indicates the BENEFITS and LIABILITIES of the solution embodied in this pattern. The benefits should match the forces in the Problem section. Benefits that do not correspond to any force may appear.")
+DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textConsequences> xsd:string)
+
+# Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textContext> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textContext>)
+
+AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textContext> "Pattern’s Context (full text)")
+DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textContext> xsd:string)
+
+# Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textImplementation> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textImplementation>)
+
+AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textImplementation> "The objective of this section is to describe what one should consider when implementing the pattern. This can be a set of general recommendations, or a sequence of what to do to use the pattern. It may include some sample code, if appropriate.")
+DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textImplementation> xsd:string)
+
 # Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textIntent> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textIntent>)
 
 AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textIntent> "Pattern’s Intent (full text)"@en)
 DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textIntent> xsd:string)
+
+# Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textKnownUses> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textKnownUses>)
+
+AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textKnownUses> "To accept a solution as a pattern, it should be found at least three examples of its use in real systems.")
+DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textKnownUses> xsd:string)
 
 # Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textName> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textName>)
 
@@ -479,6 +519,11 @@ DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#text
 
 AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textPDF> "Downloadable URL(s) of pattern’s PDF"@en)
 DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textPDF> xsd:string)
+
+# Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textProblem> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textProblem>)
+
+AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textProblem> "Pattern’s Problem (full text). It includes forces that constrain the solution.")
+DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textProblem> xsd:string)
 
 # Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReference> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReference>)
 
@@ -499,6 +544,21 @@ DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#text
 
 AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReviewSolution> "A brief text description of pattern’s solution"@en)
 DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReviewSolution> xsd:string)
+
+# Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolution> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolution>)
+
+AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolution> "Pattern’s Solution description.")
+DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolution> xsd:string)
+
+# Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionDynamics> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionDynamics>)
+
+AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionDynamics> "It describes the dynamic aspects of the solution with diagrams.")
+DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionDynamics> xsd:string)
+
+# Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionStructure> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionStructure>)
+
+AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionStructure> "It describes the structure (static view) of the solution and some dynamic aspects in the form of sequence diagrams for a use case.")
+DataPropertyRange(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionStructure> xsd:string)
 
 # Data Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textURL> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textURL>)
 
@@ -1492,145 +1552,120 @@ ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaI
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AccessControl>)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AccessControl>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackDetection> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackDetection>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackDetection>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackDetection>)
-
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackPrevention> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackPrevention>)
-
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackPrevention>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackPrevention>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability>)
 
 # Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Audit> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Audit>)
 
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Audit>)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Audit>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authentication> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authentication>)
-
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authentication>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authentication>)
-
 # Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authorization> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authorization>)
 
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authorization>)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authorization>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Containment> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Containment>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Awareness> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Awareness>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Containment>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Containment>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Awareness>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Awareness>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Coordination> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Coordination>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_CommunicationsProtection> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_CommunicationsProtection>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Coordination>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Coordination>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_CommunicationsProtection>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_CommunicationsProtection>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EventLogging> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EventLogging>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ConfigurationManagement> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ConfigurationManagement>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EventLogging>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EventLogging>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ConfigurationManagement>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ConfigurationManagement>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Identification> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Identification>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ContingencyPlanning> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ContingencyPlanning>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Identification>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Identification>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ContingencyPlanning>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ContingencyPlanning>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationHiding> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationHiding>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EnvironmentalProtection> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EnvironmentalProtection>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationHiding>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationHiding>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EnvironmentalProtection>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EnvironmentalProtection>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_KeyDistribution> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_KeyDistribution>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IdentificationAndAuthentication> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IdentificationAndAuthentication>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_KeyDistribution>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_KeyDistribution>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IdentificationAndAuthentication>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IdentificationAndAuthentication>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthentication> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthentication>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IncidentResponse> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IncidentResponse>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthentication>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthentication>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IncidentResponse>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IncidentResponse>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthenticity> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthenticity>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationIntegrity> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationIntegrity>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthenticity>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthenticity>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationIntegrity>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationIntegrity>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageIntegrity> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageIntegrity>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Maintenance> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Maintenance>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageIntegrity>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageIntegrity>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Maintenance>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Maintenance>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Monitoring> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Monitoring>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MediaProtection> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MediaProtection>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Monitoring>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Monitoring>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MediaProtection>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MediaProtection>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProcessIsolation> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProcessIsolation>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PersonnelSecurity> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PersonnelSecurity>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProcessIsolation>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProcessIsolation>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PersonnelSecurity>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PersonnelSecurity>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Realibility> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Realibility>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PhysicalProtection> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PhysicalProtection>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Realibility>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Realibility>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PhysicalProtection>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PhysicalProtection>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ResourceManagement> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ResourceManagement>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Planning> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Planning>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ResourceManagement>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ResourceManagement>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Planning>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Planning>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RightsManagement> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RightsManagement>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProgramManagement> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProgramManagement>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RightsManagement>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RightsManagement>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProgramManagement>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProgramManagement>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Sandboxing> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Sandboxing>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RiskAssessment> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RiskAssessment>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Sandboxing>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Sandboxing>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RiskAssessment>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RiskAssessment>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureCommunictations> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureCommunictations>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityAssessment> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityAssessment>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureCommunictations>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureCommunictations>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityAssessment>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityAssessment>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureDataStream> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureDataStream>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ServicesAcquisition> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ServicesAcquisition>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureDataStream>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureDataStream>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ServicesAcquisition>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ServicesAcquisition>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemAdministration> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemAdministration>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemIntegrity> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemIntegrity>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemAdministration>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemAdministration>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemIntegrity>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemIntegrity>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemIntegration> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemIntegration>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemProtection> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemProtection>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemIntegration>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemIntegration>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemProtection>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemProtection>)
 
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityArchitecture> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityArchitecture>)
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Training> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Training>)
 
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityArchitecture>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityArchitecture>)
-
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityPolicy> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityPolicy>)
-
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityPolicy>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityPolicy>)
-
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficFiltration> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficFiltration>)
-
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficFiltration>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficFiltration>)
-
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficMonitoring> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficMonitoring>)
-
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficMonitoring>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficMonitoring>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Training>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Training>)
 
 # Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#domain_CloudComputing> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#domain_CloudComputing>)
 

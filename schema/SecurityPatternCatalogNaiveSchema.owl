@@ -120,15 +120,25 @@ Declaration(ObjectProperty(:isThreatOf))
 Declaration(ObjectProperty(:isUsedBy))
 Declaration(ObjectProperty(:relatesTo))
 Declaration(ObjectProperty(:usesPattern))
+Declaration(DataProperty(:imgSolutionDynamics))
+Declaration(DataProperty(:imgSolutionStructure))
 Declaration(DataProperty(:textAKAName))
 Declaration(DataProperty(:textAuthor))
+Declaration(DataProperty(:textConsequences))
+Declaration(DataProperty(:textContext))
+Declaration(DataProperty(:textImplementation))
 Declaration(DataProperty(:textIntent))
+Declaration(DataProperty(:textKnownUses))
 Declaration(DataProperty(:textName))
 Declaration(DataProperty(:textPDF))
+Declaration(DataProperty(:textProblem))
 Declaration(DataProperty(:textReference))
 Declaration(DataProperty(:textReviewContext))
 Declaration(DataProperty(:textReviewProblem))
 Declaration(DataProperty(:textReviewSolution))
+Declaration(DataProperty(:textSolution))
+Declaration(DataProperty(:textSolutionDynamics))
+Declaration(DataProperty(:textSolutionStructure))
 Declaration(DataProperty(:textURL))
 Declaration(NamedIndividual(:SO_AccessControl))
 Declaration(NamedIndividual(:SO_Accountability))
@@ -227,34 +237,29 @@ Declaration(NamedIndividual(:component_WEBBasedApplication))
 Declaration(NamedIndividual(:component_WEBbrowser))
 Declaration(NamedIndividual(:component_Workstation))
 Declaration(NamedIndividual(:concern_AccessControl))
-Declaration(NamedIndividual(:concern_AttackDetection))
-Declaration(NamedIndividual(:concern_AttackPrevention))
+Declaration(NamedIndividual(:concern_Accountability))
 Declaration(NamedIndividual(:concern_Audit))
-Declaration(NamedIndividual(:concern_Authentication))
 Declaration(NamedIndividual(:concern_Authorization))
-Declaration(NamedIndividual(:concern_Containment))
-Declaration(NamedIndividual(:concern_Coordination))
-Declaration(NamedIndividual(:concern_EventLogging))
-Declaration(NamedIndividual(:concern_Identification))
-Declaration(NamedIndividual(:concern_InformationHiding))
-Declaration(NamedIndividual(:concern_KeyDistribution))
-Declaration(NamedIndividual(:concern_MessageAuthentication))
-Declaration(NamedIndividual(:concern_MessageAuthenticity))
-Declaration(NamedIndividual(:concern_MessageIntegrity))
-Declaration(NamedIndividual(:concern_Monitoring))
-Declaration(NamedIndividual(:concern_ProcessIsolation))
-Declaration(NamedIndividual(:concern_Realibility))
-Declaration(NamedIndividual(:concern_ResourceManagement))
-Declaration(NamedIndividual(:concern_RightsManagement))
-Declaration(NamedIndividual(:concern_Sandboxing))
-Declaration(NamedIndividual(:concern_SecureCommunictations))
-Declaration(NamedIndividual(:concern_SecureDataStream))
-Declaration(NamedIndividual(:concern_SecureSystemAdministration))
-Declaration(NamedIndividual(:concern_SecureSystemIntegration))
-Declaration(NamedIndividual(:concern_SecurityArchitecture))
-Declaration(NamedIndividual(:concern_SecurityPolicy))
-Declaration(NamedIndividual(:concern_TrafficFiltration))
-Declaration(NamedIndividual(:concern_TrafficMonitoring))
+Declaration(NamedIndividual(:concern_Awareness))
+Declaration(NamedIndividual(:concern_CommunicationsProtection))
+Declaration(NamedIndividual(:concern_ConfigurationManagement))
+Declaration(NamedIndividual(:concern_ContingencyPlanning))
+Declaration(NamedIndividual(:concern_EnvironmentalProtection))
+Declaration(NamedIndividual(:concern_IdentificationAndAuthentication))
+Declaration(NamedIndividual(:concern_IncidentResponse))
+Declaration(NamedIndividual(:concern_InformationIntegrity))
+Declaration(NamedIndividual(:concern_Maintenance))
+Declaration(NamedIndividual(:concern_MediaProtection))
+Declaration(NamedIndividual(:concern_PersonnelSecurity))
+Declaration(NamedIndividual(:concern_PhysicalProtection))
+Declaration(NamedIndividual(:concern_Planning))
+Declaration(NamedIndividual(:concern_ProgramManagement))
+Declaration(NamedIndividual(:concern_RiskAssessment))
+Declaration(NamedIndividual(:concern_SecurityAssessment))
+Declaration(NamedIndividual(:concern_ServicesAcquisition))
+Declaration(NamedIndividual(:concern_SystemIntegrity))
+Declaration(NamedIndividual(:concern_SystemProtection))
+Declaration(NamedIndividual(:concern_Training))
 Declaration(NamedIndividual(:domain_CloudComputing))
 Declaration(NamedIndividual(:domain_ECommerce))
 Declaration(NamedIndividual(:domain_EdgeComputing))
@@ -442,6 +447,16 @@ AnnotationAssertion(rdfs:comment :usesPattern "Enumerates patterns that are used
 #   Data Properties
 ############################
 
+# Data Property: :imgSolutionDynamics (:imgSolutionDynamics)
+
+AnnotationAssertion(rdfs:comment :imgSolutionDynamics "Downloadable URL(s) of a solution dynamics diagram(s)."^^xsd:string)
+DataPropertyRange(:imgSolutionDynamics xsd:string)
+
+# Data Property: :imgSolutionStructure (:imgSolutionStructure)
+
+AnnotationAssertion(rdfs:comment :imgSolutionStructure "Downloadable URL(s) of a solution structure diagram(s)."^^xsd:string)
+DataPropertyRange(:imgSolutionStructure xsd:string)
+
 # Data Property: :textAKAName (:textAKAName)
 
 AnnotationAssertion(rdfs:comment :textAKAName "Pattern’s alternative name(s)"@en)
@@ -452,10 +467,30 @@ DataPropertyRange(:textAKAName xsd:string)
 AnnotationAssertion(rdfs:comment :textAuthor "Pattern’s author(s)"@en)
 DataPropertyRange(:textAuthor xsd:string)
 
+# Data Property: :textConsequences (:textConsequences)
+
+AnnotationAssertion(rdfs:comment :textConsequences "This section indicates the BENEFITS and LIABILITIES of the solution embodied in this pattern. The benefits should match the forces in the Problem section. Benefits that do not correspond to any force may appear."^^xsd:string)
+DataPropertyRange(:textConsequences xsd:string)
+
+# Data Property: :textContext (:textContext)
+
+AnnotationAssertion(rdfs:comment :textContext "Pattern’s Context (full text)"^^xsd:string)
+DataPropertyRange(:textContext xsd:string)
+
+# Data Property: :textImplementation (:textImplementation)
+
+AnnotationAssertion(rdfs:comment :textImplementation "The objective of this section is to describe what one should consider when implementing the pattern. This can be a set of general recommendations, or a sequence of what to do to use the pattern. It may include some sample code, if appropriate."^^xsd:string)
+DataPropertyRange(:textImplementation xsd:string)
+
 # Data Property: :textIntent (:textIntent)
 
 AnnotationAssertion(rdfs:comment :textIntent "Pattern’s Intent (full text)"@en)
 DataPropertyRange(:textIntent xsd:string)
+
+# Data Property: :textKnownUses (:textKnownUses)
+
+AnnotationAssertion(rdfs:comment :textKnownUses "To accept a solution as a pattern, it should be found at least three examples of its use in real systems."^^xsd:string)
+DataPropertyRange(:textKnownUses xsd:string)
 
 # Data Property: :textName (:textName)
 
@@ -466,6 +501,11 @@ DataPropertyRange(:textName xsd:string)
 
 AnnotationAssertion(rdfs:comment :textPDF "Downloadable URL(s) of pattern’s PDF"@en)
 DataPropertyRange(:textPDF xsd:string)
+
+# Data Property: :textProblem (:textProblem)
+
+AnnotationAssertion(rdfs:comment :textProblem "Pattern’s Problem (full text). It includes forces that constrain the solution."^^xsd:string)
+DataPropertyRange(:textProblem xsd:string)
 
 # Data Property: :textReference (:textReference)
 
@@ -486,6 +526,21 @@ DataPropertyRange(:textReviewProblem xsd:string)
 
 AnnotationAssertion(rdfs:comment :textReviewSolution "A brief text description of pattern’s solution"@en)
 DataPropertyRange(:textReviewSolution xsd:string)
+
+# Data Property: :textSolution (:textSolution)
+
+AnnotationAssertion(rdfs:comment :textSolution "Pattern’s Solution description."^^xsd:string)
+DataPropertyRange(:textSolution xsd:string)
+
+# Data Property: :textSolutionDynamics (:textSolutionDynamics)
+
+AnnotationAssertion(rdfs:comment :textSolutionDynamics "It describes the dynamic aspects of the solution with diagrams."^^xsd:string)
+DataPropertyRange(:textSolutionDynamics xsd:string)
+
+# Data Property: :textSolutionStructure (:textSolutionStructure)
+
+AnnotationAssertion(rdfs:comment :textSolutionStructure "It describes the structure (static view) of the solution and some dynamic aspects in the form of sequence diagrams for a use case."^^xsd:string)
+DataPropertyRange(:textSolutionStructure xsd:string)
 
 # Data Property: :textURL (:textURL)
 
@@ -1392,145 +1447,120 @@ ClassAssertion(:SchemaInstance :component_Workstation)
 ClassAssertion(:SchemaInstance :concern_AccessControl)
 ClassAssertion(:SecurityConcern :concern_AccessControl)
 
-# Individual: :concern_AttackDetection (:concern_AttackDetection)
+# Individual: :concern_Accountability (:concern_Accountability)
 
-ClassAssertion(:SchemaInstance :concern_AttackDetection)
-ClassAssertion(:SecurityConcern :concern_AttackDetection)
-
-# Individual: :concern_AttackPrevention (:concern_AttackPrevention)
-
-ClassAssertion(:SchemaInstance :concern_AttackPrevention)
-ClassAssertion(:SecurityConcern :concern_AttackPrevention)
+ClassAssertion(:SchemaInstance :concern_Accountability)
+ClassAssertion(:SecurityConcern :concern_Accountability)
 
 # Individual: :concern_Audit (:concern_Audit)
 
 ClassAssertion(:SchemaInstance :concern_Audit)
 ClassAssertion(:SecurityConcern :concern_Audit)
 
-# Individual: :concern_Authentication (:concern_Authentication)
-
-ClassAssertion(:SchemaInstance :concern_Authentication)
-ClassAssertion(:SecurityConcern :concern_Authentication)
-
 # Individual: :concern_Authorization (:concern_Authorization)
 
 ClassAssertion(:SchemaInstance :concern_Authorization)
 ClassAssertion(:SecurityConcern :concern_Authorization)
 
-# Individual: :concern_Containment (:concern_Containment)
+# Individual: :concern_Awareness (:concern_Awareness)
 
-ClassAssertion(:SchemaInstance :concern_Containment)
-ClassAssertion(:SecurityConcern :concern_Containment)
+ClassAssertion(:SchemaInstance :concern_Awareness)
+ClassAssertion(:SecurityConcern :concern_Awareness)
 
-# Individual: :concern_Coordination (:concern_Coordination)
+# Individual: :concern_CommunicationsProtection (:concern_CommunicationsProtection)
 
-ClassAssertion(:SchemaInstance :concern_Coordination)
-ClassAssertion(:SecurityConcern :concern_Coordination)
+ClassAssertion(:SchemaInstance :concern_CommunicationsProtection)
+ClassAssertion(:SecurityConcern :concern_CommunicationsProtection)
 
-# Individual: :concern_EventLogging (:concern_EventLogging)
+# Individual: :concern_ConfigurationManagement (:concern_ConfigurationManagement)
 
-ClassAssertion(:SchemaInstance :concern_EventLogging)
-ClassAssertion(:SecurityConcern :concern_EventLogging)
+ClassAssertion(:SchemaInstance :concern_ConfigurationManagement)
+ClassAssertion(:SecurityConcern :concern_ConfigurationManagement)
 
-# Individual: :concern_Identification (:concern_Identification)
+# Individual: :concern_ContingencyPlanning (:concern_ContingencyPlanning)
 
-ClassAssertion(:SchemaInstance :concern_Identification)
-ClassAssertion(:SecurityConcern :concern_Identification)
+ClassAssertion(:SchemaInstance :concern_ContingencyPlanning)
+ClassAssertion(:SecurityConcern :concern_ContingencyPlanning)
 
-# Individual: :concern_InformationHiding (:concern_InformationHiding)
+# Individual: :concern_EnvironmentalProtection (:concern_EnvironmentalProtection)
 
-ClassAssertion(:SchemaInstance :concern_InformationHiding)
-ClassAssertion(:SecurityConcern :concern_InformationHiding)
+ClassAssertion(:SchemaInstance :concern_EnvironmentalProtection)
+ClassAssertion(:SecurityConcern :concern_EnvironmentalProtection)
 
-# Individual: :concern_KeyDistribution (:concern_KeyDistribution)
+# Individual: :concern_IdentificationAndAuthentication (:concern_IdentificationAndAuthentication)
 
-ClassAssertion(:SchemaInstance :concern_KeyDistribution)
-ClassAssertion(:SecurityConcern :concern_KeyDistribution)
+ClassAssertion(:SchemaInstance :concern_IdentificationAndAuthentication)
+ClassAssertion(:SecurityConcern :concern_IdentificationAndAuthentication)
 
-# Individual: :concern_MessageAuthentication (:concern_MessageAuthentication)
+# Individual: :concern_IncidentResponse (:concern_IncidentResponse)
 
-ClassAssertion(:SchemaInstance :concern_MessageAuthentication)
-ClassAssertion(:SecurityConcern :concern_MessageAuthentication)
+ClassAssertion(:SchemaInstance :concern_IncidentResponse)
+ClassAssertion(:SecurityConcern :concern_IncidentResponse)
 
-# Individual: :concern_MessageAuthenticity (:concern_MessageAuthenticity)
+# Individual: :concern_InformationIntegrity (:concern_InformationIntegrity)
 
-ClassAssertion(:SchemaInstance :concern_MessageAuthenticity)
-ClassAssertion(:SecurityConcern :concern_MessageAuthenticity)
+ClassAssertion(:SchemaInstance :concern_InformationIntegrity)
+ClassAssertion(:SecurityConcern :concern_InformationIntegrity)
 
-# Individual: :concern_MessageIntegrity (:concern_MessageIntegrity)
+# Individual: :concern_Maintenance (:concern_Maintenance)
 
-ClassAssertion(:SchemaInstance :concern_MessageIntegrity)
-ClassAssertion(:SecurityConcern :concern_MessageIntegrity)
+ClassAssertion(:SchemaInstance :concern_Maintenance)
+ClassAssertion(:SecurityConcern :concern_Maintenance)
 
-# Individual: :concern_Monitoring (:concern_Monitoring)
+# Individual: :concern_MediaProtection (:concern_MediaProtection)
 
-ClassAssertion(:SchemaInstance :concern_Monitoring)
-ClassAssertion(:SecurityConcern :concern_Monitoring)
+ClassAssertion(:SchemaInstance :concern_MediaProtection)
+ClassAssertion(:SecurityConcern :concern_MediaProtection)
 
-# Individual: :concern_ProcessIsolation (:concern_ProcessIsolation)
+# Individual: :concern_PersonnelSecurity (:concern_PersonnelSecurity)
 
-ClassAssertion(:SchemaInstance :concern_ProcessIsolation)
-ClassAssertion(:SecurityConcern :concern_ProcessIsolation)
+ClassAssertion(:SchemaInstance :concern_PersonnelSecurity)
+ClassAssertion(:SecurityConcern :concern_PersonnelSecurity)
 
-# Individual: :concern_Realibility (:concern_Realibility)
+# Individual: :concern_PhysicalProtection (:concern_PhysicalProtection)
 
-ClassAssertion(:SchemaInstance :concern_Realibility)
-ClassAssertion(:SecurityConcern :concern_Realibility)
+ClassAssertion(:SchemaInstance :concern_PhysicalProtection)
+ClassAssertion(:SecurityConcern :concern_PhysicalProtection)
 
-# Individual: :concern_ResourceManagement (:concern_ResourceManagement)
+# Individual: :concern_Planning (:concern_Planning)
 
-ClassAssertion(:SchemaInstance :concern_ResourceManagement)
-ClassAssertion(:SecurityConcern :concern_ResourceManagement)
+ClassAssertion(:SchemaInstance :concern_Planning)
+ClassAssertion(:SecurityConcern :concern_Planning)
 
-# Individual: :concern_RightsManagement (:concern_RightsManagement)
+# Individual: :concern_ProgramManagement (:concern_ProgramManagement)
 
-ClassAssertion(:SchemaInstance :concern_RightsManagement)
-ClassAssertion(:SecurityConcern :concern_RightsManagement)
+ClassAssertion(:SchemaInstance :concern_ProgramManagement)
+ClassAssertion(:SecurityConcern :concern_ProgramManagement)
 
-# Individual: :concern_Sandboxing (:concern_Sandboxing)
+# Individual: :concern_RiskAssessment (:concern_RiskAssessment)
 
-ClassAssertion(:SchemaInstance :concern_Sandboxing)
-ClassAssertion(:SecurityConcern :concern_Sandboxing)
+ClassAssertion(:SchemaInstance :concern_RiskAssessment)
+ClassAssertion(:SecurityConcern :concern_RiskAssessment)
 
-# Individual: :concern_SecureCommunictations (:concern_SecureCommunictations)
+# Individual: :concern_SecurityAssessment (:concern_SecurityAssessment)
 
-ClassAssertion(:SchemaInstance :concern_SecureCommunictations)
-ClassAssertion(:SecurityConcern :concern_SecureCommunictations)
+ClassAssertion(:SchemaInstance :concern_SecurityAssessment)
+ClassAssertion(:SecurityConcern :concern_SecurityAssessment)
 
-# Individual: :concern_SecureDataStream (:concern_SecureDataStream)
+# Individual: :concern_ServicesAcquisition (:concern_ServicesAcquisition)
 
-ClassAssertion(:SchemaInstance :concern_SecureDataStream)
-ClassAssertion(:SecurityConcern :concern_SecureDataStream)
+ClassAssertion(:SchemaInstance :concern_ServicesAcquisition)
+ClassAssertion(:SecurityConcern :concern_ServicesAcquisition)
 
-# Individual: :concern_SecureSystemAdministration (:concern_SecureSystemAdministration)
+# Individual: :concern_SystemIntegrity (:concern_SystemIntegrity)
 
-ClassAssertion(:SchemaInstance :concern_SecureSystemAdministration)
-ClassAssertion(:SecurityConcern :concern_SecureSystemAdministration)
+ClassAssertion(:SchemaInstance :concern_SystemIntegrity)
+ClassAssertion(:SecurityConcern :concern_SystemIntegrity)
 
-# Individual: :concern_SecureSystemIntegration (:concern_SecureSystemIntegration)
+# Individual: :concern_SystemProtection (:concern_SystemProtection)
 
-ClassAssertion(:SchemaInstance :concern_SecureSystemIntegration)
-ClassAssertion(:SecurityConcern :concern_SecureSystemIntegration)
+ClassAssertion(:SchemaInstance :concern_SystemProtection)
+ClassAssertion(:SecurityConcern :concern_SystemProtection)
 
-# Individual: :concern_SecurityArchitecture (:concern_SecurityArchitecture)
+# Individual: :concern_Training (:concern_Training)
 
-ClassAssertion(:SchemaInstance :concern_SecurityArchitecture)
-ClassAssertion(:SecurityConcern :concern_SecurityArchitecture)
-
-# Individual: :concern_SecurityPolicy (:concern_SecurityPolicy)
-
-ClassAssertion(:SchemaInstance :concern_SecurityPolicy)
-ClassAssertion(:SecurityConcern :concern_SecurityPolicy)
-
-# Individual: :concern_TrafficFiltration (:concern_TrafficFiltration)
-
-ClassAssertion(:SchemaInstance :concern_TrafficFiltration)
-ClassAssertion(:SecurityConcern :concern_TrafficFiltration)
-
-# Individual: :concern_TrafficMonitoring (:concern_TrafficMonitoring)
-
-ClassAssertion(:SchemaInstance :concern_TrafficMonitoring)
-ClassAssertion(:SecurityConcern :concern_TrafficMonitoring)
+ClassAssertion(:SchemaInstance :concern_Training)
+ClassAssertion(:SecurityConcern :concern_Training)
 
 # Individual: :domain_CloudComputing (:domain_CloudComputing)
 

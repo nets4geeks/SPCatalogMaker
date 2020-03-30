@@ -201,6 +201,20 @@
 #    Data properties
 #################################################################
 
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionDynamics
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionDynamics> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                                               rdfs:range xsd:string ;
+                                                                               rdfs:comment "Downloadable URL(s) of a solution dynamics diagram(s)." .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionStructure
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#imgSolutionStructure> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                rdfs:range xsd:string ;
+                                                                                rdfs:comment "Downloadable URL(s) of a solution structure diagram(s)." .
+
+
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textAKAName
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textAKAName> rdf:type owl:DatatypeProperty ;
                                                                        rdfs:subPropertyOf owl:topDataProperty ;
@@ -215,11 +229,39 @@
                                                                       rdfs:comment "Pattern’s author(s)"@en .
 
 
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textConsequences
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textConsequences> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                                            rdfs:range xsd:string ;
+                                                                            rdfs:comment "This section indicates the BENEFITS and LIABILITIES of the solution embodied in this pattern. The benefits should match the forces in the Problem section. Benefits that do not correspond to any force may appear." .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textContext
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textContext> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                                       rdfs:range xsd:string ;
+                                                                       rdfs:comment "Pattern’s Context (full text)" .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textImplementation
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textImplementation> rdf:type owl:DatatypeProperty ;
+                                                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                                                              rdfs:range xsd:string ;
+                                                                              rdfs:comment "The objective of this section is to describe what one should consider when implementing the pattern. This can be a set of general recommendations, or a sequence of what to do to use the pattern. It may include some sample code, if appropriate." .
+
+
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textIntent
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textIntent> rdf:type owl:DatatypeProperty ;
                                                                       rdfs:subPropertyOf owl:topDataProperty ;
                                                                       rdfs:range xsd:string ;
                                                                       rdfs:comment "Pattern’s Intent (full text)"@en .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textKnownUses
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textKnownUses> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                                         rdfs:range xsd:string ;
+                                                                         rdfs:comment "To accept a solution as a pattern, it should be found at least three examples of its use in real systems." .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textName
@@ -234,6 +276,13 @@
                                                                    rdfs:subPropertyOf owl:topDataProperty ;
                                                                    rdfs:range xsd:string ;
                                                                    rdfs:comment "Downloadable URL(s) of pattern’s PDF"@en .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textProblem
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textProblem> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                                       rdfs:range xsd:string ;
+                                                                       rdfs:comment "Pattern’s Problem (full text). It includes forces that constrain the solution." .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textReference
@@ -262,6 +311,27 @@
                                                                               rdfs:subPropertyOf owl:topDataProperty ;
                                                                               rdfs:range xsd:string ;
                                                                               rdfs:comment "A brief text description of pattern’s solution"@en .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolution
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolution> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                                        rdfs:range xsd:string ;
+                                                                        rdfs:comment "Pattern’s Solution description." .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionDynamics
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionDynamics> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                rdfs:range xsd:string ;
+                                                                                rdfs:comment "It describes the dynamic aspects of the solution with diagrams." .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionStructure
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textSolutionStructure> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                 rdfs:range xsd:string ;
+                                                                                 rdfs:comment "It describes the structure (static view) of the solution and some dynamic aspects in the form of sequence diagrams for a use case." .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#textURL
@@ -2301,22 +2371,13 @@
                                                                                           owl:Thing .
 
 
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackDetection
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackDetection> rdf:type owl:NamedIndividual ,
-                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                            owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackPrevention
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AttackPrevention> rdf:type owl:NamedIndividual ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                             owl:Thing .
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                           owl:Thing .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Audit
@@ -2330,10 +2391,6 @@
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authentication
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Authentication> rdf:type owl:NamedIndividual ,
-                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                            owl:Thing .
 
 
@@ -2346,170 +2403,26 @@
                                                                                           owl:Thing .
 
 
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Containment
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Containment> rdf:type owl:NamedIndividual ,
-                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                        owl:Thing .
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Awareness
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Awareness> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                      owl:Thing .
 
 
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Coordination
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Coordination> rdf:type owl:NamedIndividual ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                         owl:Thing .
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_CommunicationsProtection
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_CommunicationsProtection> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                     owl:Thing .
 
 
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EventLogging
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EventLogging> rdf:type owl:NamedIndividual ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                         owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Identification
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Identification> rdf:type owl:NamedIndividual ,
-                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                           owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationHiding
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationHiding> rdf:type owl:NamedIndividual ,
-                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                              owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_KeyDistribution
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_KeyDistribution> rdf:type owl:NamedIndividual ,
-                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                            owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthentication
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthentication> rdf:type owl:NamedIndividual ,
-                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                                  owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthenticity
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageAuthenticity> rdf:type owl:NamedIndividual ,
-                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                                owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageIntegrity
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageIntegrity> rdf:type owl:NamedIndividual ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                             owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Monitoring
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Monitoring> rdf:type owl:NamedIndividual ,
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                       owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProcessIsolation
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProcessIsolation> rdf:type owl:NamedIndividual ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                             owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Realibility
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Realibility> rdf:type owl:NamedIndividual ,
-                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                        owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ResourceManagement
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ResourceManagement> rdf:type owl:NamedIndividual ,
-                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                               owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RightsManagement
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RightsManagement> rdf:type owl:NamedIndividual ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                             owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Sandboxing
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Sandboxing> rdf:type owl:NamedIndividual ,
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                       owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureCommunictations
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureCommunictations> rdf:type owl:NamedIndividual ,
-                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                                  owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureDataStream
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureDataStream> rdf:type owl:NamedIndividual ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                             owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemAdministration
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemAdministration> rdf:type owl:NamedIndividual ,
-                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                                       owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemIntegration
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureSystemIntegration> rdf:type owl:NamedIndividual ,
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ConfigurationManagement
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ConfigurationManagement> rdf:type owl:NamedIndividual ,
                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
@@ -2517,8 +2430,49 @@
                                                                                                     owl:Thing .
 
 
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityArchitecture
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityArchitecture> rdf:type owl:NamedIndividual ,
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ContingencyPlanning
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ContingencyPlanning> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EnvironmentalProtection
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EnvironmentalProtection> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                    owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EventLogging
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_EventLogging> rdf:type owl:NamedIndividual ,
+                                                                                         owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IdentificationAndAuthentication
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IdentificationAndAuthentication> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                            owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IncidentResponse
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_IncidentResponse> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                             owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationIntegrity
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_InformationIntegrity> rdf:type owl:NamedIndividual ,
                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
@@ -2526,8 +2480,67 @@
                                                                                                  owl:Thing .
 
 
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityPolicy
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityPolicy> rdf:type owl:NamedIndividual ,
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Maintenance
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Maintenance> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                        owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MediaProtection
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MediaProtection> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                            owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageIntegrity
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_MessageIntegrity> rdf:type owl:NamedIndividual ,
+                                                                                             owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PersonnelSecurity
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PersonnelSecurity> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                              owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PhysicalProtection
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_PhysicalProtection> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                               owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Planning
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Planning> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                     owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProgramManagement
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ProgramManagement> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                              owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RiskAssessment
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_RiskAssessment> rdf:type owl:NamedIndividual ,
                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
@@ -2535,22 +2548,59 @@
                                                                                            owl:Thing .
 
 
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureCommunictations
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecureCommunictations> rdf:type owl:NamedIndividual ,
+                                                                                                  owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityAssessment
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SecurityAssessment> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                               owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ServicesAcquisition
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_ServicesAcquisition> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemIntegrity
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemIntegrity> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                            owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemProtection
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_SystemProtection> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                             owl:Thing .
+
+
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficFiltration
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficFiltration> rdf:type owl:NamedIndividual ,
-                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                               owl:Thing .
 
 
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficMonitoring
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_TrafficMonitoring> rdf:type owl:NamedIndividual ,
-                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                              owl:Thing .
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Training
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Training> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
+                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                     owl:Thing .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#domain_CloudComputing
