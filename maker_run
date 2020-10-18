@@ -1,4 +1,0 @@
-
-# mvn -o -e exec:java -q -Dexec.mainClass="ab.applications.SPCatalogMaker" -Dexec.args="/home/net/project2/maker.properties"
-mvn -e exec:java -q -Dexec.mainClass="ab.applications.SPCatalogMaker" -Dexec.args="/home/net/project2/maker.properties"
-

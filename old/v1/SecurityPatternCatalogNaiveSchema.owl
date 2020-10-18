@@ -9,13 +9,25 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Ontology(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema>
 Annotation(rdfs:comment "The Security Pattern Catalog Schema ontology is an ontology-driven model of security patterns. It contains concepts and individuals, needed for creation and maintenance of security pattern catalogs, misuse pattern catalogs, and threat catalogs."@en)
 
+Declaration(Class(:APIInterface))
 Declaration(Class(:ActorComponent))
 Declaration(Class(:ActorFunction))
 Declaration(Class(:ApplicationArchitecturalLayer))
+Declaration(Class(:ApplicationComponent))
 Declaration(Class(:ArchitecturalLayer))
 Declaration(Class(:AuthenticationBypassThreat))
 Declaration(Class(:BufferManipulationThreat))
+Declaration(Class(:ClientApplicationComponent))
+Declaration(Class(:CloudActorComponent))
+Declaration(Class(:CloudApplication))
+Declaration(Class(:CloudComponent))
 Declaration(Class(:CloudComputingDomain))
+Declaration(Class(:CloudFunction))
+Declaration(Class(:CloudPlatformComponent))
+Declaration(Class(:CloudPlatformFunction))
+Declaration(Class(:CloudService))
+Declaration(Class(:CloudServiceFunction))
+Declaration(Class(:CloudSupportService))
 Declaration(Class(:CodeInjectionThreat))
 Declaration(Class(:CommonParameter))
 Declaration(Class(:CommunicationArchitecturalLayer))
@@ -24,24 +36,34 @@ Declaration(Class(:Component))
 Declaration(Class(:ConstraintLevel))
 Declaration(Class(:ContentSpoofingThreat))
 Declaration(Class(:ContextParameter))
+Declaration(Class(:DataManipulationFunction))
+Declaration(Class(:DistributedApplicationComponent))
 Declaration(Class(:Domain))
 Declaration(Class(:EnvironmentManipulationThreat))
 Declaration(Class(:ExcavationThreat))
 Declaration(Class(:ExcessiveAllocationThreat))
 Declaration(Class(:FloodingThreat))
+Declaration(Class(:FogComponent))
 Declaration(Class(:FootprintingThreat))
 Declaration(Class(:Function))
 Declaration(Class(:Group))
 Declaration(Class(:HardwareComponent))
-Declaration(Class(:HardwareFunction))
+Declaration(Class(:HypervisorFunction))
+Declaration(Class(:IaaSServiceFunction))
 Declaration(Class(:IdentitySpoofingThreat))
 Declaration(Class(:InputDataManipulationThreat))
 Declaration(Class(:InterceptionThreat))
+Declaration(Class(:InterfaceFunction))
+Declaration(Class(:IoTComponent))
+Declaration(Class(:IoTFunction))
 Declaration(Class(:LifecycleStage))
+Declaration(Class(:LocalApplicationComponent))
 Declaration(Class(:MalwareThreat))
 Declaration(Class(:ManInTheMiddleThreat))
 Declaration(Class(:ManipulationAPIThreat))
+Declaration(Class(:MiddlewareFunction))
 Declaration(Class(:MisusePattern))
+Declaration(Class(:NetworkApplicationComponent))
 Declaration(Class(:OrganizationalParameter))
 Declaration(Class(:Parameter))
 Declaration(Class(:Pattern))
@@ -53,33 +75,34 @@ Declaration(Class(:STRIDE))
 Declaration(Class(:SchemaInstance))
 Declaration(Class(:SchemaStub))
 Declaration(Class(:SecurityConcern))
+Declaration(Class(:SecurityFunction))
 Declaration(Class(:SecurityLevel))
 Declaration(Class(:SecurityObjective))
 Declaration(Class(:SecurityParameter))
 Declaration(Class(:SecurityPattern))
+Declaration(Class(:ServerApplicationComponent))
 Declaration(Class(:SessionManipulationThreat))
 Declaration(Class(:SharedDataManipulationThreat))
 Declaration(Class(:SoftwareComponent))
 Declaration(Class(:SoftwareFunction))
 Declaration(Class(:SoftwareThreat))
+Declaration(Class(:SystemSoftwareComponent))
 Declaration(Class(:Template))
 Declaration(Class(:Threat))
 Declaration(Class(:ThreatImpact))
 Declaration(Class(:ThreatPattern))
 Declaration(Class(:Type))
+Declaration(Class(:UserInterface))
+Declaration(Class(:UserManagementFunction))
 Declaration(ObjectProperty(:hasAffectedComponent))
 Declaration(ObjectProperty(:hasAffectedFunction))
+Declaration(ObjectProperty(:hasAggressor))
 Declaration(ObjectProperty(:hasArchitecturalLayer))
 Declaration(ObjectProperty(:hasConstraintLevel))
 Declaration(ObjectProperty(:hasDomain))
 Declaration(ObjectProperty(:hasFlowLabel))
-Declaration(ObjectProperty(:hasFunction))
 Declaration(ObjectProperty(:hasGroup))
-Declaration(ObjectProperty(:hasInferredSTRIDE))
-Declaration(ObjectProperty(:hasInferredSecurityObjective))
-Declaration(ObjectProperty(:hasInferredThreatImpact))
 Declaration(ObjectProperty(:hasLifecycleStage))
-Declaration(ObjectProperty(:hasPart))
 Declaration(ObjectProperty(:hasResponseType))
 Declaration(ObjectProperty(:hasSTRIDE))
 Declaration(ObjectProperty(:hasSecurityConcern))
@@ -89,28 +112,16 @@ Declaration(ObjectProperty(:hasTemplate))
 Declaration(ObjectProperty(:hasThreat))
 Declaration(ObjectProperty(:hasThreatImpact))
 Declaration(ObjectProperty(:hasType))
-Declaration(ObjectProperty(:interacts))
-Declaration(ObjectProperty(:isAffectedComponentOf))
-Declaration(ObjectProperty(:isAffectedComponentOfViaFunction))
-Declaration(ObjectProperty(:isAffectedComponentOfViaPart))
-Declaration(ObjectProperty(:isAffectedFunctionOf))
+Declaration(ObjectProperty(:hasVictim))
 Declaration(ObjectProperty(:isChildOf))
-Declaration(ObjectProperty(:isFunctionOf))
 Declaration(ObjectProperty(:isGroupOf))
 Declaration(ObjectProperty(:isParentOf))
-Declaration(ObjectProperty(:isPartOf))
-Declaration(ObjectProperty(:isProducedBy))
 Declaration(ObjectProperty(:isSTRIDEof))
 Declaration(ObjectProperty(:isSecurityObjectiveOf))
 Declaration(ObjectProperty(:isThreatImpactOf))
 Declaration(ObjectProperty(:isThreatOf))
 Declaration(ObjectProperty(:isUsedBy))
-Declaration(ObjectProperty(:produces))
 Declaration(ObjectProperty(:relatesTo))
-Declaration(ObjectProperty(:suggestsFunction))
-Declaration(ObjectProperty(:suggestsInteraction))
-Declaration(ObjectProperty(:suggestsPart))
-Declaration(ObjectProperty(:suggestsProduction))
 Declaration(ObjectProperty(:usesPattern))
 Declaration(DataProperty(:imgSolutionDynamics))
 Declaration(DataProperty(:imgSolutionStructure))
@@ -158,8 +169,76 @@ Declaration(NamedIndividual(:cl_MechanismLevel))
 Declaration(NamedIndividual(:cl_OrganizationalLevel))
 Declaration(NamedIndividual(:cl_RegulatoryLevel))
 Declaration(NamedIndividual(:component_Actor))
+Declaration(NamedIndividual(:component_Application))
+Declaration(NamedIndividual(:component_BladeSystem))
+Declaration(NamedIndividual(:component_BladeSystemNode))
+Declaration(NamedIndividual(:component_ClientApplication))
+Declaration(NamedIndividual(:component_Cloud))
+Declaration(NamedIndividual(:component_CloudActor))
+Declaration(NamedIndividual(:component_CloudAdministrator))
+Declaration(NamedIndividual(:component_CloudApplication))
+Declaration(NamedIndividual(:component_CloudApplicationBuilder))
+Declaration(NamedIndividual(:component_CloudAuditor))
+Declaration(NamedIndividual(:component_CloudBuilder))
+Declaration(NamedIndividual(:component_CloudBusinessSupportService))
+Declaration(NamedIndividual(:component_CloudFederation))
+Declaration(NamedIndividual(:component_CloudNonFunctionalSupportService))
+Declaration(NamedIndividual(:component_CloudOperationaSupportService))
+Declaration(NamedIndividual(:component_CloudPlatform))
+Declaration(NamedIndividual(:component_CloudPortal))
+Declaration(NamedIndividual(:component_CloudService))
+Declaration(NamedIndividual(:component_CloudSupportService))
+Declaration(NamedIndividual(:component_CloudSystem))
+Declaration(NamedIndividual(:component_CloudZone))
+Declaration(NamedIndividual(:component_CloudZoneAdministrator))
+Declaration(NamedIndividual(:component_ClusterSystem))
+Declaration(NamedIndividual(:component_Container))
+Declaration(NamedIndividual(:component_ContainerService))
+Declaration(NamedIndividual(:component_Database))
+Declaration(NamedIndividual(:component_Developer))
+Declaration(NamedIndividual(:component_DistributedApplication))
+Declaration(NamedIndividual(:component_Filestore))
+Declaration(NamedIndividual(:component_Firmware))
+Declaration(NamedIndividual(:component_FogApplication))
 Declaration(NamedIndividual(:component_Hardware))
+Declaration(NamedIndividual(:component_Hypervisor))
+Declaration(NamedIndividual(:component_IIoTApplication))
+Declaration(NamedIndividual(:component_IaaSApplication))
+Declaration(NamedIndividual(:component_IaaSService))
+Declaration(NamedIndividual(:component_IoTApplication))
+Declaration(NamedIndividual(:component_LocalApplication))
+Declaration(NamedIndividual(:component_Middleware))
+Declaration(NamedIndividual(:component_MobileDevice))
+Declaration(NamedIndividual(:component_NetworkApplication))
+Declaration(NamedIndividual(:component_NetworkRouter))
+Declaration(NamedIndividual(:component_NetworkSwitch))
+Declaration(NamedIndividual(:component_Node))
+Declaration(NamedIndividual(:component_OperatingSystem))
+Declaration(NamedIndividual(:component_PaaSApplication))
+Declaration(NamedIndividual(:component_PaaSService))
+Declaration(NamedIndividual(:component_RemoteCLI))
+Declaration(NamedIndividual(:component_RemoteUser))
+Declaration(NamedIndividual(:component_SaaSApplication))
+Declaration(NamedIndividual(:component_SaaSService))
+Declaration(NamedIndividual(:component_Server))
+Declaration(NamedIndividual(:component_ServerApplication))
+Declaration(NamedIndividual(:component_ServiceBroker))
+Declaration(NamedIndividual(:component_ServiceConsumer))
+Declaration(NamedIndividual(:component_ServiceProvider))
 Declaration(NamedIndividual(:component_Software))
+Declaration(NamedIndividual(:component_StorageSystem))
+Declaration(NamedIndividual(:component_Supercomputer))
+Declaration(NamedIndividual(:component_SystemAdministrator))
+Declaration(NamedIndividual(:component_SystemService))
+Declaration(NamedIndividual(:component_SystemSoftware))
+Declaration(NamedIndividual(:component_VirtualMachine))
+Declaration(NamedIndividual(:component_VirtualMachineManager))
+Declaration(NamedIndividual(:component_VirtualNetwork))
+Declaration(NamedIndividual(:component_VirtualStorage))
+Declaration(NamedIndividual(:component_VirtualTenant))
+Declaration(NamedIndividual(:component_WEBBasedApplication))
+Declaration(NamedIndividual(:component_WEBbrowser))
+Declaration(NamedIndividual(:component_Workstation))
 Declaration(NamedIndividual(:concern_AccessControl))
 Declaration(NamedIndividual(:concern_Accountability))
 Declaration(NamedIndividual(:concern_Audit))
@@ -196,9 +275,46 @@ Declaration(NamedIndividual(:domain_NFV))
 Declaration(NamedIndividual(:domain_PaaS))
 Declaration(NamedIndividual(:domain_SCADA))
 Declaration(NamedIndividual(:domain_SaaS))
-Declaration(NamedIndividual(:function_Actor))
-Declaration(NamedIndividual(:function_Hardware))
-Declaration(NamedIndividual(:function_Software))
+Declaration(NamedIndividual(:function_AccessControl))
+Declaration(NamedIndividual(:function_ActorBehaviorModel))
+Declaration(NamedIndividual(:function_ActorCredentialsManagement))
+Declaration(NamedIndividual(:function_Authentication))
+Declaration(NamedIndividual(:function_Authorization))
+Declaration(NamedIndividual(:function_BroadNetworkAccess))
+Declaration(NamedIndividual(:function_CredentialsManagement))
+Declaration(NamedIndividual(:function_DataBackup))
+Declaration(NamedIndividual(:function_DataProcess))
+Declaration(NamedIndividual(:function_DataStore))
+Declaration(NamedIndividual(:function_DataTransfer))
+Declaration(NamedIndividual(:function_DistributeEventInformation))
+Declaration(NamedIndividual(:function_DistributeSensorData))
+Declaration(NamedIndividual(:function_EventLogging))
+Declaration(NamedIndividual(:function_InterfaceAPI))
+Declaration(NamedIndividual(:function_InterfaceCLI))
+Declaration(NamedIndividual(:function_InterfaceGUI))
+Declaration(NamedIndividual(:function_InterfaceWEB))
+Declaration(NamedIndividual(:function_MeasuredService))
+Declaration(NamedIndividual(:function_OnDemandSelfService))
+Declaration(NamedIndividual(:function_Permissions_Management))
+Declaration(NamedIndividual(:function_RapidElasticity))
+Declaration(NamedIndividual(:function_ResourcePooling))
+Declaration(NamedIndividual(:function_TenantManagement))
+Declaration(NamedIndividual(:function_UserBilling))
+Declaration(NamedIndividual(:function_VMcloning))
+Declaration(NamedIndividual(:function_VMexport))
+Declaration(NamedIndividual(:function_VMimageManagement))
+Declaration(NamedIndividual(:function_VMimport))
+Declaration(NamedIndividual(:function_VMmanagement))
+Declaration(NamedIndividual(:function_VMmigration))
+Declaration(NamedIndividual(:function_VMsnapshot))
+Declaration(NamedIndividual(:function_VMstorageManagement))
+Declaration(NamedIndividual(:function_VMtemplateManagement))
+Declaration(NamedIndividual(:function_VirtualNetworkAdapterManagement))
+Declaration(NamedIndividual(:function_VirtualNetworkManagement))
+Declaration(NamedIndividual(:function_VirtualResourceManagement))
+Declaration(NamedIndividual(:function_VirtualResourceScaling))
+Declaration(NamedIndividual(:function_VirtualStorageManagement))
+Declaration(NamedIndividual(:function_VirtualSwitchManagement))
 Declaration(NamedIndividual(:lc_ArchitectureAndDesign))
 Declaration(NamedIndividual(:lc_BuildAndCompilation))
 Declaration(NamedIndividual(:lc_Deployment))
@@ -234,7 +350,6 @@ Declaration(NamedIndividual(:threat_IdentitySpoofing))
 Declaration(NamedIndividual(:threat_InformationGathering))
 Declaration(NamedIndividual(:threat_InputDataManipulation))
 Declaration(NamedIndividual(:threat_Interception))
-Declaration(NamedIndividual(:threat_Malware))
 Declaration(NamedIndividual(:threat_ManInTheMiddle))
 Declaration(NamedIndividual(:threat_ManipulationAPI))
 Declaration(NamedIndividual(:threat_PriviledgeEscalation))
@@ -261,44 +376,19 @@ Declaration(NamedIndividual(:type_ThreatPattern))
 # Object Property: :hasAffectedComponent (:hasAffectedComponent)
 
 AnnotationAssertion(rdfs:comment :hasAffectedComponent "Tells which common component(s) a pattern affects."@en)
-InverseObjectProperties(:hasAffectedComponent :isAffectedComponentOf)
 
 # Object Property: :hasAffectedFunction (:hasAffectedFunction)
 
 AnnotationAssertion(rdfs:comment :hasAffectedFunction "Tells which system function(s) a pattern affects."@en)
-InverseObjectProperties(:hasAffectedFunction :isAffectedFunctionOf)
 
 # Object Property: :hasDomain (:hasDomain)
 
 AnnotationAssertion(rdfs:comment :hasDomain "Tells to which domain(s) a pattern belongs to."@en)
 
-# Object Property: :hasFunction (:hasFunction)
-
-AnnotationAssertion(rdfs:comment :hasFunction "An instance \"hasFunction\" some function (inverse)"@en)
-InverseObjectProperties(:hasFunction :isFunctionOf)
-
 # Object Property: :hasGroup (:hasGroup)
 
 AnnotationAssertion(rdfs:comment :hasGroup "Pattern's group"@en)
 InverseObjectProperties(:hasGroup :isGroupOf)
-
-# Object Property: :hasInferredSTRIDE (:hasInferredSTRIDE)
-
-AnnotationAssertion(rdfs:comment :hasInferredSTRIDE "Pattern's STRIDE"@en)
-
-# Object Property: :hasInferredSecurityObjective (:hasInferredSecurityObjective)
-
-AnnotationAssertion(rdfs:comment :hasInferredSecurityObjective "Pattern's SO"@en)
-
-# Object Property: :hasInferredThreatImpact (:hasInferredThreatImpact)
-
-AnnotationAssertion(rdfs:comment :hasInferredThreatImpact "Pattern's threat impact"@en)
-
-# Object Property: :hasPart (:hasPart)
-
-AnnotationAssertion(rdfs:comment :hasPart "An instance “hasPart” another instance."@en)
-InverseObjectProperties(:hasPart :isPartOf)
-TransitiveObjectProperty(:hasPart)
 
 # Object Property: :hasSTRIDE (:hasSTRIDE)
 
@@ -332,23 +422,6 @@ InverseObjectProperties(:hasThreatImpact :isThreatImpactOf)
 
 AnnotationAssertion(rdfs:comment :hasType "Type of a pattern"@en)
 
-# Object Property: :interacts (:interacts)
-
-AnnotationAssertion(rdfs:comment :interacts "An instance “interacts” with another instance (sym)"@en)
-SymmetricObjectProperty(:interacts)
-
-# Object Property: :isAffectedComponentOf (:isAffectedComponentOf)
-
-AnnotationAssertion(rdfs:comment :isAffectedComponentOf "Component is affected by a pattern"@en)
-
-# Object Property: :isAffectedComponentOfViaFunction (:isAffectedComponentOfViaFunction)
-
-AnnotationAssertion(rdfs:comment :isAffectedComponentOfViaFunction "Component is affected by patterns, which affect its function"@en)
-
-# Object Property: :isAffectedComponentOfViaPart (:isAffectedComponentOfViaPart)
-
-AnnotationAssertion(rdfs:comment :isAffectedComponentOfViaPart "Component is affected by patterns which affect parts of the component (hasPart is transitive)"@en)
-
 # Object Property: :isChildOf (:isChildOf)
 
 AnnotationAssertion(rdfs:comment :isChildOf "For a concrete pattern shows from which abstract pattern it has been made."@en)
@@ -358,44 +431,15 @@ InverseObjectProperties(:isChildOf :isParentOf)
 
 AnnotationAssertion(rdfs:comment :isParentOf "For an abstract pattern shows all child patterns"@en)
 
-# Object Property: :isPartOf (:isPartOf)
-
-AnnotationAssertion(rdfs:comment :isPartOf "An instance “isPartOf” another instance."@en)
-
-# Object Property: :isProducedBy (:isProducedBy)
-
-AnnotationAssertion(rdfs:comment :isProducedBy "An instance “isProducedBy” another instance"@en)
-InverseObjectProperties(:isProducedBy :produces)
-
 # Object Property: :isUsedBy (:isUsedBy)
 
 AnnotationAssertion(rdfs:comment :isUsedBy "A pattern is used as a part of another"@en)
 InverseObjectProperties(:isUsedBy :usesPattern)
 
-# Object Property: :produces (:produces)
-
-AnnotationAssertion(rdfs:comment :produces "An instance “produces” another instance."@en)
-
 # Object Property: :relatesTo (:relatesTo)
 
 AnnotationAssertion(rdfs:comment :relatesTo "Enumerates patterns that are related to this one."@en)
 SymmetricObjectProperty(:relatesTo)
-
-# Object Property: :suggestsFunction (:suggestsFunction)
-
-AnnotationAssertion(rdfs:comment :suggestsFunction "It suggests a component \"hasFunction\" some function"@en)
-
-# Object Property: :suggestsInteraction (:suggestsInteraction)
-
-AnnotationAssertion(rdfs:comment :suggestsInteraction "It suggests a component interacts with another component (concept level)"@en)
-
-# Object Property: :suggestsPart (:suggestsPart)
-
-AnnotationAssertion(rdfs:comment :suggestsPart "It suggests a component consists from other components (concept level)"@en)
-
-# Object Property: :suggestsProduction (:suggestsProduction)
-
-AnnotationAssertion(rdfs:comment :suggestsProduction "It suggests a component produces another component (concept level)"@en)
 
 # Object Property: :usesPattern (:usesPattern)
 
@@ -512,6 +556,10 @@ DataPropertyRange(:textURL xsd:string)
 #   Classes
 ############################
 
+# Class: :APIInterface (:APIInterface)
+
+SubClassOf(:APIInterface :InterfaceFunction)
+
 # Class: :ActorComponent (:ActorComponent)
 
 SubClassOf(:ActorComponent :Component)
@@ -523,6 +571,10 @@ SubClassOf(:ActorFunction :Function)
 # Class: :ApplicationArchitecturalLayer (:ApplicationArchitecturalLayer)
 
 SubClassOf(:ApplicationArchitecturalLayer :ArchitecturalLayer)
+
+# Class: :ApplicationComponent (:ApplicationComponent)
+
+SubClassOf(:ApplicationComponent :SoftwareComponent)
 
 # Class: :ArchitecturalLayer (:ArchitecturalLayer)
 
@@ -545,9 +597,50 @@ SubClassOf(:BufferManipulationThreat ObjectHasValue(:hasThreatImpact :ti_ModifyD
 SubClassOf(:BufferManipulationThreat ObjectHasValue(:hasThreatImpact :ti_ReadData))
 SubClassOf(:BufferManipulationThreat ObjectHasValue(:hasThreatImpact :ti_UnreliableExecution))
 
+# Class: :ClientApplicationComponent (:ClientApplicationComponent)
+
+SubClassOf(:ClientApplicationComponent :NetworkApplicationComponent)
+
+# Class: :CloudActorComponent (:CloudActorComponent)
+
+SubClassOf(:CloudActorComponent :ActorComponent)
+SubClassOf(:CloudActorComponent :CloudComponent)
+
+# Class: :CloudApplication (:CloudApplication)
+
+SubClassOf(:CloudApplication :CloudComponent)
+
+# Class: :CloudComponent (:CloudComponent)
+
+SubClassOf(:CloudComponent :Component)
+
 # Class: :CloudComputingDomain (:CloudComputingDomain)
 
 SubClassOf(:CloudComputingDomain :Domain)
+
+# Class: :CloudFunction (:CloudFunction)
+
+SubClassOf(:CloudFunction :Function)
+
+# Class: :CloudPlatformComponent (:CloudPlatformComponent)
+
+SubClassOf(:CloudPlatformComponent :CloudComponent)
+
+# Class: :CloudPlatformFunction (:CloudPlatformFunction)
+
+SubClassOf(:CloudPlatformFunction :CloudFunction)
+
+# Class: :CloudService (:CloudService)
+
+SubClassOf(:CloudService :CloudComponent)
+
+# Class: :CloudServiceFunction (:CloudServiceFunction)
+
+SubClassOf(:CloudServiceFunction :CloudFunction)
+
+# Class: :CloudSupportService (:CloudSupportService)
+
+SubClassOf(:CloudSupportService :CloudComponent)
 
 # Class: :CodeInjectionThreat (:CodeInjectionThreat)
 
@@ -589,6 +682,14 @@ SubClassOf(:ContentSpoofingThreat ObjectHasValue(:hasThreatImpact :ti_ReadData))
 
 SubClassOf(:ContextParameter :Parameter)
 
+# Class: :DataManipulationFunction (:DataManipulationFunction)
+
+SubClassOf(:DataManipulationFunction :SoftwareFunction)
+
+# Class: :DistributedApplicationComponent (:DistributedApplicationComponent)
+
+SubClassOf(:DistributedApplicationComponent :NetworkApplicationComponent)
+
 # Class: :Domain (:Domain)
 
 SubClassOf(:Domain :CommonParameter)
@@ -620,6 +721,10 @@ SubClassOf(:FloodingThreat :CommunicationsThreat)
 SubClassOf(:FloodingThreat ObjectHasValue(:hasSecurityObjective :SO_Availability))
 SubClassOf(:FloodingThreat ObjectHasValue(:hasThreatImpact :ti_ResourceConsumption))
 
+# Class: :FogComponent (:FogComponent)
+
+SubClassOf(:FogComponent :Component)
+
 # Class: :FootprintingThreat (:FootprintingThreat)
 
 SubClassOf(:FootprintingThreat :CommunicationsThreat)
@@ -638,9 +743,13 @@ SubClassOf(:Group :OrganizationalParameter)
 
 SubClassOf(:HardwareComponent :Component)
 
-# Class: :HardwareFunction (:HardwareFunction)
+# Class: :HypervisorFunction (:HypervisorFunction)
 
-SubClassOf(:HardwareFunction :Function)
+SubClassOf(:HypervisorFunction :CloudFunction)
+
+# Class: :IaaSServiceFunction (:IaaSServiceFunction)
+
+SubClassOf(:IaaSServiceFunction :CloudFunction)
 
 # Class: :IdentitySpoofingThreat (:IdentitySpoofingThreat)
 
@@ -667,9 +776,25 @@ SubClassOf(:InterceptionThreat :CommunicationsThreat)
 SubClassOf(:InterceptionThreat ObjectHasValue(:hasSecurityObjective :SO_Confidentiality))
 SubClassOf(:InterceptionThreat ObjectHasValue(:hasThreatImpact :ti_ReadData))
 
+# Class: :InterfaceFunction (:InterfaceFunction)
+
+SubClassOf(:InterfaceFunction :SoftwareFunction)
+
+# Class: :IoTComponent (:IoTComponent)
+
+SubClassOf(:IoTComponent :Component)
+
+# Class: :IoTFunction (:IoTFunction)
+
+SubClassOf(:IoTFunction :Function)
+
 # Class: :LifecycleStage (:LifecycleStage)
 
 SubClassOf(:LifecycleStage :CommonParameter)
+
+# Class: :LocalApplicationComponent (:LocalApplicationComponent)
+
+SubClassOf(:LocalApplicationComponent :ApplicationComponent)
 
 # Class: :MalwareThreat (:MalwareThreat)
 
@@ -702,9 +827,17 @@ SubClassOf(:ManipulationAPIThreat ObjectHasValue(:hasThreatImpact :ti_ModifyData
 SubClassOf(:ManipulationAPIThreat ObjectHasValue(:hasThreatImpact :ti_ReadData))
 SubClassOf(:ManipulationAPIThreat ObjectHasValue(:hasThreatImpact :ti_UnreliableExecution))
 
+# Class: :MiddlewareFunction (:MiddlewareFunction)
+
+SubClassOf(:MiddlewareFunction :Function)
+
 # Class: :MisusePattern (:MisusePattern)
 
 EquivalentClasses(:MisusePattern ObjectIntersectionOf(:Pattern ObjectHasValue(:hasType :type_MisusePattern)))
+
+# Class: :NetworkApplicationComponent (:NetworkApplicationComponent)
+
+SubClassOf(:NetworkApplicationComponent :ApplicationComponent)
 
 # Class: :OrganizationalParameter (:OrganizationalParameter)
 
@@ -745,6 +878,10 @@ SubClassOf(:SchemaStub :SchemaInstance)
 
 SubClassOf(:SecurityConcern :SecurityParameter)
 
+# Class: :SecurityFunction (:SecurityFunction)
+
+SubClassOf(:SecurityFunction :SoftwareFunction)
+
 # Class: :SecurityLevel (:SecurityLevel)
 
 SubClassOf(:SecurityLevel :CommonParameter)
@@ -760,6 +897,10 @@ SubClassOf(:SecurityParameter :Parameter)
 # Class: :SecurityPattern (:SecurityPattern)
 
 EquivalentClasses(:SecurityPattern ObjectIntersectionOf(:Pattern ObjectHasValue(:hasType :type_SecurityPattern)))
+
+# Class: :ServerApplicationComponent (:ServerApplicationComponent)
+
+SubClassOf(:ServerApplicationComponent :NetworkApplicationComponent)
 
 # Class: :SessionManipulationThreat (:SessionManipulationThreat)
 
@@ -792,6 +933,10 @@ SubClassOf(:SoftwareFunction :Function)
 
 SubClassOf(:SoftwareThreat :Threat)
 
+# Class: :SystemSoftwareComponent (:SystemSoftwareComponent)
+
+SubClassOf(:SystemSoftwareComponent :SoftwareComponent)
+
 # Class: :Template (:Template)
 
 SubClassOf(:Template :OrganizationalParameter)
@@ -811,6 +956,14 @@ EquivalentClasses(:ThreatPattern ObjectIntersectionOf(:Pattern ObjectHasValue(:h
 # Class: :Type (:Type)
 
 SubClassOf(:Type :OrganizationalParameter)
+
+# Class: :UserInterface (:UserInterface)
+
+SubClassOf(:UserInterface :InterfaceFunction)
+
+# Class: :UserManagementFunction (:UserManagementFunction)
+
+SubClassOf(:UserManagementFunction :SoftwareFunction)
 
 
 ############################
@@ -915,7 +1068,7 @@ ClassAssertion(:SchemaInstance :al_NetworkLayer)
 # Individual: :al_PlatformAndOperatingSystem (:al_PlatformAndOperatingSystem)
 
 ClassAssertion(:PlatformAndOperatingSystemLayer :al_PlatformAndOperatingSystem)
-ClassAssertion(:SchemaStub :al_PlatformAndOperatingSystem)
+ClassAssertion(:SchemaInstance :al_PlatformAndOperatingSystem)
 
 # Individual: :al_TransportLayer (:al_TransportLayer)
 
@@ -947,15 +1100,350 @@ ClassAssertion(:SchemaInstance :cl_RegulatoryLevel)
 ClassAssertion(:ActorComponent :component_Actor)
 ClassAssertion(:SchemaStub :component_Actor)
 
+# Individual: :component_Application (:component_Application)
+
+ClassAssertion(:ApplicationComponent :component_Application)
+ClassAssertion(:SchemaStub :component_Application)
+
+# Individual: :component_BladeSystem (:component_BladeSystem)
+
+ClassAssertion(:HardwareComponent :component_BladeSystem)
+ClassAssertion(:SchemaInstance :component_BladeSystem)
+
+# Individual: :component_BladeSystemNode (:component_BladeSystemNode)
+
+ClassAssertion(:HardwareComponent :component_BladeSystemNode)
+ClassAssertion(:SchemaInstance :component_BladeSystemNode)
+
+# Individual: :component_ClientApplication (:component_ClientApplication)
+
+ClassAssertion(:ClientApplicationComponent :component_ClientApplication)
+ClassAssertion(:SchemaStub :component_ClientApplication)
+
+# Individual: :component_Cloud (:component_Cloud)
+
+ClassAssertion(:CloudComponent :component_Cloud)
+ClassAssertion(:SchemaStub :component_Cloud)
+
+# Individual: :component_CloudActor (:component_CloudActor)
+
+ClassAssertion(:CloudActorComponent :component_CloudActor)
+ClassAssertion(:SchemaStub :component_CloudActor)
+
+# Individual: :component_CloudAdministrator (:component_CloudAdministrator)
+
+ClassAssertion(:CloudActorComponent :component_CloudAdministrator)
+ClassAssertion(:SchemaInstance :component_CloudAdministrator)
+
+# Individual: :component_CloudApplication (:component_CloudApplication)
+
+ClassAssertion(:CloudApplication :component_CloudApplication)
+ClassAssertion(:SchemaStub :component_CloudApplication)
+
+# Individual: :component_CloudApplicationBuilder (:component_CloudApplicationBuilder)
+
+ClassAssertion(:CloudActorComponent :component_CloudApplicationBuilder)
+ClassAssertion(:SchemaInstance :component_CloudApplicationBuilder)
+
+# Individual: :component_CloudAuditor (:component_CloudAuditor)
+
+ClassAssertion(:CloudActorComponent :component_CloudAuditor)
+ClassAssertion(:SchemaInstance :component_CloudAuditor)
+
+# Individual: :component_CloudBuilder (:component_CloudBuilder)
+
+ClassAssertion(:CloudActorComponent :component_CloudBuilder)
+ClassAssertion(:SchemaInstance :component_CloudBuilder)
+
+# Individual: :component_CloudBusinessSupportService (:component_CloudBusinessSupportService)
+
+ClassAssertion(:CloudSupportService :component_CloudBusinessSupportService)
+ClassAssertion(:SchemaInstance :component_CloudBusinessSupportService)
+
+# Individual: :component_CloudFederation (:component_CloudFederation)
+
+SameIndividual(:component_CloudFederation :component_CloudZone)
+
+# Individual: :component_CloudNonFunctionalSupportService (:component_CloudNonFunctionalSupportService)
+
+ClassAssertion(:CloudSupportService :component_CloudNonFunctionalSupportService)
+ClassAssertion(:SchemaInstance :component_CloudNonFunctionalSupportService)
+
+# Individual: :component_CloudOperationaSupportService (:component_CloudOperationaSupportService)
+
+ClassAssertion(:CloudSupportService :component_CloudOperationaSupportService)
+ClassAssertion(:SchemaInstance :component_CloudOperationaSupportService)
+
+# Individual: :component_CloudPlatform (:component_CloudPlatform)
+
+ClassAssertion(:CloudPlatformComponent :component_CloudPlatform)
+ClassAssertion(:SchemaStub :component_CloudPlatform)
+
+# Individual: :component_CloudPortal (:component_CloudPortal)
+
+ClassAssertion(:CloudPlatformComponent :component_CloudPortal)
+ClassAssertion(:SchemaInstance :component_CloudPortal)
+
+# Individual: :component_CloudService (:component_CloudService)
+
+ClassAssertion(:CloudService :component_CloudService)
+ClassAssertion(:SchemaStub :component_CloudService)
+
+# Individual: :component_CloudSupportService (:component_CloudSupportService)
+
+ClassAssertion(:CloudSupportService :component_CloudSupportService)
+ClassAssertion(:SchemaStub :component_CloudSupportService)
+
+# Individual: :component_CloudSystem (:component_CloudSystem)
+
+ClassAssertion(:CloudPlatformComponent :component_CloudSystem)
+ClassAssertion(:SchemaInstance :component_CloudSystem)
+
+# Individual: :component_CloudZone (:component_CloudZone)
+
+ClassAssertion(:CloudPlatformComponent :component_CloudZone)
+ClassAssertion(:SchemaInstance :component_CloudZone)
+
+# Individual: :component_CloudZoneAdministrator (:component_CloudZoneAdministrator)
+
+ClassAssertion(:CloudActorComponent :component_CloudZoneAdministrator)
+ClassAssertion(:SchemaInstance :component_CloudZoneAdministrator)
+
+# Individual: :component_ClusterSystem (:component_ClusterSystem)
+
+ClassAssertion(:HardwareComponent :component_ClusterSystem)
+ClassAssertion(:SchemaInstance :component_ClusterSystem)
+
+# Individual: :component_Container (:component_Container)
+
+ClassAssertion(:CloudApplication :component_Container)
+ClassAssertion(:SchemaInstance :component_Container)
+
+# Individual: :component_ContainerService (:component_ContainerService)
+
+ClassAssertion(:CloudService :component_ContainerService)
+ClassAssertion(:SchemaInstance :component_ContainerService)
+
+# Individual: :component_Database (:component_Database)
+
+ClassAssertion(:SchemaInstance :component_Database)
+ClassAssertion(:ServerApplicationComponent :component_Database)
+
+# Individual: :component_Developer (:component_Developer)
+
+ClassAssertion(:ActorComponent :component_Developer)
+ClassAssertion(:SchemaInstance :component_Developer)
+
+# Individual: :component_DistributedApplication (:component_DistributedApplication)
+
+ClassAssertion(:DistributedApplicationComponent :component_DistributedApplication)
+ClassAssertion(:SchemaStub :component_DistributedApplication)
+
+# Individual: :component_Filestore (:component_Filestore)
+
+ClassAssertion(:SchemaInstance :component_Filestore)
+ClassAssertion(:ServerApplicationComponent :component_Filestore)
+
+# Individual: :component_Firmware (:component_Firmware)
+
+ClassAssertion(:SchemaInstance :component_Firmware)
+ClassAssertion(:SystemSoftwareComponent :component_Firmware)
+
+# Individual: :component_FogApplication (:component_FogApplication)
+
+ClassAssertion(:FogComponent :component_FogApplication)
+ClassAssertion(:SchemaStub :component_FogApplication)
+
 # Individual: :component_Hardware (:component_Hardware)
 
 ClassAssertion(:HardwareComponent :component_Hardware)
 ClassAssertion(:SchemaStub :component_Hardware)
 
+# Individual: :component_Hypervisor (:component_Hypervisor)
+
+ClassAssertion(:CloudPlatformComponent :component_Hypervisor)
+ClassAssertion(:SchemaInstance :component_Hypervisor)
+SameIndividual(:component_Hypervisor :component_VirtualMachineManager)
+
+# Individual: :component_IIoTApplication (:component_IIoTApplication)
+
+ClassAssertion(:IoTComponent :component_IIoTApplication)
+ClassAssertion(:SchemaStub :component_IIoTApplication)
+
+# Individual: :component_IaaSApplication (:component_IaaSApplication)
+
+ClassAssertion(:CloudApplication :component_IaaSApplication)
+ClassAssertion(:SchemaInstance :component_IaaSApplication)
+
+# Individual: :component_IaaSService (:component_IaaSService)
+
+ClassAssertion(:CloudService :component_IaaSService)
+ClassAssertion(:SchemaInstance :component_IaaSService)
+
+# Individual: :component_IoTApplication (:component_IoTApplication)
+
+ClassAssertion(:IoTComponent :component_IoTApplication)
+ClassAssertion(:SchemaStub :component_IoTApplication)
+
+# Individual: :component_LocalApplication (:component_LocalApplication)
+
+ClassAssertion(:LocalApplicationComponent :component_LocalApplication)
+ClassAssertion(:SchemaStub :component_LocalApplication)
+
+# Individual: :component_Middleware (:component_Middleware)
+
+ClassAssertion(:SchemaInstance :component_Middleware)
+ClassAssertion(:SystemSoftwareComponent :component_Middleware)
+
+# Individual: :component_MobileDevice (:component_MobileDevice)
+
+ClassAssertion(:HardwareComponent :component_MobileDevice)
+ClassAssertion(:SchemaInstance :component_MobileDevice)
+
+# Individual: :component_NetworkApplication (:component_NetworkApplication)
+
+ClassAssertion(:NetworkApplicationComponent :component_NetworkApplication)
+ClassAssertion(:SchemaStub :component_NetworkApplication)
+
+# Individual: :component_NetworkRouter (:component_NetworkRouter)
+
+ClassAssertion(:HardwareComponent :component_NetworkRouter)
+ClassAssertion(:SchemaInstance :component_NetworkRouter)
+
+# Individual: :component_NetworkSwitch (:component_NetworkSwitch)
+
+ClassAssertion(:HardwareComponent :component_NetworkSwitch)
+ClassAssertion(:SchemaInstance :component_NetworkSwitch)
+
+# Individual: :component_Node (:component_Node)
+
+ClassAssertion(:HardwareComponent :component_Node)
+ClassAssertion(:SchemaInstance :component_Node)
+
+# Individual: :component_OperatingSystem (:component_OperatingSystem)
+
+ClassAssertion(:SchemaInstance :component_OperatingSystem)
+ClassAssertion(:SystemSoftwareComponent :component_OperatingSystem)
+
+# Individual: :component_PaaSApplication (:component_PaaSApplication)
+
+ClassAssertion(:CloudApplication :component_PaaSApplication)
+ClassAssertion(:SchemaInstance :component_PaaSApplication)
+
+# Individual: :component_PaaSService (:component_PaaSService)
+
+ClassAssertion(:CloudService :component_PaaSService)
+ClassAssertion(:SchemaInstance :component_PaaSService)
+
+# Individual: :component_RemoteCLI (:component_RemoteCLI)
+
+ClassAssertion(:ClientApplicationComponent :component_RemoteCLI)
+ClassAssertion(:SchemaInstance :component_RemoteCLI)
+
+# Individual: :component_RemoteUser (:component_RemoteUser)
+
+ClassAssertion(:ActorComponent :component_RemoteUser)
+ClassAssertion(:SchemaInstance :component_RemoteUser)
+
+# Individual: :component_SaaSApplication (:component_SaaSApplication)
+
+ClassAssertion(:CloudApplication :component_SaaSApplication)
+ClassAssertion(:SchemaInstance :component_SaaSApplication)
+
+# Individual: :component_SaaSService (:component_SaaSService)
+
+ClassAssertion(:CloudService :component_SaaSService)
+ClassAssertion(:SchemaInstance :component_SaaSService)
+
+# Individual: :component_Server (:component_Server)
+
+ClassAssertion(:HardwareComponent :component_Server)
+ClassAssertion(:SchemaInstance :component_Server)
+
+# Individual: :component_ServerApplication (:component_ServerApplication)
+
+ClassAssertion(:SchemaStub :component_ServerApplication)
+ClassAssertion(:ServerApplicationComponent :component_ServerApplication)
+
+# Individual: :component_ServiceBroker (:component_ServiceBroker)
+
+ClassAssertion(:CloudActorComponent :component_ServiceBroker)
+ClassAssertion(:SchemaInstance :component_ServiceBroker)
+
+# Individual: :component_ServiceConsumer (:component_ServiceConsumer)
+
+ClassAssertion(:CloudActorComponent :component_ServiceConsumer)
+ClassAssertion(:SchemaInstance :component_ServiceConsumer)
+
+# Individual: :component_ServiceProvider (:component_ServiceProvider)
+
+ClassAssertion(:CloudActorComponent :component_ServiceProvider)
+ClassAssertion(:SchemaInstance :component_ServiceProvider)
+
 # Individual: :component_Software (:component_Software)
 
 ClassAssertion(:SchemaStub :component_Software)
 ClassAssertion(:SoftwareComponent :component_Software)
+
+# Individual: :component_StorageSystem (:component_StorageSystem)
+
+ClassAssertion(:HardwareComponent :component_StorageSystem)
+ClassAssertion(:SchemaInstance :component_StorageSystem)
+
+# Individual: :component_Supercomputer (:component_Supercomputer)
+
+ClassAssertion(:HardwareComponent :component_Supercomputer)
+ClassAssertion(:SchemaInstance :component_Supercomputer)
+
+# Individual: :component_SystemAdministrator (:component_SystemAdministrator)
+
+ClassAssertion(:ActorComponent :component_SystemAdministrator)
+ClassAssertion(:SchemaInstance :component_SystemAdministrator)
+
+# Individual: :component_SystemService (:component_SystemService)
+
+ClassAssertion(:SchemaInstance :component_SystemService)
+ClassAssertion(:SystemSoftwareComponent :component_SystemService)
+
+# Individual: :component_SystemSoftware (:component_SystemSoftware)
+
+ClassAssertion(:SchemaStub :component_SystemSoftware)
+ClassAssertion(:SystemSoftwareComponent :component_SystemSoftware)
+
+# Individual: :component_VirtualMachine (:component_VirtualMachine)
+
+ClassAssertion(:CloudApplication :component_VirtualMachine)
+ClassAssertion(:SchemaInstance :component_VirtualMachine)
+
+# Individual: :component_VirtualNetwork (:component_VirtualNetwork)
+
+ClassAssertion(:CloudApplication :component_VirtualNetwork)
+ClassAssertion(:SchemaInstance :component_VirtualNetwork)
+
+# Individual: :component_VirtualStorage (:component_VirtualStorage)
+
+ClassAssertion(:CloudApplication :component_VirtualStorage)
+ClassAssertion(:SchemaInstance :component_VirtualStorage)
+
+# Individual: :component_VirtualTenant (:component_VirtualTenant)
+
+ClassAssertion(:CloudApplication :component_VirtualTenant)
+ClassAssertion(:SchemaInstance :component_VirtualTenant)
+
+# Individual: :component_WEBBasedApplication (:component_WEBBasedApplication)
+
+ClassAssertion(:SchemaInstance :component_WEBBasedApplication)
+ClassAssertion(:ServerApplicationComponent :component_WEBBasedApplication)
+
+# Individual: :component_WEBbrowser (:component_WEBbrowser)
+
+ClassAssertion(:ClientApplicationComponent :component_WEBbrowser)
+ClassAssertion(:SchemaInstance :component_WEBbrowser)
+
+# Individual: :component_Workstation (:component_Workstation)
+
+ClassAssertion(:HardwareComponent :component_Workstation)
+ClassAssertion(:SchemaInstance :component_Workstation)
 
 # Individual: :concern_AccessControl (:concern_AccessControl)
 
@@ -1138,20 +1626,205 @@ ClassAssertion(:SchemaInstance :domain_SCADA)
 ClassAssertion(:CloudComputingDomain :domain_SaaS)
 ClassAssertion(:SchemaInstance :domain_SaaS)
 
-# Individual: :function_Actor (:function_Actor)
+# Individual: :function_AccessControl (:function_AccessControl)
 
-ClassAssertion(:ActorFunction :function_Actor)
-ClassAssertion(:SchemaStub :function_Actor)
+ClassAssertion(:SchemaInstance :function_AccessControl)
+ClassAssertion(:SecurityFunction :function_AccessControl)
 
-# Individual: :function_Hardware (:function_Hardware)
+# Individual: :function_ActorBehaviorModel (:function_ActorBehaviorModel)
 
-ClassAssertion(:HardwareFunction :function_Hardware)
-ClassAssertion(:SchemaStub :function_Hardware)
+ClassAssertion(:ActorFunction :function_ActorBehaviorModel)
+ClassAssertion(:SchemaInstance :function_ActorBehaviorModel)
 
-# Individual: :function_Software (:function_Software)
+# Individual: :function_ActorCredentialsManagement (:function_ActorCredentialsManagement)
 
-ClassAssertion(:SchemaStub :function_Software)
-ClassAssertion(:SoftwareFunction :function_Software)
+ClassAssertion(:ActorFunction :function_ActorCredentialsManagement)
+ClassAssertion(:SchemaInstance :function_ActorCredentialsManagement)
+
+# Individual: :function_Authentication (:function_Authentication)
+
+ClassAssertion(:SchemaInstance :function_Authentication)
+ClassAssertion(:UserManagementFunction :function_Authentication)
+
+# Individual: :function_Authorization (:function_Authorization)
+
+ClassAssertion(:SchemaInstance :function_Authorization)
+ClassAssertion(:UserManagementFunction :function_Authorization)
+
+# Individual: :function_BroadNetworkAccess (:function_BroadNetworkAccess)
+
+ClassAssertion(:CloudPlatformFunction :function_BroadNetworkAccess)
+ClassAssertion(:SchemaInstance :function_BroadNetworkAccess)
+
+# Individual: :function_CredentialsManagement (:function_CredentialsManagement)
+
+ClassAssertion(:SchemaInstance :function_CredentialsManagement)
+ClassAssertion(:UserManagementFunction :function_CredentialsManagement)
+
+# Individual: :function_DataBackup (:function_DataBackup)
+
+ClassAssertion(:DataManipulationFunction :function_DataBackup)
+ClassAssertion(:SchemaInstance :function_DataBackup)
+
+# Individual: :function_DataProcess (:function_DataProcess)
+
+ClassAssertion(:DataManipulationFunction :function_DataProcess)
+ClassAssertion(:SchemaInstance :function_DataProcess)
+
+# Individual: :function_DataStore (:function_DataStore)
+
+ClassAssertion(:DataManipulationFunction :function_DataStore)
+ClassAssertion(:SchemaInstance :function_DataStore)
+
+# Individual: :function_DataTransfer (:function_DataTransfer)
+
+ClassAssertion(:DataManipulationFunction :function_DataTransfer)
+ClassAssertion(:SchemaInstance :function_DataTransfer)
+
+# Individual: :function_DistributeEventInformation (:function_DistributeEventInformation)
+
+ClassAssertion(:MiddlewareFunction :function_DistributeEventInformation)
+ClassAssertion(:SchemaInstance :function_DistributeEventInformation)
+
+# Individual: :function_DistributeSensorData (:function_DistributeSensorData)
+
+ClassAssertion(:IoTFunction :function_DistributeSensorData)
+ClassAssertion(:SchemaInstance :function_DistributeSensorData)
+
+# Individual: :function_EventLogging (:function_EventLogging)
+
+ClassAssertion(:SchemaInstance :function_EventLogging)
+ClassAssertion(:SecurityFunction :function_EventLogging)
+
+# Individual: :function_InterfaceAPI (:function_InterfaceAPI)
+
+ClassAssertion(:APIInterface :function_InterfaceAPI)
+ClassAssertion(:SchemaStub :function_InterfaceAPI)
+
+# Individual: :function_InterfaceCLI (:function_InterfaceCLI)
+
+ClassAssertion(:SchemaInstance :function_InterfaceCLI)
+ClassAssertion(:UserInterface :function_InterfaceCLI)
+
+# Individual: :function_InterfaceGUI (:function_InterfaceGUI)
+
+ClassAssertion(:SchemaInstance :function_InterfaceGUI)
+ClassAssertion(:UserInterface :function_InterfaceGUI)
+
+# Individual: :function_InterfaceWEB (:function_InterfaceWEB)
+
+ClassAssertion(:SchemaInstance :function_InterfaceWEB)
+ClassAssertion(:UserInterface :function_InterfaceWEB)
+
+# Individual: :function_MeasuredService (:function_MeasuredService)
+
+ClassAssertion(:CloudPlatformFunction :function_MeasuredService)
+ClassAssertion(:SchemaInstance :function_MeasuredService)
+
+# Individual: :function_OnDemandSelfService (:function_OnDemandSelfService)
+
+ClassAssertion(:CloudPlatformFunction :function_OnDemandSelfService)
+ClassAssertion(:SchemaInstance :function_OnDemandSelfService)
+
+# Individual: :function_Permissions_Management (:function_Permissions_Management)
+
+ClassAssertion(:SchemaInstance :function_Permissions_Management)
+ClassAssertion(:UserManagementFunction :function_Permissions_Management)
+
+# Individual: :function_RapidElasticity (:function_RapidElasticity)
+
+ClassAssertion(:CloudPlatformFunction :function_RapidElasticity)
+ClassAssertion(:SchemaInstance :function_RapidElasticity)
+
+# Individual: :function_ResourcePooling (:function_ResourcePooling)
+
+ClassAssertion(:CloudPlatformFunction :function_ResourcePooling)
+ClassAssertion(:SchemaInstance :function_ResourcePooling)
+
+# Individual: :function_TenantManagement (:function_TenantManagement)
+
+ClassAssertion(:CloudServiceFunction :function_TenantManagement)
+ClassAssertion(:SchemaInstance :function_TenantManagement)
+
+# Individual: :function_UserBilling (:function_UserBilling)
+
+ClassAssertion(:CloudServiceFunction :function_UserBilling)
+ClassAssertion(:SchemaInstance :function_UserBilling)
+
+# Individual: :function_VMcloning (:function_VMcloning)
+
+ClassAssertion(:HypervisorFunction :function_VMcloning)
+ClassAssertion(:SchemaInstance :function_VMcloning)
+
+# Individual: :function_VMexport (:function_VMexport)
+
+ClassAssertion(:HypervisorFunction :function_VMexport)
+ClassAssertion(:SchemaInstance :function_VMexport)
+
+# Individual: :function_VMimageManagement (:function_VMimageManagement)
+
+ClassAssertion(:IaaSServiceFunction :function_VMimageManagement)
+ClassAssertion(:SchemaInstance :function_VMimageManagement)
+
+# Individual: :function_VMimport (:function_VMimport)
+
+ClassAssertion(:HypervisorFunction :function_VMimport)
+ClassAssertion(:SchemaInstance :function_VMimport)
+
+# Individual: :function_VMmanagement (:function_VMmanagement)
+
+ClassAssertion(:HypervisorFunction :function_VMmanagement)
+ClassAssertion(:SchemaInstance :function_VMmanagement)
+
+# Individual: :function_VMmigration (:function_VMmigration)
+
+ClassAssertion(:HypervisorFunction :function_VMmigration)
+ClassAssertion(:SchemaInstance :function_VMmigration)
+
+# Individual: :function_VMsnapshot (:function_VMsnapshot)
+
+ClassAssertion(:HypervisorFunction :function_VMsnapshot)
+ClassAssertion(:SchemaInstance :function_VMsnapshot)
+
+# Individual: :function_VMstorageManagement (:function_VMstorageManagement)
+
+ClassAssertion(:HypervisorFunction :function_VMstorageManagement)
+ClassAssertion(:SchemaInstance :function_VMstorageManagement)
+
+# Individual: :function_VMtemplateManagement (:function_VMtemplateManagement)
+
+ClassAssertion(:IaaSServiceFunction :function_VMtemplateManagement)
+ClassAssertion(:SchemaInstance :function_VMtemplateManagement)
+
+# Individual: :function_VirtualNetworkAdapterManagement (:function_VirtualNetworkAdapterManagement)
+
+ClassAssertion(:HypervisorFunction :function_VirtualNetworkAdapterManagement)
+ClassAssertion(:SchemaInstance :function_VirtualNetworkAdapterManagement)
+
+# Individual: :function_VirtualNetworkManagement (:function_VirtualNetworkManagement)
+
+ClassAssertion(:IaaSServiceFunction :function_VirtualNetworkManagement)
+ClassAssertion(:SchemaInstance :function_VirtualNetworkManagement)
+
+# Individual: :function_VirtualResourceManagement (:function_VirtualResourceManagement)
+
+ClassAssertion(:CloudServiceFunction :function_VirtualResourceManagement)
+ClassAssertion(:SchemaInstance :function_VirtualResourceManagement)
+
+# Individual: :function_VirtualResourceScaling (:function_VirtualResourceScaling)
+
+ClassAssertion(:CloudServiceFunction :function_VirtualResourceScaling)
+ClassAssertion(:SchemaInstance :function_VirtualResourceScaling)
+
+# Individual: :function_VirtualStorageManagement (:function_VirtualStorageManagement)
+
+ClassAssertion(:IaaSServiceFunction :function_VirtualStorageManagement)
+ClassAssertion(:SchemaInstance :function_VirtualStorageManagement)
+
+# Individual: :function_VirtualSwitchManagement (:function_VirtualSwitchManagement)
+
+ClassAssertion(:HypervisorFunction :function_VirtualSwitchManagement)
+ClassAssertion(:SchemaInstance :function_VirtualSwitchManagement)
 
 # Individual: :lc_ArchitectureAndDesign (:lc_ArchitectureAndDesign)
 
@@ -1323,10 +1996,6 @@ ClassAssertion(:SchemaStub :threat_InputDataManipulation)
 ClassAssertion(:InterceptionThreat :threat_Interception)
 ClassAssertion(:SchemaStub :threat_Interception)
 
-# Individual: :threat_Malware (:threat_Malware)
-
-ClassAssertion(:MalwareThreat :threat_Malware)
-
 # Individual: :threat_ManInTheMiddle (:threat_ManInTheMiddle)
 
 ClassAssertion(:ManInTheMiddleThreat :threat_ManInTheMiddle)
@@ -1418,9 +2087,4 @@ ClassAssertion(:SchemaInstance :type_ThreatPattern)
 ClassAssertion(:Type :type_ThreatPattern)
 
 
-SubObjectPropertyOf(ObjectPropertyChain(:hasFunction :isAffectedFunctionOf) :isAffectedComponentOfViaFunction)
-SubObjectPropertyOf(ObjectPropertyChain(:hasPart :isAffectedComponentOf) :isAffectedComponentOfViaPart)
-SubObjectPropertyOf(ObjectPropertyChain(:hasThreat :hasSTRIDE) :hasInferredSTRIDE)
-SubObjectPropertyOf(ObjectPropertyChain(:hasThreat :hasSecurityObjective) :hasInferredSecurityObjective)
-SubObjectPropertyOf(ObjectPropertyChain(:hasThreat :hasThreatImpact) :hasInferredThreatImpact)
 )

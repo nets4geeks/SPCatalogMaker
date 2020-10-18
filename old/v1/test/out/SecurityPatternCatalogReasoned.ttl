@@ -15,6 +15,9 @@
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> rdf:type owl:ObjectProperty ;
                                                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                owl:propertyChainAxiom ( <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction>
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isImplemented>
+                                                                                                       ) ;
                                                                                 rdfs:comment "Tells which common component(s) a pattern affects."@en .
 
 
@@ -22,6 +25,14 @@
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction> rdf:type owl:ObjectProperty ;
                                                                                rdfs:subPropertyOf owl:topObjectProperty ;
                                                                                rdfs:comment "Tells which system function(s) a pattern affects."@en .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorComponent
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorComponent> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                 owl:propertyChainAxiom ( <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent>
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts>
+                                                                                                        ) .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasArchitecturalLayer
@@ -38,6 +49,11 @@
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasDomain> rdf:type owl:ObjectProperty ;
                                                                      rdfs:subPropertyOf owl:topObjectProperty ;
                                                                      rdfs:comment "Tells to which domain(s) a pattern belongs to."@en .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasFlowLabel
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasFlowLabel> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasGroup
@@ -118,6 +134,23 @@
                                                                    rdfs:comment "Type of a pattern"@en .
 
 
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#implements
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#implements> rdf:type owl:ObjectProperty ;
+                                                                      owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isImplemented>
+                                                                                             ] ;
+                                                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                      owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isImplemented> .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> rdf:type owl:ObjectProperty ;
+                                                                     owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts>
+                                                                                            ] ;
+                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                     owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> ;
+                                                                     rdf:type owl:SymmetricProperty .
+
+
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isChildOf
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isChildOf> rdf:type owl:ObjectProperty ;
                                                                      owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isParentOf>
@@ -132,6 +165,13 @@
                                                                      owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasGroup>
                                                                                             ] ;
                                                                      rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isImplemented
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isImplemented> rdf:type owl:ObjectProperty ;
+                                                                         owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#implements>
+                                                                                                ] ;
+                                                                         rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isParentOf
@@ -656,6 +696,28 @@
                                                                  rdfs:subClassOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationalParameter> .
 
 
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPClientComponent
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPClientComponent> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ClientApplicationComponent> ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#implements> ;
+                                                                                                 owl:hasValue <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_HTTP>
+                                                                                               ] ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> ;
+                                                                                                 owl:hasValue <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPServer>
+                                                                                               ] .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPServerComponent
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPServerComponent> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerApplicationComponent> ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#implements> ;
+                                                                                                 owl:hasValue <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_HTTP>
+                                                                                               ] .
+
+
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HardwareComponent
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HardwareComponent> rdf:type owl:Class ;
                                                                              rdfs:subClassOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> .
@@ -751,6 +813,11 @@
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#IoTFunction
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#IoTFunction> rdf:type owl:Class ;
                                                                        rdfs:subClassOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Function> .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Layer7Function
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Layer7Function> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkFunction> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#LifecycleStage
@@ -875,6 +942,11 @@
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkApplicationComponent
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkApplicationComponent> rdf:type owl:Class ;
                                                                                        rdfs:subClassOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ApplicationComponent> .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkFunction
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkFunction> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Function> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationalParameter
@@ -1608,18 +1680,8 @@
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaStub> ,
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                                owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Cloud
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Cloud> rdf:type owl:NamedIndividual ,
-                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CloudComponent> ,
-                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaStub> ,
-                                                                                    owl:Thing .
+                                                                                                owl:Thing ;
+                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_ServerApplication> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_CloudActor
@@ -1925,6 +1987,40 @@
                                                                                              owl:Thing .
 
 
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPClient
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPClient> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ApplicationComponent> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ClientApplicationComponent> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPClientComponent> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkApplicationComponent> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaStub> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
+                                                                                         owl:Thing ;
+                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#implements> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_HTTP> ;
+                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPServer> .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPServer
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPServer> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ApplicationComponent> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPServerComponent> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkApplicationComponent> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaStub> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerApplicationComponent> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
+                                                                                         owl:Thing ;
+                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#implements> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_HTTP> ;
+                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPClient> .
+
+
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Hardware
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Hardware> rdf:type owl:NamedIndividual ,
                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
@@ -2168,7 +2264,8 @@
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaStub> ,
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerApplicationComponent> ,
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                                owl:Thing .
+                                                                                                owl:Thing ;
+                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_ClientApplication> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_ServiceBroker
@@ -2866,6 +2963,19 @@
                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityFunction> ,
                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareFunction> ,
                                                                                           owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_HTTP
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_HTTP> rdf:type owl:NamedIndividual ,
+                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Function> ,
+                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Layer7Function> ,
+                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkFunction> ,
+                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                                  owl:Thing ;
+                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isImplemented> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPClient> ,
+                                                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPServer> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_InterfaceAPI

@@ -1,0 +1,3 @@
+
+mvn -e exec:java -q -Dexec.mainClass="ab.applications.SPCatalogMaker" -Dexec.args="/home/net/gitprojects/SPCatalogMaker/maker_cloudclassic.properties"
+

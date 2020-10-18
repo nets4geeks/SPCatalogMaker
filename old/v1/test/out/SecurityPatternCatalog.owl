@@ -46,6 +46,8 @@ Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#FogC
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#FootprintingThreat>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Function>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Group>))
+Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPClientComponent>))
+Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPServerComponent>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HardwareComponent>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HypervisorFunction>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#IaaSServiceFunction>))
@@ -55,6 +57,7 @@ Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Inte
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#InterfaceFunction>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#IoTComponent>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#IoTFunction>))
+Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Layer7Function>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#LifecycleStage>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#LocalApplicationComponent>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#MalwareThreat>))
@@ -63,6 +66,7 @@ Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Mani
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#MiddlewareFunction>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#MisusePattern>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkApplicationComponent>))
+Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkFunction>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationalParameter>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter>))
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern>))
@@ -95,9 +99,11 @@ Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#User
 Declaration(Class(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#UserManagementFunction>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction>))
+Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorComponent>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasArchitecturalLayer>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasConstraintLevel>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasDomain>))
+Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasFlowLabel>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasGroup>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasLifecycleStage>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasResponseType>))
@@ -109,8 +115,11 @@ Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSc
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType>))
+Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#implements>))
+Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isChildOf>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isGroupOf>))
+Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isImplemented>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isParentOf>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isSTRIDEof>))
 Declaration(ObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isSecurityObjectiveOf>))
@@ -183,7 +192,6 @@ Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveS
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_BladeSystem>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_BladeSystemNode>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_ClientApplication>))
-Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Cloud>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_CloudActor>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_CloudAdministrator>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_CloudApplication>))
@@ -210,6 +218,8 @@ Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveS
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Filestore>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Firmware>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_FogApplication>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPClient>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPServer>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Hardware>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Hypervisor>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_IIoTApplication>))
@@ -304,6 +314,7 @@ Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveS
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_DistributeEventInformation>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_DistributeSensorData>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_EventLogging>))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_HTTP>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_InterfaceAPI>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_InterfaceCLI>))
 Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_InterfaceGUI>))
@@ -436,6 +447,14 @@ InverseObjectProperties(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 # Object Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType>)
 
 AnnotationAssertion(rdfs:comment <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> "Type of a pattern"@en)
+
+# Object Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#implements> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#implements>)
+
+InverseObjectProperties(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#implements> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isImplemented>)
+
+# Object Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts>)
+
+SymmetricObjectProperty(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts>)
 
 # Object Property: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isChildOf> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isChildOf>)
 
@@ -754,6 +773,17 @@ SubClassOf(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Function> <
 
 SubClassOf(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Group> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationalParameter>)
 
+# Class: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPClientComponent> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPClientComponent>)
+
+SubClassOf(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPClientComponent> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ClientApplicationComponent>)
+SubClassOf(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPClientComponent> ObjectHasValue(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#implements> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_HTTP>))
+SubClassOf(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPClientComponent> ObjectHasValue(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPServer>))
+
+# Class: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPServerComponent> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPServerComponent>)
+
+SubClassOf(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPServerComponent> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerApplicationComponent>)
+SubClassOf(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPServerComponent> ObjectHasValue(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#implements> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_HTTP>))
+
 # Class: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HardwareComponent> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HardwareComponent>)
 
 SubClassOf(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HardwareComponent> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component>)
@@ -802,6 +832,10 @@ SubClassOf(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#IoTComponen
 # Class: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#IoTFunction> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#IoTFunction>)
 
 SubClassOf(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#IoTFunction> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Function>)
+
+# Class: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Layer7Function> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Layer7Function>)
+
+SubClassOf(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Layer7Function> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkFunction>)
 
 # Class: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#LifecycleStage> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#LifecycleStage>)
 
@@ -853,6 +887,10 @@ EquivalentClasses(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Misu
 # Class: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkApplicationComponent> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkApplicationComponent>)
 
 SubClassOf(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkApplicationComponent> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ApplicationComponent>)
+
+# Class: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkFunction> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkFunction>)
+
+SubClassOf(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkFunction> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Function>)
 
 # Class: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationalParameter> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationalParameter>)
 
@@ -1221,11 +1259,7 @@ ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaI
 
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ClientApplicationComponent> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_ClientApplication>)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaStub> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_ClientApplication>)
-
-# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Cloud> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Cloud>)
-
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CloudComponent> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Cloud>)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaStub> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Cloud>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_ClientApplication> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_ServerApplication>)
 
 # Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_CloudActor> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_CloudActor>)
 
@@ -1355,6 +1389,16 @@ ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SystemS
 
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#FogComponent> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_FogApplication>)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaStub> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_FogApplication>)
+
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPClient> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPClient>)
+
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPClientComponent> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPClient>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaStub> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPClient>)
+
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPServer> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPServer>)
+
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HTTPServerComponent> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPServer>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaStub> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_HTTPServer>)
 
 # Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Hardware> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#component_Hardware>)
 
@@ -1798,6 +1842,11 @@ ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaI
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_EventLogging>)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityFunction> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_EventLogging>)
 
+# Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_HTTP> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_HTTP>)
+
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Layer7Function> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_HTTP>)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_HTTP>)
+
 # Individual: <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_InterfaceAPI> (<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_InterfaceAPI>)
 
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#APIInterface> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#function_InterfaceAPI>)
@@ -2189,4 +2238,6 @@ ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaI
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Type> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 
+SubObjectPropertyOf(ObjectPropertyChain(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts>) <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorComponent>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isImplemented>) <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent>)
 )
