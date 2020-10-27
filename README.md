@@ -35,10 +35,9 @@ The development of a SP catalog includes two steps:
 
 Then you can run the **Maker** application and get a *JSON schema file* from your ontologies.
 
-* On the second stage you can use a schema-based JSON editor (like well-known *Atom* with the *atom-json-editor* plugin) to create
-decriptions of patterns in the JSON format.
+* On the second stage you can use a schema-based JSON editor (like well-known *Atom* with the *atom-json-editor* plugin) to create *decriptions of patterns* in the JSON format.
 
-Maker allows creation of a target ontology (and inferred RDF dataset) from those pieces of JSON.
+Maker allows creation of a *target ontology* (and *inferred RDF dataset*) from those pieces of JSON.
 
 [Example is here](catalogs/cloudclassicdynamic/catalog/).
 The *common.owl* file is an example of ontological description of domain.
