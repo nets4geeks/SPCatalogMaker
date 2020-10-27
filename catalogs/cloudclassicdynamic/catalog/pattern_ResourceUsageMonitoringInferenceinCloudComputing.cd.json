@@ -1,0 +1,56 @@
+{
+  "id": "pattern_ResourceUsageMonitoringInferenceinCloudComputing",
+  "metadata": {
+    "ns:textContext": "",
+    "ns:textReference": "Hashizume, K. (2013). A reference architecture for cloud computing and its security applications. Florida Atlantic University.",
+    "ns:textSolutionDynamics": "",
+    "ns:imgSolutionStructure": "",
+    "ns:textSolutionStructure": "",
+    "ns:textSolution": "",
+    "ns:textAKAName": "",
+    "ns:textIntent": "",
+    "ns:textPDF": "",
+    "ns:textImplementation": "",
+    "ns:textProblem": "",
+    "ns:textAuthor": "",
+    "ns:textReviewSolution": "",
+    "ns:textConsequences": "",
+    "ns:textKnownUses": "",
+    "ns:textName": "Resource usage monitoring inference in Cloud Computing",
+    "ns:imgSolutionDynamics": "",
+    "ns:textReviewContext": "",
+    "ns:textURL": "https://fau.digital.flvc.org/islandora/object/fau%3A4099/datastream/OBJ/view/reference_architecture_for_cloud_computing_and_its_security_applications.pdf",
+    "ns:textReviewProblem": ""
+  },
+  "organization": {
+    "ns:hasGroup": [],
+    "ns:hasType": [
+      "ns:type_MisusePattern"
+    ],
+    "ns:relatesTo": [],
+    "ns:isChildOf": [],
+    "ns:usesPattern": [],
+    "ns:hasTemplate": []
+  },
+  "common": {
+    "ns:hasSecurityLevel": [],
+    "ns:hasDomain": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": [],
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": []
+  },
+  "context": {
+    "ns:hasAffectedComponent": [
+      "su:comp_VMM"
+    ],
+    "ns:hasAffectedFunction": []
+  },
+  "security": {
+    "ns:hasThreat": [
+      "ns:threat_SharedDataManipulation",
+      "ns:threat_Interception"
+    ],
+    "ns:hasSecurityConcern": []
+  }
+}

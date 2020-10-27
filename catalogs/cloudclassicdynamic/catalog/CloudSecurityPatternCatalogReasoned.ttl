@@ -1,40 +1,42 @@
-@prefix : <http://www.grsu.by/net/CloudSecurityPatternCatalog/misusepatterns#> .
+@prefix : <http://www.grsu.by/net/CloudClassicSecurityPatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.grsu.by/net/CloudSecurityPatternCatalog/misusepatterns> .
+@base <http://www.grsu.by/net/CloudClassicSecurityPatterns> .
 
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/misusepatterns> rdf:type owl:Ontology ;
-                                                                     owl:imports <http://www.grsu.by/net/CloudSecurityPatternCatalog/common> .
+<http://www.grsu.by/net/CloudClassicSecurityPatterns> rdf:type owl:Ontology ;
+                                                       owl:imports <http://www.grsu.by/net/CloudSecurityPatternCatalog/common> .
 
 #################################################################
 #    Object Properties
 #################################################################
 
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommonProperty
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommonProperty> rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> rdfs:subPropertyOf owl:topObjectProperty .
+
+
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf>
-                                                                                                       ] ;
-                                                                                rdfs:subPropertyOf owl:topObjectProperty .
+                                                                                                       ] .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedFunctionOf>
-                                                                                                      ] ;
-                                                                               rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasArchitecturalLayer
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasArchitecturalLayer> rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasConstraintLevel
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasConstraintLevel> rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasDomain
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasDomain> rdfs:subPropertyOf owl:topObjectProperty .
+                                                                                                      ] .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasFlowLabel
@@ -49,8 +51,7 @@
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasGroup
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasGroup> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isGroupOf>
-                                                                                           ] ;
-                                                                    rdfs:subPropertyOf owl:topObjectProperty .
+                                                                                           ] .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredSTRIDE
@@ -65,18 +66,10 @@
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredThreatImpact> rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasLifecycleStage
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasLifecycleStage> rdfs:subPropertyOf owl:topObjectProperty .
-
-
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasPart
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasPart> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isPartOf>
                                                                                           ] ;
                                                                    rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasResponseType
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasResponseType> rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE
@@ -85,38 +78,21 @@
                                                                      rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityLevel
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityLevel> rdfs:subPropertyOf owl:topObjectProperty .
-
-
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityObjective
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityObjective> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isSecurityObjectiveOf>
                                                                                                        ] ;
                                                                                 rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasTemplate
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasTemplate> rdfs:subPropertyOf owl:topObjectProperty .
-
-
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf>
-                                                                                            ] ;
-                                                                     rdfs:subPropertyOf owl:topObjectProperty .
+                                                                                            ] .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatImpactOf>
                                                                                                   ] ;
                                                                            rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts
@@ -129,7 +105,8 @@
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent>
                                                                                                         ] ;
-                                                                                 rdfs:subPropertyOf owl:topObjectProperty .
+                                                                                 rdfs:subPropertyOf [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty>
+                                                                                                    ] .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOfViaFunction
@@ -143,13 +120,13 @@
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedFunctionOf
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedFunctionOf> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction>
                                                                                                        ] ;
-                                                                                rdfs:subPropertyOf owl:topObjectProperty .
+                                                                                rdfs:subPropertyOf [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty>
+                                                                                                   ] .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isChildOf
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isChildOf> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isParentOf>
-                                                                                            ] ;
-                                                                     rdfs:subPropertyOf owl:topObjectProperty .
+                                                                                            ] .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isFunctionOf
@@ -161,13 +138,15 @@
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isGroupOf
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isGroupOf> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasGroup>
                                                                                             ] ;
-                                                                     rdfs:subPropertyOf owl:topObjectProperty .
+                                                                     rdfs:subPropertyOf [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty>
+                                                                                        ] .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isParentOf
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isParentOf> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isChildOf>
                                                                                              ] ;
-                                                                      rdfs:subPropertyOf owl:topObjectProperty .
+                                                                      rdfs:subPropertyOf [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty>
+                                                                                         ] .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isPartOf
@@ -203,13 +182,15 @@
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat>
                                                                                              ] ;
-                                                                      rdfs:subPropertyOf owl:topObjectProperty .
+                                                                      rdfs:subPropertyOf [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty>
+                                                                                         ] .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isUsedBy
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isUsedBy> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#usesPattern>
                                                                                            ] ;
-                                                                    rdfs:subPropertyOf owl:topObjectProperty .
+                                                                    rdfs:subPropertyOf [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty>
+                                                                                       ] .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#produces
@@ -221,7 +202,8 @@
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo>
                                                                                             ] ;
-                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                     rdfs:subPropertyOf [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty>
+                                                                                        ] ;
                                                                      owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> .
 
 
@@ -243,8 +225,7 @@
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#usesPattern
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#usesPattern> owl:equivalentProperty [ owl:inverseOf <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isUsedBy>
-                                                                                              ] ;
-                                                                       rdfs:subPropertyOf owl:topObjectProperty .
+                                                                                              ] .
 
 
 #################################################################
@@ -362,6 +343,101 @@
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://www.grsu.by/net/CloudClassicSecurityPatterns#pattern_MaliciousVirtualMachineCreation
+:pattern_MaliciousVirtualMachineCreation rdf:type owl:NamedIndividual ,
+                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#MisusePattern> ,
+                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                  owl:Thing ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository> ,
+                                                                                                                    <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository> ,
+                                                                                                                         <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
+                                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ExecuteArbitraryCode> ,
+                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
+                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ,
+                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_UnreliableExecution> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> .
+
+
+###  http://www.grsu.by/net/CloudClassicSecurityPatterns#pattern_MaliciousVirtualMachineMigrationProcess
+:pattern_MaliciousVirtualMachineMigrationProcess rdf:type owl:NamedIndividual ,
+                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#MisusePattern> ,
+                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                          owl:Thing ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ,
+                                                                                                                            <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#func_VMMigration> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> :pattern_SecureVirtualMachineImageRepository ,
+                                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ExcessiveAllocation> ,
+                                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception> ,
+                                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManInTheMiddle> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#func_VMMigration> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Authentication> ,
+                                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Availability> ,
+                                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
+                                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_GainPrivileges> ,
+                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
+                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ,
+                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ResourceConsumption> ,
+                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_UnreliableExecution> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ExcessiveAllocation> ,
+                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception> ,
+                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManInTheMiddle> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> :pattern_SecureVirtualMachineImageRepository .
+
+
+###  http://www.grsu.by/net/CloudClassicSecurityPatterns#pattern_ResourceUsageMonitoringInferenceinCloudComputing
+:pattern_ResourceUsageMonitoringInferenceinCloudComputing rdf:type owl:NamedIndividual ,
+                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#MisusePattern> ,
+                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                                   owl:Thing ;
+                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
+                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> ;
+                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception> ,
+                                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_SharedDataManipulation> ;
+                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
+                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
+                                                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
+                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
+                                                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ;
+                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception> ,
+                                                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_SharedDataManipulation> ;
+                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> .
+
+
+###  http://www.grsu.by/net/CloudClassicSecurityPatterns#pattern_SecureVirtualMachineImageRepository
+:pattern_SecureVirtualMachineImageRepository rdf:type owl:NamedIndividual ,
+                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityPattern> ,
+                                                      owl:Thing ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> :pattern_MaliciousVirtualMachineMigrationProcess ,
+                                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_SecurityPattern> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AccessControl> ,
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability> ,
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
+                                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ExecuteArbitraryCode> ,
+                                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
+                                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ,
+                                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_UnreliableExecution> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AccessControl> ,
+                                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_SecurityPattern> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> :pattern_MaliciousVirtualMachineMigrationProcess .
+
 
 ###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_BusinessService
 <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_BusinessService> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
@@ -707,84 +783,6 @@
                                                                                       owl:Thing ;
                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedFunctionOf> :pattern_MaliciousVirtualMachineMigrationProcess ;
                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isFunctionOf> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/misusepatterns#pattern_MaliciousVirtualMachineCreation
-:pattern_MaliciousVirtualMachineCreation rdf:type owl:NamedIndividual ,
-                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#MisusePattern> ,
-                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
-                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                  owl:Thing ;
-                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository> ,
-                                                                                                                         <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
-                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
-                                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
-                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ExecuteArbitraryCode> ,
-                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
-                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ,
-                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_UnreliableExecution> ;
-                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware> ;
-                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/misusepatterns#pattern_MaliciousVirtualMachineMigrationProcess
-:pattern_MaliciousVirtualMachineMigrationProcess rdf:type owl:NamedIndividual ,
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#MisusePattern> ,
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                          owl:Thing ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#func_VMMigration> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Authentication> ,
-                                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Availability> ,
-                                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
-                                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_GainPrivileges> ,
-                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
-                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ,
-                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ResourceConsumption> ,
-                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_UnreliableExecution> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ExcessiveAllocation> ,
-                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception> ,
-                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManInTheMiddle> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> :pattern_SecureVirtualMachineImageRepository .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/misusepatterns#pattern_ResourceUsageMonitoringInferenceinCloudComputing
-:pattern_ResourceUsageMonitoringInferenceinCloudComputing rdf:type owl:NamedIndividual ,
-                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#MisusePattern> ,
-                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
-                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                   owl:Thing ;
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
-                                                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
-                                                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ;
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception> ,
-                                                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_SharedDataManipulation> ;
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/misusepatterns#pattern_SecureVirtualMachineImageRepository
-:pattern_SecureVirtualMachineImageRepository rdf:type owl:NamedIndividual ,
-                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
-                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityPattern> ,
-                                                      owl:Thing ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
-                                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ExecuteArbitraryCode> ,
-                                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
-                                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ,
-                                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_UnreliableExecution> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AccessControl> ,
-                                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_SecurityPattern> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> :pattern_MaliciousVirtualMachineMigrationProcess .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_AccessControl

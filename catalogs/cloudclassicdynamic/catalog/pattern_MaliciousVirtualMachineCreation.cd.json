@@ -1,0 +1,39 @@
+{
+  "id": "pattern_MaliciousVirtualMachineCreation",
+  "metadata": {
+    "ns:textURL": "https://fau.digital.flvc.org/islandora/object/fau%3A4099/datastream/OBJ/view/reference_architecture_for_cloud_computing_and_its_security_applications.pdf",
+    "ns:textName": "Malicious VirtualMachine creation",
+    "ns:textReference": "Hashizume, K. (2013). A reference architecture for cloud computing and its security applications. Florida Atlantic University."
+  },
+  "organization": {
+    "ns:hasTemplate": [],
+    "ns:isChildOf": [],
+    "ns:hasType": [
+      "ns:type_MisusePattern"
+    ],
+    "ns:relatesTo": [],
+    "ns:usesPattern": [],
+    "ns:hasGroup": []
+  },
+  "common": {
+    "ns:hasSecurityLevel": [],
+    "ns:hasDomain": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasResponseType": [],
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": [
+      "su:comp_VMImageRepository",
+      "su:comp_VMM"
+    ]
+  },
+  "security": {
+    "ns:hasSecurityConcern": [],
+    "ns:hasThreat": [
+      "ns:threat_Malware"
+    ]
+  }
+}

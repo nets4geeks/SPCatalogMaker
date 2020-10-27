@@ -1,2 +1,0 @@
-# to "execute" the *.rq files, it requires Apache Jena, in particular, the arq tool 
-/home/net/apache-jena/bin/arq --query $1 --data ../out/CloudSecurityPatternCatalogReasoned.ttl

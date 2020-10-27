@@ -1,0 +1,292 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "title" : "JSON schema",
+  "properties" : {
+    "id" : {
+      "title" : "ID",
+      "description" : "Pattern's ID (compatible with OWL)",
+      "type" : "string"
+    },
+    "metadata" : {
+      "title" : "Metadata section",
+      "type" : "object",
+      "properties" : {
+        "ns:textConsequences" : {
+          "type" : "string",
+          "title" : "Consequences",
+          "description" : "Pattern's consequences (benefits and liabilities of the solution)"
+        },
+        "ns:textReference" : {
+          "type" : "string",
+          "title" : "Reference",
+          "description" : "A bibliographic description of a primary paper, describing a pattern"
+        },
+        "ns:textKnownUses" : {
+          "type" : "string",
+          "title" : "Known uses",
+          "description" : "Examples of pattern's use (at least three)"
+        },
+        "ns:imgSolutionStructure" : {
+          "type" : "string",
+          "title" : "Solution structure diagram",
+          "description" : "Downloadable URL(s) of a solution structure diagram(s)"
+        },
+        "ns:textReviewContext" : {
+          "type" : "string",
+          "title" : "Context (review)",
+          "description" : "Pattern’s context (review)"
+        },
+        "ns:textAuthor" : {
+          "type" : "string",
+          "title" : "Author(s)",
+          "description" : "Pattern’s author(s)"
+        },
+        "ns:textContext" : {
+          "type" : "string",
+          "title" : "Context",
+          "description" : "Pattern’s Context"
+        },
+        "ns:textProblem" : {
+          "type" : "string",
+          "title" : "Problem",
+          "description" : "Pattern’s Problem (forces that constrain the solution)."
+        },
+        "ns:textPDF" : {
+          "type" : "string",
+          "title" : "PDF",
+          "description" : "URL(s) of pattern’s PDF"
+        },
+        "ns:textImplementation" : {
+          "type" : "string",
+          "title" : "Implementation",
+          "description" : "Pattern's implementation. This can be a set of general recommendations, a sequence of what to do to use the pattern, some sample code."
+        },
+        "ns:textAKAName" : {
+          "type" : "string",
+          "title" : "Alternative name(s)",
+          "description" : "Alternative name(s)"
+        },
+        "ns:textSolutionDynamics" : {
+          "type" : "string",
+          "title" : "Solution dynamics",
+          "description" : "Dynamic aspects of the solution"
+        },
+        "ns:textURL" : {
+          "type" : "string",
+          "title" : "URL",
+          "description" : "URL(s) of pattern's webpage"
+        },
+        "ns:imgSolutionDynamics" : {
+          "type" : "string",
+          "title" : "Solution dynamics diagram",
+          "description" : "Downloadable URL(s) of a solution dynamics diagram(s)"
+        },
+        "ns:textSolutionStructure" : {
+          "type" : "string",
+          "title" : "Solution structure",
+          "description" : "The structure of the solution"
+        },
+        "ns:textReviewSolution" : {
+          "type" : "string",
+          "title" : "Solution (review)",
+          "description" : "Pattern’s solution (review)"
+        },
+        "ns:textReviewProblem" : {
+          "type" : "string",
+          "title" : "Problem (review)",
+          "description" : "Pattern’s problem (review)"
+        },
+        "ns:textSolution" : {
+          "type" : "string",
+          "title" : "Solution",
+          "description" : "Pattern’s solution"
+        },
+        "ns:textIntent" : {
+          "type" : "string",
+          "title" : "Intent",
+          "description" : "Pattern’s Intent"
+        },
+        "ns:textName" : {
+          "type" : "string",
+          "title" : "Name",
+          "description" : "Pattern’s primary name"
+        }
+      }
+    },
+    "organization" : {
+      "title" : "Organization and scope section",
+      "type" : "object",
+      "properties" : {
+        "ns:hasGroup" : {
+          "title" : "Group",
+          "description" : "Pattern's group",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "ns:relatesTo" : {
+          "title" : "Related Pattern",
+          "description" : "Enumerates patterns that are related to this one.",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "ns:isChildOf" : {
+          "title" : "Parent pattern",
+          "description" : "For a concrete pattern shows from which abstract pattern it has been made.",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "ns:usesPattern" : {
+          "title" : "Used pattern",
+          "description" : "Enumerates patterns that are used by this one.",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "ns:hasTemplate" : {
+          "title" : "Template",
+          "description" : "Template, used to describe a pattern.",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:template_POSA", "ns:template_GOF" ]
+          }
+        },
+        "ns:hasType" : {
+          "title" : "Type",
+          "description" : "Type of a pattern",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:type_SecurityPattern", "ns:type_MisusePattern", "ns:type_ThreatPattern" ]
+          }
+        }
+      }
+    },
+    "common" : {
+      "title" : "Common section",
+      "type" : "object",
+      "properties" : {
+        "ns:hasArchitecturalLayer" : {
+          "title" : "Architectural layer",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:al_DistributionLayer", "ns:al_ClientLayer", "ns:al_NetworkLayer", "ns:al_TransportLayer", "ns:al_DataLayer", "ns:al_LogicLayer", "ns:al_PlatformAndOperatingSystem" ]
+          }
+        },
+        "ns:hasResponseType" : {
+          "title" : "Response type",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:rt_Prevention", "ns:rt_Forensics", "ns:rt_Recovery", "ns:rt_Mitigation", "ns:rt_Deterrence", "ns:rt_Avoidance", "ns:rt_Detection" ]
+          }
+        },
+        "ns:hasLifecycleStage" : {
+          "title" : "Lifecycle stage",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:lc_ArchitectureAndDesign", "ns:lc_Deployment", "ns:lc_Operations", "ns:lc_Requirements", "ns:lc_Implementation", "ns:lc_BuildAndCompilation", "ns:lc_SystemConfiguration", "ns:lc_Installation" ]
+          }
+        },
+        "ns:hasDomain" : {
+          "title" : "Domain",
+          "description" : "Tells to which domain(s) a pattern belongs to.",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:domain_SCADA", "ns:domain_PaaS", "ns:domain_Military", "ns:domain_FogComputing", "ns:domain_CloudComputing", "ns:domain_InternetOfThings", "ns:domain_GridComputing", "ns:domain_IaaS", "ns:domain_NFV", "ns:domain_EdgeComputing", "ns:domain_SaaS", "ns:domain_ECommerce" ]
+          }
+        },
+        "ns:hasSecurityLevel" : {
+          "title" : "Security level",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:sl_PhysicalSecurity", "ns:sl_PersonnelSecurity", "ns:sl_CommunicationAndDataSecurity", "ns:sl_OperationalSecurity" ]
+          }
+        },
+        "ns:hasConstraintLevel" : {
+          "title" : "Constraint level",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:cl_OrganizationalLevel", "ns:cl_HumanLevel", "ns:cl_MechanismLevel", "ns:cl_RegulatoryLevel" ]
+          }
+        }
+      }
+    },
+    "context" : {
+      "title" : "Context section",
+      "type" : "object",
+      "properties" : {
+        "ns:hasAffectedComponent" : {
+          "title" : "Affected component",
+          "description" : "Tells which common component(s) a pattern affects.",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "su:comp_VMImage", "su:comp_Storage", "su:comp_Network", "su:comp_CloudAdministrator", "su:comp_Cluster", "su:comp_VMImageRepository", "su:comp_Hardware", "ns:component_Hardware", "su:comp_CloudConsumer", "su:comp_Portal", "su:comp_Node", "su:comp_VirtualEnvironment", "ns:component_Actor", "su:comp_SaaSService", "su:comp_VMM", "su:comp_VirtualMachine", "su:comp_CloudService", "su:comp_OperationalService", "su:comp_SaaSApplication", "su:comp_NonFunctionalService", "su:comp_IaaSService", "su:comp_Server", "ns:component_Software", "su:comp_PaaSService", "su:comp_SupportService", "su:comp_BusinessService", "su:comp_Cloud" ]
+          }
+        },
+        "ns:hasAffectedFunction" : {
+          "title" : "Affected function",
+          "description" : "Tells which system function(s) a pattern affects.",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "su:func_VMMigration", "ns:function_Software", "ns:function_Actor", "ns:function_Hardware" ]
+          }
+        }
+      }
+    },
+    "security" : {
+      "title" : "Security section",
+      "type" : "object",
+      "properties" : {
+        "ns:hasThreat" : {
+          "title" : "Threat",
+          "description" : "Tells what threats a pattern describes with connection to component(s) and function(s",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:threat_Flooding", "ns:threat_InformationGathering", "ns:threat_AuthenticationBypass", "ns:threat_EnvironmentManipulation", "ns:threat_PriviledgeEscalation", "ns:threat_InputDataManipulation", "ns:threat_SharedDataManipulation", "ns:threat_ProtocolAnalysis", "ns:threat_ManInTheMiddle", "ns:threat_Malware", "ns:threat_Excavation", "ns:threat_Footprinting", "ns:threat_ContentSpoofing", "ns:threat_IdentitySpoofing", "ns:threat_SessionManipulation", "ns:threat_BufferManipulation", "ns:threat_CodeInjection", "ns:threat_Interception", "ns:threat_ManipulationAPI", "ns:threat_ExcessiveAllocation" ]
+          }
+        },
+        "ns:hasSecurityConcern" : {
+          "title" : "Security concern",
+          "description" : "Tells which security concern(s) a pattern touches.",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:concern_RiskAssessment", "ns:concern_EnvironmentalProtection", "ns:concern_Awareness", "ns:concern_Maintenance", "ns:concern_MediaProtection", "ns:concern_Authorization", "ns:concern_IdentificationAndAuthentication", "ns:concern_IncidentResponse", "ns:concern_ConfigurationManagement", "ns:concern_CommunicationsProtection", "ns:concern_Training", "ns:concern_ServicesAcquisition", "ns:concern_SecurityAssessment", "ns:concern_Accountability", "ns:concern_ContingencyPlanning", "ns:concern_Planning", "ns:concern_PhysicalProtection", "ns:concern_ProgramManagement", "ns:concern_SystemProtection", "ns:concern_InformationIntegrity", "ns:concern_SystemIntegrity", "ns:concern_AccessControl", "ns:concern_Audit", "ns:concern_PersonnelSecurity" ]
+          }
+        }
+      }
+    }
+  }
+}

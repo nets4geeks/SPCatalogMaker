@@ -1,0 +1,375 @@
+Prefix(:=<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#>)
+Prefix(ns:=<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#>)
+Prefix(su:=<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.grsu.by/net/CloudSecurityPatternCatalog/common>
+Import(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema>)
+Annotation(rdfs:comment "Based on:
+Fernandez, E. B., Monge, R., & Hashizume, K. (2016). Building a security reference architecture for cloud systems. Requirements Engineering, 21(2), 225-249."@en)
+
+Declaration(Class(su:BusinessService))
+Declaration(Class(su:Cloud))
+Declaration(Class(su:CloudActor))
+Declaration(Class(su:CloudAdministrator))
+Declaration(Class(su:CloudComponent))
+Declaration(Class(su:CloudConsumer))
+Declaration(Class(su:CloudFunction))
+Declaration(Class(su:CloudService))
+Declaration(Class(su:Cluster))
+Declaration(Class(su:Hardware))
+Declaration(Class(su:IaaSService))
+Declaration(Class(su:Network))
+Declaration(Class(su:Node))
+Declaration(Class(su:NonFunctionalService))
+Declaration(Class(su:OperationalService))
+Declaration(Class(su:PaaSService))
+Declaration(Class(su:Portal))
+Declaration(Class(su:SaaSApplication))
+Declaration(Class(su:SaaSService))
+Declaration(Class(su:Server))
+Declaration(Class(su:Storage))
+Declaration(Class(su:SupportService))
+Declaration(Class(su:VMImage))
+Declaration(Class(su:VMImageRepository))
+Declaration(Class(su:VMM))
+Declaration(Class(su:VMMFunction))
+Declaration(Class(su:VMMigrationFunction))
+Declaration(Class(su:VirtualEnvironment))
+Declaration(Class(su:VirtualMachine))
+Declaration(NamedIndividual(su:comp_BusinessService))
+Declaration(NamedIndividual(su:comp_Cloud))
+Declaration(NamedIndividual(su:comp_CloudAdministrator))
+Declaration(NamedIndividual(su:comp_CloudConsumer))
+Declaration(NamedIndividual(su:comp_CloudService))
+Declaration(NamedIndividual(su:comp_Cluster))
+Declaration(NamedIndividual(su:comp_Hardware))
+Declaration(NamedIndividual(su:comp_IaaSService))
+Declaration(NamedIndividual(su:comp_Network))
+Declaration(NamedIndividual(su:comp_Node))
+Declaration(NamedIndividual(su:comp_NonFunctionalService))
+Declaration(NamedIndividual(su:comp_OperationalService))
+Declaration(NamedIndividual(su:comp_PaaSService))
+Declaration(NamedIndividual(su:comp_Portal))
+Declaration(NamedIndividual(su:comp_SaaSApplication))
+Declaration(NamedIndividual(su:comp_SaaSService))
+Declaration(NamedIndividual(su:comp_Server))
+Declaration(NamedIndividual(su:comp_Storage))
+Declaration(NamedIndividual(su:comp_SupportService))
+Declaration(NamedIndividual(su:comp_VMImage))
+Declaration(NamedIndividual(su:comp_VMImageRepository))
+Declaration(NamedIndividual(su:comp_VMM))
+Declaration(NamedIndividual(su:comp_VirtualEnvironment))
+Declaration(NamedIndividual(su:comp_VirtualMachine))
+Declaration(NamedIndividual(su:func_VMMigration))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: su:BusinessService (su:BusinessService)
+
+SubClassOf(su:BusinessService su:SupportService)
+
+# Class: su:Cloud (su:Cloud)
+
+SubClassOf(su:Cloud su:CloudComponent)
+SubClassOf(su:Cloud ObjectSomeValuesFrom(ns:suggestsInteraction su:Portal))
+SubClassOf(su:Cloud ObjectSomeValuesFrom(ns:suggestsPart su:CloudService))
+SubClassOf(su:Cloud ObjectSomeValuesFrom(ns:suggestsPart su:Cluster))
+SubClassOf(su:Cloud ObjectSomeValuesFrom(ns:suggestsPart su:SupportService))
+SubClassOf(su:Cloud ObjectHasValue(ns:hasPart su:comp_CloudService))
+SubClassOf(su:Cloud ObjectHasValue(ns:hasPart su:comp_Cluster))
+SubClassOf(su:Cloud ObjectHasValue(ns:hasPart su:comp_SupportService))
+
+# Class: su:CloudActor (su:CloudActor)
+
+AnnotationAssertion(rdfs:comment su:CloudActor "Cloud actor"@en)
+SubClassOf(su:CloudActor ns:ActorComponent)
+
+# Class: su:CloudAdministrator (su:CloudAdministrator)
+
+SubClassOf(su:CloudAdministrator su:CloudActor)
+SubClassOf(su:CloudAdministrator ObjectSomeValuesFrom(ns:suggestsInteraction su:Portal))
+SubClassOf(su:CloudAdministrator ObjectHasValue(ns:interacts su:comp_Portal))
+
+# Class: su:CloudComponent (su:CloudComponent)
+
+SubClassOf(su:CloudComponent ns:SoftwareComponent)
+
+# Class: su:CloudConsumer (su:CloudConsumer)
+
+SubClassOf(su:CloudConsumer su:CloudActor)
+SubClassOf(su:CloudConsumer ObjectSomeValuesFrom(ns:suggestsInteraction su:Portal))
+SubClassOf(su:CloudConsumer ObjectHasValue(ns:interacts su:comp_Portal))
+
+# Class: su:CloudFunction (su:CloudFunction)
+
+SubClassOf(su:CloudFunction ns:SoftwareFunction)
+
+# Class: su:CloudService (su:CloudService)
+
+SubClassOf(su:CloudService su:CloudComponent)
+
+# Class: su:Cluster (su:Cluster)
+
+SubClassOf(su:Cluster ns:HardwareComponent)
+SubClassOf(su:Cluster ObjectSomeValuesFrom(ns:suggestsPart su:Node))
+SubClassOf(su:Cluster ObjectHasValue(ns:hasPart su:comp_Node))
+
+# Class: su:Hardware (su:Hardware)
+
+SubClassOf(su:Hardware ns:HardwareComponent)
+SubClassOf(su:Hardware ObjectSomeValuesFrom(ns:suggestsInteraction su:VMM))
+SubClassOf(su:Hardware ObjectSomeValuesFrom(ns:suggestsPart su:Network))
+SubClassOf(su:Hardware ObjectSomeValuesFrom(ns:suggestsPart su:Server))
+SubClassOf(su:Hardware ObjectSomeValuesFrom(ns:suggestsPart su:Storage))
+SubClassOf(su:Hardware ObjectHasValue(ns:hasPart su:comp_Network))
+SubClassOf(su:Hardware ObjectHasValue(ns:hasPart su:comp_Server))
+SubClassOf(su:Hardware ObjectHasValue(ns:hasPart su:comp_Storage))
+
+# Class: su:IaaSService (su:IaaSService)
+
+SubClassOf(su:IaaSService su:CloudService)
+SubClassOf(su:IaaSService ObjectSomeValuesFrom(ns:suggestsInteraction su:VMImageRepository))
+SubClassOf(su:IaaSService ObjectSomeValuesFrom(ns:suggestsProduction su:VirtualMachine))
+SubClassOf(su:IaaSService ObjectHasValue(ns:interacts su:comp_VMImageRepository))
+SubClassOf(su:IaaSService ObjectHasValue(ns:produces su:comp_VirtualMachine))
+
+# Class: su:Network (su:Network)
+
+SubClassOf(su:Network ns:HardwareComponent)
+
+# Class: su:Node (su:Node)
+
+SubClassOf(su:Node ns:HardwareComponent)
+SubClassOf(su:Node ObjectSomeValuesFrom(ns:suggestsPart su:Hardware))
+SubClassOf(su:Node ObjectSomeValuesFrom(ns:suggestsPart su:VMM))
+SubClassOf(su:Node ObjectHasValue(ns:hasPart su:comp_Hardware))
+SubClassOf(su:Node ObjectHasValue(ns:hasPart su:comp_VMM))
+
+# Class: su:NonFunctionalService (su:NonFunctionalService)
+
+SubClassOf(su:NonFunctionalService su:SupportService)
+
+# Class: su:OperationalService (su:OperationalService)
+
+SubClassOf(su:OperationalService su:SupportService)
+
+# Class: su:PaaSService (su:PaaSService)
+
+SubClassOf(su:PaaSService su:CloudService)
+SubClassOf(su:PaaSService ObjectSomeValuesFrom(ns:suggestsProduction su:VirtualEnvironment))
+SubClassOf(su:PaaSService ObjectHasValue(ns:produces su:comp_VirtualEnvironment))
+
+# Class: su:Portal (su:Portal)
+
+SubClassOf(su:Portal su:CloudComponent)
+SubClassOf(su:Portal ObjectSomeValuesFrom(ns:suggestsInteraction su:Cloud))
+SubClassOf(su:Portal ObjectSomeValuesFrom(ns:suggestsInteraction su:CloudAdministrator))
+SubClassOf(su:Portal ObjectSomeValuesFrom(ns:suggestsInteraction su:CloudConsumer))
+SubClassOf(su:Portal ObjectHasValue(ns:interacts su:comp_Cloud))
+
+# Class: su:SaaSApplication (su:SaaSApplication)
+
+SubClassOf(su:SaaSApplication su:CloudComponent)
+
+# Class: su:SaaSService (su:SaaSService)
+
+SubClassOf(su:SaaSService su:CloudService)
+SubClassOf(su:SaaSService ObjectSomeValuesFrom(ns:suggestsProduction su:SaaSApplication))
+SubClassOf(su:SaaSService ObjectHasValue(ns:produces su:comp_SaaSApplication))
+
+# Class: su:Server (su:Server)
+
+SubClassOf(su:Server ns:HardwareComponent)
+
+# Class: su:Storage (su:Storage)
+
+SubClassOf(su:Storage ns:HardwareComponent)
+
+# Class: su:SupportService (su:SupportService)
+
+SubClassOf(su:SupportService su:CloudComponent)
+
+# Class: su:VMImage (su:VMImage)
+
+SubClassOf(su:VMImage su:CloudComponent)
+SubClassOf(su:VMImage ObjectSomeValuesFrom(ns:suggestsProduction su:VirtualMachine))
+SubClassOf(su:VMImage ObjectHasValue(ns:produces su:comp_VirtualMachine))
+
+# Class: su:VMImageRepository (su:VMImageRepository)
+
+SubClassOf(su:VMImageRepository su:CloudComponent)
+SubClassOf(su:VMImageRepository ObjectSomeValuesFrom(ns:suggestsInteraction su:IaaSService))
+SubClassOf(su:VMImageRepository ObjectSomeValuesFrom(ns:suggestsProduction su:VMImage))
+SubClassOf(su:VMImageRepository ObjectHasValue(ns:produces su:comp_VMImage))
+
+# Class: su:VMM (su:VMM)
+
+SubClassOf(su:VMM su:CloudComponent)
+SubClassOf(su:VMM ObjectSomeValuesFrom(ns:suggestsFunction su:VMMFunction))
+SubClassOf(su:VMM ObjectSomeValuesFrom(ns:suggestsInteraction su:Hardware))
+SubClassOf(su:VMM ObjectSomeValuesFrom(ns:suggestsPart su:VirtualMachine))
+SubClassOf(su:VMM ObjectHasValue(ns:hasFunction su:func_VMMigration))
+SubClassOf(su:VMM ObjectHasValue(ns:hasPart su:comp_VirtualMachine))
+SubClassOf(su:VMM ObjectHasValue(ns:interacts su:comp_Hardware))
+
+# Class: su:VMMFunction (su:VMMFunction)
+
+SubClassOf(su:VMMFunction su:CloudFunction)
+
+# Class: su:VMMigrationFunction (su:VMMigrationFunction)
+
+SubClassOf(su:VMMigrationFunction su:VMMFunction)
+
+# Class: su:VirtualEnvironment (su:VirtualEnvironment)
+
+SubClassOf(su:VirtualEnvironment su:CloudComponent)
+SubClassOf(su:VirtualEnvironment ObjectSomeValuesFrom(ns:suggestsPart su:VirtualMachine))
+SubClassOf(su:VirtualEnvironment ObjectSomeValuesFrom(ns:suggestsProduction su:SaaSApplication))
+SubClassOf(su:VirtualEnvironment ObjectHasValue(ns:hasPart su:comp_VirtualMachine))
+SubClassOf(su:VirtualEnvironment ObjectHasValue(ns:produces su:comp_SaaSApplication))
+
+# Class: su:VirtualMachine (su:VirtualMachine)
+
+SubClassOf(su:VirtualMachine su:CloudComponent)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: su:comp_BusinessService (su:comp_BusinessService)
+
+ClassAssertion(su:BusinessService su:comp_BusinessService)
+ClassAssertion(ns:SchemaStub su:comp_BusinessService)
+
+# Individual: su:comp_Cloud (su:comp_Cloud)
+
+ClassAssertion(su:Cloud su:comp_Cloud)
+ClassAssertion(ns:SchemaStub su:comp_Cloud)
+
+# Individual: su:comp_CloudAdministrator (su:comp_CloudAdministrator)
+
+ClassAssertion(su:CloudAdministrator su:comp_CloudAdministrator)
+ClassAssertion(ns:SchemaStub su:comp_CloudAdministrator)
+
+# Individual: su:comp_CloudConsumer (su:comp_CloudConsumer)
+
+ClassAssertion(su:CloudConsumer su:comp_CloudConsumer)
+ClassAssertion(ns:SchemaStub su:comp_CloudConsumer)
+
+# Individual: su:comp_CloudService (su:comp_CloudService)
+
+ClassAssertion(su:CloudService su:comp_CloudService)
+ClassAssertion(ns:SchemaStub su:comp_CloudService)
+
+# Individual: su:comp_Cluster (su:comp_Cluster)
+
+ClassAssertion(su:Cluster su:comp_Cluster)
+ClassAssertion(ns:SchemaStub su:comp_Cluster)
+
+# Individual: su:comp_Hardware (su:comp_Hardware)
+
+ClassAssertion(su:Hardware su:comp_Hardware)
+ClassAssertion(ns:SchemaStub su:comp_Hardware)
+
+# Individual: su:comp_IaaSService (su:comp_IaaSService)
+
+ClassAssertion(su:IaaSService su:comp_IaaSService)
+ClassAssertion(ns:SchemaStub su:comp_IaaSService)
+
+# Individual: su:comp_Network (su:comp_Network)
+
+ClassAssertion(su:Network su:comp_Network)
+ClassAssertion(ns:SchemaStub su:comp_Network)
+
+# Individual: su:comp_Node (su:comp_Node)
+
+ClassAssertion(su:Node su:comp_Node)
+ClassAssertion(ns:SchemaStub su:comp_Node)
+
+# Individual: su:comp_NonFunctionalService (su:comp_NonFunctionalService)
+
+ClassAssertion(su:NonFunctionalService su:comp_NonFunctionalService)
+ClassAssertion(ns:SchemaStub su:comp_NonFunctionalService)
+
+# Individual: su:comp_OperationalService (su:comp_OperationalService)
+
+ClassAssertion(su:OperationalService su:comp_OperationalService)
+ClassAssertion(ns:SchemaStub su:comp_OperationalService)
+
+# Individual: su:comp_PaaSService (su:comp_PaaSService)
+
+ClassAssertion(su:PaaSService su:comp_PaaSService)
+ClassAssertion(ns:SchemaStub su:comp_PaaSService)
+
+# Individual: su:comp_Portal (su:comp_Portal)
+
+ClassAssertion(su:Portal su:comp_Portal)
+ClassAssertion(ns:SchemaStub su:comp_Portal)
+
+# Individual: su:comp_SaaSApplication (su:comp_SaaSApplication)
+
+ClassAssertion(su:SaaSApplication su:comp_SaaSApplication)
+ClassAssertion(ns:SchemaStub su:comp_SaaSApplication)
+
+# Individual: su:comp_SaaSService (su:comp_SaaSService)
+
+ClassAssertion(su:SaaSService su:comp_SaaSService)
+ClassAssertion(ns:SchemaStub su:comp_SaaSService)
+
+# Individual: su:comp_Server (su:comp_Server)
+
+ClassAssertion(su:Server su:comp_Server)
+ClassAssertion(ns:SchemaStub su:comp_Server)
+
+# Individual: su:comp_Storage (su:comp_Storage)
+
+ClassAssertion(su:Storage su:comp_Storage)
+ClassAssertion(ns:SchemaStub su:comp_Storage)
+
+# Individual: su:comp_SupportService (su:comp_SupportService)
+
+ClassAssertion(su:SupportService su:comp_SupportService)
+ClassAssertion(ns:SchemaStub su:comp_SupportService)
+
+# Individual: su:comp_VMImage (su:comp_VMImage)
+
+ClassAssertion(su:VMImage su:comp_VMImage)
+ClassAssertion(ns:SchemaStub su:comp_VMImage)
+
+# Individual: su:comp_VMImageRepository (su:comp_VMImageRepository)
+
+ClassAssertion(su:VMImageRepository su:comp_VMImageRepository)
+ClassAssertion(ns:SchemaStub su:comp_VMImageRepository)
+
+# Individual: su:comp_VMM (su:comp_VMM)
+
+ClassAssertion(su:VMM su:comp_VMM)
+ClassAssertion(ns:SchemaStub su:comp_VMM)
+
+# Individual: su:comp_VirtualEnvironment (su:comp_VirtualEnvironment)
+
+ClassAssertion(su:VirtualEnvironment su:comp_VirtualEnvironment)
+ClassAssertion(ns:SchemaStub su:comp_VirtualEnvironment)
+
+# Individual: su:comp_VirtualMachine (su:comp_VirtualMachine)
+
+ClassAssertion(su:VirtualMachine su:comp_VirtualMachine)
+ClassAssertion(ns:SchemaStub su:comp_VirtualMachine)
+
+# Individual: su:func_VMMigration (su:func_VMMigration)
+
+ClassAssertion(su:VMMigrationFunction su:func_VMMigration)
+
+
+)

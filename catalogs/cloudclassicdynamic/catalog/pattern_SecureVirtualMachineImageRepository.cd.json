@@ -1,0 +1,41 @@
+{
+  "id": "pattern_SecureVirtualMachineImageRepository",
+  "metadata": {
+    "ns:textURL": "https://link.springer.com/article/10.1007/s00766-014-0218-7",
+    "ns:textName": "Secure Virtual Machine image repository",
+    "ns:textReference": "Fernandez, E. B., Monge, R., & Hashizume, K. (2016). Building a security reference architecture for cloud systems. Requirements Engineering, 21(2), 225-249."
+  },
+  "organization": {
+    "ns:hasTemplate": [],
+    "ns:isChildOf": [],
+    "ns:hasType": [
+      "ns:type_SecurityPattern"
+    ],
+    "ns:relatesTo": [],
+    "ns:usesPattern": [],
+    "ns:hasGroup": []
+  },
+  "common": {
+    "ns:hasSecurityLevel": [],
+    "ns:hasDomain": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasResponseType": [],
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": [
+      "su:comp_VMImageRepository"
+    ]
+  },
+  "security": {
+    "ns:hasSecurityConcern": [
+      "ns:concern_Accountability",
+      "ns:concern_AccessControl"
+    ],
+    "ns:hasThreat": [
+      "ns:threat_Malware"
+    ]
+  }
+}
