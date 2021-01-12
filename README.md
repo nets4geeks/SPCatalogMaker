@@ -12,7 +12,7 @@ in a formal way;
 dataset from a set of source ontologies and JSON (JavaScript Object Notation) files.
 
 
-We use these tools for development of the ACCTP catalog (see below).
+We use these tools for development of the **ACCTP catalog** (see below).
 
 ## Schema
 
