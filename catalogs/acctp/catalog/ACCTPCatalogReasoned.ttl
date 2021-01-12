@@ -1,13 +1,13 @@
-@prefix : <http://www.grsu.by/net/CloudClassicSecurityPatterns#> .
+@prefix : <http://www.grsu.by/net/ACCTP#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.grsu.by/net/CloudClassicSecurityPatterns> .
+@base <http://www.grsu.by/net/ACCTP> .
 
-<http://www.grsu.by/net/CloudClassicSecurityPatterns> rdf:type owl:Ontology ;
-                                                       owl:imports <http://www.grsu.by/net/CloudSecurityPatternCatalog/common> .
+<http://www.grsu.by/net/ACCTP> rdf:type owl:Ontology ;
+                                owl:imports <http://www.grsu.by/net/ACCTP/common> .
 
 #################################################################
 #    Object Properties
@@ -344,450 +344,181 @@
 #    Individuals
 #################################################################
 
-###  http://www.grsu.by/net/CloudClassicSecurityPatterns#pattern_MaliciousVirtualMachineCreation
-:pattern_MaliciousVirtualMachineCreation rdf:type owl:NamedIndividual ,
-                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#MisusePattern> ,
-                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
-                                                  owl:Thing ;
-                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository> ,
-                                                                                                                    <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
-                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> ;
-                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware> ;
-                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository> ,
-                                                                                                                         <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
-                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
-                                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
-                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ExecuteArbitraryCode> ,
-                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
-                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ,
-                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_UnreliableExecution> ;
-                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware> ;
-                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> ;
-                                         rdfs:label "Malicious VirtualMachine creation"@en .
+###  http://www.grsu.by/net/ACCTP#threatAA01_FailureOfRemoteService
+:threatAA01_FailureOfRemoteService rdf:type owl:NamedIndividual ,
+                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                            owl:Thing ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
+                                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ,
+                                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                   rdfs:comment "Unexpected failure of the remote service"@en ;
+                                   rdfs:label "AA01 Failure Of Remote Service"@en .
 
 
-###  http://www.grsu.by/net/CloudClassicSecurityPatterns#pattern_MaliciousVirtualMachineMigrationProcess
-:pattern_MaliciousVirtualMachineMigrationProcess rdf:type owl:NamedIndividual ,
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#MisusePattern> ,
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
-                                                          owl:Thing ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ,
-                                                                                                                            <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#func_VMMigration> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> :pattern_SecureVirtualMachineImageRepository ,
-                                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ExcessiveAllocation> ,
-                                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception> ,
-                                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManInTheMiddle> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#func_VMMigration> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Authentication> ,
-                                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Availability> ,
-                                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
-                                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_GainPrivileges> ,
-                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
-                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ,
-                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ResourceConsumption> ,
-                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_UnreliableExecution> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ExcessiveAllocation> ,
-                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception> ,
-                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManInTheMiddle> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> ;
-                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> :pattern_SecureVirtualMachineImageRepository ;
-                                                 rdfs:label "Malicious Virtual Machine migration process"@en .
+###  http://www.grsu.by/net/ACCTP#threatAA02_ConnectionLostToRemoteService
+:threatAA02_ConnectionLostToRemoteService rdf:type owl:NamedIndividual ,
+                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                   owl:Thing ;
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
+                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ,
+                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ;
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ;
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                          rdfs:comment "Connection lost to the remote service"@en ;
+                                          rdfs:label "AA02 Connection Lost To Remote Service"@en .
 
 
-###  http://www.grsu.by/net/CloudClassicSecurityPatterns#pattern_ResourceUsageMonitoringInferenceinCloudComputing
-:pattern_ResourceUsageMonitoringInferenceinCloudComputing rdf:type owl:NamedIndividual ,
-                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#MisusePattern> ,
-                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
-                                                                   owl:Thing ;
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> ;
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception> ,
-                                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_SharedDataManipulation> ;
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
-                                                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
-                                                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ;
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception> ,
-                                                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_SharedDataManipulation> ;
-                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern> ;
-                                                          rdfs:comment ""@en ;
-                                                          rdfs:label "Resource usage monitoring inference in Cloud Computing"@en .
+###  http://www.grsu.by/net/ACCTP#threatAB01_FailureOfCloudApplication
+:threatAB01_FailureOfCloudApplication rdf:type owl:NamedIndividual ,
+                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                               owl:Thing ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
+                                                                                                                 <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
+                                                                                                                 <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
+                                                                                                                      <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
+                                                                                                                      <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                      rdfs:comment "Unexpected failure of the cloud application"@en ;
+                                      rdfs:label "AB01 Failure Of Cloud Application"@en .
 
 
-###  http://www.grsu.by/net/CloudClassicSecurityPatterns#pattern_SecureVirtualMachineImageRepository
-:pattern_SecureVirtualMachineImageRepository rdf:type owl:NamedIndividual ,
-                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
-                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityPattern> ,
-                                                      owl:Thing ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> :pattern_MaliciousVirtualMachineMigrationProcess ,
-                                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_SecurityPattern> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AccessControl> ,
-                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability> ,
-                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
-                                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasInferredThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ExecuteArbitraryCode> ,
-                                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
-                                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ,
-                                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_UnreliableExecution> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AccessControl> ,
-                                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_SecurityPattern> ;
-                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> :pattern_MaliciousVirtualMachineMigrationProcess ;
-                                             rdfs:label "Secure Virtual Machine image repository"@en .
+###  http://www.grsu.by/net/ACCTP#threatAC01_MalwareFromCloudApplication
+:threatAC01_MalwareFromCloudApplication rdf:type owl:NamedIndividual ,
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                 owl:Thing ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
+                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                        rdfs:comment "Malicious content (malware) from the cloud application (affects remote user)"@en ;
+                                        rdfs:label "AC01 Malware From Cloud Application"@en .
 
 
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_BusinessService
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_BusinessService> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                          <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#SupportService> ,
-                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                          owl:Thing .
+###  http://www.grsu.by/net/ACCTP#threatAD01_BrokenAuthentication
+:threatAD01_BrokenAuthentication rdf:type owl:NamedIndividual ,
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                          owl:Thing ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
+                                                                                                             <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
+                                                                                                             <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
+                                                                                                         <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
+                                                                                                         <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                 rdfs:comment "No authentication or broken (weak) authentication of the cloud application"@en ;
+                                 rdfs:label "AD01 Broken Authentication"@en .
 
 
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cloud
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cloud> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                owl:Thing ;
-                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasPart> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_CloudService> ,
-                                                                                                                                          <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cluster> ,
-                                                                                                                                          <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Hardware> ,
-                                                                                                                                          <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Network> ,
-                                                                                                                                          <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Node> ,
-                                                                                                                                          <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Server> ,
-                                                                                                                                          <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Storage> ,
-                                                                                                                                          <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_SupportService> ,
-                                                                                                                                          <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ,
-                                                                                                                                          <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualMachine> ;
-                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Portal> ;
-                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOfViaPart> :pattern_MaliciousVirtualMachineCreation ,
-                                                                                                                                                               :pattern_MaliciousVirtualMachineMigrationProcess ,
-                                                                                                                                                               :pattern_ResourceUsageMonitoringInferenceinCloudComputing .
+###  http://www.grsu.by/net/ACCTP/common#comp_CloudApplication
+<http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerComponent> ,
+                                                                     owl:Thing ;
+                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf> :threatAA01_FailureOfRemoteService ,
+                                                                                                                                             :threatAA02_ConnectionLostToRemoteService ,
+                                                                                                                                             :threatAB01_FailureOfCloudApplication ,
+                                                                                                                                             :threatAD01_BrokenAuthentication .
 
 
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_CloudAdministrator
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_CloudAdministrator> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudActor> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ActorComponent> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                             owl:Thing ;
-                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Portal> .
+###  http://www.grsu.by/net/ACCTP/common#comp_CloudInfrastructure
+<http://www.grsu.by/net/ACCTP/common#comp_CloudInfrastructure> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerComponent> ,
+                                                                        owl:Thing .
 
 
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_CloudConsumer
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_CloudConsumer> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudActor> ,
-                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ActorComponent> ,
-                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                        owl:Thing ;
-                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Portal> .
+###  http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager
+<http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ClientComponent> ,
+                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                      owl:Thing .
 
 
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_CloudService
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_CloudService> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                       owl:Thing ;
-                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isPartOf> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cloud> .
+###  http://www.grsu.by/net/ACCTP/common#comp_ExternalService
+<http://www.grsu.by/net/ACCTP/common#comp_ExternalService> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerComponent> ,
+                                                                    owl:Thing ;
+                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf> :threatAB01_FailureOfCloudApplication .
 
 
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cluster
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cluster> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HardwareComponent> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                  owl:Thing ;
-                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasPart> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Hardware> ,
-                                                                                                                                            <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Network> ,
-                                                                                                                                            <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Node> ,
-                                                                                                                                            <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Server> ,
-                                                                                                                                            <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Storage> ,
-                                                                                                                                            <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ,
-                                                                                                                                            <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualMachine> ;
-                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOfViaPart> :pattern_MaliciousVirtualMachineCreation ,
-                                                                                                                                                                 :pattern_MaliciousVirtualMachineMigrationProcess ,
-                                                                                                                                                                 :pattern_ResourceUsageMonitoringInferenceinCloudComputing ;
-                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isPartOf> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cloud> .
+###  http://www.grsu.by/net/ACCTP/common#comp_PaaSApplication
+<http://www.grsu.by/net/ACCTP/common#comp_PaaSApplication> rdf:type <http://www.grsu.by/net/ACCTP/common#CloudApplication> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerComponent> ,
+                                                                    owl:Thing .
 
 
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Hardware
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Hardware> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HardwareComponent> ,
-                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                   owl:Thing ;
-                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasPart> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Network> ,
-                                                                                                                                             <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Server> ,
-                                                                                                                                             <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Storage> ;
-                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ;
-                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isPartOf> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cloud> ,
-                                                                                                                                              <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cluster> ,
-                                                                                                                                              <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Node> .
+###  http://www.grsu.by/net/ACCTP/common#comp_PriivacyManager
+<http://www.grsu.by/net/ACCTP/common#comp_PriivacyManager> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ClientComponent> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                    owl:Thing .
 
 
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_IaaSService
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_IaaSService> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                      <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudService> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                      owl:Thing ;
-                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository> ;
-                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#produces> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualMachine> .
+###  http://www.grsu.by/net/ACCTP/common#comp_RemoteUser
+<http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ClientComponent> ,
+                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                               owl:Thing ;
+                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf> :threatAB01_FailureOfCloudApplication ,
+                                                                                                                                       :threatAC01_MalwareFromCloudApplication .
 
 
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Network
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Network> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HardwareComponent> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                  owl:Thing ;
-                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isPartOf> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cloud> ,
-                                                                                                                                             <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cluster> ,
-                                                                                                                                             <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Hardware> ,
-                                                                                                                                             <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Node> .
+###  http://www.grsu.by/net/ACCTP/common#comp_SaaSApplication
+<http://www.grsu.by/net/ACCTP/common#comp_SaaSApplication> rdf:type <http://www.grsu.by/net/ACCTP/common#CloudApplication> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerComponent> ,
+                                                                    owl:Thing .
 
 
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Node
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Node> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HardwareComponent> ,
-                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                               owl:Thing ;
-                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasPart> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Hardware> ,
-                                                                                                                                         <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Network> ,
-                                                                                                                                         <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Server> ,
-                                                                                                                                         <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Storage> ,
-                                                                                                                                         <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ,
-                                                                                                                                         <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualMachine> ;
-                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOfViaPart> :pattern_MaliciousVirtualMachineCreation ,
-                                                                                                                                                              :pattern_MaliciousVirtualMachineMigrationProcess ,
-                                                                                                                                                              :pattern_ResourceUsageMonitoringInferenceinCloudComputing ;
-                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isPartOf> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cloud> ,
-                                                                                                                                          <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cluster> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_NonFunctionalService
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_NonFunctionalService> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                               <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#SupportService> ,
-                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                               owl:Thing .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_OperationalService
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_OperationalService> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                             <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#SupportService> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                             owl:Thing .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_PaaSService
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_PaaSService> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                      <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudService> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                      owl:Thing ;
-                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#produces> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualEnvironment> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Portal
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Portal> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                 owl:Thing ;
-                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cloud> ,
-                                                                                                                                             <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_CloudAdministrator> ,
-                                                                                                                                             <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_CloudConsumer> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_SaaSApplication
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_SaaSApplication> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                          owl:Thing ;
-                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isProducedBy> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_SaaSService> ,
-                                                                                                                                                         <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualEnvironment> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_SaaSService
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_SaaSService> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                      <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudService> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                      owl:Thing ;
-                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#produces> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_SaaSApplication> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Server
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Server> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HardwareComponent> ,
-                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                 owl:Thing ;
-                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isPartOf> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cloud> ,
-                                                                                                                                            <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cluster> ,
-                                                                                                                                            <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Hardware> ,
-                                                                                                                                            <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Node> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Storage
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Storage> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#HardwareComponent> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                  owl:Thing ;
-                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isPartOf> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cloud> ,
-                                                                                                                                             <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cluster> ,
-                                                                                                                                             <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Hardware> ,
-                                                                                                                                             <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Node> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_SupportService
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_SupportService> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                         owl:Thing ;
-                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isPartOf> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cloud> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImage
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImage> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                  owl:Thing ;
-                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isProducedBy> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository> ;
-                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#produces> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualMachine> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                            owl:Thing ;
-                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_IaaSService> ;
-                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf> :pattern_MaliciousVirtualMachineCreation ,
-                                                                                                                                                                    :pattern_SecureVirtualMachineImageRepository ;
-                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#produces> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImage> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                              owl:Thing ;
-                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasFunction> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#func_VMMigration> ;
-                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasPart> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualMachine> ;
-                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#interacts> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Hardware> ;
-                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf> :pattern_MaliciousVirtualMachineCreation ,
-                                                                                                                                                      :pattern_MaliciousVirtualMachineMigrationProcess ,
-                                                                                                                                                      :pattern_ResourceUsageMonitoringInferenceinCloudComputing ;
-                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOfViaFunction> :pattern_MaliciousVirtualMachineMigrationProcess ;
-                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isPartOf> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cloud> ,
-                                                                                                                                         <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cluster> ,
-                                                                                                                                         <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Node> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualEnvironment
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualEnvironment> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                             owl:Thing ;
-                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasPart> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualMachine> ;
-                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isProducedBy> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_PaaSService> ;
-                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#produces> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_SaaSApplication> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualMachine
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualMachine> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudComponent> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareComponent> ,
-                                                                                         owl:Thing ;
-                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isPartOf> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cloud> ,
-                                                                                                                                                    <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Cluster> ,
-                                                                                                                                                    <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_Node> ,
-                                                                                                                                                    <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> ,
-                                                                                                                                                    <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VirtualEnvironment> ;
-                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isProducedBy> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_IaaSService> ,
-                                                                                                                                                        <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImage> .
-
-
-###  http://www.grsu.by/net/CloudSecurityPatternCatalog/common#func_VMMigration
-<http://www.grsu.by/net/CloudSecurityPatternCatalog/common#func_VMMigration> rdf:type <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#CloudFunction> ,
-                                                                                      <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#VMMFunction> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Function> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareFunction> ,
-                                                                                      owl:Thing ;
-                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedFunctionOf> :pattern_MaliciousVirtualMachineMigrationProcess ;
-                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isFunctionOf> <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM> .
+###  http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine
+<http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                   owl:Thing .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_AccessControl
@@ -882,7 +613,10 @@
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                             owl:Thing .
+                                                                                             owl:Thing ;
+                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isSTRIDEof> :threatAA01_FailureOfRemoteService ,
+                                                                                                                                                          :threatAA02_ConnectionLostToRemoteService ,
+                                                                                                                                                          :threatAB01_FailureOfCloudApplication .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege
@@ -1017,14 +751,6 @@
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AccessControl> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                           owl:Thing .
-
-
-###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability> rdf:type owl:NamedIndividual ,
-                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityConcern> ,
-                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                           owl:Thing .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AssessmentAuthorizationAndMonitoring
@@ -1460,8 +1186,7 @@
                                                                                                owl:Thing ;
                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Availability> ;
                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ResourceConsumption> ,
-                                                                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_UnreliableExecution> ;
-                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :pattern_MaliciousVirtualMachineMigrationProcess .
+                                                                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_UnreliableExecution> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Flooding
@@ -1536,9 +1261,7 @@
                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
                                                                                         owl:Thing ;
                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ;
-                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ;
-                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :pattern_MaliciousVirtualMachineMigrationProcess ,
-                                                                                                                                                     :pattern_ResourceUsageMonitoringInferenceinCloudComputing .
+                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware
@@ -1552,9 +1275,7 @@
                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ExecuteArbitraryCode> ,
                                                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
                                                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ,
-                                                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_UnreliableExecution> ;
-                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :pattern_MaliciousVirtualMachineCreation ,
-                                                                                                                                                :pattern_SecureVirtualMachineImageRepository .
+                                                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_UnreliableExecution> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManInTheMiddle
@@ -1569,8 +1290,7 @@
                                                                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_GainPrivileges> ,
                                                                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
-                                                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ;
-                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :pattern_MaliciousVirtualMachineMigrationProcess .
+                                                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManipulationAPI
@@ -1640,8 +1360,7 @@
                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityObjective> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Confidentiality> ,
                                                                                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
-                                                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> ;
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :pattern_ResourceUsageMonitoringInferenceinCloudComputing .
+                                                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_AlterExecutionLogic

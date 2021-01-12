@@ -1,0 +1,114 @@
+Prefix(:=<http://www.grsu.by/net/ACCTP/common#>)
+Prefix(ns:=<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#>)
+Prefix(su:=<http://www.grsu.by/net/ACCTP/common#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.grsu.by/net/ACCTP/common>
+Import(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema>)
+
+Declaration(Class(su:CloudApplication))
+Declaration(Class(su:CloudInfrastructure))
+Declaration(Class(su:ComplianceManager))
+Declaration(Class(su:ExternalService))
+Declaration(Class(su:PaaSApplication))
+Declaration(Class(su:PrivacyManager))
+Declaration(Class(su:RemoteUser))
+Declaration(Class(su:SaaSApplication))
+Declaration(Class(su:VirtualMachine))
+Declaration(NamedIndividual(su:comp_CloudApplication))
+Declaration(NamedIndividual(su:comp_CloudInfrastructure))
+Declaration(NamedIndividual(su:comp_ComplianceManager))
+Declaration(NamedIndividual(su:comp_ExternalService))
+Declaration(NamedIndividual(su:comp_PaaSApplication))
+Declaration(NamedIndividual(su:comp_PriivacyManager))
+Declaration(NamedIndividual(su:comp_RemoteUser))
+Declaration(NamedIndividual(su:comp_SaaSApplication))
+Declaration(NamedIndividual(su:comp_VirtualMachine))
+############################
+#   Classes
+############################
+
+# Class: su:CloudApplication (su:CloudApplication)
+
+SubClassOf(su:CloudApplication ns:ServerComponent)
+
+# Class: su:CloudInfrastructure (su:CloudInfrastructure)
+
+SubClassOf(su:CloudInfrastructure ns:ServerComponent)
+
+# Class: su:ComplianceManager (su:ComplianceManager)
+
+SubClassOf(su:ComplianceManager ns:ClientComponent)
+
+# Class: su:ExternalService (su:ExternalService)
+
+SubClassOf(su:ExternalService ns:ServerComponent)
+
+# Class: su:PaaSApplication (su:PaaSApplication)
+
+SubClassOf(su:PaaSApplication su:CloudApplication)
+
+# Class: su:PrivacyManager (su:PrivacyManager)
+
+SubClassOf(su:PrivacyManager ns:ClientComponent)
+
+# Class: su:RemoteUser (su:RemoteUser)
+
+SubClassOf(su:RemoteUser ns:ClientComponent)
+
+# Class: su:SaaSApplication (su:SaaSApplication)
+
+SubClassOf(su:SaaSApplication su:CloudApplication)
+
+# Class: su:VirtualMachine (su:VirtualMachine)
+
+SubClassOf(su:VirtualMachine su:CloudApplication)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: su:comp_CloudApplication (su:comp_CloudApplication)
+
+ClassAssertion(su:CloudApplication su:comp_CloudApplication)
+
+# Individual: su:comp_CloudInfrastructure (su:comp_CloudInfrastructure)
+
+ClassAssertion(su:CloudInfrastructure su:comp_CloudInfrastructure)
+
+# Individual: su:comp_ComplianceManager (su:comp_ComplianceManager)
+
+ClassAssertion(su:ComplianceManager su:comp_ComplianceManager)
+
+# Individual: su:comp_ExternalService (su:comp_ExternalService)
+
+ClassAssertion(su:ExternalService su:comp_ExternalService)
+
+# Individual: su:comp_PaaSApplication (su:comp_PaaSApplication)
+
+ClassAssertion(su:PaaSApplication su:comp_PaaSApplication)
+
+# Individual: su:comp_PriivacyManager (su:comp_PriivacyManager)
+
+ClassAssertion(su:PrivacyManager su:comp_PriivacyManager)
+
+# Individual: su:comp_RemoteUser (su:comp_RemoteUser)
+
+ClassAssertion(su:RemoteUser su:comp_RemoteUser)
+
+# Individual: su:comp_SaaSApplication (su:comp_SaaSApplication)
+
+ClassAssertion(su:SaaSApplication su:comp_SaaSApplication)
+
+# Individual: su:comp_VirtualMachine (su:comp_VirtualMachine)
+
+ClassAssertion(ns:SchemaStub su:comp_VirtualMachine)
+
+
+)

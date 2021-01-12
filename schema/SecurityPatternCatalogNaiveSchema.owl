@@ -12,10 +12,12 @@ Annotation(rdfs:comment "The Security Pattern Catalog Schema ontology is an onto
 
 Declaration(Class(ns:ActorComponent))
 Declaration(Class(ns:ActorFunction))
+Declaration(Class(ns:AggressorRole))
 Declaration(Class(ns:ApplicationArchitecturalLayer))
 Declaration(Class(ns:ArchitecturalLayer))
 Declaration(Class(ns:AuthenticationBypassThreat))
 Declaration(Class(ns:BufferManipulationThreat))
+Declaration(Class(ns:ClientComponent))
 Declaration(Class(ns:CloudComputingDomain))
 Declaration(Class(ns:CodeInjectionThreat))
 Declaration(Class(ns:CommonParameter))
@@ -58,6 +60,7 @@ Declaration(Class(ns:SecurityLevel))
 Declaration(Class(ns:SecurityObjective))
 Declaration(Class(ns:SecurityParameter))
 Declaration(Class(ns:SecurityPattern))
+Declaration(Class(ns:ServerComponent))
 Declaration(Class(ns:SessionManipulationThreat))
 Declaration(Class(ns:SharedDataManipulationThreat))
 Declaration(Class(ns:SoftwareComponent))
@@ -68,12 +71,15 @@ Declaration(Class(ns:Threat))
 Declaration(Class(ns:ThreatImpact))
 Declaration(Class(ns:ThreatPattern))
 Declaration(Class(ns:Type))
+Declaration(Class(ns:Weakness))
 Declaration(ObjectProperty(ns:CommonProperty))
 Declaration(ObjectProperty(ns:ContextProperty))
 Declaration(ObjectProperty(ns:OrganizationProperty))
 Declaration(ObjectProperty(ns:SecurityProperty))
 Declaration(ObjectProperty(ns:hasAffectedComponent))
 Declaration(ObjectProperty(ns:hasAffectedFunction))
+Declaration(ObjectProperty(ns:hasAggressor))
+Declaration(ObjectProperty(ns:hasAggressorRole))
 Declaration(ObjectProperty(ns:hasArchitecturalLayer))
 Declaration(ObjectProperty(ns:hasConstraintLevel))
 Declaration(ObjectProperty(ns:hasDomain))
@@ -94,6 +100,7 @@ Declaration(ObjectProperty(ns:hasTemplate))
 Declaration(ObjectProperty(ns:hasThreat))
 Declaration(ObjectProperty(ns:hasThreatImpact))
 Declaration(ObjectProperty(ns:hasType))
+Declaration(ObjectProperty(ns:hasWeakness))
 Declaration(ObjectProperty(ns:interacts))
 Declaration(ObjectProperty(ns:isAffectedComponentOf))
 Declaration(ObjectProperty(ns:isAffectedComponentOfViaFunction))
@@ -166,29 +173,23 @@ Declaration(NamedIndividual(ns:component_Actor))
 Declaration(NamedIndividual(ns:component_Hardware))
 Declaration(NamedIndividual(ns:component_Software))
 Declaration(NamedIndividual(ns:concern_AccessControl))
-Declaration(NamedIndividual(ns:concern_Accountability))
-Declaration(NamedIndividual(ns:concern_Audit))
-Declaration(NamedIndividual(ns:concern_Authorization))
-Declaration(NamedIndividual(ns:concern_Awareness))
-Declaration(NamedIndividual(ns:concern_CommunicationsProtection))
+Declaration(NamedIndividual(ns:concern_AssessmentAuthorizationAndMonitoring))
+Declaration(NamedIndividual(ns:concern_AuditAndAccountability))
+Declaration(NamedIndividual(ns:concern_AwarenessAndTraining))
 Declaration(NamedIndividual(ns:concern_ConfigurationManagement))
 Declaration(NamedIndividual(ns:concern_ContingencyPlanning))
-Declaration(NamedIndividual(ns:concern_EnvironmentalProtection))
 Declaration(NamedIndividual(ns:concern_IdentificationAndAuthentication))
 Declaration(NamedIndividual(ns:concern_IncidentResponse))
-Declaration(NamedIndividual(ns:concern_InformationIntegrity))
 Declaration(NamedIndividual(ns:concern_Maintenance))
 Declaration(NamedIndividual(ns:concern_MediaProtection))
 Declaration(NamedIndividual(ns:concern_PersonnelSecurity))
-Declaration(NamedIndividual(ns:concern_PhysicalProtection))
+Declaration(NamedIndividual(ns:concern_PhysicalAndEnvironmentalProtection))
 Declaration(NamedIndividual(ns:concern_Planning))
 Declaration(NamedIndividual(ns:concern_ProgramManagement))
 Declaration(NamedIndividual(ns:concern_RiskAssessment))
-Declaration(NamedIndividual(ns:concern_SecurityAssessment))
-Declaration(NamedIndividual(ns:concern_ServicesAcquisition))
-Declaration(NamedIndividual(ns:concern_SystemIntegrity))
-Declaration(NamedIndividual(ns:concern_SystemProtection))
-Declaration(NamedIndividual(ns:concern_Training))
+Declaration(NamedIndividual(ns:concern_SystemAndCommunicationsProtection))
+Declaration(NamedIndividual(ns:concern_SystemAndInformationIntegrity))
+Declaration(NamedIndividual(ns:concern_SystemAndServicesAcquisition))
 Declaration(NamedIndividual(ns:domain_CloudComputing))
 Declaration(NamedIndividual(ns:domain_ECommerce))
 Declaration(NamedIndividual(ns:domain_EdgeComputing))
@@ -212,6 +213,8 @@ Declaration(NamedIndividual(ns:lc_Installation))
 Declaration(NamedIndividual(ns:lc_Operations))
 Declaration(NamedIndividual(ns:lc_Requirements))
 Declaration(NamedIndividual(ns:lc_SystemConfiguration))
+Declaration(NamedIndividual(ns:role_Client))
+Declaration(NamedIndividual(ns:role_Server))
 Declaration(NamedIndividual(ns:rt_Avoidance))
 Declaration(NamedIndividual(ns:rt_Detection))
 Declaration(NamedIndividual(ns:rt_Deterrence))
@@ -279,6 +282,18 @@ SubObjectPropertyOf(ns:hasAffectedFunction ns:ContextProperty)
 InverseObjectProperties(ns:hasAffectedFunction ns:isAffectedFunctionOf)
 ObjectPropertyRange(ns:hasAffectedFunction ns:Function)
 
+# Object Property: ns:hasAggressor (Aggressor)
+
+AnnotationAssertion(rdfs:comment ns:hasAggressor "Possible aggressor"@en)
+AnnotationAssertion(rdfs:label ns:hasAggressor "Aggressor"@en)
+SubObjectPropertyOf(ns:hasAggressor ns:SecurityProperty)
+ObjectPropertyRange(ns:hasAggressor ns:Component)
+
+# Object Property: ns:hasAggressorRole (ns:hasAggressorRole)
+
+SubObjectPropertyOf(ns:hasAggressorRole ns:SecurityProperty)
+ObjectPropertyRange(ns:hasAggressorRole ns:AggressorRole)
+
 # Object Property: ns:hasArchitecturalLayer (Architectural layer)
 
 AnnotationAssertion(rdfs:label ns:hasArchitecturalLayer "Architectural layer"@en)
@@ -341,10 +356,13 @@ AnnotationAssertion(rdfs:label ns:hasResponseType "Response type"@en)
 SubObjectPropertyOf(ns:hasResponseType ns:CommonProperty)
 ObjectPropertyRange(ns:hasResponseType ns:ResponseType)
 
-# Object Property: ns:hasSTRIDE (ns:hasSTRIDE)
+# Object Property: ns:hasSTRIDE (STRIDE)
 
-AnnotationAssertion(rdfs:comment ns:hasSTRIDE "Tells which STRIDE item(s) a pattern touches."@en)
+AnnotationAssertion(rdfs:comment ns:hasSTRIDE "Related STRIDE item(s)"@en)
+AnnotationAssertion(rdfs:label ns:hasSTRIDE "STRIDE"@en)
+SubObjectPropertyOf(ns:hasSTRIDE ns:SecurityProperty)
 InverseObjectProperties(ns:hasSTRIDE ns:isSTRIDEof)
+ObjectPropertyRange(ns:hasSTRIDE ns:STRIDE)
 
 # Object Property: ns:hasSecurityConcern (Security concern)
 
@@ -371,10 +389,10 @@ AnnotationAssertion(rdfs:label ns:hasTemplate "Template"@en)
 SubObjectPropertyOf(ns:hasTemplate ns:OrganizationProperty)
 ObjectPropertyRange(ns:hasTemplate ns:Template)
 
-# Object Property: ns:hasThreat (Threat)
+# Object Property: ns:hasThreat (Threat (CAPEC-based))
 
-AnnotationAssertion(rdfs:comment ns:hasThreat "Tells what threats a pattern describes with connection to component(s) and function(s"@en)
-AnnotationAssertion(rdfs:label ns:hasThreat "Threat"@en)
+AnnotationAssertion(rdfs:comment ns:hasThreat "Tells what threats (CAPEC attack patterns) a pattern describes with connection to component(s) and function(s"@en)
+AnnotationAssertion(rdfs:label ns:hasThreat "Threat (CAPEC-based)"@en)
 SubObjectPropertyOf(ns:hasThreat ns:SecurityProperty)
 InverseObjectProperties(ns:hasThreat ns:isThreatOf)
 ObjectPropertyRange(ns:hasThreat ns:Threat)
@@ -390,6 +408,13 @@ AnnotationAssertion(rdfs:comment ns:hasType "Type of a pattern"@en)
 AnnotationAssertion(rdfs:label ns:hasType "Type"@en)
 SubObjectPropertyOf(ns:hasType ns:OrganizationProperty)
 ObjectPropertyRange(ns:hasType ns:Type)
+
+# Object Property: ns:hasWeakness (Weakness (CWE-based))
+
+AnnotationAssertion(rdfs:comment ns:hasWeakness "Possible related weknesses (CWE-based)"@en)
+AnnotationAssertion(rdfs:label ns:hasWeakness "Weakness (CWE-based)"@en)
+SubObjectPropertyOf(ns:hasWeakness ns:SecurityProperty)
+ObjectPropertyRange(ns:hasWeakness ns:Weakness)
 
 # Object Property: ns:interacts (ns:interacts)
 
@@ -608,6 +633,10 @@ SubClassOf(ns:ActorComponent ns:Component)
 
 SubClassOf(ns:ActorFunction ns:Function)
 
+# Class: ns:AggressorRole (ns:AggressorRole)
+
+SubClassOf(ns:AggressorRole ns:SecurityParameter)
+
 # Class: ns:ApplicationArchitecturalLayer (ns:ApplicationArchitecturalLayer)
 
 SubClassOf(ns:ApplicationArchitecturalLayer ns:ArchitecturalLayer)
@@ -632,6 +661,10 @@ SubClassOf(ns:BufferManipulationThreat ObjectHasValue(ns:hasSecurityObjective ns
 SubClassOf(ns:BufferManipulationThreat ObjectHasValue(ns:hasThreatImpact ns:ti_ModifyData))
 SubClassOf(ns:BufferManipulationThreat ObjectHasValue(ns:hasThreatImpact ns:ti_ReadData))
 SubClassOf(ns:BufferManipulationThreat ObjectHasValue(ns:hasThreatImpact ns:ti_UnreliableExecution))
+
+# Class: ns:ClientComponent (ns:ClientComponent)
+
+SubClassOf(ns:ClientComponent ns:Component)
 
 # Class: ns:CloudComputingDomain (ns:CloudComputingDomain)
 
@@ -849,6 +882,10 @@ SubClassOf(ns:SecurityParameter ns:Parameter)
 
 EquivalentClasses(ns:SecurityPattern ObjectIntersectionOf(ns:Pattern ObjectHasValue(ns:hasType ns:type_SecurityPattern)))
 
+# Class: ns:ServerComponent (ns:ServerComponent)
+
+SubClassOf(ns:ServerComponent ns:Component)
+
 # Class: ns:SessionManipulationThreat (ns:SessionManipulationThreat)
 
 SubClassOf(ns:SessionManipulationThreat ns:SoftwareThreat)
@@ -899,6 +936,10 @@ EquivalentClasses(ns:ThreatPattern ObjectIntersectionOf(ns:Pattern ObjectHasValu
 # Class: ns:Type (ns:Type)
 
 SubClassOf(ns:Type ns:OrganizationalParameter)
+
+# Class: ns:Weakness (ns:Weakness)
+
+SubClassOf(ns:Weakness ns:SecurityParameter)
 
 
 ############################
@@ -1050,30 +1091,20 @@ ClassAssertion(ns:SoftwareComponent ns:component_Software)
 ClassAssertion(ns:SchemaInstance ns:concern_AccessControl)
 ClassAssertion(ns:SecurityConcern ns:concern_AccessControl)
 
-# Individual: ns:concern_Accountability (ns:concern_Accountability)
+# Individual: ns:concern_AssessmentAuthorizationAndMonitoring (ns:concern_AssessmentAuthorizationAndMonitoring)
 
-ClassAssertion(ns:SchemaInstance ns:concern_Accountability)
-ClassAssertion(ns:SecurityConcern ns:concern_Accountability)
+ClassAssertion(ns:SchemaInstance ns:concern_AssessmentAuthorizationAndMonitoring)
+ClassAssertion(ns:SecurityConcern ns:concern_AssessmentAuthorizationAndMonitoring)
 
-# Individual: ns:concern_Audit (ns:concern_Audit)
+# Individual: ns:concern_AuditAndAccountability (ns:concern_AuditAndAccountability)
 
-ClassAssertion(ns:SchemaInstance ns:concern_Audit)
-ClassAssertion(ns:SecurityConcern ns:concern_Audit)
+ClassAssertion(ns:SchemaInstance ns:concern_AuditAndAccountability)
+ClassAssertion(ns:SecurityConcern ns:concern_AuditAndAccountability)
 
-# Individual: ns:concern_Authorization (ns:concern_Authorization)
+# Individual: ns:concern_AwarenessAndTraining (ns:concern_AwarenessAndTraining)
 
-ClassAssertion(ns:SchemaInstance ns:concern_Authorization)
-ClassAssertion(ns:SecurityConcern ns:concern_Authorization)
-
-# Individual: ns:concern_Awareness (ns:concern_Awareness)
-
-ClassAssertion(ns:SchemaInstance ns:concern_Awareness)
-ClassAssertion(ns:SecurityConcern ns:concern_Awareness)
-
-# Individual: ns:concern_CommunicationsProtection (ns:concern_CommunicationsProtection)
-
-ClassAssertion(ns:SchemaInstance ns:concern_CommunicationsProtection)
-ClassAssertion(ns:SecurityConcern ns:concern_CommunicationsProtection)
+ClassAssertion(ns:SchemaInstance ns:concern_AwarenessAndTraining)
+ClassAssertion(ns:SecurityConcern ns:concern_AwarenessAndTraining)
 
 # Individual: ns:concern_ConfigurationManagement (ns:concern_ConfigurationManagement)
 
@@ -1085,11 +1116,6 @@ ClassAssertion(ns:SecurityConcern ns:concern_ConfigurationManagement)
 ClassAssertion(ns:SchemaInstance ns:concern_ContingencyPlanning)
 ClassAssertion(ns:SecurityConcern ns:concern_ContingencyPlanning)
 
-# Individual: ns:concern_EnvironmentalProtection (ns:concern_EnvironmentalProtection)
-
-ClassAssertion(ns:SchemaInstance ns:concern_EnvironmentalProtection)
-ClassAssertion(ns:SecurityConcern ns:concern_EnvironmentalProtection)
-
 # Individual: ns:concern_IdentificationAndAuthentication (ns:concern_IdentificationAndAuthentication)
 
 ClassAssertion(ns:SchemaInstance ns:concern_IdentificationAndAuthentication)
@@ -1099,11 +1125,6 @@ ClassAssertion(ns:SecurityConcern ns:concern_IdentificationAndAuthentication)
 
 ClassAssertion(ns:SchemaInstance ns:concern_IncidentResponse)
 ClassAssertion(ns:SecurityConcern ns:concern_IncidentResponse)
-
-# Individual: ns:concern_InformationIntegrity (ns:concern_InformationIntegrity)
-
-ClassAssertion(ns:SchemaInstance ns:concern_InformationIntegrity)
-ClassAssertion(ns:SecurityConcern ns:concern_InformationIntegrity)
 
 # Individual: ns:concern_Maintenance (ns:concern_Maintenance)
 
@@ -1120,10 +1141,10 @@ ClassAssertion(ns:SecurityConcern ns:concern_MediaProtection)
 ClassAssertion(ns:SchemaInstance ns:concern_PersonnelSecurity)
 ClassAssertion(ns:SecurityConcern ns:concern_PersonnelSecurity)
 
-# Individual: ns:concern_PhysicalProtection (ns:concern_PhysicalProtection)
+# Individual: ns:concern_PhysicalAndEnvironmentalProtection (ns:concern_PhysicalAndEnvironmentalProtection)
 
-ClassAssertion(ns:SchemaInstance ns:concern_PhysicalProtection)
-ClassAssertion(ns:SecurityConcern ns:concern_PhysicalProtection)
+ClassAssertion(ns:SchemaInstance ns:concern_PhysicalAndEnvironmentalProtection)
+ClassAssertion(ns:SecurityConcern ns:concern_PhysicalAndEnvironmentalProtection)
 
 # Individual: ns:concern_Planning (ns:concern_Planning)
 
@@ -1140,30 +1161,20 @@ ClassAssertion(ns:SecurityConcern ns:concern_ProgramManagement)
 ClassAssertion(ns:SchemaInstance ns:concern_RiskAssessment)
 ClassAssertion(ns:SecurityConcern ns:concern_RiskAssessment)
 
-# Individual: ns:concern_SecurityAssessment (ns:concern_SecurityAssessment)
+# Individual: ns:concern_SystemAndCommunicationsProtection (ns:concern_SystemAndCommunicationsProtection)
 
-ClassAssertion(ns:SchemaInstance ns:concern_SecurityAssessment)
-ClassAssertion(ns:SecurityConcern ns:concern_SecurityAssessment)
+ClassAssertion(ns:SchemaInstance ns:concern_SystemAndCommunicationsProtection)
+ClassAssertion(ns:SecurityConcern ns:concern_SystemAndCommunicationsProtection)
 
-# Individual: ns:concern_ServicesAcquisition (ns:concern_ServicesAcquisition)
+# Individual: ns:concern_SystemAndInformationIntegrity (ns:concern_SystemAndInformationIntegrity)
 
-ClassAssertion(ns:SchemaInstance ns:concern_ServicesAcquisition)
-ClassAssertion(ns:SecurityConcern ns:concern_ServicesAcquisition)
+ClassAssertion(ns:SchemaInstance ns:concern_SystemAndInformationIntegrity)
+ClassAssertion(ns:SecurityConcern ns:concern_SystemAndInformationIntegrity)
 
-# Individual: ns:concern_SystemIntegrity (ns:concern_SystemIntegrity)
+# Individual: ns:concern_SystemAndServicesAcquisition (ns:concern_SystemAndServicesAcquisition)
 
-ClassAssertion(ns:SchemaInstance ns:concern_SystemIntegrity)
-ClassAssertion(ns:SecurityConcern ns:concern_SystemIntegrity)
-
-# Individual: ns:concern_SystemProtection (ns:concern_SystemProtection)
-
-ClassAssertion(ns:SchemaInstance ns:concern_SystemProtection)
-ClassAssertion(ns:SecurityConcern ns:concern_SystemProtection)
-
-# Individual: ns:concern_Training (ns:concern_Training)
-
-ClassAssertion(ns:SchemaInstance ns:concern_Training)
-ClassAssertion(ns:SecurityConcern ns:concern_Training)
+ClassAssertion(ns:SchemaInstance ns:concern_SystemAndServicesAcquisition)
+ClassAssertion(ns:SecurityConcern ns:concern_SystemAndServicesAcquisition)
 
 # Individual: ns:domain_CloudComputing (ns:domain_CloudComputing)
 
@@ -1280,6 +1291,16 @@ ClassAssertion(ns:SchemaInstance ns:lc_Requirements)
 
 ClassAssertion(ns:LifecycleStage ns:lc_SystemConfiguration)
 ClassAssertion(ns:SchemaInstance ns:lc_SystemConfiguration)
+
+# Individual: ns:role_Client (ns:role_Client)
+
+ClassAssertion(ns:AggressorRole ns:role_Client)
+ClassAssertion(ns:SchemaInstance ns:role_Client)
+
+# Individual: ns:role_Server (ns:role_Server)
+
+ClassAssertion(ns:AggressorRole ns:role_Server)
+ClassAssertion(ns:SchemaInstance ns:role_Server)
 
 # Individual: ns:rt_Avoidance (ns:rt_Avoidance)
 

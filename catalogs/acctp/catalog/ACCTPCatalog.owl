@@ -1,0 +1,83 @@
+Prefix(:=<http://www.grsu.by/net/ACCTP#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.grsu.by/net/ACCTP>
+Import(<http://www.grsu.by/net/ACCTP/common>)
+
+Declaration(NamedIndividual(:threatAA01_FailureOfRemoteService))
+Declaration(NamedIndividual(:threatAA02_ConnectionLostToRemoteService))
+Declaration(NamedIndividual(:threatAB01_FailureOfCloudApplication))
+Declaration(NamedIndividual(:threatAC01_MalwareFromCloudApplication))
+Declaration(NamedIndividual(:threatAD01_BrokenAuthentication))
+
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :threatAA01_FailureOfRemoteService (AA01 Failure Of Remote Service)
+
+AnnotationAssertion(rdfs:comment :threatAA01_FailureOfRemoteService "Unexpected failure of the remote service"@en)
+AnnotationAssertion(rdfs:label :threatAA01_FailureOfRemoteService "AA01 Failure Of Remote Service"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAA01_FailureOfRemoteService)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAA01_FailureOfRemoteService <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAA01_FailureOfRemoteService <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAA01_FailureOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAA01_FailureOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAA01_FailureOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAA02_ConnectionLostToRemoteService (AA02 Connection Lost To Remote Service)
+
+AnnotationAssertion(rdfs:comment :threatAA02_ConnectionLostToRemoteService "Connection lost to the remote service"@en)
+AnnotationAssertion(rdfs:label :threatAA02_ConnectionLostToRemoteService "AA02 Connection Lost To Remote Service"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAA02_ConnectionLostToRemoteService)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAA02_ConnectionLostToRemoteService <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAA02_ConnectionLostToRemoteService <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAA02_ConnectionLostToRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAA02_ConnectionLostToRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAA02_ConnectionLostToRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAB01_FailureOfCloudApplication (AB01 Failure Of Cloud Application)
+
+AnnotationAssertion(rdfs:comment :threatAB01_FailureOfCloudApplication "Unexpected failure of the cloud application"@en)
+AnnotationAssertion(rdfs:label :threatAB01_FailureOfCloudApplication "AB01 Failure Of Cloud Application"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAB01_FailureOfCloudApplication)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAB01_FailureOfCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAB01_FailureOfCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAB01_FailureOfCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAB01_FailureOfCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAB01_FailureOfCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAB01_FailureOfCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAB01_FailureOfCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAC01_MalwareFromCloudApplication (AC01 Malware From Cloud Application)
+
+AnnotationAssertion(rdfs:comment :threatAC01_MalwareFromCloudApplication "Malicious content (malware) from the cloud application (affects remote user)"@en)
+AnnotationAssertion(rdfs:label :threatAC01_MalwareFromCloudApplication "AC01 Malware From Cloud Application"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAC01_MalwareFromCloudApplication)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAD01_BrokenAuthentication (AD01 Broken Authentication)
+
+AnnotationAssertion(rdfs:comment :threatAD01_BrokenAuthentication "No authentication or broken (weak) authentication of the cloud application"@en)
+AnnotationAssertion(rdfs:label :threatAD01_BrokenAuthentication "AD01 Broken Authentication"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAD01_BrokenAuthentication)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+
+)

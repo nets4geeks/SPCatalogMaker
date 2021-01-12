@@ -13,22 +13,27 @@ Declaration(NamedIndividual(:pattern_MaliciousVirtualMachineCreation))
 Declaration(NamedIndividual(:pattern_MaliciousVirtualMachineMigrationProcess))
 Declaration(NamedIndividual(:pattern_ResourceUsageMonitoringInferenceinCloudComputing))
 Declaration(NamedIndividual(:pattern_SecureVirtualMachineImageRepository))
+Declaration(NamedIndividual(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_Accountability>))
+
+
 
 
 ############################
 #   Named Individuals
 ############################
 
-# Individual: :pattern_MaliciousVirtualMachineCreation (:pattern_MaliciousVirtualMachineCreation)
+# Individual: :pattern_MaliciousVirtualMachineCreation (Malicious VirtualMachine creation)
 
+AnnotationAssertion(rdfs:label :pattern_MaliciousVirtualMachineCreation "Malicious VirtualMachine creation"@en)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :pattern_MaliciousVirtualMachineCreation)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :pattern_MaliciousVirtualMachineCreation <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :pattern_MaliciousVirtualMachineCreation <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :pattern_MaliciousVirtualMachineCreation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :pattern_MaliciousVirtualMachineCreation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern>)
 
-# Individual: :pattern_MaliciousVirtualMachineMigrationProcess (:pattern_MaliciousVirtualMachineMigrationProcess)
+# Individual: :pattern_MaliciousVirtualMachineMigrationProcess (Malicious Virtual Machine migration process)
 
+AnnotationAssertion(rdfs:label :pattern_MaliciousVirtualMachineMigrationProcess "Malicious Virtual Machine migration process"@en)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :pattern_MaliciousVirtualMachineMigrationProcess)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :pattern_MaliciousVirtualMachineMigrationProcess <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedFunction> :pattern_MaliciousVirtualMachineMigrationProcess <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#func_VMMigration>)
@@ -38,16 +43,19 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :pattern_MaliciousVirtualMachineMigrationProcess <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#relatesTo> :pattern_MaliciousVirtualMachineMigrationProcess :pattern_SecureVirtualMachineImageRepository)
 
-# Individual: :pattern_ResourceUsageMonitoringInferenceinCloudComputing (:pattern_ResourceUsageMonitoringInferenceinCloudComputing)
+# Individual: :pattern_ResourceUsageMonitoringInferenceinCloudComputing (Resource usage monitoring inference in Cloud Computing)
 
+AnnotationAssertion(rdfs:comment :pattern_ResourceUsageMonitoringInferenceinCloudComputing ""@en)
+AnnotationAssertion(rdfs:label :pattern_ResourceUsageMonitoringInferenceinCloudComputing "Resource usage monitoring inference in Cloud Computing"@en)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :pattern_ResourceUsageMonitoringInferenceinCloudComputing)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :pattern_ResourceUsageMonitoringInferenceinCloudComputing <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMM>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :pattern_ResourceUsageMonitoringInferenceinCloudComputing <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :pattern_ResourceUsageMonitoringInferenceinCloudComputing <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_SharedDataManipulation>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :pattern_ResourceUsageMonitoringInferenceinCloudComputing <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_MisusePattern>)
 
-# Individual: :pattern_SecureVirtualMachineImageRepository (:pattern_SecureVirtualMachineImageRepository)
+# Individual: :pattern_SecureVirtualMachineImageRepository (Secure Virtual Machine image repository)
 
+AnnotationAssertion(rdfs:label :pattern_SecureVirtualMachineImageRepository "Secure Virtual Machine image repository"@en)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :pattern_SecureVirtualMachineImageRepository)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :pattern_SecureVirtualMachineImageRepository <http://www.grsu.by/net/CloudSecurityPatternCatalog/common#comp_VMImageRepository>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSecurityConcern> :pattern_SecureVirtualMachineImageRepository <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#concern_AccessControl>)

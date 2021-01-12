@@ -1,0 +1,38 @@
+{
+  "id": "",
+  "metadata": {
+    "ns:textReviewContext": "",
+    "ns:textName": "",
+    "ns:textReviewSolution": "",
+    "ns:textURL": "",
+    "ns:textReviewProblem": ""
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": []
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": [],
+    "ns:hasAggressorRole": [],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": [],
+    "ns:hasSecurityConcern": []
+  }
+}

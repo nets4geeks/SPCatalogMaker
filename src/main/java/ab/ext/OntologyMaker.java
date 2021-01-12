@@ -40,6 +40,33 @@ public class OntologyMaker{
    
    public static String PATTERN_CLASS = "http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern";
 
+   // a bit of metadata
+   public boolean processMetadata(IRI patternIRI, JsonNode section, O wmodel, O pmodel){	 
+    // "ns:textReviewContext": "Cloud application uses a remote service",
+    // "ns:textName": "AA01 Failure Of Remote Service",
+    // "ns:textReviewSolution": "Ensure fault tolerance of the remote service; Apply a standby remote service; Replace the remote service
+    // "ns:textURL": "",
+    // "ns:textReviewProblem": "Unexpected failure of the remote service"
+
+	  Iterator<String> iterator = section.fieldNames();
+      while (iterator.hasNext()) {  
+		 String propertyName = iterator.next();
+		 IRI propertyIRI = wmodel.getIRIForm(propertyName);
+		 String propertyValue = section.get(propertyName).textValue();
+		 if (propertyName.equals("ns:textName")){
+            OWLAxiom ax = pmodel.getIndividualAnnotation(patternIRI,propertyValue,"en");
+            pmodel.addAxiom(ax);			 
+		 }
+         if (propertyName.equals("ns:textReviewProblem")){
+            OWLAxiom ax = pmodel.getIndividualComment(patternIRI,propertyValue,"en");
+            pmodel.addAxiom(ax);			 
+		 }
+
+      }
+ 	  return true;
+   }
+
+
    public boolean processSection(IRI patternIRI, JsonNode section, O wmodel, O pmodel){	 
       //	  "ns:hasTemplate": [
       //      "ns:template_POSA"
@@ -83,6 +110,10 @@ public class OntologyMaker{
 					 IRI patternIRI = IRI.create(pmodel.getDefaultPrefix()+id);
 					 OWLAxiom ax = pmodel.getClassAssertionAxiom(IRI.create(PATTERN_CLASS), patternIRI);
 					 pmodel.addAxiom(ax);
+
+					 JsonNode metadata = document.path("metadata");
+					 processMetadata(patternIRI,metadata,wmodel,pmodel);
+
 					 
 					 JsonNode organization = document.path("organization");
 					 processSection(patternIRI,organization,wmodel,pmodel);

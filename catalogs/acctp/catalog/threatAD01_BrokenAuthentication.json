@@ -1,0 +1,38 @@
+{
+  "id": "threatAD01_BrokenAuthentication",
+  "metadata": {
+    "ns:textReviewContext": "Someone interacts with a cloud application",
+    "ns:textName": "AD01 Broken Authentication",
+    "ns:textReviewSolution": "Apply access-token authentication; Apply password-based authentication; Apply certificate-based authentication; Ensure no use of default passwords; ... ",
+    "ns:textURL": "",
+    "ns:textReviewProblem": "No authentication or broken (weak) authentication of the cloud application"
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": ["su:comp_CloudApplication"]
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
+    "ns:hasAggressorRole": ["ns:role_Client"],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": [],
+    "ns:hasSecurityConcern": []
+  }
+}

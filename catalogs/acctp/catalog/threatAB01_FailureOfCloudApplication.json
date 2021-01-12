@@ -1,0 +1,38 @@
+{
+  "id": "threatAB01_FailureOfCloudApplication",
+  "metadata": {
+    "ns:textReviewContext": "Someone interacts with a cloud application",
+    "ns:textName": "AB01 Failure Of Cloud Application",
+    "ns:textReviewSolution": "Ensure fault tolerance of the remote service; Apply a standby remote service; Replace the remote service by a local one;",
+    "ns:textURL": "",
+    "ns:textReviewProblem": "Unexpected failure of the cloud application"
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": ["su:comp_CloudApplication", "su:comp_RemoteUser", "su:comp_ExternalService" ]
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": ["su:comp_CloudApplication"],
+    "ns:hasAggressorRole": ["ns:role_Server"],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": ["ns:STRIDE_Denial_of_Service"],
+    "ns:hasSecurityConcern": []
+  }
+}

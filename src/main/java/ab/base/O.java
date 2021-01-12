@@ -92,12 +92,16 @@ public class O {
       o.removeAxiom(ax);
    }
   
+   // !!! don't use it
    // it seems to be legacy approach
    // what is a new one? EntitySearcher.containsAxiom
    public boolean containsAxiom(OWLAxiom ax){
       return o.containsAxiom(ax);
    }
 
+   public boolean containsAxiom1(OWLAxiom ax){
+      return reasoner.isEntailed(ax);
+   }
 
    public boolean isReasonerConsistent(){
       return reasoner.isConsistent();
@@ -296,6 +300,15 @@ public class O {
        return null;
     }
 
+   public static ArrayList<OWLNamedIndividual> individualsToList(Stream<OWLNamedIndividual> stream){
+      ArrayList<OWLNamedIndividual> out = new ArrayList<OWLNamedIndividual>();
+      for (Iterator<OWLNamedIndividual> iterator = stream.iterator(); iterator.hasNext(); ){
+          OWLNamedIndividual item = (OWLNamedIndividual)iterator.next();
+          out.add(item); 
+      }
+      return out;
+   }
+
    public static String safeIRI(String in){
       String in1 = in;
       in1 = in1.replace(" ","_");
@@ -357,6 +370,18 @@ public class O {
 // http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/model/OWLDataFactory.html
 //////////////////////////////////////////////////////////////////////////////////
 
+   public OWLAxiom getIndividualAnnotation(IRI indIRI, String label, String lang){
+      OWLAnnotation labelAnno = df.getOWLAnnotation(df.getRDFSLabel(), df.getOWLLiteral(label, lang));
+      OWLAxiom ax1 = df.getOWLAnnotationAssertionAxiom(indIRI, labelAnno);
+      return ax1;
+   }
+
+   public OWLAxiom getIndividualComment(IRI indIRI, String label, String lang){
+      OWLAnnotation commentAnno = df.getOWLAnnotation(df.getRDFSComment(), df.getOWLLiteral(label, lang));
+      OWLAxiom ax1 = df.getOWLAnnotationAssertionAxiom(indIRI, commentAnno);
+      return ax1;
+   }
+ 
 
    // create class assertion axiom, i.e. map an individual to a class
    public OWLAxiom getClassAssertionAxiom(IRI className, IRI individualName){
@@ -429,6 +454,22 @@ public class O {
    public OWLAxiom getDefinedClassAnd(IRI clsName,IRI cls1Name, IRI cls2Name){
       return getDefinedClassAnd(df.getOWLClass(clsName),df.getOWLClass(cls1Name),df.getOWLClass(cls2Name));
    }  
+
+   // create sub class axiom like "<cls> subclass of <prop> value <val>"
+   public OWLAxiom getSubClassValue (OWLClass cls, OWLObjectProperty prop, OWLNamedIndividual val){
+      return df.getOWLSubClassOfAxiom(cls, df.getOWLObjectHasValue(prop, val)); 
+   }
+   public OWLAxiom getSubClassValue(IRI clsName,IRI propName, IRI valName){
+      return getSubClassValue(df.getOWLClass(clsName),df.getOWLObjectProperty(propName),df.getOWLNamedIndividual(valName));
+   }  
+ 
+   public OWLAxiom getSubClass(OWLClass cls, OWLClass parent){
+      return df.getOWLSubClassOfAxiom(cls, parent);
+   }
+   public OWLAxiom getSubClass(IRI cls, IRI parent){
+      return df.getOWLSubClassOfAxiom(df.getOWLClass(cls), df.getOWLClass(parent));
+   }
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -593,6 +634,14 @@ public class O {
       // return reasoner.types(df.getOWLNamedIndividual(individualName),true);
    } 
      
+   public OWLClass getReasonerDirectType(OWLNamedIndividual instance){
+      Iterator<OWLClass> iterator = getReasonerDirectTypes(instance).iterator();
+      if (iterator.hasNext()) return (OWLClass)iterator.next(); 
+      LOGGER.severe("instance does not have type - " + instance.getIRI().toString());
+      return null;
+   }
+
+
 
    // get all instances of given class
    public Stream<OWLNamedIndividual> getReasonerInstances(OWLClass cls){
@@ -622,17 +671,32 @@ public class O {
       return reasoner.objectPropertyValues(df.getOWLNamedIndividual(instanceName),df.getOWLObjectProperty(propertyName));
    } 
 
+
    // assumes that instance belongs to only one class
    public OWLNamedIndividual getObjectPropertyValue(OWLNamedIndividual instance,OWLObjectProperty property){
       Iterator<OWLNamedIndividual> iterator = getReasonerObjectPropertyValues(instance,property).iterator();
       if (iterator.hasNext()) return (OWLNamedIndividual)iterator.next(); 
-      LOGGER.severe("instance does not have this propery - " + instance.getIRI().toString() + "  "+ property.getIRI().toString());
+      LOGGER.severe("instance does not have this property - " + instance.getIRI().toString() + "  "+ property.getIRI().toString());
       return null;
    }
    public OWLNamedIndividual getObjectPropertyValue(IRI instanceName,IRI propertyName){
       return getObjectPropertyValue(df.getOWLNamedIndividual(instanceName),df.getOWLObjectProperty(propertyName));
    }   
    
+
+   public OWLNamedIndividual getObjectPropertyValueFromOntology(OWLNamedIndividual instance,OWLObjectProperty property, IRI iri){
+      for (Iterator<OWLNamedIndividual> iterator = getReasonerObjectPropertyValues(instance,property).iterator(); iterator.hasNext(); ){
+          OWLNamedIndividual in = (OWLNamedIndividual)iterator.next();
+          if (in.getIRI().toString().startsWith(iri.toString())) return in;
+      }
+      LOGGER.severe("instance does not have this property - " + instance.getIRI().toString() + "  "+ property.getIRI().toString());
+      return null;
+   }
+
+   public OWLNamedIndividual getObjectPropertyValueFromOntology(IRI instanceIRI, IRI propertyIRI, IRI iri){
+      return getObjectPropertyValueFromOntology(df.getOWLNamedIndividual(instanceIRI),df.getOWLObjectProperty(propertyIRI),iri);
+   }
+
    
    public boolean isReasonerIndividualBelongsToClass(OWLNamedIndividual instance, OWLClass cls){
       for (Iterator<OWLClass> iterator = getReasonerTypes(instance).iterator(); iterator.hasNext(); ){
