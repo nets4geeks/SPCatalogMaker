@@ -69,7 +69,7 @@ You can use the OWL ontology to make DL queries, for example, with **Protege**.
 It is possible to use the RDF dataset to make the SPARQL requests with the **Apache Jena** toolset.
 
 Also, the ACCTP catalog can be used as a source of domain specific threat model 
-for the [ontlogy-driven threat modeling](https://github.com/nets4geeks/OdTM)
+for the [ontology-driven threat modeling](https://github.com/nets4geeks/OdTM)
 of the cloud systems with the DFD (Data Flow Diagram) approach.
 
 ### References
