@@ -1,0 +1,39 @@
+{
+  "id": "threatAD02_BrokenAccessControl",
+  "metadata": {
+    "ns:textReviewContext": "Someone interacts with a cloud application",
+    "ns:textName": "AD02 Broken Access Control",
+    "ns:textReviewSolution": "Apply access control model; Apply access management;",
+    "ns:textURL": "",
+    "ns:textReviewProblem": "No access control or broken (weak) access control of the cloud application",
+    "ns:textReference": "Broken Access Control [OWASP10]"
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": ["su:comp_CloudApplication"]
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
+    "ns:hasAggressorRole": ["ns:role_Client"],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": [],
+    "ns:hasSecurityConcern": []
+  }
+}

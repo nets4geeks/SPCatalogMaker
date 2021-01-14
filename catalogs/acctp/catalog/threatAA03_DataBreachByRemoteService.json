@@ -1,0 +1,39 @@
+{
+  "id": "threatAA03_DataBreachByRemoteService",
+  "metadata": {
+    "ns:textReviewContext": "Cloud application uses a remote service",
+    "ns:textName": "AA03 Data Breach By Remote Service",
+    "ns:textReviewSolution": "Replace the remote service by a local one; Apply data encryption;",
+    "ns:textURL": "",
+    "ns:textReviewProblem": "Data breach (information disclosure) by the remote service",
+    "ns:textReference": ""
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": ["su:comp_CloudApplication"]
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": ["su:comp_ExternalService"],
+    "ns:hasAggressorRole": ["ns:role_Server"],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": ["ns:STRIDE_Information_Disclosure"],
+    "ns:hasSecurityConcern": []
+  }
+}

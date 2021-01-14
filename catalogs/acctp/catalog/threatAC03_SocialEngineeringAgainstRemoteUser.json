@@ -1,0 +1,39 @@
+{
+  "id": "threatAC03_SocialEngineeringAgainstRemoteUser",
+  "metadata": {
+    "ns:textReviewContext": "Remote user interacts with a cloud application",
+    "ns:textName": "AC03 Social Engineering Against Remote User",
+    "ns:textReviewSolution": "Apply TLS-based encryption and certificate for connection (cloud application); Apply security awareness; Apply security training;",
+    "ns:textURL": "",
+    "ns:textReviewProblem": "Remote user suffers from Social Engineering attacks, performed by third-party adversary (e.g. including the cloud application into phishing schema)",
+    "ns:textReference": "R.29: Social engineering attacks (impersonation) [ENISA]"
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": ["su:comp_RemoteUser"]
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": ["su:comp_CloudApplication"],
+    "ns:hasAggressorRole": ["ns:role_Server"],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": ["ns:STRIDE_Information_Disclosure", "ns:STRIDE_Spoofing"],
+    "ns:hasSecurityConcern": []
+  }
+}

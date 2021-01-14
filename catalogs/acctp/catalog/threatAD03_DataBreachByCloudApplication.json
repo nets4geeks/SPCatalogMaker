@@ -1,0 +1,39 @@
+{
+  "id": "threatAD03_DataBreachByCloudApplication",
+  "metadata": {
+    "ns:textReviewContext": "Someone interacts with a cloud application",
+    "ns:textName": "AD03 Data Breach By Cloud Application",
+    "ns:textReviewSolution": "Ensure data security of cloud infrastructure (cloud application); Apply data encryption (cloud application);",
+    "ns:textURL": "",
+    "ns:textReviewProblem": "Data breach (information disclosure) by the cloud application",
+    "ns:textReference": "Sensitive_Data_Exposure [OWASP10]; Data Breaches [CSA10]; R.19: Compromise service engine [ENISA]; Compromise service engine [QUIRC]; Computation on Encrypted Data [Rath];"
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": ["su:comp_CloudApplication"]
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
+    "ns:hasAggressorRole": ["ns:role_Client"],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": ["ns:STRIDE_Information_Disclosure"],
+    "ns:hasSecurityConcern": []
+  }
+}

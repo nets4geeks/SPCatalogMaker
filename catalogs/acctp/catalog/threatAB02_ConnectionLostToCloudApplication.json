@@ -1,0 +1,39 @@
+{
+  "id": "threatAB02_ConnectionLostToCloudApplication",
+  "metadata": {
+    "ns:textReviewContext": "Someone interacts with a cloud application",
+    "ns:textName": "AB02 Connection Lost To Cloud Application",
+    "ns:textReviewSolution": "Ensure fault tolerance of the network connection; Apply clustrer-like configuration and load balancing of the cloud application; Apply Multi Availability Zone Deployment; Apply Content Distribution Networks (CDN)",
+    "ns:textURL": "",
+    "ns:textReviewProblem": "Connection lost to the cloud application",
+    "ns:textReference": "BNA-3: Loss of wide-area network connectivity... [SECCRIT]"
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": ["su:comp_CloudApplication", "su:comp_RemoteUser", "su:comp_ExternalService" ]
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": ["su:comp_CloudApplication"],
+    "ns:hasAggressorRole": ["ns:role_Server"],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": ["ns:STRIDE_Denial_of_Service"],
+    "ns:hasSecurityConcern": []
+  }
+}
