@@ -12,7 +12,7 @@ in a formal way;
 dataset from a set of source ontologies and JSON (JavaScript Object Notation) files.
 
 
-We use these tools for development of the **ACCTP catalog** (see below).
+We use these tools for development of the **ACCTP catalog** for the cloud computing domain (see below).
 
 ## Schema
 
@@ -44,35 +44,30 @@ to create *decriptions of patterns* in the JSON format.
 
 Maker allows creation of a *target ontology* (and *inferred RDF dataset*) from those pieces of JSON.
 
+You can use the **OWL ontology** to make DL queries, for example, with **Protege**.
+The **RDF dataset** can be used to make the SPARQL requests with the **Apache Jena** toolset.
+Also, it is possible to create a domain specific threat model, based on a catalog, 
+for the [ontology-driven threat modeling](https://github.com/nets4geeks/OdTM) 
+with the DFD (Data Flow Diagram) approach.
+
 To compile Maker, you need **Java** and **Maven**. Simply clone the repository and run **./maker_compile**.
 To make the datasets, run **./maker_XXX.run**. For configuration use the *maker_XXX.properties* file.
 
-
 ## Academic Cloud Computing Threat Patterns (ACCTP) catalog
 
-The Academic Cloud Computing Threat Patterns (ACCTP) catalog is based on the data of the common security knowledge sources, 
-as well as the academic community findings.
-It “mines” the knowledge of the risk-oriented cloud security models and maps the risk-based terminology (risks, assets) 
-to the design terminology (components, flows, boundaries, threats).
-
-The catalog contains different profiles (architecture, compliance, privacy, IaaS, PaaS, SaaS, cloud storage); 
+The Academic Cloud Computing Threat Patterns (ACCTP) catalog contains different 
+profiles (architecture, compliance, privacy, IaaS, PaaS, SaaS, cloud storage) of cloud threats; 
 all the entities are mapped to the STRIDE model.
 
+There is a [web version of the ACCTP catalog](https://nets4geeks.github.io/acctp/) with its description.
 
-
-And [source folder is here](catalogs/acctp/catalog/).
+And [folder with source files is here](catalogs/acctp/catalog/).
 The *common.owl* file is an example of ontological description of the cloud computing domain.
 Generated JSON schema (first stage) is in *cd.schema.json*; and Threat patterns descriptions are in the *xxx.json* files.
 *ACCTPCatalog.owl* and *ACCTPCatalogReasoned.ttl* are target ontology and RDF dataset respectively (second stage).
 
-You can use the OWL ontology to make DL queries, for example, with **Protege**.
-It is possible to use the RDF dataset to make the SPARQL requests with the **Apache Jena** toolset.
 
-Also, the ACCTP catalog can be used as a source of domain specific threat model 
-for the [ontology-driven threat modeling](https://github.com/nets4geeks/OdTM)
-of the cloud systems with the DFD (Data Flow Diagram) approach.
-
-### References
+### Reference
 If you want to refer to the Schema and Maker, please cite:
 >Brazhuk A., Olizarovich E. Format and Usage Model of Security Patterns in Ontology-Driven Threat Modelling.
 //Russian Conference on Artificial Intelligence (RCAI 2020). – Springer, Cham, 2020. – С. 382-392.

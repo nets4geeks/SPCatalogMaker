@@ -3,9 +3,10 @@
   "metadata": {
     "ns:textReviewContext": "Someone interacts with a cloud application",
     "ns:textName": "AD01 Broken Authentication",
-    "ns:textReviewSolution": "Apply access-token authentication; Apply password-based authentication; Apply certificate-based authentication; Ensure no use of default passwords; ... ",
+    "ns:textReviewSolution": "Apply access-token authentication; Apply password-based authentication; Apply certificate-based authentication; Ensure no use of default passwords; Ensure security of credentials, avoid placement into source code; Apply credentials rotation policy; Apply strong passwords policy; Apply weak-password checks; Apply failed password delay; Apply failed password block by host; Apply multi-factor authentication; Apply mutual authentication; Apply social identity authentication; Apply Single-Sign-On; ",
     "ns:textURL": "",
-    "ns:textReviewProblem": "No authentication or broken (weak) authentication of the cloud application"
+    "ns:textReviewProblem": "No authentication or broken (weak) authentication of the cloud application",
+    "ns:textReference": "Broken Authentication [OWASP10]; Insufficient Identity, Credential, Access and Key Management [CSA10]; Multi-Factor Authentication, Federation (Single Sign-On), Access Token, Mutual Authentication [Rath];"
   },
   "organization": {
     "ns:usesPattern": [],

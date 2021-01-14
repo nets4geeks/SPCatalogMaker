@@ -5,7 +5,8 @@
     "ns:textName": "",
     "ns:textReviewSolution": "",
     "ns:textURL": "",
-    "ns:textReviewProblem": ""
+    "ns:textReviewProblem": "",
+    "ns:textReference": ""
   },
   "organization": {
     "ns:usesPattern": [],

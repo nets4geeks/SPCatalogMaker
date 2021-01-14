@@ -48,7 +48,7 @@ public class SchemaMaker extends JacksonParser{
            String description = metamodel.getSeacherComment(ent);
            // use only "*Review*", "textName",and "textURL" fields
            if (shortMeta){
-			  if ( (!name.contains("Review")) & (!name.contains("textName")) & (!name.contains("textURL")) ) name = null;
+			  if ( (!name.contains("Review")) & (!name.contains("textName")) & (!name.contains("textURL")) & (!name.contains("textReference"))) name = null;
 		   }
            if (name !=null){ 
 			  // create a property like ObjectNode and use "put" to apply there pairs "key : value" 

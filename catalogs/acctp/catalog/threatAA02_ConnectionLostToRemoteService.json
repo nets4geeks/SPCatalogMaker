@@ -5,7 +5,8 @@
     "ns:textName": "AA02 Connection Lost To Remote Service",
     "ns:textReviewSolution": "Ensure fault tolerance of the network connection; Replace the remote service by a local one;",
     "ns:textURL": "",
-    "ns:textReviewProblem": "Connection lost to the remote service"
+    "ns:textReviewProblem": "Connection lost to the remote service",
+    "ns:textReference": "BNA-3: Loss of wide-area network connectivity... [SECCRIT]"
   },
   "organization": {
     "ns:usesPattern": [],

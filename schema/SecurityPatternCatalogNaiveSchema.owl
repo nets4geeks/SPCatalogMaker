@@ -573,7 +573,7 @@ DataPropertyRange(ns:textProblem xsd:string)
 
 # Data Property: ns:textReference (Reference)
 
-AnnotationAssertion(rdfs:comment ns:textReference "A bibliographic description of a primary paper, describing a pattern"@en)
+AnnotationAssertion(rdfs:comment ns:textReference "A bibliographic description"@en)
 AnnotationAssertion(rdfs:label ns:textReference "Reference"@en)
 DataPropertyRange(ns:textReference xsd:string)
 
