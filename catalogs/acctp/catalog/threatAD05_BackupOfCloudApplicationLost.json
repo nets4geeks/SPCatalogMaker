@@ -1,12 +1,12 @@
 {
-  "id": "threatAD02_BrokenAccessControl",
+  "id": "threatAD05_BackupOfCloudApplicationLost",
   "metadata": {
     "ns:textReviewContext": "Someone interacts with a cloud application",
-    "ns:textName": "AD02 Broken Access Control",
-    "ns:textReviewSolution": "Apply access control model; Apply access management;",
+    "ns:textName": "AD05 Backup Of CloudApplication Lost",
+    "ns:textReviewSolution": "",
     "ns:textURL": "",
-    "ns:textReviewProblem": "No access control or broken (weak) access control by the cloud application",
-    "ns:textReference": "Broken Access Control [OWASP10]"
+    "ns:textReviewProblem": "Lost of cloud application backup",
+    "ns:textReference": "R.32: BACKUPS LOST, STOLEN [ENISA]; Data Retention [Rath]"
   },
   "organization": {
     "ns:usesPattern": [],
@@ -33,7 +33,7 @@
     "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
     "ns:hasAggressorRole": ["ns:role_Client"],
     "ns:hasWeakness": [],
-    "ns:hasSTRIDE": [],
+    "ns:hasSTRIDE": ["ns:STRIDE_Denial_of_Service"],
     "ns:hasSecurityConcern": []
   }
 }

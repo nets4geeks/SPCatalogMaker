@@ -1,12 +1,12 @@
 {
-  "id": "threatAD02_BrokenAccessControl",
+  "id": "threatAE05_BlockSharedResourcesOfCloudApplication",
   "metadata": {
-    "ns:textReviewContext": "Someone interacts with a cloud application",
-    "ns:textName": "AD02 Broken Access Control",
-    "ns:textReviewSolution": "Apply access control model; Apply access management;",
+    "ns:textReviewContext": "Remote user interacts with a cloud application",
+    "ns:textName": "AE05 Block Shared Resources Of Cloud Application",
+    "ns:textReviewSolution": "",
     "ns:textURL": "",
-    "ns:textReviewProblem": "No access control or broken (weak) access control by the cloud application",
-    "ns:textReference": "Broken Access Control [OWASP10]"
+    "ns:textReviewProblem": "Blocking shared resources of cloud application (e.g. shared external IP) by a third-part reputation service",
+    "ns:textReference": ""
   },
   "organization": {
     "ns:usesPattern": [],
@@ -30,10 +30,10 @@
   },
   "security": {
     "ns:hasThreat": [],
-    "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
+    "ns:hasAggressor": ["su:comp_RemoteUser"],
     "ns:hasAggressorRole": ["ns:role_Client"],
     "ns:hasWeakness": [],
-    "ns:hasSTRIDE": [],
+    "ns:hasSTRIDE": ["ns:STRIDE_Denial_of_Service"],
     "ns:hasSecurityConcern": []
   }
 }

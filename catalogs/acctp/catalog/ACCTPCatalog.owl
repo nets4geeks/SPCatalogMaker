@@ -23,6 +23,17 @@ Declaration(NamedIndividual(:threatAD01_BrokenAuthentication))
 Declaration(NamedIndividual(:threatAD02_BrokenAccessControl))
 Declaration(NamedIndividual(:threatAD03_DataBreachByCloudApplication))
 Declaration(NamedIndividual(:threatAD04_DataLossByCloudApplication))
+Declaration(NamedIndividual(:threatAD05_BackupOfCloudApplicationLost))
+Declaration(NamedIndividual(:threatAD06_BackupOfCloudApplicationStolen))
+Declaration(NamedIndividual(:threatAD07_LogOfCloudApplicationLost))
+Declaration(NamedIndividual(:threatAD08_LogOfCloudApplicationStolen))
+Declaration(NamedIndividual(:threatAE01_DDoSAttackToCloudApplication))
+Declaration(NamedIndividual(:threatAE02_EDoSAttackToCloudApplication))
+Declaration(NamedIndividual(:threatAE03_NetworkAttacksToCloudApplication))
+Declaration(NamedIndividual(:threatAE04_CloudApplicationAbuse))
+Declaration(NamedIndividual(:threatAE05_BlockSharedResourcesOfCloudApplication))
+Declaration(NamedIndividual(:threatAE06_DisclosureOfCredentialsOfCloudManagementInterface))
+Declaration(NamedIndividual(<http://www.grsu.by/net/ACCTP#Management Interface Compromise [QUIRC]>))
 
 
 
@@ -114,7 +125,7 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 
 # Individual: :threatAC01_MalwareFromCloudApplication (AC01 Malware From Cloud Application)
 
-AnnotationAssertion(rdfs:comment :threatAC01_MalwareFromCloudApplication "Malicious content (malware) from the cloud application (affects remote user)"@en)
+AnnotationAssertion(rdfs:comment :threatAC01_MalwareFromCloudApplication "Malicious content (malware) from the cloud application"@en)
 AnnotationAssertion(rdfs:label :threatAC01_MalwareFromCloudApplication "AC01 Malware From Cloud Application"@en)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAC01_MalwareFromCloudApplication)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
@@ -124,7 +135,7 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 
 # Individual: :threatAC02_PublicNetworkAccessToCloudApplication (AC02 Public Network Access To Cloud Application)
 
-AnnotationAssertion(rdfs:comment :threatAC02_PublicNetworkAccessToCloudApplication "Remote user connects to the cloud application though a public network (e.g. Wi-Fi) and can be attacked by a third-party adversary (affects remote user)"@en)
+AnnotationAssertion(rdfs:comment :threatAC02_PublicNetworkAccessToCloudApplication "Remote user connects to the cloud application though a public network (e.g. Wi-Fi) and can be attacked by a third-party adversary"@en)
 AnnotationAssertion(rdfs:label :threatAC02_PublicNetworkAccessToCloudApplication "AC02 Public Network Access To Cloud Application"@en)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAC02_PublicNetworkAccessToCloudApplication)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAC02_PublicNetworkAccessToCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
@@ -147,7 +158,7 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 
 # Individual: :threatAD01_BrokenAuthentication (AD01 Broken Authentication)
 
-AnnotationAssertion(rdfs:comment :threatAD01_BrokenAuthentication "No authentication or broken (weak) authentication of the cloud application"@en)
+AnnotationAssertion(rdfs:comment :threatAD01_BrokenAuthentication "No authentication or broken (weak) authentication by the cloud application"@en)
 AnnotationAssertion(rdfs:label :threatAD01_BrokenAuthentication "AD01 Broken Authentication"@en)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAD01_BrokenAuthentication)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
@@ -159,7 +170,7 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 
 # Individual: :threatAD02_BrokenAccessControl (AD02 Broken Access Control)
 
-AnnotationAssertion(rdfs:comment :threatAD02_BrokenAccessControl "No access control or broken (weak) access control of the cloud application"@en)
+AnnotationAssertion(rdfs:comment :threatAD02_BrokenAccessControl "No access control or broken (weak) access control by the cloud application"@en)
 AnnotationAssertion(rdfs:label :threatAD02_BrokenAccessControl "AD02 Broken Access Control"@en)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAD02_BrokenAccessControl)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
@@ -194,6 +205,122 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAD04_DataLossByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD04_DataLossByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD04_DataLossByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAD05_BackupOfCloudApplicationLost (AD05 Backup Of CloudApplication Lost)
+
+AnnotationAssertion(rdfs:comment :threatAD05_BackupOfCloudApplicationLost "Lost of cloud application backup"@en)
+AnnotationAssertion(rdfs:label :threatAD05_BackupOfCloudApplicationLost "AD05 Backup Of CloudApplication Lost"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAD05_BackupOfCloudApplicationLost)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAD05_BackupOfCloudApplicationLost <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD05_BackupOfCloudApplicationLost <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD05_BackupOfCloudApplicationLost <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD05_BackupOfCloudApplicationLost <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAD05_BackupOfCloudApplicationLost <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD05_BackupOfCloudApplicationLost <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD05_BackupOfCloudApplicationLost <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAD06_BackupOfCloudApplicationStolen (AD06 Backup Of Cloud Application Stolen)
+
+AnnotationAssertion(rdfs:comment :threatAD06_BackupOfCloudApplicationStolen "Disclosure of cloud application backup"@en)
+AnnotationAssertion(rdfs:label :threatAD06_BackupOfCloudApplicationStolen "AD06 Backup Of Cloud Application Stolen"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAD06_BackupOfCloudApplicationStolen)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAD06_BackupOfCloudApplicationStolen <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD06_BackupOfCloudApplicationStolen <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD06_BackupOfCloudApplicationStolen <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD06_BackupOfCloudApplicationStolen <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAD06_BackupOfCloudApplicationStolen <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD06_BackupOfCloudApplicationStolen <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD06_BackupOfCloudApplicationStolen <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAD07_LogOfCloudApplicationLost (AD07 Log Of Cloud Application Lost)
+
+AnnotationAssertion(rdfs:comment :threatAD07_LogOfCloudApplicationLost "Lost of cloud application log"@en)
+AnnotationAssertion(rdfs:label :threatAD07_LogOfCloudApplicationLost "AD07 Log Of Cloud Application Lost"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAD07_LogOfCloudApplicationLost)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAD07_LogOfCloudApplicationLost <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD07_LogOfCloudApplicationLost <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD07_LogOfCloudApplicationLost <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD07_LogOfCloudApplicationLost <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAD07_LogOfCloudApplicationLost <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD07_LogOfCloudApplicationLost <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Repudiation>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD07_LogOfCloudApplicationLost <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAD08_LogOfCloudApplicationStolen (AD08 Log Of Cloud Application Stolen)
+
+AnnotationAssertion(rdfs:comment :threatAD08_LogOfCloudApplicationStolen "Disclosure of sensitive information from cloud application log"@en)
+AnnotationAssertion(rdfs:label :threatAD08_LogOfCloudApplicationStolen "AD08 Log Of Cloud Application Stolen"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAD08_LogOfCloudApplicationStolen)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAD08_LogOfCloudApplicationStolen <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD08_LogOfCloudApplicationStolen <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD08_LogOfCloudApplicationStolen <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD08_LogOfCloudApplicationStolen <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAD08_LogOfCloudApplicationStolen <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD08_LogOfCloudApplicationStolen <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD08_LogOfCloudApplicationStolen <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAE01_DDoSAttackToCloudApplication (AE01 DDoS Attack To Cloud Application)
+
+AnnotationAssertion(rdfs:comment :threatAE01_DDoSAttackToCloudApplication "DDoS/DoS attack against cloud application from the Internet"@en)
+AnnotationAssertion(rdfs:label :threatAE01_DDoSAttackToCloudApplication "AE01 DDoS Attack To Cloud Application"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAE01_DDoSAttackToCloudApplication)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAE01_DDoSAttackToCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAE01_DDoSAttackToCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAE01_DDoSAttackToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAE01_DDoSAttackToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAE01_DDoSAttackToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAE02_EDoSAttackToCloudApplication (AE02 EDoS Attack To Cloud Application)
+
+AnnotationAssertion(rdfs:comment :threatAE02_EDoSAttackToCloudApplication "EDoS (Economic Denial of Service) attack against cloud application from the Internet"@en)
+AnnotationAssertion(rdfs:label :threatAE02_EDoSAttackToCloudApplication "AE02 EDoS Attack To Cloud Application"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAE02_EDoSAttackToCloudApplication)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAE02_EDoSAttackToCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAE02_EDoSAttackToCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAE02_EDoSAttackToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAE02_EDoSAttackToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAE02_EDoSAttackToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAE03_NetworkAttacksToCloudApplication (AE03 Network Attacks To Cloud Application)
+
+AnnotationAssertion(rdfs:comment :threatAE03_NetworkAttacksToCloudApplication "Remote side can perform remote malicious activities based on misconfiguration or vulnerabilities of the cloud application"@en)
+AnnotationAssertion(rdfs:label :threatAE03_NetworkAttacksToCloudApplication "AE03 Network Attacks To Cloud Application"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAE03_NetworkAttacksToCloudApplication)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAE04_CloudApplicationAbuse (AE04 Cloud Application Abuse)
+
+AnnotationAssertion(rdfs:comment :threatAE04_CloudApplicationAbuse "Malicious usage (abuse) of cloud application from the Internet (e.g. sending spam, participating botnet, mining) after gain control on it"@en)
+AnnotationAssertion(rdfs:label :threatAE04_CloudApplicationAbuse "AE04 Cloud Application Abuse"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAE04_CloudApplicationAbuse)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAE04_CloudApplicationAbuse <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAE04_CloudApplicationAbuse <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAE04_CloudApplicationAbuse <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAE04_CloudApplicationAbuse <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAE05_BlockSharedResourcesOfCloudApplication (AE05 Block Shared Resources Of Cloud Application)
+
+AnnotationAssertion(rdfs:comment :threatAE05_BlockSharedResourcesOfCloudApplication "Blocking shared resources of cloud application (e.g. shared external IP) by a third-part reputation service"@en)
+AnnotationAssertion(rdfs:label :threatAE05_BlockSharedResourcesOfCloudApplication "AE05 Block Shared Resources Of Cloud Application"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAE05_BlockSharedResourcesOfCloudApplication)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAE05_BlockSharedResourcesOfCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAE05_BlockSharedResourcesOfCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAE05_BlockSharedResourcesOfCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAE05_BlockSharedResourcesOfCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAE05_BlockSharedResourcesOfCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface (AE06 Disclosure Of Credentials Of Cloud Management Interface)
+
+AnnotationAssertion(rdfs:comment :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface "Disclosure of user credentials of management interface of cloud application"@en)
+AnnotationAssertion(rdfs:label :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface "AE06 Disclosure Of Credentials Of Cloud Management Interface"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface <http://www.grsu.by/net/ACCTP#Management Interface Compromise [QUIRC]>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 
 )

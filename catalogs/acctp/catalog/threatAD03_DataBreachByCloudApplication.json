@@ -3,10 +3,10 @@
   "metadata": {
     "ns:textReviewContext": "Someone interacts with a cloud application",
     "ns:textName": "AD03 Data Breach By Cloud Application",
-    "ns:textReviewSolution": "Ensure data security of cloud infrastructure (cloud application); Apply data encryption (cloud application);",
+    "ns:textReviewSolution": "Ensure data security of cloud infrastructure (cloud application); Apply data encryption to the cloud application);",
     "ns:textURL": "",
     "ns:textReviewProblem": "Data breach (information disclosure) by the cloud application",
-    "ns:textReference": "Sensitive_Data_Exposure [OWASP10]; Data Breaches [CSA10]; R.19: Compromise service engine [ENISA]; Compromise service engine [QUIRC]; Computation on Encrypted Data [Rath];"
+    "ns:textReference": "Sensitive Data Exposure [OWASP10]; Data Breaches [CSA10]; R.19: Compromise service engine [ENISA]; Compromise service engine [QUIRC]; Computation on Encrypted Data [Rath];"
   },
   "organization": {
     "ns:usesPattern": [],

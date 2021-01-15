@@ -5,7 +5,7 @@
     "ns:textName": "AC02 Public Network Access To Cloud Application",
     "ns:textReviewSolution": "Apply TLS-based encryption and certificate for connection (cloud application)",
     "ns:textURL": "",
-    "ns:textReviewProblem": "Remote user connects to the cloud application though a public network (e.g. Wi-Fi) and can be attacked by a third-party adversary (affects remote user)",
+    "ns:textReviewProblem": "Remote user connects to the cloud application though a public network (e.g. Wi-Fi) and can be attacked by a third-party adversary",
     "ns:textReference": "BNA-4: Man-in-the-middle attack... [SECCRIT] "
   },
   "organization": {

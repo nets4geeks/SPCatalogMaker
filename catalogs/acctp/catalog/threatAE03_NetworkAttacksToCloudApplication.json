@@ -1,12 +1,12 @@
 {
-  "id": "threatAD02_BrokenAccessControl",
+  "id": "threatAE03_NetworkAttacksToCloudApplication",
   "metadata": {
-    "ns:textReviewContext": "Someone interacts with a cloud application",
-    "ns:textName": "AD02 Broken Access Control",
-    "ns:textReviewSolution": "Apply access control model; Apply access management;",
+    "ns:textReviewContext": "Remote user interacts with a cloud application",
+    "ns:textName": "AE03 Network Attacks To Cloud Application",
+    "ns:textReviewSolution": "",
     "ns:textURL": "",
-    "ns:textReviewProblem": "No access control or broken (weak) access control by the cloud application",
-    "ns:textReference": "Broken Access Control [OWASP10]"
+    "ns:textReviewProblem": "Remote side can perform remote malicious activities based on misconfiguration or vulnerabilities of the cloud application",
+    "ns:textReference": "Automated Threat Detection, Web Application Firewall [Rath]"
   },
   "organization": {
     "ns:usesPattern": [],
@@ -30,7 +30,7 @@
   },
   "security": {
     "ns:hasThreat": [],
-    "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
+    "ns:hasAggressor": ["su:comp_RemoteUser"],
     "ns:hasAggressorRole": ["ns:role_Client"],
     "ns:hasWeakness": [],
     "ns:hasSTRIDE": [],

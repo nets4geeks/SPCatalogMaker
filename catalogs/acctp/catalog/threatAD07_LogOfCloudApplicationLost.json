@@ -1,12 +1,12 @@
 {
-  "id": "threatAD02_BrokenAccessControl",
+  "id": "threatAD07_LogOfCloudApplicationLost",
   "metadata": {
     "ns:textReviewContext": "Someone interacts with a cloud application",
-    "ns:textName": "AD02 Broken Access Control",
-    "ns:textReviewSolution": "Apply access control model; Apply access management;",
+    "ns:textName": "AD07 Log Of Cloud Application Lost",
+    "ns:textReviewSolution": "Apply third-part log service",
     "ns:textURL": "",
-    "ns:textReviewProblem": "No access control or broken (weak) access control by the cloud application",
-    "ns:textReference": "Broken Access Control [OWASP10]"
+    "ns:textReviewProblem": "Lost of cloud application log",
+    "ns:textReference": "R30, R.31 Lost or compromise of operational or security logs [ENISA]"
   },
   "organization": {
     "ns:usesPattern": [],
@@ -33,7 +33,7 @@
     "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
     "ns:hasAggressorRole": ["ns:role_Client"],
     "ns:hasWeakness": [],
-    "ns:hasSTRIDE": [],
+    "ns:hasSTRIDE": ["ns:STRIDE_Repudiation"],
     "ns:hasSecurityConcern": []
   }
 }

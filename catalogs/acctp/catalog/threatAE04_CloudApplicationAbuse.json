@@ -1,12 +1,12 @@
 {
-  "id": "threatAD02_BrokenAccessControl",
+  "id": "threatAE04_CloudApplicationAbuse",
   "metadata": {
-    "ns:textReviewContext": "Someone interacts with a cloud application",
-    "ns:textName": "AD02 Broken Access Control",
-    "ns:textReviewSolution": "Apply access control model; Apply access management;",
+    "ns:textReviewContext": "Remote user interacts with a cloud application",
+    "ns:textName": "AE04 Cloud Application Abuse",
+    "ns:textReviewSolution": "",
     "ns:textURL": "",
-    "ns:textReviewProblem": "No access control or broken (weak) access control by the cloud application",
-    "ns:textReference": "Broken Access Control [OWASP10]"
+    "ns:textReviewProblem": "Malicious usage (abuse) of cloud application from the Internet (e.g. sending spam, participating botnet, mining) after gain control on it",
+    "ns:textReference": "TIS.020 [BDU]"
   },
   "organization": {
     "ns:usesPattern": [],
@@ -30,7 +30,7 @@
   },
   "security": {
     "ns:hasThreat": [],
-    "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
+    "ns:hasAggressor": ["su:comp_RemoteUser"],
     "ns:hasAggressorRole": ["ns:role_Client"],
     "ns:hasWeakness": [],
     "ns:hasSTRIDE": [],

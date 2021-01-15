@@ -54,9 +54,8 @@ To make the datasets, run **./maker_XXX.run**. For configuration use the *maker_
 
 ## Academic Cloud Computing Threat Patterns (ACCTP) catalog
 
-The Academic Cloud Computing Threat Patterns (ACCTP) catalog contains different 
-profiles (architecture, compliance, privacy, IaaS, PaaS, SaaS, cloud storage) of cloud threats; 
-all the entities are mapped to the STRIDE model.
+The Academic Cloud Computing Threat Patterns (ACCTP) catalog is a pilot project that uses the SPCatalogMaker toolset.
+It describes common threats of cloud-based computer systems.
 
 There is a [WWW version of the ACCTP catalog](https://nets4geeks.github.io/acctp/) with its description.
 
@@ -66,7 +65,7 @@ Generated JSON schema (first stage) is in *cd.schema.json*; and Threat patterns 
 *ACCTPCatalog.owl* and *ACCTPCatalogReasoned.ttl* are target ontology and RDF dataset respectively (second stage).
 
 
-### Reference
+### Citations
 If you want to refer to the Schema and Maker, please cite:
 >Brazhuk A., Olizarovich E. Format and Usage Model of Security Patterns in Ontology-Driven Threat Modelling.
 //Russian Conference on Artificial Intelligence (RCAI 2020). – Springer, Cham, 2020. – С. 382-392.
