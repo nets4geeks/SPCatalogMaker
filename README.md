@@ -64,7 +64,7 @@ The *common.owl* file is an example of ontological description of the cloud comp
 Generated JSON schema (first stage) is in *cd.schema.json*; and Threat patterns descriptions are in the *xxx.json* files.
 *ACCTPCatalog.owl* and *ACCTPCatalogReasoned.ttl* are target ontology and RDF dataset respectively (second stage).
 
-[Changlog](CHANGELOG.md) of the project.
+[Changelog](CHANGELOG.md) of the project.
 
 ### Citations
 If you want to refer to the Schema and Maker, please cite:
