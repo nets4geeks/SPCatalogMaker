@@ -1,12 +1,12 @@
 {
-  "id": "threatAD06_BackupOfCloudApplicationStolen",
+  "id": "threatBA01_MaliciousInsiderInCloudInfrastructure",
   "metadata": {
-    "ns:textReviewContext": "Someone interacts with a cloud application",
-    "ns:textName": "AD06 Backups Of Cloud Application Stolen",
+    "ns:textReviewContext": "Compliance manager works with cloud application",
+    "ns:textName": "BA01 Malicious Insider In Cloud Infrastructure",
     "ns:textReviewSolution": "",
     "ns:textURL": "",
-    "ns:textReviewProblem": "Disclosure of cloud application backups",
-    "ns:textReference": "R.32: Backups lost, stolen [ENISA]"
+    "ns:textReviewProblem": "Malicious insider in cloud infrastructure causes security issues of cloud application",
+    "ns:textReference": "OI-1: Malicious insiders in the cloud infrastructure provider [SECCRIT]; R.10: Cloud provider malicious insider - abuse of high privilege roles [ENISA]; Cloud Provider Malicious Insider [QUIRC]; TIS.021 [BDU]"
   },
   "organization": {
     "ns:usesPattern": [],
@@ -30,10 +30,10 @@
   },
   "security": {
     "ns:hasThreat": [],
-    "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
+    "ns:hasAggressor": ["su:comp_ComplianceManager"],
     "ns:hasAggressorRole": ["ns:role_Client"],
     "ns:hasWeakness": [],
-    "ns:hasSTRIDE": ["ns:STRIDE_Information_Disclosure"],
+    "ns:hasSTRIDE": [],
     "ns:hasSecurityConcern": []
   }
 }

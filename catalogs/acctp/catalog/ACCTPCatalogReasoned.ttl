@@ -672,8 +672,8 @@
                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ;
                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
-                                           rdfs:comment "Disclosure of cloud application backup"@en ;
-                                           rdfs:label "AD06 Backup Of Cloud Application Stolen"@en .
+                                           rdfs:comment "Disclosure of cloud application backups"@en ;
+                                           rdfs:label "AD06 Backups Of Cloud Application Stolen"@en .
 
 
 ###  http://www.grsu.by/net/ACCTP#threatAD07_LogOfCloudApplicationLost
@@ -695,8 +695,8 @@
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Repudiation> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
-                                      rdfs:comment "Lost of cloud application log"@en ;
-                                      rdfs:label "AD07 Log Of Cloud Application Lost"@en .
+                                      rdfs:comment "Lost of cloud application logs"@en ;
+                                      rdfs:label "AD07 Logs Of Cloud Application Lost"@en .
 
 
 ###  http://www.grsu.by/net/ACCTP#threatAD08_LogOfCloudApplicationStolen
@@ -718,8 +718,8 @@
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ;
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
-                                        rdfs:comment "Disclosure of sensitive information from cloud application log"@en ;
-                                        rdfs:label "AD08 Log Of Cloud Application Stolen"@en .
+                                        rdfs:comment "Disclosure of sensitive information from cloud application logs"@en ;
+                                        rdfs:label "AD08 Logs Of Cloud Application Stolen"@en .
 
 
 ###  http://www.grsu.by/net/ACCTP#threatAE01_DDoSAttackToCloudApplication
@@ -820,25 +820,287 @@
                                                                        owl:Thing ;
                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
-                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP#Management Interface Compromise [QUIRC]> ,
-                                                                                                                                          <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
                                                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
-                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/ACCTP#Management Interface Compromise [QUIRC]> ;
+                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ;
                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                                               rdfs:comment "Disclosure of user credentials of management interface of cloud application"@en ;
                                                               rdfs:label "AE06 Disclosure Of Credentials Of Cloud Management Interface"@en .
 
 
-###  http://www.grsu.by/net/ACCTP#Management Interface Compromise [QUIRC]
-<http://www.grsu.by/net/ACCTP#Management Interface Compromise [QUIRC]> rdf:type owl:NamedIndividual ,
-                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE> ,
-                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                owl:Thing ;
-                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isSTRIDEof> :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface .
+###  http://www.grsu.by/net/ACCTP#threatBA01_MaliciousInsiderInCloudInfrastructure
+:threatBA01_MaliciousInsiderInCloudInfrastructure rdf:type owl:NamedIndividual ,
+                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                           owl:Thing ;
+                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                  rdfs:comment "Malicious insider in cloud infrastructure causes security issues of cloud application"@en ;
+                                                  rdfs:label "BA01 Malicious Insider In Cloud Infrastructure"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA02_LackOfReservedResourcesForCloudApplication
+:threatBA02_LackOfReservedResourcesForCloudApplication rdf:type owl:NamedIndividual ,
+                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                                owl:Thing ;
+                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ,
+                                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ;
+                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                       rdfs:comment "Lack of reserved resources for cloud application because of overload of cloud infrastructure"@en ;
+                                                       rdfs:label "BA02 Lack Of Reserved Resources For Cloud Application"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA03_FailureOfResourceScalingForCloudApplication
+:threatBA03_FailureOfResourceScalingForCloudApplication rdf:type owl:NamedIndividual ,
+                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                                 owl:Thing ;
+                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ,
+                                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ;
+                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                        rdfs:comment "Unexpected failure of resource scaling for cloud application"@en ;
+                                                        rdfs:label "BA03 Failure Of Resource Scaling For Cloud Application"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA04_HiddenDependenciesOfCloudInfrastructure
+:threatBA04_HiddenDependenciesOfCloudInfrastructure rdf:type owl:NamedIndividual ,
+                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                             owl:Thing ;
+                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ,
+                                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ;
+                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                    rdfs:comment "Hidden dependencies between components of cloud application and cloud infrastructure cause security issues of cloud application"@en ;
+                                                    rdfs:label "BA04 Hidden Dependencies Of Cloud Infrastructure"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA05_LackOfResourceIsolationOfCloudApplication
+:threatBA05_LackOfResourceIsolationOfCloudApplication rdf:type owl:NamedIndividual ,
+                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                               owl:Thing ;
+                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
+                                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ,
+                                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
+                                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ;
+                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                      rdfs:comment "Lack of data, code, network isolation of cloud applications caused by misconfigurations and vulnerabilities of cloud infrastructure"@en ;
+                                                      rdfs:label "BA05 Lack Of Resource Isolation Of Cloud Application"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA06_LossOfSecurityControl
+:threatBA06_LossOfSecurityControl rdf:type owl:NamedIndividual ,
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                           owl:Thing ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                  rdfs:comment "Loss of visibility and control of security and privacy of cloud application (partially controlled)"@en ;
+                                  rdfs:label "BA06 Loss Of Security Control"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA07_PoorInformationSecurityProcesses
+:threatBA07_PoorInformationSecurityProcesses rdf:type owl:NamedIndividual ,
+                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                      owl:Thing ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                             rdfs:comment "Poor information security processes of cloud provider (design, implementation and operations)"@en ;
+                                             rdfs:label "BA07 Poor Information Security Processes"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA08_AuditAndCertificationIssues
+:threatBA08_AuditAndCertificationIssues rdf:type owl:NamedIndividual ,
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                 owl:Thing ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                        rdfs:comment "Audit and certification of cloud applications and infrastructure are inaccessible or restricted"@en ;
+                                        rdfs:label "BA08 Audit And Certification Issues"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA09_SecurityIssuesOfSLA
+:threatBA09_SecurityIssuesOfSLA rdf:type owl:NamedIndividual ,
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                         owl:Thing ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                rdfs:comment "Incorrect or unclear information security section of SLA"@en ;
+                                rdfs:label "BA09 Security Issues Of SLA"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA10_ServiceProviderLockIn
+:threatBA10_ServiceProviderLockIn rdf:type owl:NamedIndividual ,
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                           owl:Thing ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                  rdfs:comment "Service provider lock-in"@en ;
+                                  rdfs:label "BA10 Service Provider Lock-In"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA11_SoftwareLicenseIssues
+:threatBA11_SoftwareLicenseIssues rdf:type owl:NamedIndividual ,
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                           owl:Thing ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                  rdfs:comment "Software license issues"@en ;
+                                  rdfs:label "BA11 Software License Issues"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA12_ConfiscationOfComputerHardware
+:threatBA12_ConfiscationOfComputerHardware rdf:type owl:NamedIndividual ,
+                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                    owl:Thing ;
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ,
+                                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
+                                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ,
+                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ;
+                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                           rdfs:comment "Confiscation of computer hardware of cloud provider as a result of subpoena by law-enforcement agencies"@en ;
+                                           rdfs:label "BA12 Confiscation Of Computer Hardware"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA13_RestrictionsOfForensicReadiness
+:threatBA13_RestrictionsOfForensicReadiness rdf:type owl:NamedIndividual ,
+                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                     owl:Thing ;
+                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                            rdfs:comment "Restrictions of forensic readiness for cloud applications (e.g. access to low-level logs and background data, disclosure of client context)"@en ;
+                                            rdfs:label "BA13 Restrictions Of Forensic Readiness"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA14_PhysicalAccessOrTheftOfComputerEquipment
+:threatBA14_PhysicalAccessOrTheftOfComputerEquipment rdf:type owl:NamedIndividual ,
+                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                              owl:Thing ;
+                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
+                                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ;
+                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                     rdfs:comment "Unauthorized access or theft of computer equipment from data centre"@en ;
+                                                     rdfs:label "BA14 Physical Access Or Theft Of Computer Equipment"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatBA15_DestructionOfDataCenter
+:threatBA15_DestructionOfDataCenter rdf:type owl:NamedIndividual ,
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                             owl:Thing ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                    rdfs:comment "Natural disasters destroy data centre or cloud infrastructure (Force Majeure)"@en ;
+                                    rdfs:label "BA15 Destruction Of Data Center"@en .
 
 
 ###  http://www.grsu.by/net/ACCTP/common#comp_CloudApplication
@@ -867,7 +1129,22 @@
                                                                                                                                              :threatAE03_NetworkAttacksToCloudApplication ,
                                                                                                                                              :threatAE04_CloudApplicationAbuse ,
                                                                                                                                              :threatAE05_BlockSharedResourcesOfCloudApplication ,
-                                                                                                                                             :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface .
+                                                                                                                                             :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface ,
+                                                                                                                                             :threatBA01_MaliciousInsiderInCloudInfrastructure ,
+                                                                                                                                             :threatBA02_LackOfReservedResourcesForCloudApplication ,
+                                                                                                                                             :threatBA03_FailureOfResourceScalingForCloudApplication ,
+                                                                                                                                             :threatBA04_HiddenDependenciesOfCloudInfrastructure ,
+                                                                                                                                             :threatBA05_LackOfResourceIsolationOfCloudApplication ,
+                                                                                                                                             :threatBA06_LossOfSecurityControl ,
+                                                                                                                                             :threatBA07_PoorInformationSecurityProcesses ,
+                                                                                                                                             :threatBA08_AuditAndCertificationIssues ,
+                                                                                                                                             :threatBA09_SecurityIssuesOfSLA ,
+                                                                                                                                             :threatBA10_ServiceProviderLockIn ,
+                                                                                                                                             :threatBA11_SoftwareLicenseIssues ,
+                                                                                                                                             :threatBA12_ConfiscationOfComputerHardware ,
+                                                                                                                                             :threatBA13_RestrictionsOfForensicReadiness ,
+                                                                                                                                             :threatBA14_PhysicalAccessOrTheftOfComputerEquipment ,
+                                                                                                                                             :threatBA15_DestructionOfDataCenter .
 
 
 ###  http://www.grsu.by/net/ACCTP/common#comp_CloudInfrastructure
@@ -1040,7 +1317,11 @@
                                                                                                                                                           :threatAD05_BackupOfCloudApplicationLost ,
                                                                                                                                                           :threatAE01_DDoSAttackToCloudApplication ,
                                                                                                                                                           :threatAE02_EDoSAttackToCloudApplication ,
-                                                                                                                                                          :threatAE05_BlockSharedResourcesOfCloudApplication .
+                                                                                                                                                          :threatAE05_BlockSharedResourcesOfCloudApplication ,
+                                                                                                                                                          :threatBA02_LackOfReservedResourcesForCloudApplication ,
+                                                                                                                                                          :threatBA03_FailureOfResourceScalingForCloudApplication ,
+                                                                                                                                                          :threatBA04_HiddenDependenciesOfCloudInfrastructure ,
+                                                                                                                                                          :threatBA12_ConfiscationOfComputerHardware .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege
@@ -1058,7 +1339,11 @@
                                                                                                                                                                :threatAC03_SocialEngineeringAgainstRemoteUser ,
                                                                                                                                                                :threatAD03_DataBreachByCloudApplication ,
                                                                                                                                                                :threatAD06_BackupOfCloudApplicationStolen ,
-                                                                                                                                                               :threatAD08_LogOfCloudApplicationStolen .
+                                                                                                                                                               :threatAD08_LogOfCloudApplicationStolen ,
+                                                                                                                                                               :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface ,
+                                                                                                                                                               :threatBA05_LackOfResourceIsolationOfCloudApplication ,
+                                                                                                                                                               :threatBA12_ConfiscationOfComputerHardware ,
+                                                                                                                                                               :threatBA14_PhysicalAccessOrTheftOfComputerEquipment .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Repudiation
@@ -1081,7 +1366,8 @@
                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                      owl:Thing ;
                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isSTRIDEof> :threatAA04_DataLossByRemoteService ,
-                                                                                                                                                  :threatAD04_DataLossByCloudApplication .
+                                                                                                                                                  :threatAD04_DataLossByCloudApplication ,
+                                                                                                                                                  :threatBA05_LackOfResourceIsolationOfCloudApplication .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#al_ClientLayer

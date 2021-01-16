@@ -11,6 +11,16 @@
       "title" : "Metadata section",
       "type" : "object",
       "properties" : {
+        "ns:textReviewProblem" : {
+          "type" : "string",
+          "title" : "Problem (review)",
+          "description" : "Pattern’s problem (review)"
+        },
+        "ns:textURL" : {
+          "type" : "string",
+          "title" : "URL",
+          "description" : "URL(s) of pattern's webpage"
+        },
         "ns:textReference" : {
           "type" : "string",
           "title" : "Reference",
@@ -30,16 +40,6 @@
           "type" : "string",
           "title" : "Context (review)",
           "description" : "Pattern’s context (review)"
-        },
-        "ns:textReviewProblem" : {
-          "type" : "string",
-          "title" : "Problem (review)",
-          "description" : "Pattern’s problem (review)"
-        },
-        "ns:textURL" : {
-          "type" : "string",
-          "title" : "URL",
-          "description" : "URL(s) of pattern's webpage"
         }
       }
     },
@@ -47,6 +47,15 @@
       "title" : "Organization and scope section",
       "type" : "object",
       "properties" : {
+        "ns:isChildOf" : {
+          "title" : "Parent pattern",
+          "description" : "For a concrete pattern shows from which abstract pattern it has been made.",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string"
+          }
+        },
         "ns:hasTemplate" : {
           "title" : "Template",
           "description" : "Template, used to describe a pattern.",
@@ -57,18 +66,18 @@
             "enum" : [ "ns:template_POSA", "ns:template_GOF" ]
           }
         },
-        "ns:hasGroup" : {
-          "title" : "Group",
-          "description" : "Pattern's group",
+        "ns:relatesTo" : {
+          "title" : "Related Pattern",
+          "description" : "Enumerates patterns that are related to this one.",
           "type" : "array",
           "uniqueItems" : true,
           "items" : {
             "type" : "string"
           }
         },
-        "ns:usesPattern" : {
-          "title" : "Used pattern",
-          "description" : "Enumerates patterns that are used by this one.",
+        "ns:hasGroup" : {
+          "title" : "Group",
+          "description" : "Pattern's group",
           "type" : "array",
           "uniqueItems" : true,
           "items" : {
@@ -85,18 +94,9 @@
             "enum" : [ "ns:type_SecurityPattern", "ns:type_MisusePattern", "ns:type_ThreatPattern" ]
           }
         },
-        "ns:isChildOf" : {
-          "title" : "Parent pattern",
-          "description" : "For a concrete pattern shows from which abstract pattern it has been made.",
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string"
-          }
-        },
-        "ns:relatesTo" : {
-          "title" : "Related Pattern",
-          "description" : "Enumerates patterns that are related to this one.",
+        "ns:usesPattern" : {
+          "title" : "Used pattern",
+          "description" : "Enumerates patterns that are used by this one.",
           "type" : "array",
           "uniqueItems" : true,
           "items" : {
@@ -109,6 +109,24 @@
       "title" : "Common section",
       "type" : "object",
       "properties" : {
+        "ns:hasArchitecturalLayer" : {
+          "title" : "Architectural layer",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:al_DistributionLayer", "ns:al_ClientLayer", "ns:al_NetworkLayer", "ns:al_TransportLayer", "ns:al_DataLayer", "ns:al_LogicLayer", "ns:al_PlatformAndOperatingSystem" ]
+          }
+        },
+        "ns:hasResponseType" : {
+          "title" : "Response type",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:rt_Prevention", "ns:rt_Forensics", "ns:rt_Recovery", "ns:rt_Mitigation", "ns:rt_Deterrence", "ns:rt_Avoidance", "ns:rt_Detection" ]
+          }
+        },
         "ns:hasSecurityLevel" : {
           "title" : "Security level",
           "type" : "array",
@@ -125,34 +143,7 @@
           "uniqueItems" : true,
           "items" : {
             "type" : "string",
-            "enum" : [ "ns:domain_SCADA", "ns:domain_PaaS", "ns:domain_Military", "ns:domain_FogComputing", "ns:domain_CloudComputing", "ns:domain_InternetOfThings", "ns:domain_GridComputing", "ns:domain_IaaS", "ns:domain_NFV", "ns:domain_SaaS", "ns:domain_EdgeComputing", "ns:domain_ECommerce" ]
-          }
-        },
-        "ns:hasConstraintLevel" : {
-          "title" : "Constraint level",
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string",
-            "enum" : [ "ns:cl_OrganizationalLevel", "ns:cl_HumanLevel", "ns:cl_MechanismLevel", "ns:cl_RegulatoryLevel" ]
-          }
-        },
-        "ns:hasResponseType" : {
-          "title" : "Response type",
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string",
-            "enum" : [ "ns:rt_Prevention", "ns:rt_Forensics", "ns:rt_Recovery", "ns:rt_Mitigation", "ns:rt_Deterrence", "ns:rt_Avoidance", "ns:rt_Detection" ]
-          }
-        },
-        "ns:hasArchitecturalLayer" : {
-          "title" : "Architectural layer",
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string",
-            "enum" : [ "ns:al_DistributionLayer", "ns:al_ClientLayer", "ns:al_NetworkLayer", "ns:al_TransportLayer", "ns:al_DataLayer", "ns:al_LogicLayer", "ns:al_PlatformAndOperatingSystem" ]
+            "enum" : [ "ns:domain_Military", "ns:domain_PaaS", "ns:domain_SCADA", "ns:domain_FogComputing", "ns:domain_CloudComputing", "ns:domain_InternetOfThings", "ns:domain_GridComputing", "ns:domain_IaaS", "ns:domain_NFV", "ns:domain_EdgeComputing", "ns:domain_SaaS", "ns:domain_ECommerce" ]
           }
         },
         "ns:hasLifecycleStage" : {
@@ -163,6 +154,15 @@
             "type" : "string",
             "enum" : [ "ns:lc_ArchitectureAndDesign", "ns:lc_Deployment", "ns:lc_Operations", "ns:lc_Requirements", "ns:lc_Implementation", "ns:lc_BuildAndCompilation", "ns:lc_SystemConfiguration", "ns:lc_Installation" ]
           }
+        },
+        "ns:hasConstraintLevel" : {
+          "title" : "Constraint level",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:cl_OrganizationalLevel", "ns:cl_HumanLevel", "ns:cl_MechanismLevel", "ns:cl_RegulatoryLevel" ]
+          }
         }
       }
     },
@@ -170,16 +170,6 @@
       "title" : "Context section",
       "type" : "object",
       "properties" : {
-        "ns:hasAffectedComponent" : {
-          "title" : "Affected component",
-          "description" : "Tells which common component(s) a pattern affects.",
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string",
-            "enum" : [ "su:comp_RemoteUser", "su:comp_CloudInfrastructure", "ns:component_Hardware", "su:comp_ExternalService", "su:comp_SaaSApplication", "ns:component_Actor", "ns:component_Software", "su:comp_ComplianceManager", "su:comp_PaaSApplication", "su:comp_CloudApplication", "su:comp_PriivacyManager" ]
-          }
-        },
         "ns:hasAffectedFunction" : {
           "title" : "Affected function",
           "description" : "Tells which system function(s) a pattern affects.",
@@ -188,6 +178,16 @@
           "items" : {
             "type" : "string",
             "enum" : [ "ns:function_Software", "ns:function_Actor", "ns:function_Hardware" ]
+          }
+        },
+        "ns:hasAffectedComponent" : {
+          "title" : "Affected component",
+          "description" : "Tells which common component(s) a pattern affects.",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "su:comp_CloudInfrastructure", "su:comp_RemoteUser", "ns:component_Hardware", "su:comp_ExternalService", "su:comp_SaaSApplication", "ns:component_Actor", "ns:component_Software", "su:comp_PaaSApplication", "su:comp_ComplianceManager", "su:comp_CloudApplication", "su:comp_PriivacyManager" ]
           }
         }
       }
@@ -203,7 +203,7 @@
           "uniqueItems" : true,
           "items" : {
             "type" : "string",
-            "enum" : [ "ns:threat_Flooding", "ns:threat_AuthenticationBypass", "ns:threat_InformationGathering", "ns:threat_EnvironmentManipulation", "ns:threat_PriviledgeEscalation", "ns:threat_InputDataManipulation", "ns:threat_SharedDataManipulation", "ns:threat_ProtocolAnalysis", "ns:threat_ManInTheMiddle", "ns:threat_Malware", "ns:threat_Footprinting", "ns:threat_Excavation", "ns:threat_IdentitySpoofing", "ns:threat_ContentSpoofing", "ns:threat_SessionManipulation", "ns:threat_BufferManipulation", "ns:threat_CodeInjection", "ns:threat_Interception", "ns:threat_ManipulationAPI", "ns:threat_ExcessiveAllocation" ]
+            "enum" : [ "ns:threat_Flooding", "ns:threat_AuthenticationBypass", "ns:threat_InformationGathering", "ns:threat_EnvironmentManipulation", "ns:threat_PriviledgeEscalation", "ns:threat_InputDataManipulation", "ns:threat_ProtocolAnalysis", "ns:threat_SharedDataManipulation", "ns:threat_ManInTheMiddle", "ns:threat_Malware", "ns:threat_Footprinting", "ns:threat_Excavation", "ns:threat_ContentSpoofing", "ns:threat_IdentitySpoofing", "ns:threat_SessionManipulation", "ns:threat_BufferManipulation", "ns:threat_CodeInjection", "ns:threat_Interception", "ns:threat_ManipulationAPI", "ns:threat_ExcessiveAllocation" ]
           }
         },
         "ns:hasAggressor" : {
@@ -213,17 +213,7 @@
           "uniqueItems" : true,
           "items" : {
             "type" : "string",
-            "enum" : [ "su:comp_RemoteUser", "su:comp_CloudInfrastructure", "ns:component_Hardware", "su:comp_ExternalService", "su:comp_SaaSApplication", "ns:component_Actor", "ns:component_Software", "su:comp_ComplianceManager", "su:comp_PaaSApplication", "su:comp_CloudApplication", "su:comp_PriivacyManager" ]
-          }
-        },
-        "ns:hasSecurityConcern" : {
-          "title" : "Security concern",
-          "description" : "Tells which security concern(s) a pattern touches.",
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string",
-            "enum" : [ "ns:concern_RiskAssessment", "ns:concern_Maintenance", "ns:concern_AssessmentAuthorizationAndMonitoring", "ns:concern_MediaProtection", "ns:concern_SystemAndServicesAcquisition", "ns:concern_IdentificationAndAuthentication", "ns:concern_IncidentResponse", "ns:concern_AuditAndAccountability", "ns:concern_SystemAndInformationIntegrity", "ns:concern_ConfigurationManagement", "ns:concern_AwarenessAndTraining", "ns:concern_SystemAndCommunicationsProtection", "ns:concern_ContingencyPlanning", "ns:concern_Planning", "ns:concern_ProgramManagement", "ns:concern_AccessControl", "ns:concern_PhysicalAndEnvironmentalProtection", "ns:concern_PersonnelSecurity" ]
+            "enum" : [ "su:comp_CloudInfrastructure", "su:comp_RemoteUser", "ns:component_Hardware", "su:comp_ExternalService", "su:comp_SaaSApplication", "ns:component_Actor", "ns:component_Software", "su:comp_PaaSApplication", "su:comp_ComplianceManager", "su:comp_CloudApplication", "su:comp_PriivacyManager" ]
           }
         },
         "ns:hasWeakness" : {
@@ -235,14 +225,14 @@
             "type" : "string"
           }
         },
-        "ns:hasSTRIDE" : {
-          "title" : "STRIDE",
-          "description" : "Related STRIDE item(s)",
+        "ns:hasSecurityConcern" : {
+          "title" : "Security concern",
+          "description" : "Tells which security concern(s) a pattern touches.",
           "type" : "array",
           "uniqueItems" : true,
           "items" : {
             "type" : "string",
-            "enum" : [ "ns:STRIDE_Repudiation", "ns:STRIDE_Tampering", "ns:STRIDE_Information_Disclosure", "ns:STRIDE_Elevation_of_Privilege", "ns:STRIDE_Spoofing", "ns:STRIDE_Denial_of_Service" ]
+            "enum" : [ "ns:concern_RiskAssessment", "ns:concern_Maintenance", "ns:concern_MediaProtection", "ns:concern_AssessmentAuthorizationAndMonitoring", "ns:concern_SystemAndServicesAcquisition", "ns:concern_IdentificationAndAuthentication", "ns:concern_IncidentResponse", "ns:concern_AuditAndAccountability", "ns:concern_ConfigurationManagement", "ns:concern_SystemAndInformationIntegrity", "ns:concern_AwarenessAndTraining", "ns:concern_SystemAndCommunicationsProtection", "ns:concern_ContingencyPlanning", "ns:concern_Planning", "ns:concern_ProgramManagement", "ns:concern_AccessControl", "ns:concern_PhysicalAndEnvironmentalProtection", "ns:concern_PersonnelSecurity" ]
           }
         },
         "ns:hasAggressorRole" : {
@@ -251,6 +241,16 @@
           "items" : {
             "type" : "string",
             "enum" : [ "ns:role_Server", "ns:role_Client" ]
+          }
+        },
+        "ns:hasSTRIDE" : {
+          "title" : "STRIDE",
+          "description" : "Related STRIDE item(s)",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:STRIDE_Repudiation", "ns:STRIDE_Tampering", "ns:STRIDE_Information_Disclosure", "ns:STRIDE_Elevation_of_Privilege", "ns:STRIDE_Spoofing", "ns:STRIDE_Denial_of_Service" ]
           }
         }
       }

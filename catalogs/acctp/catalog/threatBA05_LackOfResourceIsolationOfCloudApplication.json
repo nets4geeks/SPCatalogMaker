@@ -1,12 +1,12 @@
 {
-  "id": "threatAD06_BackupOfCloudApplicationStolen",
+  "id": "threatBA05_LackOfResourceIsolationOfCloudApplication",
   "metadata": {
-    "ns:textReviewContext": "Someone interacts with a cloud application",
-    "ns:textName": "AD06 Backups Of Cloud Application Stolen",
+    "ns:textReviewContext": "Compliance manager works with cloud application",
+    "ns:textName": "BA05 Lack Of Resource Isolation Of Cloud Application",
     "ns:textReviewSolution": "",
     "ns:textURL": "",
-    "ns:textReviewProblem": "Disclosure of cloud application backups",
-    "ns:textReference": "R.32: Backups lost, stolen [ENISA]"
+    "ns:textReviewProblem": "Lack of data, code, network isolation of cloud applications caused by misconfigurations and vulnerabilities of cloud infrastructure",
+    "ns:textReference": "R.9 Isolation failure [ENISA]; Isolation Failure [QUIRC]"
   },
   "organization": {
     "ns:usesPattern": [],
@@ -30,10 +30,10 @@
   },
   "security": {
     "ns:hasThreat": [],
-    "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
+    "ns:hasAggressor": ["su:comp_ComplianceManager"],
     "ns:hasAggressorRole": ["ns:role_Client"],
     "ns:hasWeakness": [],
-    "ns:hasSTRIDE": ["ns:STRIDE_Information_Disclosure"],
+    "ns:hasSTRIDE": ["ns:STRIDE_Information_Disclosure","ns:STRIDE_Tampering"],
     "ns:hasSecurityConcern": []
   }
 }

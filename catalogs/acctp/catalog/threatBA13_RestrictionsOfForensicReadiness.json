@@ -1,12 +1,12 @@
 {
-  "id": "threatAD06_BackupOfCloudApplicationStolen",
+  "id": "threatBA13_RestrictionsOfForensicReadiness",
   "metadata": {
-    "ns:textReviewContext": "Someone interacts with a cloud application",
-    "ns:textName": "AD06 Backups Of Cloud Application Stolen",
+    "ns:textReviewContext": "Compliance manager works with cloud application",
+    "ns:textName": "BA13 Restrictions Of Forensic Readiness",
     "ns:textReviewSolution": "",
     "ns:textURL": "",
-    "ns:textReviewProblem": "Disclosure of cloud application backups",
-    "ns:textReference": "R.32: Backups lost, stolen [ENISA]"
+    "ns:textReviewProblem": "Restrictions of forensic readiness for cloud applications (e.g. access to low-level logs and background data, disclosure of client context)",
+    "ns:textReference": "V.19: Lack of forensic readiness [ENISA]"
   },
   "organization": {
     "ns:usesPattern": [],
@@ -30,10 +30,10 @@
   },
   "security": {
     "ns:hasThreat": [],
-    "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
+    "ns:hasAggressor": ["su:comp_ComplianceManager"],
     "ns:hasAggressorRole": ["ns:role_Client"],
     "ns:hasWeakness": [],
-    "ns:hasSTRIDE": ["ns:STRIDE_Information_Disclosure"],
+    "ns:hasSTRIDE": [],
     "ns:hasSecurityConcern": []
   }
 }
