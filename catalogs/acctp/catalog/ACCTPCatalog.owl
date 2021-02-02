@@ -145,6 +145,8 @@ ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAC02_PublicNetworkAccessToCloudApplication (AC02 Public Network Access To Cloud Application)
@@ -220,10 +222,10 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD04_DataLossByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD04_DataLossByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
-# Individual: :threatAD05_BackupOfCloudApplicationLost (AD05 Backup Of CloudApplication Lost)
+# Individual: :threatAD05_BackupOfCloudApplicationLost (AD05 Backup Of Cloud Application Lost)
 
 AnnotationAssertion(rdfs:comment :threatAD05_BackupOfCloudApplicationLost "Lost of cloud application backup"@en)
-AnnotationAssertion(rdfs:label :threatAD05_BackupOfCloudApplicationLost "AD05 Backup Of CloudApplication Lost"@en)
+AnnotationAssertion(rdfs:label :threatAD05_BackupOfCloudApplicationLost "AD05 Backup Of Cloud Application Lost"@en)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAD05_BackupOfCloudApplicationLost)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAD05_BackupOfCloudApplicationLost <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD05_BackupOfCloudApplicationLost <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)

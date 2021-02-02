@@ -3,7 +3,7 @@
   "metadata": {
     "ns:textReviewContext": "Someone interacts with a cloud application",
     "ns:textName": "AB02 Connection Lost To Cloud Application",
-    "ns:textReviewSolution": "Ensure fault tolerance of the network connection; Apply clustrer-like configuration and load balancing of the cloud application; Apply Multi Availability Zone Deployment; Apply Content Distribution Networks (CDN)",
+    "ns:textReviewSolution": "Ensure fault tolerance of the network connection; Apply Availability Zones (AZ) to the cloud application; Apply Content Distribution Network (CDN) to the cloud application",
     "ns:textURL": "",
     "ns:textReviewProblem": "Connection lost to the cloud application",
     "ns:textReference": "BNA-3: Loss of wide-area network connectivity... [SECCRIT]"

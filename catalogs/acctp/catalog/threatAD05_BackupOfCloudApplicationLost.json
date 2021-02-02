@@ -2,7 +2,7 @@
   "id": "threatAD05_BackupOfCloudApplicationLost",
   "metadata": {
     "ns:textReviewContext": "Someone interacts with a cloud application",
-    "ns:textName": "AD05 Backup Of CloudApplication Lost",
+    "ns:textName": "AD05 Backup Of Cloud Application Lost",
     "ns:textReviewSolution": "",
     "ns:textURL": "",
     "ns:textReviewProblem": "Lost of cloud application backup",

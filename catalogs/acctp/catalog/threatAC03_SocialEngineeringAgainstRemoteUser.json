@@ -3,7 +3,7 @@
   "metadata": {
     "ns:textReviewContext": "Remote user interacts with a cloud application",
     "ns:textName": "AC03 Social Engineering Against Remote User",
-    "ns:textReviewSolution": "Apply TLS-based encryption and certificate for connection (cloud application); Apply security awareness; Apply security training;",
+    "ns:textReviewSolution": "Apply security awareness (cloud application); Apply security training (remote user);",
     "ns:textURL": "",
     "ns:textReviewProblem": "Remote user suffers from Social Engineering attacks, performed by third-party adversary (e.g. including the cloud application into phishing schema)",
     "ns:textReference": "R.29: Social engineering attacks (impersonation) [ENISA]"
