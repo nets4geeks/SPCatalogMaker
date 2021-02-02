@@ -3,7 +3,7 @@
   "metadata": {
     "ns:textReviewContext": "Someone interacts with a cloud application",
     "ns:textName": "AB01 Failure Of Cloud Application",
-    "ns:textReviewSolution": "Ensure fault tolerance of the cloud infrastructure; Apply automatic recovery of the cloud application; Apply autoscaling of the cloud application; Apply clustrer-like configuration and load balancing of the cloud application;",
+    "ns:textReviewSolution": "Ensure fault tolerance of the cloud infrastructure; Apply automatic recovery of the cloud application; Apply autoscaling of the cloud application; Apply clustrer-like configuration of the cloud application (failover and load balancing);",
     "ns:textURL": "",
     "ns:textReviewProblem": "Unexpected failure of the cloud application",
     "ns:textReference": "TIS.043, TIS.142 [BDU]"
