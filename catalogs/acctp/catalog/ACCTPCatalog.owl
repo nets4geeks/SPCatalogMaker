@@ -182,11 +182,12 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Spoofing>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAD02_BrokenAccessControl (AD02 Broken Access Control)
 
-AnnotationAssertion(rdfs:comment :threatAD02_BrokenAccessControl "No access control or broken (weak) access control by the cloud application"@en)
+AnnotationAssertion(rdfs:comment :threatAD02_BrokenAccessControl "No access control, broken (weak) access control, and the authorization issues of the cloud application"@en)
 AnnotationAssertion(rdfs:label :threatAD02_BrokenAccessControl "AD02 Broken Access Control"@en)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAD02_BrokenAccessControl)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
@@ -194,6 +195,7 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAD03_DataBreachByCloudApplication (AD03 Data Breach By Cloud Application)

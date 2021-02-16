@@ -556,12 +556,14 @@
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                              <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                              <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Spoofing> ,
                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                          <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                          <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Spoofing> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                  rdfs:comment "No authentication or broken (weak) authentication by the cloud application"@en ;
                                  rdfs:label "AD01 Broken Authentication"@en .
@@ -577,14 +579,16 @@
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                             <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                             <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege> ,
                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                         <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                         <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
-                                rdfs:comment "No access control or broken (weak) access control by the cloud application"@en ;
+                                rdfs:comment "No access control, broken (weak) access control, and the authorization issues of the cloud application"@en ;
                                 rdfs:label "AD02 Broken Access Control"@en .
 
 
@@ -1331,7 +1335,8 @@
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
-                                                                                                  owl:Thing .
+                                                                                                  owl:Thing ;
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isSTRIDEof> :threatAD02_BrokenAccessControl .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure
@@ -1363,7 +1368,8 @@
                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                     owl:Thing ;
                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isSTRIDEof> :threatAA05_SpoofingOfRemoteService ,
-                                                                                                                                                 :threatAC03_SocialEngineeringAgainstRemoteUser .
+                                                                                                                                                 :threatAC03_SocialEngineeringAgainstRemoteUser ,
+                                                                                                                                                 :threatAD01_BrokenAuthentication .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering

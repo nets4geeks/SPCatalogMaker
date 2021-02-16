@@ -33,7 +33,7 @@
     "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
     "ns:hasAggressorRole": ["ns:role_Client"],
     "ns:hasWeakness": [],
-    "ns:hasSTRIDE": [],
+    "ns:hasSTRIDE": ["ns:STRIDE_Spoofing"],
     "ns:hasSecurityConcern": []
   }
 }

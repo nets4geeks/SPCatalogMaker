@@ -3,9 +3,9 @@
   "metadata": {
     "ns:textReviewContext": "Someone interacts with a cloud application",
     "ns:textName": "AD02 Broken Access Control",
-    "ns:textReviewSolution": "Apply access control model; Apply access management;",
+    "ns:textReviewSolution": "Follow the principle of least privilege; Apply Authorization; Apply Audit; Apply Mandatory Access Control (MAC); Apply Discretionary Access Control (DAC); Apply Role-Based Access Control (RBAC); Apply management of user sessions; Secure user IDs and tokens; Ensure proper file permissions; Avoid Path Traversal; Avoid Client Side Caching;",
     "ns:textURL": "",
-    "ns:textReviewProblem": "No access control or broken (weak) access control by the cloud application",
+    "ns:textReviewProblem": "No access control, broken (weak) access control, and the authorization issues of the cloud application",
     "ns:textReference": "Broken Access Control [OWASP10]"
   },
   "organization": {
@@ -33,7 +33,7 @@
     "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
     "ns:hasAggressorRole": ["ns:role_Client"],
     "ns:hasWeakness": [],
-    "ns:hasSTRIDE": [],
+    "ns:hasSTRIDE": ["ns:STRIDE_Elevation_of_Privilege"],
     "ns:hasSecurityConcern": []
   }
 }
