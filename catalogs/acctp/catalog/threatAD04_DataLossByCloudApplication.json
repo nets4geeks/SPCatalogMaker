@@ -3,7 +3,7 @@
   "metadata": {
     "ns:textReviewContext": "Someone interacts with a cloud application",
     "ns:textName": "AD04 Data Loss By Cloud Application",
-    "ns:textReviewSolution": "Ensure data integrity of cloud infrastructure (cloud application); Apply digital signatures to the cloud application; Apply data encryption to the cloud application;",
+    "ns:textReviewSolution": "Ensure data integrity of cloud infrastructure; Apply digital signatures; Apply data backup; Apply Data Loss Prevention (DLP);",
     "ns:textURL": "",
     "ns:textReviewProblem": "Data loss (modification) by the cloud application",
     "ns:textReference": "R.19: Compromise service engine [ENISA]; Compromise service engine [QUIRC];"

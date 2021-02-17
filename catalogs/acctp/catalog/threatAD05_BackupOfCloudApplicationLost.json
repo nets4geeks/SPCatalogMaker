@@ -3,7 +3,7 @@
   "metadata": {
     "ns:textReviewContext": "Someone interacts with a cloud application",
     "ns:textName": "AD05 Backup Of Cloud Application Lost",
-    "ns:textReviewSolution": "",
+    "ns:textReviewSolution": "Apply data backup plan; Apply replication of data backup (multiple backups); Apply an external service of data backup;",
     "ns:textURL": "",
     "ns:textReviewProblem": "Lost of cloud application backup",
     "ns:textReference": "R.32: BACKUPS LOST, STOLEN [ENISA]; Data Retention [Rath]"

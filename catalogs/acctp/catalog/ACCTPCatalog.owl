@@ -237,10 +237,10 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD05_BackupOfCloudApplicationLost <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD05_BackupOfCloudApplicationLost <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
-# Individual: :threatAD06_BackupOfCloudApplicationStolen (AD06 Backups Of Cloud Application Stolen)
+# Individual: :threatAD06_BackupOfCloudApplicationStolen (AD06 Backup Of Cloud Application Stolen)
 
 AnnotationAssertion(rdfs:comment :threatAD06_BackupOfCloudApplicationStolen "Disclosure of cloud application backups"@en)
-AnnotationAssertion(rdfs:label :threatAD06_BackupOfCloudApplicationStolen "AD06 Backups Of Cloud Application Stolen"@en)
+AnnotationAssertion(rdfs:label :threatAD06_BackupOfCloudApplicationStolen "AD06 Backup Of Cloud Application Stolen"@en)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAD06_BackupOfCloudApplicationStolen)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAD06_BackupOfCloudApplicationStolen <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD06_BackupOfCloudApplicationStolen <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)

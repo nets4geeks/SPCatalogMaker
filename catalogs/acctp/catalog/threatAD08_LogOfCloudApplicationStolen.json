@@ -3,7 +3,7 @@
   "metadata": {
     "ns:textReviewContext": "Someone interacts with a cloud application",
     "ns:textName": "AD08 Logs Of Cloud Application Stolen",
-    "ns:textReviewSolution": "Apply third-part logs service",
+    "ns:textReviewSolution": "Avoid storing of sensitive data in logs; Apply logs encryption; Ensure strong encryption algorithms for logs;",
     "ns:textURL": "",
     "ns:textReviewProblem": "Disclosure of sensitive information from cloud application logs",
     "ns:textReference": "R30, R.31 Lost or compromise of operational or security logs [ENISA]"

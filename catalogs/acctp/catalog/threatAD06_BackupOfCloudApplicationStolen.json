@@ -2,8 +2,8 @@
   "id": "threatAD06_BackupOfCloudApplicationStolen",
   "metadata": {
     "ns:textReviewContext": "Someone interacts with a cloud application",
-    "ns:textName": "AD06 Backups Of Cloud Application Stolen",
-    "ns:textReviewSolution": "",
+    "ns:textName": "AD06 Backup Of Cloud Application Stolen",
+    "ns:textReviewSolution": "Apply data backup encryption; Ensure strong encryption algorithms of data backup;",
     "ns:textURL": "",
     "ns:textReviewProblem": "Disclosure of cloud application backups",
     "ns:textReference": "R.32: Backups lost, stolen [ENISA]"
