@@ -764,7 +764,7 @@
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ;
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
-                                         rdfs:comment "EDoS (Economic Denial of Service) attack against cloud application from the Internet"@en ;
+                                         rdfs:comment "EDoS (Economic Denial of Sustainability or Economic Denial of Service) attack against cloud application from the Internet"@en ;
                                          rdfs:label "AE02 EDoS Attack To Cloud Application"@en .
 
 

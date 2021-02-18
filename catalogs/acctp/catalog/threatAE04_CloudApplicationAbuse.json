@@ -3,7 +3,7 @@
   "metadata": {
     "ns:textReviewContext": "Remote user interacts with a cloud application",
     "ns:textName": "AE04 Cloud Application Abuse",
-    "ns:textReviewSolution": "",
+    "ns:textReviewSolution": "Apply intrusion detection; Apply audit of logs and events;",
     "ns:textURL": "",
     "ns:textReviewProblem": "Malicious usage (abuse) of cloud application from the Internet (e.g. sending spam, participating botnet, mining) after gain control on it",
     "ns:textReference": "TIS.020 [BDU]"

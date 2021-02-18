@@ -3,7 +3,7 @@
   "metadata": {
     "ns:textReviewContext": "Remote user interacts with a cloud application",
     "ns:textName": "AE03 Network Attacks To Cloud Application",
-    "ns:textReviewSolution": "Apply firewall service; Apply bastion host; Apply threat detection service; Apply Web Application Firewall (WAF)",
+    "ns:textReviewSolution": "Apply firewall service; Apply bastion host; Apply intrusion detection; Apply intrusion prevention; Apply Web Application Firewall (WAF); Apply Cyber Threat Intelligence (CTI) service;",
     "ns:textURL": "",
     "ns:textReviewProblem": "Remote side can perform remote malicious activities based on misconfiguration or vulnerabilities of the cloud application",
     "ns:textReference": "Automated Threat Detection, Web Application Firewall [Rath]"

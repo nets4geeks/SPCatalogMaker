@@ -289,7 +289,7 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 
 # Individual: :threatAE02_EDoSAttackToCloudApplication (AE02 EDoS Attack To Cloud Application)
 
-AnnotationAssertion(rdfs:comment :threatAE02_EDoSAttackToCloudApplication "EDoS (Economic Denial of Service) attack against cloud application from the Internet"@en)
+AnnotationAssertion(rdfs:comment :threatAE02_EDoSAttackToCloudApplication "EDoS (Economic Denial of Sustainability or Economic Denial of Service) attack against cloud application from the Internet"@en)
 AnnotationAssertion(rdfs:label :threatAE02_EDoSAttackToCloudApplication "AE02 EDoS Attack To Cloud Application"@en)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatAE02_EDoSAttackToCloudApplication)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAE02_EDoSAttackToCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)

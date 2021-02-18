@@ -3,7 +3,7 @@
   "metadata": {
     "ns:textReviewContext": "Remote user interacts with a cloud application",
     "ns:textName": "AE05 Block Shared Resources Of Cloud Application",
-    "ns:textReviewSolution": "",
+    "ns:textReviewSolution": "Ensure strict division identifiers (names, IP addresses) of cloud infrastructure;",
     "ns:textURL": "",
     "ns:textReviewProblem": "Blocking shared resources of cloud application (e.g. shared external IP) by a third-part reputation service",
     "ns:textReference": ""
