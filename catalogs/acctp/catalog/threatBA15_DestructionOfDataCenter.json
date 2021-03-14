@@ -3,10 +3,10 @@
   "metadata": {
     "ns:textReviewContext": "Compliance manager works with cloud application",
     "ns:textName": "BA15 Destruction Of Data Center",
-    "ns:textReviewSolution": "",
+    "ns:textReviewSolution": "Define different data centre locations (SLA);",
     "ns:textURL": "",
     "ns:textReviewProblem": "Natural disasters destroy data centre or cloud infrastructure (Force Majeure)",
-    "ns:textReference": "R.35: Natural disasters [ENISA]"
+    "ns:textReference": "R.35: Natural disasters [ENISA]; Total expenses due to compensatory damages, Average expenses due to compensatory damages, Level of Diversity, Datacenter Location [Casola]"
   },
   "organization": {
     "ns:usesPattern": [],

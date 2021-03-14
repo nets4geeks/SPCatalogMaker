@@ -3,10 +3,10 @@
   "metadata": {
     "ns:textReviewContext": "Compliance manager works with cloud application",
     "ns:textName": "BA03 Failure Of Resource Scaling For Cloud Application",
-    "ns:textReviewSolution": "",
+    "ns:textReviewSolution": "Define data and service availability metrics (SLA); Apply data and service availability monitoring;",
     "ns:textURL": "",
     "ns:textReviewProblem": "Unexpected failure of resource scaling for cloud application",
-    "ns:textReference": "RE-8, RE-9: Scaling out ... [SECCRIT]"
+    "ns:textReference": "RE-8, RE-9: Scaling out ... [SECCRIT]; Data availability, Service availability [Casola];"
   },
   "organization": {
     "ns:usesPattern": [],

@@ -6,7 +6,7 @@
     "ns:textReviewSolution": "",
     "ns:textURL": "",
     "ns:textReviewProblem": "Audit and certification of cloud applications and infrastructure are inaccessible or restricted",
-    "ns:textReference": "V.25: Audit or certification not available to customers [ENISA]; V.26: Certification schemes not adapted to cloud infrastructures [ENISA]"
+    "ns:textReference": "V.25: Audit or certification not available to customers [ENISA]; V.26: Certification schemes not adapted to cloud infrastructures [ENISA]; Log Unalterability, Type of incident notification, Audit Record Generation Frequency [Casola];"
   },
   "organization": {
     "ns:usesPattern": [],

@@ -3,10 +3,10 @@
   "metadata": {
     "ns:textReviewContext": "Compliance manager works with cloud application",
     "ns:textName": "BA05 Lack Of Resource Isolation Of Cloud Application",
-    "ns:textReviewSolution": "",
+    "ns:textReviewSolution": "Define data isolation testing procedures (SLA);",
     "ns:textURL": "",
     "ns:textReviewProblem": "Lack of data, code, network isolation of cloud applications caused by misconfigurations and vulnerabilities of cloud infrastructure",
-    "ns:textReference": "R.9 Isolation failure [ENISA]; Isolation Failure [QUIRC]"
+    "ns:textReference": "R.9 Isolation failure [ENISA]; Isolation Failure [QUIRC]; Data Isolation Testing Level [Casola];"
   },
   "organization": {
     "ns:usesPattern": [],

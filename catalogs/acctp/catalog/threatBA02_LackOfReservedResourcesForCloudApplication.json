@@ -3,10 +3,10 @@
   "metadata": {
     "ns:textReviewContext": "Compliance manager works with cloud application",
     "ns:textName": "BA02 Lack Of Reserved Resources For Cloud Application",
-    "ns:textReviewSolution": "",
+    "ns:textReviewSolution": "Define data and service availability metrics (SLA); Apply data and service availability monitoring;",
     "ns:textURL": "",
     "ns:textReviewProblem": "Lack of reserved resources for cloud application because of overload of cloud infrastructure",
-    "ns:textReference": "RE-1...RE-6  Insufficient underlying ... [SECCRIT]; R.8: Resource exhaustion (under or over provisioning) [ENISA]; Resource Exhaustion ... [QUIRC];"
+    "ns:textReference": "RE-1...RE-6  Insufficient underlying ... [SECCRIT]; R.8: Resource exhaustion (under or over provisioning) [ENISA]; Resource Exhaustion ... [QUIRC]; Data availability, Service availability [Casola];"
   },
   "organization": {
     "ns:usesPattern": [],

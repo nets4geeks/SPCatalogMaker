@@ -3,10 +3,10 @@
   "metadata": {
     "ns:textReviewContext": "Compliance manager works with cloud application",
     "ns:textName": "BA01 Malicious Insider In Cloud Infrastructure",
-    "ns:textReviewSolution": "",
+    "ns:textReviewSolution": "Define Cost of Incident metrics;",
     "ns:textURL": "",
     "ns:textReviewProblem": "Malicious insider in cloud infrastructure causes security issues of cloud application",
-    "ns:textReference": "OI-1: Malicious insiders in the cloud infrastructure provider [SECCRIT]; R.10: Cloud provider malicious insider - abuse of high privilege roles [ENISA]; Cloud Provider Malicious Insider [QUIRC]; TIS.021 [BDU]"
+    "ns:textReference": "OI-1: Malicious insiders in the cloud infrastructure provider [SECCRIT]; R.10: Cloud provider malicious insider - abuse of high privilege roles [ENISA]; Cloud Provider Malicious Insider [QUIRC]; TIS.021 [BDU]; Cost of Incidents, Mean Cost of Incidents, Mean Incident Recovery Cost [Casola];"
   },
   "organization": {
     "ns:usesPattern": [],

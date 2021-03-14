@@ -3,10 +3,10 @@
   "metadata": {
     "ns:textReviewContext": "Compliance manager works with cloud application",
     "ns:textName": "BA06 Loss Of Security Control",
-    "ns:textReviewSolution": "",
+    "ns:textReviewSolution": "Define the use of security controls (SLA);",
     "ns:textURL": "",
     "ns:textReviewProblem": "Loss of visibility and control of security and privacy of cloud application (partially controlled)",
-    "ns:textReference": "ODSS-1: Loss of human-operated control point to verify security and privacy settings [SECCRIT]; R.2: Loss of governance [ENISA]"
+    "ns:textReference": "ODSS-1: Loss of human-operated control point to verify security and privacy settings [SECCRIT]; R.2: Loss of governance [ENISA]; Vulnerability Scanning Frequency, Vulnerability-List Update Frequency, SW Update Check Frequency [Casola];"
   },
   "organization": {
     "ns:usesPattern": [],
