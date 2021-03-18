@@ -1111,6 +1111,167 @@
                                     rdfs:label "BA15 Destruction Of Data Center"@en .
 
 
+###  http://www.grsu.by/net/ACCTP#threatDB01_PriviledgeEscalation
+:threatDB01_PriviledgeEscalation rdf:type owl:NamedIndividual ,
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                          owl:Thing ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                 rdfs:comment "System services and applications suffer from privilege escalation"@en ;
+                                 rdfs:label "DB01 Priviledge Escalation"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatDB02_NetworkScanning
+:threatDB02_NetworkScanning rdf:type owl:NamedIndividual ,
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                     owl:Thing ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                            rdfs:comment "Network and port scanning, service and version detection of VM from Internet"@en ;
+                            rdfs:label "DB02 Network Scanning"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatDC01_VMEscape
+:threatDC01_VMEscape rdf:type owl:NamedIndividual ,
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                              owl:Thing ;
+                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                     rdfs:comment "VM suffers from process that escaped from another VM (VM Escape)"@en ;
+                     rdfs:label "DC01 VM Escape"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatDC02_CrossVMSideChannel
+:threatDC02_CrossVMSideChannel rdf:type owl:NamedIndividual ,
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                        owl:Thing ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                               rdfs:comment "VM suffers from a Cross-VM side channel attack"@en ;
+                               rdfs:label "DC02 Cross-VM Side Channel"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatDC03_HypervisorVulnerabilities
+:threatDC03_HypervisorVulnerabilities rdf:type owl:NamedIndividual ,
+                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                               owl:Thing ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                      rdfs:comment "VM suffers from vulnerabilities of hypervisor"@en ;
+                                      rdfs:label "DC03 Hypervisor Vulnerabilities"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatDC04_UnsafeVMMigration
+:threatDC04_UnsafeVMMigration rdf:type owl:NamedIndividual ,
+                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                       owl:Thing ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                              rdfs:comment "Loss or disclosure of information during VM migration"@en ;
+                              rdfs:label "DC04 Unsafe VM Migration"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatDC05_RogueVMImageInRepository
+:threatDC05_RogueVMImageInRepository rdf:type owl:NamedIndividual ,
+                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                              owl:Thing ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                     rdfs:comment "Uncontrolled placement of VM images (possibly with malicious content) in repository"@en ;
+                                     rdfs:label "DC05 Rogue VM Image In Repository"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatDC06_OutdatedVMImageInRepository
+:threatDC06_OutdatedVMImageInRepository rdf:type owl:NamedIndividual ,
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                 owl:Thing ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                        rdfs:comment "Use of an outdated image for VM from repository"@en ;
+                                        rdfs:label "DC06 Outdated VM Image In Repository"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatDC07_LackOfNetworkIsolation
+:threatDC07_LackOfNetworkIsolation rdf:type owl:NamedIndividual ,
+                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                            owl:Thing ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
+                                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                   rdfs:comment "Security issues of VM networking, caused by lack of network isolation"@en ;
+                                   rdfs:label "DC07 Lack Of Network Isolation"@en .
+
+
 ###  http://www.grsu.by/net/ACCTP/common#comp_CloudApplication
 <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
@@ -1221,8 +1382,20 @@
 
 
 ###  http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine
-<http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
-                                                                   owl:Thing .
+<http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                   owl:Thing ;
+                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf> :threatDB01_PriviledgeEscalation ,
+                                                                                                                                           :threatDB02_NetworkScanning ,
+                                                                                                                                           :threatDC01_VMEscape ,
+                                                                                                                                           :threatDC02_CrossVMSideChannel ,
+                                                                                                                                           :threatDC03_HypervisorVulnerabilities ,
+                                                                                                                                           :threatDC04_UnsafeVMMigration ,
+                                                                                                                                           :threatDC05_RogueVMImageInRepository ,
+                                                                                                                                           :threatDC06_OutdatedVMImageInRepository ,
+                                                                                                                                           :threatDC07_LackOfNetworkIsolation .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_AccessControl
@@ -1336,7 +1509,8 @@
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                                   owl:Thing ;
-                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isSTRIDEof> :threatAD02_BrokenAccessControl .
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isSTRIDEof> :threatAD02_BrokenAccessControl ,
+                                                                                                                                                               :threatDB01_PriviledgeEscalation .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure
@@ -1353,7 +1527,9 @@
                                                                                                                                                                :threatAE06_DisclosureOfCredentialsOfCloudManagementInterface ,
                                                                                                                                                                :threatBA05_LackOfResourceIsolationOfCloudApplication ,
                                                                                                                                                                :threatBA12_ConfiscationOfComputerHardware ,
-                                                                                                                                                               :threatBA14_PhysicalAccessOrTheftOfComputerEquipment .
+                                                                                                                                                               :threatBA14_PhysicalAccessOrTheftOfComputerEquipment ,
+                                                                                                                                                               :threatDB02_NetworkScanning ,
+                                                                                                                                                               :threatDC04_UnsafeVMMigration .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Repudiation
@@ -1379,7 +1555,8 @@
                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isSTRIDEof> :threatAA04_DataLossByRemoteService ,
                                                                                                                                                   :threatAC01_MalwareFromCloudApplication ,
                                                                                                                                                   :threatAD04_DataLossByCloudApplication ,
-                                                                                                                                                  :threatBA05_LackOfResourceIsolationOfCloudApplication .
+                                                                                                                                                  :threatBA05_LackOfResourceIsolationOfCloudApplication ,
+                                                                                                                                                  :threatDC04_UnsafeVMMigration .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#al_ClientLayer

@@ -1,0 +1,39 @@
+{
+  "id": "threatDC03_HypervisorVulnerabilities",
+  "metadata": {
+    "ns:textReviewContext": "Compliance manager works with virtual machine",
+    "ns:textName": "DC03 Hypervisor Vulnerabilities",
+    "ns:textReviewSolution": "",
+    "ns:textURL": "",
+    "ns:textReviewProblem": "VM suffers from vulnerabilities of hypervisor",
+    "ns:textReference": "VN-1: Software vulnerabilities in the Virtual Machine Manager (VMM) [SECCRIT]; V5: Hypervisor vulnerabilities [ENISA];"
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": ["su:comp_VirtualMachine"]
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": ["su:comp_ComplianceManager"],
+    "ns:hasAggressorRole": ["ns:role_Client"],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": [],
+    "ns:hasSecurityConcern": []
+  }
+}

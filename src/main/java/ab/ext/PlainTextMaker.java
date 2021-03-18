@@ -75,7 +75,8 @@ public class PlainTextMaker{
        catalog.add("/ [Home](/acctp/) /");
        catalog.add("");
        catalog.add("## Threat Patterns");
-       catalog.add("AXXX - Architecture profile, BXXX - Compliance profile, CXXX - Privacy profile");
+       catalog.add("AXXX - Architecture profile, BXXX - Compliance profile, CXXX - Privacy profile (coming soon)");
+       catalog.add("DXXX - IaaS Profile");
        catalog.add("");
 
 	   // get list of json files

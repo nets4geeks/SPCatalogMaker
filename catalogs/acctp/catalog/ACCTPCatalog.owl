@@ -48,6 +48,15 @@ Declaration(NamedIndividual(:threatBA12_ConfiscationOfComputerHardware))
 Declaration(NamedIndividual(:threatBA13_RestrictionsOfForensicReadiness))
 Declaration(NamedIndividual(:threatBA14_PhysicalAccessOrTheftOfComputerEquipment))
 Declaration(NamedIndividual(:threatBA15_DestructionOfDataCenter))
+Declaration(NamedIndividual(:threatDB01_PriviledgeEscalation))
+Declaration(NamedIndividual(:threatDB02_NetworkScanning))
+Declaration(NamedIndividual(:threatDC01_VMEscape))
+Declaration(NamedIndividual(:threatDC02_CrossVMSideChannel))
+Declaration(NamedIndividual(:threatDC03_HypervisorVulnerabilities))
+Declaration(NamedIndividual(:threatDC04_UnsafeVMMigration))
+Declaration(NamedIndividual(:threatDC05_RogueVMImageInRepository))
+Declaration(NamedIndividual(:threatDC06_OutdatedVMImageInRepository))
+Declaration(NamedIndividual(:threatDC07_LackOfNetworkIsolation))
 
 
 
@@ -497,6 +506,100 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatBA15_DestructionOfDataCenter <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatBA15_DestructionOfDataCenter <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatBA15_DestructionOfDataCenter <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatDB01_PriviledgeEscalation (DB01 Priviledge Escalation)
+
+AnnotationAssertion(rdfs:comment :threatDB01_PriviledgeEscalation "System services and applications suffer from privilege escalation"@en)
+AnnotationAssertion(rdfs:label :threatDB01_PriviledgeEscalation "DB01 Priviledge Escalation"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDB01_PriviledgeEscalation)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatDB02_NetworkScanning (DB02 Network Scanning)
+
+AnnotationAssertion(rdfs:comment :threatDB02_NetworkScanning "Network and port scanning, service and version detection of VM from Internet"@en)
+AnnotationAssertion(rdfs:label :threatDB02_NetworkScanning "DB02 Network Scanning"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDB02_NetworkScanning)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDB02_NetworkScanning <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDB02_NetworkScanning <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDB02_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatDB02_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDB02_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatDC01_VMEscape (DC01 VM Escape)
+
+AnnotationAssertion(rdfs:comment :threatDC01_VMEscape "VM suffers from process that escaped from another VM (VM Escape)"@en)
+AnnotationAssertion(rdfs:label :threatDC01_VMEscape "DC01 VM Escape"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDC01_VMEscape)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDC01_VMEscape <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDC01_VMEscape <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDC01_VMEscape <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDC01_VMEscape <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatDC02_CrossVMSideChannel (DC02 Cross-VM Side Channel)
+
+AnnotationAssertion(rdfs:comment :threatDC02_CrossVMSideChannel "VM suffers from a Cross-VM side channel attack"@en)
+AnnotationAssertion(rdfs:label :threatDC02_CrossVMSideChannel "DC02 Cross-VM Side Channel"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDC02_CrossVMSideChannel)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDC02_CrossVMSideChannel <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDC02_CrossVMSideChannel <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDC02_CrossVMSideChannel <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDC02_CrossVMSideChannel <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatDC03_HypervisorVulnerabilities (DC03 Hypervisor Vulnerabilities)
+
+AnnotationAssertion(rdfs:comment :threatDC03_HypervisorVulnerabilities "VM suffers from vulnerabilities of hypervisor"@en)
+AnnotationAssertion(rdfs:label :threatDC03_HypervisorVulnerabilities "DC03 Hypervisor Vulnerabilities"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDC03_HypervisorVulnerabilities)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDC03_HypervisorVulnerabilities <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDC03_HypervisorVulnerabilities <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDC03_HypervisorVulnerabilities <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDC03_HypervisorVulnerabilities <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatDC04_UnsafeVMMigration (DC04 Unsafe VM Migration)
+
+AnnotationAssertion(rdfs:comment :threatDC04_UnsafeVMMigration "Loss or disclosure of information during VM migration"@en)
+AnnotationAssertion(rdfs:label :threatDC04_UnsafeVMMigration "DC04 Unsafe VM Migration"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDC04_UnsafeVMMigration)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDC04_UnsafeVMMigration <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDC04_UnsafeVMMigration <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDC04_UnsafeVMMigration <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatDC04_UnsafeVMMigration <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatDC04_UnsafeVMMigration <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDC04_UnsafeVMMigration <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatDC05_RogueVMImageInRepository (DC05 Rogue VM Image In Repository)
+
+AnnotationAssertion(rdfs:comment :threatDC05_RogueVMImageInRepository "Uncontrolled placement of VM images (possibly with malicious content) in repository"@en)
+AnnotationAssertion(rdfs:label :threatDC05_RogueVMImageInRepository "DC05 Rogue VM Image In Repository"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDC05_RogueVMImageInRepository)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDC05_RogueVMImageInRepository <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDC05_RogueVMImageInRepository <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDC05_RogueVMImageInRepository <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDC05_RogueVMImageInRepository <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatDC06_OutdatedVMImageInRepository (DC06 Outdated VM Image In Repository)
+
+AnnotationAssertion(rdfs:comment :threatDC06_OutdatedVMImageInRepository "Use of an outdated image for VM from repository"@en)
+AnnotationAssertion(rdfs:label :threatDC06_OutdatedVMImageInRepository "DC06 Outdated VM Image In Repository"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDC06_OutdatedVMImageInRepository)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDC06_OutdatedVMImageInRepository <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDC06_OutdatedVMImageInRepository <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDC06_OutdatedVMImageInRepository <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDC06_OutdatedVMImageInRepository <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatDC07_LackOfNetworkIsolation (DC07 Lack Of Network Isolation)
+
+AnnotationAssertion(rdfs:comment :threatDC07_LackOfNetworkIsolation "Security issues of VM networking, caused by lack of network isolation"@en)
+AnnotationAssertion(rdfs:label :threatDC07_LackOfNetworkIsolation "DC07 Lack Of Network Isolation"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDC07_LackOfNetworkIsolation)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDC07_LackOfNetworkIsolation <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDC07_LackOfNetworkIsolation <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDC07_LackOfNetworkIsolation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDC07_LackOfNetworkIsolation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 
 )
