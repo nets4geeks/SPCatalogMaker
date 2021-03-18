@@ -1382,10 +1382,11 @@
 
 
 ###  http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine
-<http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+<http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> rdf:type <http://www.grsu.by/net/ACCTP/common#CloudApplication> ,
+                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
-                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
+                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerComponent> ,
                                                                    owl:Thing ;
                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf> :threatDB01_PriviledgeEscalation ,
                                                                                                                                            :threatDB02_NetworkScanning ,

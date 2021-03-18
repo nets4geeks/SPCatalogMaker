@@ -108,7 +108,7 @@ ClassAssertion(su:SaaSApplication su:comp_SaaSApplication)
 
 # Individual: su:comp_VirtualMachine (su:comp_VirtualMachine)
 
-ClassAssertion(ns:SchemaStub su:comp_VirtualMachine)
+ClassAssertion(su:VirtualMachine su:comp_VirtualMachine)
 
 
 )
