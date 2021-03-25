@@ -2,7 +2,7 @@
   "id": "threatDC08_UnsafeVMSnapshots",
   "metadata": {
     "ns:textReviewContext": "Compliance manager works with virtual machine",
-    "ns:textName": "DC08_Unsafe VM Snapshots",
+    "ns:textName": "DC08 Unsafe VM Snapshots",
     "ns:textReviewSolution": "",
     "ns:textURL": "",
     "ns:textReviewProblem": "Security issues, related to management of VM snapshots",

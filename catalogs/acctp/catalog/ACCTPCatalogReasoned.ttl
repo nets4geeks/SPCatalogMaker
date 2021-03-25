@@ -1305,7 +1305,7 @@
                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                               rdfs:comment "Security issues, related to management of VM snapshots"@en ;
-                              rdfs:label "DC08_Unsafe VM Snapshots"@en .
+                              rdfs:label "DC08 Unsafe VM Snapshots"@en .
 
 
 ###  http://www.grsu.by/net/ACCTP/common#comp_CloudApplication

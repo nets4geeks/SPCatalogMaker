@@ -614,10 +614,10 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDC07_LackOfNetworkIsolation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDC07_LackOfNetworkIsolation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
-# Individual: :threatDC08_UnsafeVMSnapshots (DC08_Unsafe VM Snapshots)
+# Individual: :threatDC08_UnsafeVMSnapshots (DC08 Unsafe VM Snapshots)
 
 AnnotationAssertion(rdfs:comment :threatDC08_UnsafeVMSnapshots "Security issues, related to management of VM snapshots"@en)
-AnnotationAssertion(rdfs:label :threatDC08_UnsafeVMSnapshots "DC08_Unsafe VM Snapshots"@en)
+AnnotationAssertion(rdfs:label :threatDC08_UnsafeVMSnapshots "DC08 Unsafe VM Snapshots"@en)
 ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDC08_UnsafeVMSnapshots)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDC08_UnsafeVMSnapshots <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDC08_UnsafeVMSnapshots <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager>)
