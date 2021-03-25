@@ -1,0 +1,39 @@
+{
+  "id": "threatDB02_RemoteCodeExecution",
+  "metadata": {
+    "ns:textReviewContext": "Remote user interacts with a virtual machine",
+    "ns:textName": "DB02 Remote Code Execution",
+    "ns:textReviewSolution": "",
+    "ns:textURL": "",
+    "ns:textReviewProblem": "Remote code execution against network applications and services from Internet",
+    "ns:textReference": ""
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": ["su:comp_VirtualMachine"]
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": ["su:comp_RemoteUser"],
+    "ns:hasAggressorRole": ["ns:role_Client"],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": ["ns:STRIDE_Tampering"],
+    "ns:hasSecurityConcern": []
+  }
+}

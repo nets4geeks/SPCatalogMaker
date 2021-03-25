@@ -49,7 +49,8 @@ Declaration(NamedIndividual(:threatBA13_RestrictionsOfForensicReadiness))
 Declaration(NamedIndividual(:threatBA14_PhysicalAccessOrTheftOfComputerEquipment))
 Declaration(NamedIndividual(:threatBA15_DestructionOfDataCenter))
 Declaration(NamedIndividual(:threatDB01_PriviledgeEscalation))
-Declaration(NamedIndividual(:threatDB02_NetworkScanning))
+Declaration(NamedIndividual(:threatDB02_RemoteCodeExecution))
+Declaration(NamedIndividual(:threatDB03_NetworkScanning))
 Declaration(NamedIndividual(:threatDC01_VMEscape))
 Declaration(NamedIndividual(:threatDC02_CrossVMSideChannel))
 Declaration(NamedIndividual(:threatDC03_HypervisorVulnerabilities))
@@ -57,6 +58,7 @@ Declaration(NamedIndividual(:threatDC04_UnsafeVMMigration))
 Declaration(NamedIndividual(:threatDC05_RogueVMImageInRepository))
 Declaration(NamedIndividual(:threatDC06_OutdatedVMImageInRepository))
 Declaration(NamedIndividual(:threatDC07_LackOfNetworkIsolation))
+Declaration(NamedIndividual(:threatDC08_UnsafeVMSnapshots))
 
 
 
@@ -518,16 +520,27 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
-# Individual: :threatDB02_NetworkScanning (DB02 Network Scanning)
+# Individual: :threatDB02_RemoteCodeExecution (DB02 Remote Code Execution)
 
-AnnotationAssertion(rdfs:comment :threatDB02_NetworkScanning "Network and port scanning, service and version detection of VM from Internet"@en)
-AnnotationAssertion(rdfs:label :threatDB02_NetworkScanning "DB02 Network Scanning"@en)
-ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDB02_NetworkScanning)
-ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDB02_NetworkScanning <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
-ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDB02_NetworkScanning <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
-ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDB02_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
-ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatDB02_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure>)
-ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDB02_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+AnnotationAssertion(rdfs:comment :threatDB02_RemoteCodeExecution "Remote code execution against network applications and services from Internet"@en)
+AnnotationAssertion(rdfs:label :threatDB02_RemoteCodeExecution "DB02 Remote Code Execution"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDB02_RemoteCodeExecution)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatDB03_NetworkScanning (DB03 Network Scanning)
+
+AnnotationAssertion(rdfs:comment :threatDB03_NetworkScanning "Network and port scanning, service and version detection of VM from Internet"@en)
+AnnotationAssertion(rdfs:label :threatDB03_NetworkScanning "DB03 Network Scanning"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDB03_NetworkScanning)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDB03_NetworkScanning <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDB03_NetworkScanning <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDB03_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatDB03_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDB03_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatDC01_VMEscape (DC01 VM Escape)
 
@@ -600,6 +613,16 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDC07_LackOfNetworkIsolation <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDC07_LackOfNetworkIsolation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDC07_LackOfNetworkIsolation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
+
+# Individual: :threatDC08_UnsafeVMSnapshots (DC08_Unsafe VM Snapshots)
+
+AnnotationAssertion(rdfs:comment :threatDC08_UnsafeVMSnapshots "Security issues, related to management of VM snapshots"@en)
+AnnotationAssertion(rdfs:label :threatDC08_UnsafeVMSnapshots "DC08_Unsafe VM Snapshots"@en)
+ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> :threatDC08_UnsafeVMSnapshots)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatDC08_UnsafeVMSnapshots <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDC08_UnsafeVMSnapshots <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDC08_UnsafeVMSnapshots <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDC08_UnsafeVMSnapshots <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 
 )

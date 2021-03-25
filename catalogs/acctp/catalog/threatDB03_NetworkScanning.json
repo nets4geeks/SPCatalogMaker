@@ -1,8 +1,8 @@
 {
-  "id": "threatDB02_NetworkScanning",
+  "id": "threatDB03_NetworkScanning",
   "metadata": {
     "ns:textReviewContext": "Remote user interacts with a virtual machine",
-    "ns:textName": "DB02 Network Scanning",
+    "ns:textName": "DB03 Network Scanning",
     "ns:textReviewSolution": "",
     "ns:textURL": "",
     "ns:textReviewProblem": "Network and port scanning, service and version detection of VM from Internet",

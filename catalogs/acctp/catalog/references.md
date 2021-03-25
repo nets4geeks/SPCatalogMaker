@@ -19,9 +19,11 @@
 * [Paladi] Paladi N., Gehrmann C., Michalas A. Providing user security guarantees in public infrastructure clouds //IEEE Transactions on Cloud Computing. – 2016. – Т. 5. – №. 3. – С. 405-419.
 * [QUIRC] Saripalli P., Walters B. Quirc: A quantitative impact and risk assessment framework for cloud security //2010 IEEE 3rd International Conference on Cloud Computing. – Ieee, 2010. – С. 280-288.
 * [Rath] Rath A. et al. Security Pattern for Cloud SaaS: From System and Data Security to Privacy Case Study in AWS and Azure //Computers. – 2019. – Т. 8. – №. 2. – С. 34.
+* [Schluga] Schluga O. et al. Operations Security Evaluation of IaaS-Cloud Backend for Industry 4.0 //CLOSER. – 2018. – С. 392-399.
 * [SECCRIT] https://www.seccrit.eu
 * [Sethi] Sethi C., Pradhan S. K. Trusted-Cloud: A Cloud Security Model for Infrastructure as a Service (IaaS) //International Journal of Advanced Research in Computer Science and Software Engineering. – 2016. – Т. 6. – №. 3.
 * [Shu] Shu R., Gu X., Enck W. A study of security vulnerabilities on docker hub //Proceedings of the Seventh ACM on Conference on Data and Application Security and Privacy. – 2017. – С. 269-280.
 * [Soltys] Soltys M. Cybersecurity in the AWS Cloud //arXiv preprint arXiv:2003.12905. – 2020.
 * [Takahashi] Takahashi T., Kadobayashi Y., Fujiwara H. Ontological approach toward cybersecurity in cloud computing //Proceedings of the 3rd international conference on Security of information and networks. – ACM, 2010. – С. 100-109.
+* [Wonjiga] Wonjiga A. T., Rilling L., Morin C. Defining Security Monitoring SLAs in IaaS Clouds: the Example of a Network IDS : – Inria Rennes Bretagne Atlantique, 2019.
 * [Yin] Yin X. et al. Research of security as a service for VMs in IaaS platform //IEEE Access. – 2018. – Т. 6. – С. 29158-29172.
