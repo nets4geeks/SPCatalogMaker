@@ -29,7 +29,7 @@
     "ns:hasAffectedComponent": ["su:comp_CloudApplication"]
   },
   "security": {
-    "ns:hasThreat": [],
+    "ns:hasThreat": ["ns:threat_txRepudiation", "ns:threat_txTrackErasing"],
     "ns:hasAggressor": ["su:comp_CloudApplication", "su:comp_ExternalService", "su:comp_RemoteUser"],
     "ns:hasAggressorRole": ["ns:role_Client"],
     "ns:hasWeakness": [],

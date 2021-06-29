@@ -10,13 +10,17 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Ontology(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema>
 Annotation(rdfs:comment "The Security Pattern Catalog Schema ontology is an ontology-driven model of security patterns. It contains concepts and individuals, needed for creation and maintenance of security pattern catalogs, misuse pattern catalogs, and threat catalogs."@en)
 
+Declaration(Class(ns:AbuseOfWeakAlgorithmTxThreat))
 Declaration(Class(ns:ActorComponent))
 Declaration(Class(ns:ActorFunction))
+Declaration(Class(ns:AdvantageousIdentityAllocationTxThreat))
 Declaration(Class(ns:AggressorRole))
 Declaration(Class(ns:ApplicationArchitecturalLayer))
 Declaration(Class(ns:ArchitecturalLayer))
 Declaration(Class(ns:AuthenticationBypassThreat))
 Declaration(Class(ns:BufferManipulationThreat))
+Declaration(Class(ns:BypassingControlsTxThreat))
+Declaration(Class(ns:CAPECThreat))
 Declaration(Class(ns:ClientComponent))
 Declaration(Class(ns:CloudComputingDomain))
 Declaration(Class(ns:CodeInjectionThreat))
@@ -24,35 +28,71 @@ Declaration(Class(ns:CommonParameter))
 Declaration(Class(ns:CommunicationArchitecturalLayer))
 Declaration(Class(ns:CommunicationsThreat))
 Declaration(Class(ns:Component))
+Declaration(Class(ns:ConfigurationAdministrationThreat))
 Declaration(Class(ns:ConstraintLevel))
 Declaration(Class(ns:ContentSpoofingThreat))
 Declaration(Class(ns:ContextParameter))
+Declaration(Class(ns:CorruptionTxThreat))
+Declaration(Class(ns:CountermeasureDesignThreat))
+Declaration(Class(ns:CovertNetworkChannelTxThreat))
+Declaration(Class(ns:CryptographyAttacksThreat))
+Declaration(Class(ns:DataInferenceTxThreat))
 Declaration(Class(ns:Domain))
 Declaration(Class(ns:EnvironmentManipulationThreat))
 Declaration(Class(ns:ExcavationThreat))
 Declaration(Class(ns:ExcessiveAllocationThreat))
+Declaration(Class(ns:ExploitationOfTightComponentCouplingTxThreat))
+Declaration(Class(ns:ExploitingBadPoliciesTxThreat))
+Declaration(Class(ns:ExploitingConcurrencyFlawsTxThreat))
+Declaration(Class(ns:ExploitingVulnerableSecurityProtocolTxThreat))
 Declaration(Class(ns:FloodingThreat))
 Declaration(Class(ns:FootprintingThreat))
+Declaration(Class(ns:ForgingCryptographicCredentialsTxThreat))
 Declaration(Class(ns:Function))
 Declaration(Class(ns:Group))
 Declaration(Class(ns:HardwareComponent))
 Declaration(Class(ns:HardwareFunction))
+Declaration(Class(ns:IdentityAttacksThreat))
 Declaration(Class(ns:IdentitySpoofingThreat))
+Declaration(Class(ns:IdentitySpoofingTxThreat))
+Declaration(Class(ns:InjectionTxThreat))
 Declaration(Class(ns:InputDataManipulationThreat))
 Declaration(Class(ns:InterceptionThreat))
+Declaration(Class(ns:InvokingUnauthorizedOperationsTxThreat))
+Declaration(Class(ns:LeveragingAuthorizationModelTxThreat))
 Declaration(Class(ns:LifecycleStage))
+Declaration(Class(ns:LossOfAccountabilityThreat))
 Declaration(Class(ns:MalwareThreat))
 Declaration(Class(ns:ManInTheMiddleThreat))
 Declaration(Class(ns:ManipulationAPIThreat))
+Declaration(Class(ns:MessageAuthenticityViolationTxThreat))
+Declaration(Class(ns:MessageFloodingTxThreat))
+Declaration(Class(ns:MessageIntegrityViolationTxThreat))
+Declaration(Class(ns:MessageReplayTxThreat))
+Declaration(Class(ns:MessageReuseTxThreat))
+Declaration(Class(ns:MessageSecrecyViolationTxThreat))
 Declaration(Class(ns:MisusePattern))
+Declaration(Class(ns:NetworkCommunicationsAttacksThreat))
 Declaration(Class(ns:OrganizationalParameter))
+Declaration(Class(ns:OutputInformationDisclosureTxThreat))
 Declaration(Class(ns:Parameter))
+Declaration(Class(ns:PassingIllegalDataThreat))
+Declaration(Class(ns:PasswordAttacksTxThreat))
 Declaration(Class(ns:Pattern))
 Declaration(Class(ns:PlatformAndOperatingSystemLayer))
 Declaration(Class(ns:PriviledgeEscalationThreat))
+Declaration(Class(ns:ProbingVulnerabilityCheckingTxThreat))
+Declaration(Class(ns:ProcessOverflowAttackTxThreat))
 Declaration(Class(ns:ProtocolAnalysisThreat))
+Declaration(Class(ns:ProtocolFieldModificationTxThreat))
+Declaration(Class(ns:ProtocolStateExploitationTxThreat))
+Declaration(Class(ns:RemoteInformationInferenceThreat))
+Declaration(Class(ns:RepudiationTxThreat))
+Declaration(Class(ns:ResourceExhaustionTxThreat))
 Declaration(Class(ns:ResponseType))
+Declaration(Class(ns:RoutePoisoningTxThreat))
 Declaration(Class(ns:STRIDE))
+Declaration(Class(ns:ScanningInformationGatheringTxThreat))
 Declaration(Class(ns:SchemaInstance))
 Declaration(Class(ns:SchemaStub))
 Declaration(Class(ns:SecurityConcern))
@@ -61,16 +101,31 @@ Declaration(Class(ns:SecurityObjective))
 Declaration(Class(ns:SecurityParameter))
 Declaration(Class(ns:SecurityPattern))
 Declaration(Class(ns:ServerComponent))
+Declaration(Class(ns:SessionHijackingTxThreat))
 Declaration(Class(ns:SessionManipulationThreat))
+Declaration(Class(ns:SessionStatePoisoningTxThreat))
 Declaration(Class(ns:SharedDataManipulationThreat))
 Declaration(Class(ns:SoftwareComponent))
 Declaration(Class(ns:SoftwareFunction))
 Declaration(Class(ns:SoftwareThreat))
+Declaration(Class(ns:SpoofingPrivilegedProcessesTxThreat))
+Declaration(Class(ns:StoredDataAttacksThreat))
+Declaration(Class(ns:TargetedProcessCrashingTxThreat))
+Declaration(Class(ns:TaxonomyThreat))
 Declaration(Class(ns:Template))
 Declaration(Class(ns:Threat))
 Declaration(Class(ns:ThreatImpact))
 Declaration(Class(ns:ThreatPattern))
+Declaration(Class(ns:TrackErasingTxThreat))
+Declaration(Class(ns:TrafficAnalysisAndSniffingTxThreat))
 Declaration(Class(ns:Type))
+Declaration(Class(ns:UnauthorizedAccessTxThreat))
+Declaration(Class(ns:UnauthorizedModificationOfRightsTxThreat))
+Declaration(Class(ns:UncontrolledOperationsThreat))
+Declaration(Class(ns:UnsafeCodeExecutionTxThreat))
+Declaration(Class(ns:UseOfAbnormalPacketSizesTxThreat))
+Declaration(Class(ns:UseOfDefaultCredentialsTxThreat))
+Declaration(Class(ns:UseOfReservedProtocolPacketsTxThreat))
 Declaration(Class(ns:Weakness))
 Declaration(ObjectProperty(ns:CommonProperty))
 Declaration(ObjectProperty(ns:ContextProperty))
@@ -249,6 +304,49 @@ Declaration(NamedIndividual(ns:threat_PriviledgeEscalation))
 Declaration(NamedIndividual(ns:threat_ProtocolAnalysis))
 Declaration(NamedIndividual(ns:threat_SessionManipulation))
 Declaration(NamedIndividual(ns:threat_SharedDataManipulation))
+Declaration(NamedIndividual(ns:threat_txAbuseOfWeakAlgorithm))
+Declaration(NamedIndividual(ns:threat_txAdvantageousIdentityAllocation))
+Declaration(NamedIndividual(ns:threat_txBypassingControls))
+Declaration(NamedIndividual(ns:threat_txCorruption))
+Declaration(NamedIndividual(ns:threat_txCovertNetworkChannel))
+Declaration(NamedIndividual(ns:threat_txDataInference))
+Declaration(NamedIndividual(ns:threat_txExploitationOfTightComponentCoupling))
+Declaration(NamedIndividual(ns:threat_txExploitingBadPolicies))
+Declaration(NamedIndividual(ns:threat_txExploitingConcurrencyFlaws))
+Declaration(NamedIndividual(ns:threat_txExploitingVulnerableSecurityProtocol))
+Declaration(NamedIndividual(ns:threat_txForgingCryptographicCredentials))
+Declaration(NamedIndividual(ns:threat_txIdentitySpoofing))
+Declaration(NamedIndividual(ns:threat_txInjection))
+Declaration(NamedIndividual(ns:threat_txInvokingUnauthorizedOperations))
+Declaration(NamedIndividual(ns:threat_txLeveragingAuthorizationModel))
+Declaration(NamedIndividual(ns:threat_txMessageAuthenticityViolation))
+Declaration(NamedIndividual(ns:threat_txMessageFlooding))
+Declaration(NamedIndividual(ns:threat_txMessageIntegrityViolation))
+Declaration(NamedIndividual(ns:threat_txMessageReplay))
+Declaration(NamedIndividual(ns:threat_txMessageReuse))
+Declaration(NamedIndividual(ns:threat_txMessageSecrecyViolation))
+Declaration(NamedIndividual(ns:threat_txOutputInformationDisclosure))
+Declaration(NamedIndividual(ns:threat_txPasswordAttacks))
+Declaration(NamedIndividual(ns:threat_txProbingVulnerabilityChecking))
+Declaration(NamedIndividual(ns:threat_txProcessOverflowAttack))
+Declaration(NamedIndividual(ns:threat_txProtocolFieldModification))
+Declaration(NamedIndividual(ns:threat_txProtocolStateExploitation))
+Declaration(NamedIndividual(ns:threat_txRepudiation))
+Declaration(NamedIndividual(ns:threat_txResourceExhaustion))
+Declaration(NamedIndividual(ns:threat_txRoutePoisoning))
+Declaration(NamedIndividual(ns:threat_txScanningInformationGathering))
+Declaration(NamedIndividual(ns:threat_txSessionHijacking))
+Declaration(NamedIndividual(ns:threat_txSessionStatePoisoning))
+Declaration(NamedIndividual(ns:threat_txSpoofingPrivilegedProcesses))
+Declaration(NamedIndividual(ns:threat_txTargetedProcessCrashing))
+Declaration(NamedIndividual(ns:threat_txTrackErasing))
+Declaration(NamedIndividual(ns:threat_txTrafficAnalysisAndSniffing))
+Declaration(NamedIndividual(ns:threat_txUnauthorizedAccess))
+Declaration(NamedIndividual(ns:threat_txUnauthorizedModificationOfRights))
+Declaration(NamedIndividual(ns:threat_txUnsafeCodeExecution))
+Declaration(NamedIndividual(ns:threat_txUseOfAbnormalPacketSizes))
+Declaration(NamedIndividual(ns:threat_txUseOfDefaultCredentials))
+Declaration(NamedIndividual(ns:threat_txUseOfReservedProtocolPackets))
 Declaration(NamedIndividual(ns:ti_AlterExecutionLogic))
 Declaration(NamedIndividual(ns:ti_BypassProtectionMechanism))
 Declaration(NamedIndividual(ns:ti_ExecuteArbitraryCode))
@@ -625,6 +723,10 @@ DataPropertyRange(ns:textURL xsd:string)
 #   Classes
 ############################
 
+# Class: ns:AbuseOfWeakAlgorithmTxThreat (ns:AbuseOfWeakAlgorithmTxThreat)
+
+SubClassOf(ns:AbuseOfWeakAlgorithmTxThreat ns:CryptographyAttacksThreat)
+
 # Class: ns:ActorComponent (ns:ActorComponent)
 
 SubClassOf(ns:ActorComponent ns:Component)
@@ -632,6 +734,10 @@ SubClassOf(ns:ActorComponent ns:Component)
 # Class: ns:ActorFunction (ns:ActorFunction)
 
 SubClassOf(ns:ActorFunction ns:Function)
+
+# Class: ns:AdvantageousIdentityAllocationTxThreat (ns:AdvantageousIdentityAllocationTxThreat)
+
+SubClassOf(ns:AdvantageousIdentityAllocationTxThreat ns:IdentityAttacksThreat)
 
 # Class: ns:AggressorRole (ns:AggressorRole)
 
@@ -662,6 +768,14 @@ SubClassOf(ns:BufferManipulationThreat ObjectHasValue(ns:hasThreatImpact ns:ti_M
 SubClassOf(ns:BufferManipulationThreat ObjectHasValue(ns:hasThreatImpact ns:ti_ReadData))
 SubClassOf(ns:BufferManipulationThreat ObjectHasValue(ns:hasThreatImpact ns:ti_UnreliableExecution))
 
+# Class: ns:BypassingControlsTxThreat (ns:BypassingControlsTxThreat)
+
+SubClassOf(ns:BypassingControlsTxThreat ns:CountermeasureDesignThreat)
+
+# Class: ns:CAPECThreat (ns:CAPECThreat)
+
+SubClassOf(ns:CAPECThreat ns:Threat)
+
 # Class: ns:ClientComponent (ns:ClientComponent)
 
 SubClassOf(ns:ClientComponent ns:Component)
@@ -688,11 +802,15 @@ SubClassOf(ns:CommunicationArchitecturalLayer ns:ArchitecturalLayer)
 
 # Class: ns:CommunicationsThreat (ns:CommunicationsThreat)
 
-SubClassOf(ns:CommunicationsThreat ns:Threat)
+SubClassOf(ns:CommunicationsThreat ns:CAPECThreat)
 
 # Class: ns:Component (ns:Component)
 
 SubClassOf(ns:Component ns:ContextParameter)
+
+# Class: ns:ConfigurationAdministrationThreat (ns:ConfigurationAdministrationThreat)
+
+SubClassOf(ns:ConfigurationAdministrationThreat ns:TaxonomyThreat)
 
 # Class: ns:ConstraintLevel (ns:ConstraintLevel)
 
@@ -709,6 +827,26 @@ SubClassOf(ns:ContentSpoofingThreat ObjectHasValue(ns:hasThreatImpact ns:ti_Read
 # Class: ns:ContextParameter (ns:ContextParameter)
 
 SubClassOf(ns:ContextParameter ns:Parameter)
+
+# Class: ns:CorruptionTxThreat (ns:CorruptionTxThreat)
+
+SubClassOf(ns:CorruptionTxThreat ns:StoredDataAttacksThreat)
+
+# Class: ns:CountermeasureDesignThreat (ns:CountermeasureDesignThreat)
+
+SubClassOf(ns:CountermeasureDesignThreat ns:TaxonomyThreat)
+
+# Class: ns:CovertNetworkChannelTxThreat (ns:CovertNetworkChannelTxThreat)
+
+SubClassOf(ns:CovertNetworkChannelTxThreat ns:NetworkCommunicationsAttacksThreat)
+
+# Class: ns:CryptographyAttacksThreat (ns:CryptographyAttacksThreat)
+
+SubClassOf(ns:CryptographyAttacksThreat ns:TaxonomyThreat)
+
+# Class: ns:DataInferenceTxThreat (ns:DataInferenceTxThreat)
+
+SubClassOf(ns:DataInferenceTxThreat ns:RemoteInformationInferenceThreat)
 
 # Class: ns:Domain (ns:Domain)
 
@@ -735,6 +873,22 @@ SubClassOf(ns:ExcessiveAllocationThreat ObjectHasValue(ns:hasSecurityObjective n
 SubClassOf(ns:ExcessiveAllocationThreat ObjectHasValue(ns:hasThreatImpact ns:ti_ResourceConsumption))
 SubClassOf(ns:ExcessiveAllocationThreat ObjectHasValue(ns:hasThreatImpact ns:ti_UnreliableExecution))
 
+# Class: ns:ExploitationOfTightComponentCouplingTxThreat (ns:ExploitationOfTightComponentCouplingTxThreat)
+
+SubClassOf(ns:ExploitationOfTightComponentCouplingTxThreat ns:UncontrolledOperationsThreat)
+
+# Class: ns:ExploitingBadPoliciesTxThreat (ns:ExploitingBadPoliciesTxThreat)
+
+SubClassOf(ns:ExploitingBadPoliciesTxThreat ns:ConfigurationAdministrationThreat)
+
+# Class: ns:ExploitingConcurrencyFlawsTxThreat (ns:ExploitingConcurrencyFlawsTxThreat)
+
+SubClassOf(ns:ExploitingConcurrencyFlawsTxThreat ns:UncontrolledOperationsThreat)
+
+# Class: ns:ExploitingVulnerableSecurityProtocolTxThreat (ns:ExploitingVulnerableSecurityProtocolTxThreat)
+
+SubClassOf(ns:ExploitingVulnerableSecurityProtocolTxThreat ns:CryptographyAttacksThreat)
+
 # Class: ns:FloodingThreat (ns:FloodingThreat)
 
 SubClassOf(ns:FloodingThreat ns:CommunicationsThreat)
@@ -746,6 +900,10 @@ SubClassOf(ns:FloodingThreat ObjectHasValue(ns:hasThreatImpact ns:ti_ResourceCon
 SubClassOf(ns:FootprintingThreat ns:CommunicationsThreat)
 SubClassOf(ns:FootprintingThreat ObjectHasValue(ns:hasSecurityObjective ns:SO_Confidentiality))
 SubClassOf(ns:FootprintingThreat ObjectHasValue(ns:hasThreatImpact ns:ti_ReadData))
+
+# Class: ns:ForgingCryptographicCredentialsTxThreat (ns:ForgingCryptographicCredentialsTxThreat)
+
+SubClassOf(ns:ForgingCryptographicCredentialsTxThreat ns:CryptographyAttacksThreat)
 
 # Class: ns:Function (ns:Function)
 
@@ -763,6 +921,10 @@ SubClassOf(ns:HardwareComponent ns:Component)
 
 SubClassOf(ns:HardwareFunction ns:Function)
 
+# Class: ns:IdentityAttacksThreat (ns:IdentityAttacksThreat)
+
+SubClassOf(ns:IdentityAttacksThreat ns:TaxonomyThreat)
+
 # Class: ns:IdentitySpoofingThreat (ns:IdentitySpoofingThreat)
 
 SubClassOf(ns:IdentitySpoofingThreat ns:CommunicationsThreat)
@@ -770,6 +932,14 @@ SubClassOf(ns:IdentitySpoofingThreat ObjectHasValue(ns:hasSecurityObjective ns:S
 SubClassOf(ns:IdentitySpoofingThreat ObjectHasValue(ns:hasSecurityObjective ns:SO_Confidentiality))
 SubClassOf(ns:IdentitySpoofingThreat ObjectHasValue(ns:hasThreatImpact ns:ti_GainPrivileges))
 SubClassOf(ns:IdentitySpoofingThreat ObjectHasValue(ns:hasThreatImpact ns:ti_ReadData))
+
+# Class: ns:IdentitySpoofingTxThreat (ns:IdentitySpoofingTxThreat)
+
+SubClassOf(ns:IdentitySpoofingTxThreat ns:IdentityAttacksThreat)
+
+# Class: ns:InjectionTxThreat (ns:InjectionTxThreat)
+
+SubClassOf(ns:InjectionTxThreat ns:PassingIllegalDataThreat)
 
 # Class: ns:InputDataManipulationThreat (ns:InputDataManipulationThreat)
 
@@ -788,9 +958,21 @@ SubClassOf(ns:InterceptionThreat ns:CommunicationsThreat)
 SubClassOf(ns:InterceptionThreat ObjectHasValue(ns:hasSecurityObjective ns:SO_Confidentiality))
 SubClassOf(ns:InterceptionThreat ObjectHasValue(ns:hasThreatImpact ns:ti_ReadData))
 
+# Class: ns:InvokingUnauthorizedOperationsTxThreat (ns:InvokingUnauthorizedOperationsTxThreat)
+
+SubClassOf(ns:InvokingUnauthorizedOperationsTxThreat ns:UncontrolledOperationsThreat)
+
+# Class: ns:LeveragingAuthorizationModelTxThreat (ns:LeveragingAuthorizationModelTxThreat)
+
+SubClassOf(ns:LeveragingAuthorizationModelTxThreat ns:CountermeasureDesignThreat)
+
 # Class: ns:LifecycleStage (ns:LifecycleStage)
 
 SubClassOf(ns:LifecycleStage ns:CommonParameter)
+
+# Class: ns:LossOfAccountabilityThreat (ns:LossOfAccountabilityThreat)
+
+SubClassOf(ns:LossOfAccountabilityThreat ns:TaxonomyThreat)
 
 # Class: ns:MalwareThreat (ns:MalwareThreat)
 
@@ -823,13 +1005,53 @@ SubClassOf(ns:ManipulationAPIThreat ObjectHasValue(ns:hasThreatImpact ns:ti_Modi
 SubClassOf(ns:ManipulationAPIThreat ObjectHasValue(ns:hasThreatImpact ns:ti_ReadData))
 SubClassOf(ns:ManipulationAPIThreat ObjectHasValue(ns:hasThreatImpact ns:ti_UnreliableExecution))
 
+# Class: ns:MessageAuthenticityViolationTxThreat (ns:MessageAuthenticityViolationTxThreat)
+
+SubClassOf(ns:MessageAuthenticityViolationTxThreat ns:NetworkCommunicationsAttacksThreat)
+
+# Class: ns:MessageFloodingTxThreat (ns:MessageFloodingTxThreat)
+
+SubClassOf(ns:MessageFloodingTxThreat ns:NetworkCommunicationsAttacksThreat)
+
+# Class: ns:MessageIntegrityViolationTxThreat (ns:MessageIntegrityViolationTxThreat)
+
+SubClassOf(ns:MessageIntegrityViolationTxThreat ns:NetworkCommunicationsAttacksThreat)
+
+# Class: ns:MessageReplayTxThreat (ns:MessageReplayTxThreat)
+
+SubClassOf(ns:MessageReplayTxThreat ns:NetworkCommunicationsAttacksThreat)
+
+# Class: ns:MessageReuseTxThreat (ns:MessageReuseTxThreat)
+
+SubClassOf(ns:MessageReuseTxThreat ns:NetworkCommunicationsAttacksThreat)
+
+# Class: ns:MessageSecrecyViolationTxThreat (ns:MessageSecrecyViolationTxThreat)
+
+SubClassOf(ns:MessageSecrecyViolationTxThreat ns:NetworkCommunicationsAttacksThreat)
+
 # Class: ns:MisusePattern (ns:MisusePattern)
 
 EquivalentClasses(ns:MisusePattern ObjectIntersectionOf(ns:Pattern ObjectHasValue(ns:hasType ns:type_MisusePattern)))
 
+# Class: ns:NetworkCommunicationsAttacksThreat (ns:NetworkCommunicationsAttacksThreat)
+
+SubClassOf(ns:NetworkCommunicationsAttacksThreat ns:TaxonomyThreat)
+
 # Class: ns:OrganizationalParameter (ns:OrganizationalParameter)
 
 SubClassOf(ns:OrganizationalParameter ns:Parameter)
+
+# Class: ns:OutputInformationDisclosureTxThreat (ns:OutputInformationDisclosureTxThreat)
+
+SubClassOf(ns:OutputInformationDisclosureTxThreat ns:RemoteInformationInferenceThreat)
+
+# Class: ns:PassingIllegalDataThreat (ns:PassingIllegalDataThreat)
+
+SubClassOf(ns:PassingIllegalDataThreat ns:TaxonomyThreat)
+
+# Class: ns:PasswordAttacksTxThreat (ns:PasswordAttacksTxThreat)
+
+SubClassOf(ns:PasswordAttacksTxThreat ns:CryptographyAttacksThreat)
 
 # Class: ns:PlatformAndOperatingSystemLayer (ns:PlatformAndOperatingSystemLayer)
 
@@ -842,6 +1064,14 @@ SubClassOf(ns:PriviledgeEscalationThreat ObjectHasValue(ns:hasSecurityObjective 
 SubClassOf(ns:PriviledgeEscalationThreat ObjectHasValue(ns:hasSecurityObjective ns:SO_Authorization))
 SubClassOf(ns:PriviledgeEscalationThreat ObjectHasValue(ns:hasThreatImpact ns:ti_GainPrivileges))
 
+# Class: ns:ProbingVulnerabilityCheckingTxThreat (ns:ProbingVulnerabilityCheckingTxThreat)
+
+SubClassOf(ns:ProbingVulnerabilityCheckingTxThreat ns:RemoteInformationInferenceThreat)
+
+# Class: ns:ProcessOverflowAttackTxThreat (ns:ProcessOverflowAttackTxThreat)
+
+SubClassOf(ns:ProcessOverflowAttackTxThreat ns:UncontrolledOperationsThreat)
+
 # Class: ns:ProtocolAnalysisThreat (ns:ProtocolAnalysisThreat)
 
 SubClassOf(ns:ProtocolAnalysisThreat ns:CommunicationsThreat)
@@ -850,13 +1080,41 @@ SubClassOf(ns:ProtocolAnalysisThreat ObjectHasValue(ns:hasSecurityObjective ns:S
 SubClassOf(ns:ProtocolAnalysisThreat ObjectHasValue(ns:hasThreatImpact ns:ti_ModifyData))
 SubClassOf(ns:ProtocolAnalysisThreat ObjectHasValue(ns:hasThreatImpact ns:ti_ReadData))
 
+# Class: ns:ProtocolFieldModificationTxThreat (ns:ProtocolFieldModificationTxThreat)
+
+SubClassOf(ns:ProtocolFieldModificationTxThreat ns:NetworkCommunicationsAttacksThreat)
+
+# Class: ns:ProtocolStateExploitationTxThreat (ns:ProtocolStateExploitationTxThreat)
+
+SubClassOf(ns:ProtocolStateExploitationTxThreat ns:NetworkCommunicationsAttacksThreat)
+
+# Class: ns:RemoteInformationInferenceThreat (ns:RemoteInformationInferenceThreat)
+
+SubClassOf(ns:RemoteInformationInferenceThreat ns:TaxonomyThreat)
+
+# Class: ns:RepudiationTxThreat (ns:RepudiationTxThreat)
+
+SubClassOf(ns:RepudiationTxThreat ns:LossOfAccountabilityThreat)
+
+# Class: ns:ResourceExhaustionTxThreat (ns:ResourceExhaustionTxThreat)
+
+SubClassOf(ns:ResourceExhaustionTxThreat ns:UncontrolledOperationsThreat)
+
 # Class: ns:ResponseType (ns:ResponseType)
 
 SubClassOf(ns:ResponseType ns:CommonParameter)
 
+# Class: ns:RoutePoisoningTxThreat (ns:RoutePoisoningTxThreat)
+
+SubClassOf(ns:RoutePoisoningTxThreat ns:NetworkCommunicationsAttacksThreat)
+
 # Class: ns:STRIDE (ns:STRIDE)
 
 SubClassOf(ns:STRIDE ns:SecurityParameter)
+
+# Class: ns:ScanningInformationGatheringTxThreat (ns:ScanningInformationGatheringTxThreat)
+
+SubClassOf(ns:ScanningInformationGatheringTxThreat ns:RemoteInformationInferenceThreat)
 
 # Class: ns:SchemaStub (ns:SchemaStub)
 
@@ -886,6 +1144,10 @@ EquivalentClasses(ns:SecurityPattern ObjectIntersectionOf(ns:Pattern ObjectHasVa
 
 SubClassOf(ns:ServerComponent ns:Component)
 
+# Class: ns:SessionHijackingTxThreat (ns:SessionHijackingTxThreat)
+
+SubClassOf(ns:SessionHijackingTxThreat ns:NetworkCommunicationsAttacksThreat)
+
 # Class: ns:SessionManipulationThreat (ns:SessionManipulationThreat)
 
 SubClassOf(ns:SessionManipulationThreat ns:SoftwareThreat)
@@ -896,6 +1158,10 @@ SubClassOf(ns:SessionManipulationThreat ObjectHasValue(ns:hasSecurityObjective n
 SubClassOf(ns:SessionManipulationThreat ObjectHasValue(ns:hasThreatImpact ns:ti_GainPrivileges))
 SubClassOf(ns:SessionManipulationThreat ObjectHasValue(ns:hasThreatImpact ns:ti_ModifyData))
 SubClassOf(ns:SessionManipulationThreat ObjectHasValue(ns:hasThreatImpact ns:ti_ReadData))
+
+# Class: ns:SessionStatePoisoningTxThreat (ns:SessionStatePoisoningTxThreat)
+
+SubClassOf(ns:SessionStatePoisoningTxThreat ns:NetworkCommunicationsAttacksThreat)
 
 # Class: ns:SharedDataManipulationThreat (ns:SharedDataManipulationThreat)
 
@@ -915,7 +1181,23 @@ SubClassOf(ns:SoftwareFunction ns:Function)
 
 # Class: ns:SoftwareThreat (ns:SoftwareThreat)
 
-SubClassOf(ns:SoftwareThreat ns:Threat)
+SubClassOf(ns:SoftwareThreat ns:CAPECThreat)
+
+# Class: ns:SpoofingPrivilegedProcessesTxThreat (ns:SpoofingPrivilegedProcessesTxThreat)
+
+SubClassOf(ns:SpoofingPrivilegedProcessesTxThreat ns:UncontrolledOperationsThreat)
+
+# Class: ns:StoredDataAttacksThreat (ns:StoredDataAttacksThreat)
+
+SubClassOf(ns:StoredDataAttacksThreat ns:TaxonomyThreat)
+
+# Class: ns:TargetedProcessCrashingTxThreat (ns:TargetedProcessCrashingTxThreat)
+
+SubClassOf(ns:TargetedProcessCrashingTxThreat ns:UncontrolledOperationsThreat)
+
+# Class: ns:TaxonomyThreat (ns:TaxonomyThreat)
+
+SubClassOf(ns:TaxonomyThreat ns:Threat)
 
 # Class: ns:Template (ns:Template)
 
@@ -933,9 +1215,45 @@ SubClassOf(ns:ThreatImpact ns:SecurityParameter)
 
 EquivalentClasses(ns:ThreatPattern ObjectIntersectionOf(ns:Pattern ObjectHasValue(ns:hasType ns:type_ThreatPattern)))
 
+# Class: ns:TrackErasingTxThreat (ns:TrackErasingTxThreat)
+
+SubClassOf(ns:TrackErasingTxThreat ns:LossOfAccountabilityThreat)
+
+# Class: ns:TrafficAnalysisAndSniffingTxThreat (ns:TrafficAnalysisAndSniffingTxThreat)
+
+SubClassOf(ns:TrafficAnalysisAndSniffingTxThreat ns:NetworkCommunicationsAttacksThreat)
+
 # Class: ns:Type (ns:Type)
 
 SubClassOf(ns:Type ns:OrganizationalParameter)
+
+# Class: ns:UnauthorizedAccessTxThreat (ns:UnauthorizedAccessTxThreat)
+
+SubClassOf(ns:UnauthorizedAccessTxThreat ns:UncontrolledOperationsThreat)
+
+# Class: ns:UnauthorizedModificationOfRightsTxThreat (ns:UnauthorizedModificationOfRightsTxThreat)
+
+SubClassOf(ns:UnauthorizedModificationOfRightsTxThreat ns:ConfigurationAdministrationThreat)
+
+# Class: ns:UncontrolledOperationsThreat (ns:UncontrolledOperationsThreat)
+
+SubClassOf(ns:UncontrolledOperationsThreat ns:TaxonomyThreat)
+
+# Class: ns:UnsafeCodeExecutionTxThreat (ns:UnsafeCodeExecutionTxThreat)
+
+SubClassOf(ns:UnsafeCodeExecutionTxThreat ns:UncontrolledOperationsThreat)
+
+# Class: ns:UseOfAbnormalPacketSizesTxThreat (ns:UseOfAbnormalPacketSizesTxThreat)
+
+SubClassOf(ns:UseOfAbnormalPacketSizesTxThreat ns:NetworkCommunicationsAttacksThreat)
+
+# Class: ns:UseOfDefaultCredentialsTxThreat (ns:UseOfDefaultCredentialsTxThreat)
+
+SubClassOf(ns:UseOfDefaultCredentialsTxThreat ns:CountermeasureDesignThreat)
+
+# Class: ns:UseOfReservedProtocolPacketsTxThreat (ns:UseOfReservedProtocolPacketsTxThreat)
+
+SubClassOf(ns:UseOfReservedProtocolPacketsTxThreat ns:NetworkCommunicationsAttacksThreat)
 
 # Class: ns:Weakness (ns:Weakness)
 
@@ -1465,6 +1783,178 @@ ClassAssertion(ns:SessionManipulationThreat ns:threat_SessionManipulation)
 
 ClassAssertion(ns:SchemaStub ns:threat_SharedDataManipulation)
 ClassAssertion(ns:SharedDataManipulationThreat ns:threat_SharedDataManipulation)
+
+# Individual: ns:threat_txAbuseOfWeakAlgorithm (ns:threat_txAbuseOfWeakAlgorithm)
+
+ClassAssertion(ns:AbuseOfWeakAlgorithmTxThreat ns:threat_txAbuseOfWeakAlgorithm)
+
+# Individual: ns:threat_txAdvantageousIdentityAllocation (ns:threat_txAdvantageousIdentityAllocation)
+
+ClassAssertion(ns:AdvantageousIdentityAllocationTxThreat ns:threat_txAdvantageousIdentityAllocation)
+
+# Individual: ns:threat_txBypassingControls (ns:threat_txBypassingControls)
+
+ClassAssertion(ns:BypassingControlsTxThreat ns:threat_txBypassingControls)
+
+# Individual: ns:threat_txCorruption (ns:threat_txCorruption)
+
+ClassAssertion(ns:CorruptionTxThreat ns:threat_txCorruption)
+
+# Individual: ns:threat_txCovertNetworkChannel (ns:threat_txCovertNetworkChannel)
+
+ClassAssertion(ns:CovertNetworkChannelTxThreat ns:threat_txCovertNetworkChannel)
+
+# Individual: ns:threat_txDataInference (ns:threat_txDataInference)
+
+ClassAssertion(ns:DataInferenceTxThreat ns:threat_txDataInference)
+
+# Individual: ns:threat_txExploitationOfTightComponentCoupling (ns:threat_txExploitationOfTightComponentCoupling)
+
+ClassAssertion(ns:ExploitationOfTightComponentCouplingTxThreat ns:threat_txExploitationOfTightComponentCoupling)
+
+# Individual: ns:threat_txExploitingBadPolicies (ns:threat_txExploitingBadPolicies)
+
+ClassAssertion(ns:ExploitingBadPoliciesTxThreat ns:threat_txExploitingBadPolicies)
+
+# Individual: ns:threat_txExploitingConcurrencyFlaws (ns:threat_txExploitingConcurrencyFlaws)
+
+ClassAssertion(ns:ExploitingConcurrencyFlawsTxThreat ns:threat_txExploitingConcurrencyFlaws)
+
+# Individual: ns:threat_txExploitingVulnerableSecurityProtocol (ns:threat_txExploitingVulnerableSecurityProtocol)
+
+ClassAssertion(ns:ExploitingVulnerableSecurityProtocolTxThreat ns:threat_txExploitingVulnerableSecurityProtocol)
+
+# Individual: ns:threat_txForgingCryptographicCredentials (ns:threat_txForgingCryptographicCredentials)
+
+ClassAssertion(ns:ForgingCryptographicCredentialsTxThreat ns:threat_txForgingCryptographicCredentials)
+
+# Individual: ns:threat_txIdentitySpoofing (ns:threat_txIdentitySpoofing)
+
+ClassAssertion(ns:IdentitySpoofingTxThreat ns:threat_txIdentitySpoofing)
+
+# Individual: ns:threat_txInjection (ns:threat_txInjection)
+
+ClassAssertion(ns:InjectionTxThreat ns:threat_txInjection)
+
+# Individual: ns:threat_txInvokingUnauthorizedOperations (ns:threat_txInvokingUnauthorizedOperations)
+
+ClassAssertion(ns:InvokingUnauthorizedOperationsTxThreat ns:threat_txInvokingUnauthorizedOperations)
+
+# Individual: ns:threat_txLeveragingAuthorizationModel (ns:threat_txLeveragingAuthorizationModel)
+
+ClassAssertion(ns:LeveragingAuthorizationModelTxThreat ns:threat_txLeveragingAuthorizationModel)
+
+# Individual: ns:threat_txMessageAuthenticityViolation (ns:threat_txMessageAuthenticityViolation)
+
+ClassAssertion(ns:MessageAuthenticityViolationTxThreat ns:threat_txMessageAuthenticityViolation)
+
+# Individual: ns:threat_txMessageFlooding (ns:threat_txMessageFlooding)
+
+ClassAssertion(ns:MessageAuthenticityViolationTxThreat ns:threat_txMessageFlooding)
+
+# Individual: ns:threat_txMessageIntegrityViolation (ns:threat_txMessageIntegrityViolation)
+
+ClassAssertion(ns:MessageIntegrityViolationTxThreat ns:threat_txMessageIntegrityViolation)
+
+# Individual: ns:threat_txMessageReplay (ns:threat_txMessageReplay)
+
+ClassAssertion(ns:MessageReplayTxThreat ns:threat_txMessageReplay)
+
+# Individual: ns:threat_txMessageReuse (ns:threat_txMessageReuse)
+
+ClassAssertion(ns:MessageReuseTxThreat ns:threat_txMessageReuse)
+
+# Individual: ns:threat_txMessageSecrecyViolation (ns:threat_txMessageSecrecyViolation)
+
+ClassAssertion(ns:MessageSecrecyViolationTxThreat ns:threat_txMessageSecrecyViolation)
+
+# Individual: ns:threat_txOutputInformationDisclosure (ns:threat_txOutputInformationDisclosure)
+
+ClassAssertion(ns:OutputInformationDisclosureTxThreat ns:threat_txOutputInformationDisclosure)
+
+# Individual: ns:threat_txPasswordAttacks (ns:threat_txPasswordAttacks)
+
+ClassAssertion(ns:PasswordAttacksTxThreat ns:threat_txPasswordAttacks)
+
+# Individual: ns:threat_txProbingVulnerabilityChecking (ns:threat_txProbingVulnerabilityChecking)
+
+ClassAssertion(ns:ProbingVulnerabilityCheckingTxThreat ns:threat_txProbingVulnerabilityChecking)
+
+# Individual: ns:threat_txProcessOverflowAttack (ns:threat_txProcessOverflowAttack)
+
+ClassAssertion(ns:ProcessOverflowAttackTxThreat ns:threat_txProcessOverflowAttack)
+
+# Individual: ns:threat_txProtocolFieldModification (ns:threat_txProtocolFieldModification)
+
+ClassAssertion(ns:ProtocolFieldModificationTxThreat ns:threat_txProtocolFieldModification)
+
+# Individual: ns:threat_txProtocolStateExploitation (ns:threat_txProtocolStateExploitation)
+
+ClassAssertion(ns:ProtocolStateExploitationTxThreat ns:threat_txProtocolStateExploitation)
+
+# Individual: ns:threat_txRepudiation (ns:threat_txRepudiation)
+
+ClassAssertion(ns:RepudiationTxThreat ns:threat_txRepudiation)
+
+# Individual: ns:threat_txResourceExhaustion (ns:threat_txResourceExhaustion)
+
+ClassAssertion(ns:ResourceExhaustionTxThreat ns:threat_txResourceExhaustion)
+
+# Individual: ns:threat_txRoutePoisoning (ns:threat_txRoutePoisoning)
+
+ClassAssertion(ns:RoutePoisoningTxThreat ns:threat_txRoutePoisoning)
+
+# Individual: ns:threat_txScanningInformationGathering (ns:threat_txScanningInformationGathering)
+
+ClassAssertion(ns:ScanningInformationGatheringTxThreat ns:threat_txScanningInformationGathering)
+
+# Individual: ns:threat_txSessionHijacking (ns:threat_txSessionHijacking)
+
+ClassAssertion(ns:SessionHijackingTxThreat ns:threat_txSessionHijacking)
+
+# Individual: ns:threat_txSessionStatePoisoning (ns:threat_txSessionStatePoisoning)
+
+ClassAssertion(ns:SessionStatePoisoningTxThreat ns:threat_txSessionStatePoisoning)
+
+# Individual: ns:threat_txSpoofingPrivilegedProcesses (ns:threat_txSpoofingPrivilegedProcesses)
+
+ClassAssertion(ns:SpoofingPrivilegedProcessesTxThreat ns:threat_txSpoofingPrivilegedProcesses)
+
+# Individual: ns:threat_txTargetedProcessCrashing (ns:threat_txTargetedProcessCrashing)
+
+ClassAssertion(ns:TargetedProcessCrashingTxThreat ns:threat_txTargetedProcessCrashing)
+
+# Individual: ns:threat_txTrackErasing (ns:threat_txTrackErasing)
+
+ClassAssertion(ns:TrackErasingTxThreat ns:threat_txTrackErasing)
+
+# Individual: ns:threat_txTrafficAnalysisAndSniffing (ns:threat_txTrafficAnalysisAndSniffing)
+
+ClassAssertion(ns:TrafficAnalysisAndSniffingTxThreat ns:threat_txTrafficAnalysisAndSniffing)
+
+# Individual: ns:threat_txUnauthorizedAccess (ns:threat_txUnauthorizedAccess)
+
+ClassAssertion(ns:UnauthorizedAccessTxThreat ns:threat_txUnauthorizedAccess)
+
+# Individual: ns:threat_txUnauthorizedModificationOfRights (ns:threat_txUnauthorizedModificationOfRights)
+
+ClassAssertion(ns:UnauthorizedModificationOfRightsTxThreat ns:threat_txUnauthorizedModificationOfRights)
+
+# Individual: ns:threat_txUnsafeCodeExecution (ns:threat_txUnsafeCodeExecution)
+
+ClassAssertion(ns:UnsafeCodeExecutionTxThreat ns:threat_txUnsafeCodeExecution)
+
+# Individual: ns:threat_txUseOfAbnormalPacketSizes (ns:threat_txUseOfAbnormalPacketSizes)
+
+ClassAssertion(ns:UseOfAbnormalPacketSizesTxThreat ns:threat_txUseOfAbnormalPacketSizes)
+
+# Individual: ns:threat_txUseOfDefaultCredentials (ns:threat_txUseOfDefaultCredentials)
+
+ClassAssertion(ns:UseOfDefaultCredentialsTxThreat ns:threat_txUseOfDefaultCredentials)
+
+# Individual: ns:threat_txUseOfReservedProtocolPackets (ns:threat_txUseOfReservedProtocolPackets)
+
+ClassAssertion(ns:UseOfReservedProtocolPacketsTxThreat ns:threat_txUseOfReservedProtocolPackets)
 
 # Individual: ns:ti_AlterExecutionLogic (ns:ti_AlterExecutionLogic)
 

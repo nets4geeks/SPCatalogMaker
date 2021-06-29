@@ -130,7 +130,7 @@ public class PlainTextMaker{
              plain.add("|Aggr. role|"+breaks(getList(security,"ns:hasAggressorRole")+"|"));
 
              plain.add("|STRIDE|"+breaks(getList(security,"ns:hasSTRIDE")+"|"));
-
+             plain.add("|THREAT|"+breaks(getList(security,"ns:hasThreat")+"|"));
              
              
 

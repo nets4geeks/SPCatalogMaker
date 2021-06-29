@@ -353,11 +353,15 @@
                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ,
-                                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ,
+                                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ,
+                                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTargetedProcessCrashing> ;
                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ;
                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTargetedProcessCrashing> ;
                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                    rdfs:comment "Unexpected failure of the remote service"@en ;
                                    rdfs:label "AA01 Failure Of Remote Service"@en .
@@ -372,11 +376,15 @@
                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ,
-                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ,
+                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageFlooding> ,
+                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ;
                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ;
                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ;
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageFlooding> ,
+                                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ;
                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                           rdfs:comment "Connection lost to the remote service"@en ;
                                           rdfs:label "AA02 Connection Lost To Remote Service"@en .
@@ -391,11 +399,19 @@
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
-                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txDataInference> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageSecrecyViolation> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txOutputInformationDisclosure> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txDataInference> ,
+                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageSecrecyViolation> ,
+                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txOutputInformationDisclosure> ,
+                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                       rdfs:comment "Data breach (information disclosure) by the remote service"@en ;
                                       rdfs:label "AA03 Data Breach By Remote Service"@en .
@@ -410,11 +426,15 @@
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ,
-                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ,
+                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txCorruption> ,
+                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageIntegrityViolation> ;
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ;
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txCorruption> ,
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageIntegrityViolation> ;
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                     rdfs:comment "Data loss (modification) by the remote service"@en ;
                                     rdfs:label "AA04 Data Loss By Remote Service"@en .
@@ -429,11 +449,17 @@
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Spoofing> ,
-                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ,
+                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txIdentitySpoofing> ,
+                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageAuthenticityViolation> ,
+                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSessionHijacking> ;
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ;
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Spoofing> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txIdentitySpoofing> ,
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageAuthenticityViolation> ,
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSessionHijacking> ;
                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                     rdfs:comment "Spoofing of the remote service"@en ;
                                     rdfs:label "AA05 Spoofing Of Remote Service"@en .
@@ -450,13 +476,17 @@
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ,
-                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTargetedProcessCrashing> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                                       <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                                       <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ,
+                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTargetedProcessCrashing> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                       rdfs:comment "Unexpected failure of the cloud application"@en ;
                                       rdfs:label "AB01 Failure Of Cloud Application"@en .
@@ -473,13 +503,17 @@
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ,
-                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ,
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageFlooding> ,
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ;
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                                              <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                                              <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageFlooding> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ;
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                              rdfs:comment "Connection lost to the cloud application"@en ;
                                              rdfs:label "AB02 Connection Lost To Cloud Application"@en .
@@ -495,12 +529,14 @@
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ,
-                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ,
+                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnsafeCodeExecution> ;
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnsafeCodeExecution> ;
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                         rdfs:comment "Malicious content (malware) from the cloud application"@en ;
                                         rdfs:label "AC01 Malware From Cloud Application"@en .
@@ -515,11 +551,23 @@
                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
-                                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ,
+                                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ,
+                                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageReuse> ,
+                                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageSecrecyViolation> ,
+                                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRoutePoisoning> ,
+                                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSessionHijacking> ,
+                                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing> ;
                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
-                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ;
+                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
+                                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ;
+                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageReuse> ,
+                                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageSecrecyViolation> ,
+                                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRoutePoisoning> ,
+                                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSessionHijacking> ,
+                                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing> ;
                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                                   rdfs:comment "Remote user connects to the cloud application though a public network (e.g. Wi-Fi) and can be attacked by a third-party adversary"@en ;
                                                   rdfs:label "AC02 Public Network Access To Cloud Application"@en .
@@ -535,12 +583,14 @@
                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
                                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Spoofing> ,
-                                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
+                                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ,
+                                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingBadPolicies> ;
                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server> ;
                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Spoofing> ;
+                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingBadPolicies> ;
                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                                rdfs:comment "Remote user suffers from Social Engineering attacks, performed by third-party adversary (e.g. including the cloud application into phishing schema)"@en ;
                                                rdfs:label "AC03 Social Engineering Against Remote User"@en .
@@ -557,13 +607,19 @@
                                                                                                              <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                              <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Spoofing> ,
-                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txAbuseOfWeakAlgorithm> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txPasswordAttacks> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfDefaultCredentials> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                          <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                          <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Spoofing> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txAbuseOfWeakAlgorithm> ,
+                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txPasswordAttacks> ,
+                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfDefaultCredentials> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                  rdfs:comment "No authentication or broken (weak) authentication by the cloud application"@en ;
                                  rdfs:label "AD01 Broken Authentication"@en .
@@ -580,13 +636,21 @@
                                                                                                             <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                             <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege> ,
-                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txBypassingControls> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txInvokingUnauthorizedOperations> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txLeveragingAuthorizationModel> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnauthorizedAccess> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                         <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                         <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txBypassingControls> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txInvokingUnauthorizedOperations> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txLeveragingAuthorizationModel> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnauthorizedAccess> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                 rdfs:comment "No access control, broken (weak) access control, and the authorization issues of the cloud application"@en ;
                                 rdfs:label "AD02 Broken Access Control"@en .
@@ -603,13 +667,21 @@
                                                                                                                      <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                                      <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
-                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ,
+                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txDataInference> ,
+                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageSecrecyViolation> ,
+                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txOutputInformationDisclosure> ,
+                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing> ;
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                                  <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                                  <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txDataInference> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageSecrecyViolation> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txOutputInformationDisclosure> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing> ;
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                          rdfs:comment "Data breach (information disclosure) by the cloud application"@en ;
                                          rdfs:label "AD03 Data Breach By Cloud Application"@en .
@@ -626,13 +698,17 @@
                                                                                                                    <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                                    <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ,
-                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ,
+                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txCorruption> ,
+                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageIntegrityViolation> ;
                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                                <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                                <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ;
+                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txCorruption> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageIntegrityViolation> ;
                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                        rdfs:comment "Data loss (modification) by the cloud application"@en ;
                                        rdfs:label "AD04 Data Loss By Cloud Application"@en .
@@ -695,13 +771,17 @@
                                                                                                                   <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                                   <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
                                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Repudiation> ,
-                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRepudiation> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrackErasing> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ,
                                                                                                               <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> ,
                                                                                                               <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Repudiation> ;
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRepudiation> ,
+                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrackErasing> ;
                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                       rdfs:comment "Lost of cloud application logs"@en ;
                                       rdfs:label "AD07 Logs Of Cloud Application Lost"@en .
@@ -739,11 +819,15 @@
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
                                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ,
-                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ,
+                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ,
+                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTargetedProcessCrashing> ;
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTargetedProcessCrashing> ;
                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                          rdfs:comment "DDoS/DoS attack against cloud application from the Internet"@en ;
                                          rdfs:label "AE01 DDoS Attack To Cloud Application"@en .
@@ -776,10 +860,26 @@
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
-                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ,
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txCovertNetworkChannel> ,
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProbingVulnerabilityChecking> ,
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProtocolStateExploitation> ,
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRoutePoisoning> ,
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txScanningInformationGathering> ,
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing> ,
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfAbnormalPacketSizes> ,
+                                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfReservedProtocolPackets> ;
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txCovertNetworkChannel> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProbingVulnerabilityChecking> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProtocolStateExploitation> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRoutePoisoning> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txScanningInformationGathering> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfAbnormalPacketSizes> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfReservedProtocolPackets> ;
                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                              rdfs:comment "Remote side can perform remote malicious activities based on misconfiguration or vulnerabilities of the cloud application"@en ;
                                              rdfs:label "AE03 Network Attacks To Cloud Application"@en .
@@ -793,10 +893,16 @@
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
-                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnauthorizedAccess> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnsafeCodeExecution> ;
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnauthorizedAccess> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnsafeCodeExecution> ;
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                   rdfs:comment "Malicious usage (abuse) of cloud application from the Internet (e.g. sending spam, participating botnet, mining) after gain control on it"@en ;
                                   rdfs:label "AE04 Cloud Application Abuse"@en .
@@ -943,10 +1049,12 @@
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
-                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingBadPolicies> ;
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingBadPolicies> ;
                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                   rdfs:comment "Loss of visibility and control of security and privacy of cloud application (partially controlled)"@en ;
                                   rdfs:label "BA06 Loss Of Security Control"@en .
@@ -977,10 +1085,14 @@
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ,
-                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ,
+                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRepudiation> ,
+                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrackErasing> ;
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> ;
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager> ;
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRepudiation> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrackErasing> ;
                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                         rdfs:comment "Audit and certification of cloud applications and infrastructure are inaccessible or restricted"@en ;
                                         rdfs:label "BA08 Audit And Certification Issues"@en .
@@ -1120,11 +1232,19 @@
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege> ,
-                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txInvokingUnauthorizedOperations> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txLeveragingAuthorizationModel> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSpoofingPrivilegedProcesses> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnauthorizedAccess> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txInvokingUnauthorizedOperations> ,
+                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txLeveragingAuthorizationModel> ,
+                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSpoofingPrivilegedProcesses> ,
+                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnauthorizedAccess> ;
                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                  rdfs:comment "System services and applications suffer from privilege escalation"@en ;
                                  rdfs:label "DB01 Priviledge Escalation"@en .
@@ -1139,11 +1259,23 @@
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ,
-                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitationOfTightComponentCoupling> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingConcurrencyFlaws> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProcessOverflowAttack> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSpoofingPrivilegedProcesses> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnsafeCodeExecution> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitationOfTightComponentCoupling> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingConcurrencyFlaws> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProcessOverflowAttack> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSpoofingPrivilegedProcesses> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnsafeCodeExecution> ;
                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                                 rdfs:comment "Remote code execution against network applications and services from Internet"@en ;
                                 rdfs:label "DB02 Remote Code Execution"@en .
@@ -1158,11 +1290,15 @@
                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ,
-                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProbingVulnerabilityChecking> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txScanningInformationGathering> ;
                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_VirtualMachine> ;
                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProbingVulnerabilityChecking> ,
+                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txScanningInformationGathering> ;
                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
                             rdfs:comment "Network and port scanning, service and version detection of VM from Internet"@en ;
                             rdfs:label "DB03 Network Scanning"@en .
@@ -1593,6 +1729,7 @@
                                                                                      owl:Thing ;
                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isSTRIDEof> :threatAA04_DataLossByRemoteService ,
                                                                                                                                                   :threatAC01_MalwareFromCloudApplication ,
+                                                                                                                                                  :threatAC02_PublicNetworkAccessToCloudApplication ,
                                                                                                                                                   :threatAD04_DataLossByCloudApplication ,
                                                                                                                                                   :threatBA05_LackOfResourceIsolationOfCloudApplication ,
                                                                                                                                                   :threatDB02_RemoteCodeExecution ,
@@ -2046,7 +2183,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_AuthenticationBypass
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_AuthenticationBypass> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_AuthenticationBypass> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareThreat> ,
@@ -2063,7 +2201,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_BufferManipulation
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_BufferManipulation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_BufferManipulation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareThreat> ,
@@ -2078,7 +2217,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_CodeInjection
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_CodeInjection> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_CodeInjection> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareThreat> ,
@@ -2091,7 +2231,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ContentSpoofing
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ContentSpoofing> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ContentSpoofing> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
@@ -2104,7 +2245,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_EnvironmentManipulation
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_EnvironmentManipulation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_EnvironmentManipulation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareThreat> ,
@@ -2117,7 +2259,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Excavation
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Excavation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Excavation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareThreat> ,
@@ -2128,7 +2271,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ExcessiveAllocation
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ExcessiveAllocation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ExcessiveAllocation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareThreat> ,
@@ -2140,7 +2284,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Flooding
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Flooding> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Flooding> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
@@ -2151,7 +2296,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Footprinting
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Footprinting> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Footprinting> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
@@ -2162,7 +2308,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_IdentitySpoofing
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_IdentitySpoofing> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_IdentitySpoofing> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
@@ -2175,7 +2322,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_InformationGathering
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_InformationGathering> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_InformationGathering> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#FootprintingThreat> ,
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
@@ -2188,7 +2336,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_InputDataManipulation
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_InputDataManipulation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_InputDataManipulation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareThreat> ,
@@ -2204,7 +2353,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Interception> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
@@ -2215,7 +2365,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_Malware> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareThreat> ,
                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
@@ -2229,7 +2380,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManInTheMiddle
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManInTheMiddle> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManInTheMiddle> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
@@ -2244,7 +2396,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManipulationAPI
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManipulationAPI> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ManipulationAPI> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareThreat> ,
@@ -2260,7 +2413,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_PriviledgeEscalation
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_PriviledgeEscalation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_PriviledgeEscalation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareThreat> ,
@@ -2272,7 +2426,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ProtocolAnalysis
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ProtocolAnalysis> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_ProtocolAnalysis> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CommunicationsThreat> ,
                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
@@ -2285,7 +2440,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_SessionManipulation
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_SessionManipulation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_SessionManipulation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareThreat> ,
@@ -2301,7 +2457,8 @@
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_SharedDataManipulation
-<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_SharedDataManipulation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_SharedDataManipulation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CAPECThreat> ,
+                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SchemaInstance> ,
                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SoftwareThreat> ,
@@ -2311,6 +2468,460 @@
                                                                                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SO_Integrity> ;
                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreatImpact> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ModifyData> ,
                                                                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_ReadData> .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txAbuseOfWeakAlgorithm
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txAbuseOfWeakAlgorithm> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CryptographyAttacksThreat> ,
+                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                  owl:Thing ;
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAD01_BrokenAuthentication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txAdvantageousIdentityAllocation
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txAdvantageousIdentityAllocation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#IdentityAttacksThreat> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                            owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txBypassingControls
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txBypassingControls> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CountermeasureDesignThreat> ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                               owl:Thing ;
+                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAD02_BrokenAccessControl .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txCorruption
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txCorruption> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#StoredDataAttacksThreat> ,
+                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                        owl:Thing ;
+                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAA04_DataLossByRemoteService ,
+                                                                                                                                                     :threatAD04_DataLossByCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txCovertNetworkChannel
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txCovertNetworkChannel> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                  owl:Thing ;
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAE03_NetworkAttacksToCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txDataInference
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txDataInference> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#RemoteInformationInferenceThreat> ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                           owl:Thing ;
+                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAA03_DataBreachByRemoteService ,
+                                                                                                                                                        :threatAD03_DataBreachByCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitationOfTightComponentCoupling
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitationOfTightComponentCoupling> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#UncontrolledOperationsThreat> ,
+                                                                                                                  owl:Thing ;
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatDB02_RemoteCodeExecution .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingBadPolicies
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingBadPolicies> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ConfigurationAdministrationThreat> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                   owl:Thing ;
+                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAC03_SocialEngineeringAgainstRemoteUser ,
+                                                                                                                                                                :threatBA06_LossOfSecurityControl .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingConcurrencyFlaws
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingConcurrencyFlaws> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#UncontrolledOperationsThreat> ,
+                                                                                                        owl:Thing ;
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatDB02_RemoteCodeExecution .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingVulnerableSecurityProtocol
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingVulnerableSecurityProtocol> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CryptographyAttacksThreat> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                                  owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txForgingCryptographicCredentials
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txForgingCryptographicCredentials> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CryptographyAttacksThreat> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                             owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txIdentitySpoofing
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txIdentitySpoofing> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#IdentityAttacksThreat> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                              owl:Thing ;
+                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAA05_SpoofingOfRemoteService .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txInjection
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txInjection> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#PassingIllegalDataThreat> ,
+                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                       owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txInvokingUnauthorizedOperations
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txInvokingUnauthorizedOperations> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#UncontrolledOperationsThreat> ,
+                                                                                                            owl:Thing ;
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAD02_BrokenAccessControl ,
+                                                                                                                                                                         :threatDB01_PriviledgeEscalation .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txLeveragingAuthorizationModel
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txLeveragingAuthorizationModel> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CountermeasureDesignThreat> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                          owl:Thing ;
+                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAD02_BrokenAccessControl ,
+                                                                                                                                                                       :threatDB01_PriviledgeEscalation .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageAuthenticityViolation
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageAuthenticityViolation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                          owl:Thing ;
+                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAA05_SpoofingOfRemoteService .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageFlooding
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageFlooding> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                             owl:Thing ;
+                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAA02_ConnectionLostToRemoteService ,
+                                                                                                                                                          :threatAB02_ConnectionLostToCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageIntegrityViolation
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageIntegrityViolation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                       owl:Thing ;
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAA04_DataLossByRemoteService ,
+                                                                                                                                                                    :threatAD04_DataLossByCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageReplay
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageReplay> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                           owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageReuse
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageReuse> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                          owl:Thing ;
+                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAC02_PublicNetworkAccessToCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageSecrecyViolation
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageSecrecyViolation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                     owl:Thing ;
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAA03_DataBreachByRemoteService ,
+                                                                                                                                                                  :threatAC02_PublicNetworkAccessToCloudApplication ,
+                                                                                                                                                                  :threatAD03_DataBreachByCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txOutputInformationDisclosure
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txOutputInformationDisclosure> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#RemoteInformationInferenceThreat> ,
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                         owl:Thing ;
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAA03_DataBreachByRemoteService ,
+                                                                                                                                                                      :threatAD03_DataBreachByCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txPasswordAttacks
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txPasswordAttacks> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CryptographyAttacksThreat> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                             owl:Thing ;
+                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAD01_BrokenAuthentication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProbingVulnerabilityChecking
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProbingVulnerabilityChecking> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#RemoteInformationInferenceThreat> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                          owl:Thing ;
+                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAE03_NetworkAttacksToCloudApplication ,
+                                                                                                                                                                       :threatDB03_NetworkScanning .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProcessOverflowAttack
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProcessOverflowAttack> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#UncontrolledOperationsThreat> ,
+                                                                                                   owl:Thing ;
+                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatDB02_RemoteCodeExecution .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProtocolFieldModification
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProtocolFieldModification> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                       owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProtocolStateExploitation
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProtocolStateExploitation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                       owl:Thing ;
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAE03_NetworkAttacksToCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRepudiation
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRepudiation> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#LossOfAccountabilityThreat> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                         owl:Thing ;
+                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAD07_LogOfCloudApplicationLost ,
+                                                                                                                                                      :threatBA08_AuditAndCertificationIssues .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#UncontrolledOperationsThreat> ,
+                                                                                                owl:Thing ;
+                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAA01_FailureOfRemoteService ,
+                                                                                                                                                             :threatAA02_ConnectionLostToRemoteService ,
+                                                                                                                                                             :threatAB01_FailureOfCloudApplication ,
+                                                                                                                                                             :threatAB02_ConnectionLostToCloudApplication ,
+                                                                                                                                                             :threatAE01_DDoSAttackToCloudApplication ,
+                                                                                                                                                             :threatAE04_CloudApplicationAbuse ,
+                                                                                                                                                             :threatDB02_RemoteCodeExecution .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRoutePoisoning
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRoutePoisoning> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                            owl:Thing ;
+                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAC02_PublicNetworkAccessToCloudApplication ,
+                                                                                                                                                         :threatAE03_NetworkAttacksToCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txScanningInformationGathering
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txScanningInformationGathering> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#RemoteInformationInferenceThreat> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                          owl:Thing ;
+                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAE03_NetworkAttacksToCloudApplication ,
+                                                                                                                                                                       :threatDB03_NetworkScanning .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSessionHijacking
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSessionHijacking> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                              owl:Thing ;
+                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAA05_SpoofingOfRemoteService ,
+                                                                                                                                                           :threatAC02_PublicNetworkAccessToCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSessionStatePoisoning
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSessionStatePoisoning> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                   owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSpoofingPrivilegedProcesses
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSpoofingPrivilegedProcesses> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#UncontrolledOperationsThreat> ,
+                                                                                                         owl:Thing ;
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatDB01_PriviledgeEscalation ,
+                                                                                                                                                                      :threatDB02_RemoteCodeExecution .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTargetedProcessCrashing
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTargetedProcessCrashing> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#UncontrolledOperationsThreat> ,
+                                                                                                     owl:Thing ;
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAA01_FailureOfRemoteService ,
+                                                                                                                                                                  :threatAB01_FailureOfCloudApplication ,
+                                                                                                                                                                  :threatAE01_DDoSAttackToCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrackErasing
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrackErasing> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#LossOfAccountabilityThreat> ,
+                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                          owl:Thing ;
+                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAD07_LogOfCloudApplicationLost ,
+                                                                                                                                                       :threatBA08_AuditAndCertificationIssues .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                        owl:Thing ;
+                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAA03_DataBreachByRemoteService ,
+                                                                                                                                                                     :threatAC02_PublicNetworkAccessToCloudApplication ,
+                                                                                                                                                                     :threatAD03_DataBreachByCloudApplication ,
+                                                                                                                                                                     :threatAE03_NetworkAttacksToCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnauthorizedAccess
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnauthorizedAccess> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#UncontrolledOperationsThreat> ,
+                                                                                                owl:Thing ;
+                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAD02_BrokenAccessControl ,
+                                                                                                                                                             :threatAE04_CloudApplicationAbuse ,
+                                                                                                                                                             :threatDB01_PriviledgeEscalation .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnauthorizedModificationOfRights
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnauthorizedModificationOfRights> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ConfigurationAdministrationThreat> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                              owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnsafeCodeExecution
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnsafeCodeExecution> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#UncontrolledOperationsThreat> ,
+                                                                                                 owl:Thing ;
+                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAC01_MalwareFromCloudApplication ,
+                                                                                                                                                              :threatAE04_CloudApplicationAbuse ,
+                                                                                                                                                              :threatDB02_RemoteCodeExecution .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfAbnormalPacketSizes
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfAbnormalPacketSizes> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                      owl:Thing ;
+                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAE03_NetworkAttacksToCloudApplication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfDefaultCredentials
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfDefaultCredentials> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#CountermeasureDesignThreat> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                     owl:Thing ;
+                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAD01_BrokenAuthentication .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfReservedProtocolPackets
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfReservedProtocolPackets> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#NetworkCommunicationsAttacksThreat> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#TaxonomyThreat> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Threat> ,
+                                                                                                          owl:Thing ;
+                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isThreatOf> :threatAE03_NetworkAttacksToCloudApplication .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ti_AlterExecutionLogic

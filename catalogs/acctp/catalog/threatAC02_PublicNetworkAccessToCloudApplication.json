@@ -29,11 +29,11 @@
     "ns:hasAffectedComponent": ["su:comp_RemoteUser"]
   },
   "security": {
-    "ns:hasThreat": [],
+    "ns:hasThreat": ["ns:threat_txTrafficAnalysisAndSniffing", "ns:threat_txMessageSecrecyViolation", "ns:threat_txSessionHijacking", "ns:threat_txRoutePoisoning", "ns:threat_txMessageReuse"],
     "ns:hasAggressor": ["su:comp_CloudApplication"],
     "ns:hasAggressorRole": ["ns:role_Server"],
     "ns:hasWeakness": [],
-    "ns:hasSTRIDE": ["ns:STRIDE_Information_Disclosure"],
+    "ns:hasSTRIDE": ["ns:STRIDE_Information_Disclosure", "ns:STRIDE_Tampering"],
     "ns:hasSecurityConcern": []
   }
 }

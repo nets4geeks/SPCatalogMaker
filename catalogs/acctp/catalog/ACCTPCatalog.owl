@@ -76,6 +76,8 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAA01_FailureOfRemoteService <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAA01_FailureOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAA01_FailureOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAA01_FailureOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAA01_FailureOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTargetedProcessCrashing>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAA01_FailureOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAA02_ConnectionLostToRemoteService (AA02 Connection Lost To Remote Service)
@@ -87,6 +89,8 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAA02_ConnectionLostToRemoteService <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAA02_ConnectionLostToRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAA02_ConnectionLostToRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAA02_ConnectionLostToRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageFlooding>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAA02_ConnectionLostToRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAA02_ConnectionLostToRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAA03_DataBreachByRemoteService (AA03 Data Breach By Remote Service)
@@ -98,6 +102,10 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAA03_DataBreachByRemoteService <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAA03_DataBreachByRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAA03_DataBreachByRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAA03_DataBreachByRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txDataInference>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAA03_DataBreachByRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageSecrecyViolation>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAA03_DataBreachByRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txOutputInformationDisclosure>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAA03_DataBreachByRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAA03_DataBreachByRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAA04_DataLossByRemoteService (AA04 Data Loss By Remote Service)
@@ -109,6 +117,8 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAA04_DataLossByRemoteService <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAA04_DataLossByRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAA04_DataLossByRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAA04_DataLossByRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txCorruption>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAA04_DataLossByRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageIntegrityViolation>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAA04_DataLossByRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAA05_SpoofingOfRemoteService (AA05 Spoofing Of Remote Service)
@@ -120,6 +130,9 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAA05_SpoofingOfRemoteService <http://www.grsu.by/net/ACCTP/common#comp_ExternalService>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAA05_SpoofingOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAA05_SpoofingOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Spoofing>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAA05_SpoofingOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txIdentitySpoofing>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAA05_SpoofingOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageAuthenticityViolation>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAA05_SpoofingOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSessionHijacking>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAA05_SpoofingOfRemoteService <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAB01_FailureOfCloudApplication (AB01 Failure Of Cloud Application)
@@ -133,6 +146,8 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAB01_FailureOfCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAB01_FailureOfCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAB01_FailureOfCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAB01_FailureOfCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAB01_FailureOfCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTargetedProcessCrashing>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAB01_FailureOfCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAB02_ConnectionLostToCloudApplication (AB02 Connection Lost To Cloud Application)
@@ -146,6 +161,8 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAB02_ConnectionLostToCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAB02_ConnectionLostToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAB02_ConnectionLostToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAB02_ConnectionLostToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageFlooding>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAB02_ConnectionLostToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAB02_ConnectionLostToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAC01_MalwareFromCloudApplication (AC01 Malware From Cloud Application)
@@ -158,6 +175,7 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnsafeCodeExecution>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAC01_MalwareFromCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAC02_PublicNetworkAccessToCloudApplication (AC02 Public Network Access To Cloud Application)
@@ -169,6 +187,12 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAC02_PublicNetworkAccessToCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAC02_PublicNetworkAccessToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAC02_PublicNetworkAccessToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAC02_PublicNetworkAccessToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAC02_PublicNetworkAccessToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageReuse>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAC02_PublicNetworkAccessToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageSecrecyViolation>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAC02_PublicNetworkAccessToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRoutePoisoning>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAC02_PublicNetworkAccessToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSessionHijacking>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAC02_PublicNetworkAccessToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAC02_PublicNetworkAccessToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAC03_SocialEngineeringAgainstRemoteUser (AC03 Social Engineering Against Remote User)
@@ -181,6 +205,7 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAC03_SocialEngineeringAgainstRemoteUser <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAC03_SocialEngineeringAgainstRemoteUser <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAC03_SocialEngineeringAgainstRemoteUser <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Spoofing>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAC03_SocialEngineeringAgainstRemoteUser <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingBadPolicies>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAC03_SocialEngineeringAgainstRemoteUser <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAD01_BrokenAuthentication (AD01 Broken Authentication)
@@ -194,6 +219,9 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Spoofing>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txAbuseOfWeakAlgorithm>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txPasswordAttacks>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfDefaultCredentials>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD01_BrokenAuthentication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAD02_BrokenAccessControl (AD02 Broken Access Control)
@@ -207,6 +235,10 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txBypassingControls>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txInvokingUnauthorizedOperations>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txLeveragingAuthorizationModel>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnauthorizedAccess>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD02_BrokenAccessControl <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAD03_DataBreachByCloudApplication (AD03 Data Breach By Cloud Application)
@@ -220,6 +252,10 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD03_DataBreachByCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAD03_DataBreachByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD03_DataBreachByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD03_DataBreachByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txDataInference>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD03_DataBreachByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageSecrecyViolation>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD03_DataBreachByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txOutputInformationDisclosure>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD03_DataBreachByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD03_DataBreachByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAD04_DataLossByCloudApplication (AD04 Data Loss By Cloud Application)
@@ -233,6 +269,8 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD04_DataLossByCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAD04_DataLossByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD04_DataLossByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD04_DataLossByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txCorruption>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD04_DataLossByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txMessageIntegrityViolation>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD04_DataLossByCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAD05_BackupOfCloudApplicationLost (AD05 Backup Of Cloud Application Lost)
@@ -272,6 +310,8 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAD07_LogOfCloudApplicationLost <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAD07_LogOfCloudApplicationLost <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAD07_LogOfCloudApplicationLost <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Repudiation>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD07_LogOfCloudApplicationLost <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRepudiation>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAD07_LogOfCloudApplicationLost <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrackErasing>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAD07_LogOfCloudApplicationLost <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAD08_LogOfCloudApplicationStolen (AD08 Logs Of Cloud Application Stolen)
@@ -296,6 +336,8 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAE01_DDoSAttackToCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAE01_DDoSAttackToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatAE01_DDoSAttackToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Denial_of_Service>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAE01_DDoSAttackToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAE01_DDoSAttackToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTargetedProcessCrashing>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAE01_DDoSAttackToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAE02_EDoSAttackToCloudApplication (AE02 EDoS Attack To Cloud Application)
@@ -317,6 +359,14 @@ ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txCovertNetworkChannel>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProbingVulnerabilityChecking>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProtocolStateExploitation>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRoutePoisoning>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txScanningInformationGathering>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrafficAnalysisAndSniffing>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfAbnormalPacketSizes>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUseOfReservedProtocolPackets>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAE03_NetworkAttacksToCloudApplication <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAE04_CloudApplicationAbuse (AE04 Cloud Application Abuse)
@@ -327,6 +377,9 @@ ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatAE04_CloudApplicationAbuse <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatAE04_CloudApplicationAbuse <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatAE04_CloudApplicationAbuse <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAE04_CloudApplicationAbuse <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAE04_CloudApplicationAbuse <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnauthorizedAccess>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatAE04_CloudApplicationAbuse <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnsafeCodeExecution>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatAE04_CloudApplicationAbuse <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatAE05_BlockSharedResourcesOfCloudApplication (AE05 Block Shared Resources Of Cloud Application)
@@ -414,6 +467,7 @@ ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatBA06_LossOfSecurityControl <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatBA06_LossOfSecurityControl <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatBA06_LossOfSecurityControl <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatBA06_LossOfSecurityControl <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingBadPolicies>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatBA06_LossOfSecurityControl <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatBA07_PoorInformationSecurityProcesses (BA07 Poor Information Security Processes)
@@ -434,6 +488,8 @@ ClassAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> :threatBA08_AuditAndCertificationIssues <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatBA08_AuditAndCertificationIssues <http://www.grsu.by/net/ACCTP/common#comp_ComplianceManager>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatBA08_AuditAndCertificationIssues <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatBA08_AuditAndCertificationIssues <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txRepudiation>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatBA08_AuditAndCertificationIssues <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txTrackErasing>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatBA08_AuditAndCertificationIssues <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatBA09_SecurityIssuesOfSLA (BA09 Security Issues Of SLA)
@@ -518,6 +574,10 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Elevation_of_Privilege>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txInvokingUnauthorizedOperations>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txLeveragingAuthorizationModel>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSpoofingPrivilegedProcesses>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnauthorizedAccess>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDB01_PriviledgeEscalation <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatDB02_RemoteCodeExecution (DB02 Remote Code Execution)
@@ -529,6 +589,12 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Tampering>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitationOfTightComponentCoupling>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txExploitingConcurrencyFlaws>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProcessOverflowAttack>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txResourceExhaustion>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txSpoofingPrivilegedProcesses>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txUnsafeCodeExecution>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDB02_RemoteCodeExecution <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatDB03_NetworkScanning (DB03 Network Scanning)
@@ -540,6 +606,8 @@ ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchem
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> :threatDB03_NetworkScanning <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> :threatDB03_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasSTRIDE> :threatDB03_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#STRIDE_Information_Disclosure>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatDB03_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txProbingVulnerabilityChecking>)
+ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasThreat> :threatDB03_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#threat_txScanningInformationGathering>)
 ObjectPropertyAssertion(<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> :threatDB03_NetworkScanning <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern>)
 
 # Individual: :threatDC01_VMEscape (DC01 VM Escape)

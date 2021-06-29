@@ -29,7 +29,7 @@
     "ns:hasAffectedComponent": ["su:comp_CloudApplication"]
   },
   "security": {
-    "ns:hasThreat": [],
+    "ns:hasThreat": ["ns:threat_txMessageSecrecyViolation", "ns:threat_txTrafficAnalysisAndSniffing", "ns:threat_txOutputInformationDisclosure", "ns:threat_txDataInference"],
     "ns:hasAggressor": ["su:comp_ExternalService"],
     "ns:hasAggressorRole": ["ns:role_Server"],
     "ns:hasWeakness": [],
