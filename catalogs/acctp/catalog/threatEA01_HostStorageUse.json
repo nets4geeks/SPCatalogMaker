@@ -1,0 +1,39 @@
+{
+  "id": "threatEA01_HostStorageUse",
+  "metadata": {
+    "ns:textReviewContext": "Container saves data on host storage",
+    "ns:textName": "EA01 Host storage use",
+    "ns:textReviewSolution": "",
+    "ns:textURL": "",
+    "ns:textReviewProblem": "The use of host storage is not recommended for production environments",
+    "ns:textReference": ""
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": ["su:comp_HostStorage"]
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": ["su:comp_Container"],
+    "ns:hasAggressorRole": ["ns:role_Client"],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": [],
+    "ns:hasSecurityConcern": []
+  }
+}

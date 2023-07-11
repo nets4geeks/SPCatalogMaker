@@ -1,0 +1,39 @@
+{
+  "id": "threatEC02_ContainerEscape",
+  "metadata": {
+    "ns:textReviewContext": "Remote Entity affects Container",
+    "ns:textName": "EC02 Container Escape",
+    "ns:textReviewSolution": "",
+    "ns:textURL": "",
+    "ns:textReviewProblem": "Compromised container can be used to get access to a host where the container has been run.",
+    "ns:textReference": "T1611: Escape to Host [ATT&CK];"
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": ["su:comp_Container"]
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": ["su:comp_Container" , "su:comp_RemoteUser" ],
+    "ns:hasAggressorRole": ["ns:role_Client"],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": [],
+    "ns:hasSecurityConcern": []
+  }
+}

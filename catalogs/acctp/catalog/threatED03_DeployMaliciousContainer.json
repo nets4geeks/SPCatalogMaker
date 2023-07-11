@@ -1,0 +1,39 @@
+{
+  "id": "threatED03_DeployMaliciousContainer",
+  "metadata": {
+    "ns:textReviewContext": "Remote User interacts with Container",
+    "ns:textName": "ED03 Deploy Malicious Container",
+    "ns:textReviewSolution": "",
+    "ns:textURL": "",
+    "ns:textReviewProblem": "A container management system can be used to deploy containers that include malicious software.",
+    "ns:textReference": "T1611: Deploy Container [ATT&CK]; Sidecar injection [MS];"
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": ["su:comp_Container"]
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": [ "su:comp_RemoteUser" ],
+    "ns:hasAggressorRole": ["ns:role_Client"],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": [],
+    "ns:hasSecurityConcern": []
+  }
+}

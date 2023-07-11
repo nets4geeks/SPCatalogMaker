@@ -1444,6 +1444,298 @@
                               rdfs:label "DC08 Unsafe VM Snapshots"@en .
 
 
+###  http://www.grsu.by/net/ACCTP#threatEA01_HostStorageUse
+:threatEA01_HostStorageUse rdf:type owl:NamedIndividual ,
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                    owl:Thing ;
+                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_HostStorage> ;
+                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_HostStorage> ;
+                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                           rdfs:comment "The use of host storage is not recommended for production environments"@en ;
+                           rdfs:label "EA01 Host storage use"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatEA02_UseOfContainerSocket
+:threatEA02_UseOfContainerSocket rdf:type owl:NamedIndividual ,
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                          owl:Thing ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_ContainerSocket> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_ContainerSocket> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                 rdfs:comment "The use of container socket (a raw management interface) is not recommended"@en ;
+                                 rdfs:label "EA02 Use of Container Socket"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatEB01_WriteAccessToVolume
+:threatEB01_WriteAccessToVolume rdf:type owl:NamedIndividual ,
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                         owl:Thing ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_ContainerVolume> ,
+                                                                                                           <http://www.grsu.by/net/ACCTP/common#comp_HostStorage> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_ContainerVolume> ,
+                                                                                                                <http://www.grsu.by/net/ACCTP/common#comp_HostStorage> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                rdfs:comment "Use of a volume in read-write mode when only the read access required (configuration, permanent data)"@en ;
+                                rdfs:label "EB01 Write Access to Volume"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatEB02_DataLeakAtStorage
+:threatEB02_DataLeakAtStorage rdf:type owl:NamedIndividual ,
+                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                       owl:Thing ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_ContainerVolume> ,
+                                                                                                         <http://www.grsu.by/net/ACCTP/common#comp_HostStorage> ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_ContainerVolume> ,
+                                                                                                              <http://www.grsu.by/net/ACCTP/common#comp_HostStorage> ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                              rdfs:comment "Data may be stolen from volume or host storage"@en ;
+                              rdfs:label "EB02 Data Leak at Storage"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatEB03_DataCorruptionAtStorage
+:threatEB03_DataCorruptionAtStorage rdf:type owl:NamedIndividual ,
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                             owl:Thing ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_ContainerVolume> ,
+                                                                                                               <http://www.grsu.by/net/ACCTP/common#comp_HostStorage> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_ContainerVolume> ,
+                                                                                                                    <http://www.grsu.by/net/ACCTP/common#comp_HostStorage> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                    rdfs:comment "Data may be corrupted being on volume or host storage"@en ;
+                                    rdfs:label "EB03 Data Corruption at Storage"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatEC01_UseContainerManagementTools
+:threatEC01_UseContainerManagementTools rdf:type owl:NamedIndividual ,
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                 owl:Thing ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                                    <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                                <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                        rdfs:comment "Container management tools (API, CLI) can be illegally used to compromise a container."@en ;
+                                        rdfs:label "EC01 Use container management tools"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatEC02_ContainerEscape
+:threatEC02_ContainerEscape rdf:type owl:NamedIndividual ,
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                     owl:Thing ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                        <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                    <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                            rdfs:comment "Compromised container can be used to get access to a host where the container has been run."@en ;
+                            rdfs:label "EC02 Container Escape"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatEC03_ContainerPrivilegeEscalation
+:threatEC03_ContainerPrivilegeEscalation rdf:type owl:NamedIndividual ,
+                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                  <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                  owl:Thing ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                                     <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                                 <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                         rdfs:comment "Escalation of privileges within a container."@en ;
+                                         rdfs:label "EC03 Container Privilege Escalation"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatEC04_CompromisedAccessToken
+:threatEC04_CompromisedAccessToken rdf:type owl:NamedIndividual ,
+                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                            owl:Thing ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                               <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                           <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                   <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                   rdfs:comment "Access Tokens (other credentials) used to authenticate a container can be compromised."@en ;
+                                   rdfs:label "EC04 Compromised Access Token"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatEC05_DataLeakAtTransfer
+:threatEC05_DataLeakAtTransfer rdf:type owl:NamedIndividual ,
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                        owl:Thing ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                           <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Flow> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                       <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Flow> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                               rdfs:comment "Containers use channels (virtual networks) to communicate each other as well as interact with remote users"@en ;
+                               rdfs:label "EC05 Data Leak At Transfer"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatEC06_DataCorruptionAtTransfer
+:threatEC06_DataCorruptionAtTransfer rdf:type owl:NamedIndividual ,
+                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                              owl:Thing ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                                 <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Flow> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                             <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Flow> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                     rdfs:comment "Containers use channels (virtual networks) to communicate each other as well as interact with remote users"@en ;
+                                     rdfs:label "EC06 Data Corruption At Transfer"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatEC07_ChannelDestroyed
+:threatEC07_ChannelDestroyed rdf:type owl:NamedIndividual ,
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                      owl:Thing ;
+                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                         <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                         <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Flow> ;
+                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_Container> ,
+                                                                                                     <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Flow> ;
+                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                             rdfs:comment "Containers use channels (virtual networks) to communicate each other as well as interact with remote users"@en ;
+                             rdfs:label "EC07 Channel Destroyed"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatED01_AccessToContainerManagementInterface
+:threatED01_AccessToContainerManagementInterface rdf:type owl:NamedIndividual ,
+                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                          <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                          owl:Thing ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                                             <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                                 rdfs:comment "Remote user can get access to container management interface (Web, CLI)"@en ;
+                                                 rdfs:label "ED01 Access to container management interface"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatED02_ExploitPublishedNetworkApplication
+:threatED02_ExploitPublishedNetworkApplication rdf:type owl:NamedIndividual ,
+                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                                        owl:Thing ;
+                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                               rdfs:comment "Open network port can be exploited in order to compromise container instance."@en ;
+                                               rdfs:label "ED02 Exploit Published Network Application"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatED03_DeployMaliciousContainer
+:threatED03_DeployMaliciousContainer rdf:type owl:NamedIndividual ,
+                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                              owl:Thing ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                                     rdfs:comment "A container management system can be used to deploy containers that include malicious software."@en ;
+                                     rdfs:label "ED03 Deploy Malicious Container"@en .
+
+
+###  http://www.grsu.by/net/ACCTP#threatED04_ContainerDiscovery
+:threatED04_ContainerDiscovery rdf:type owl:NamedIndividual ,
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Pattern> ,
+                                        <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ThreatPattern> ,
+                                        owl:Thing ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextProperty> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#OrganizationProperty> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityProperty> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ,
+                                                                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAffectedComponent> <http://www.grsu.by/net/ACCTP/common#comp_Container> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressor> <http://www.grsu.by/net/ACCTP/common#comp_RemoteUser> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasAggressorRole> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> ;
+                               <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#hasType> <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#type_ThreatPattern> ;
+                               rdfs:comment "Available containers and other resources can be discovered."@en ;
+                               rdfs:label "ED04 Container Discovery"@en .
+
+
 ###  http://www.grsu.by/net/ACCTP/common#comp_CloudApplication
 <http://www.grsu.by/net/ACCTP/common#comp_CloudApplication> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
                                                                      <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
@@ -1504,6 +1796,48 @@
                                                                       owl:Thing .
 
 
+###  http://www.grsu.by/net/ACCTP/common#comp_Container
+<http://www.grsu.by/net/ACCTP/common#comp_Container> rdf:type <http://www.grsu.by/net/ACCTP/common#ContainerComponent> ,
+                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerComponent> ,
+                                                              owl:Thing ;
+                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf> :threatEC01_UseContainerManagementTools ,
+                                                                                                                                      :threatEC02_ContainerEscape ,
+                                                                                                                                      :threatEC03_ContainerPrivilegeEscalation ,
+                                                                                                                                      :threatEC04_CompromisedAccessToken ,
+                                                                                                                                      :threatEC05_DataLeakAtTransfer ,
+                                                                                                                                      :threatEC06_DataCorruptionAtTransfer ,
+                                                                                                                                      :threatEC07_ChannelDestroyed ,
+                                                                                                                                      :threatED01_AccessToContainerManagementInterface ,
+                                                                                                                                      :threatED02_ExploitPublishedNetworkApplication ,
+                                                                                                                                      :threatED03_DeployMaliciousContainer ,
+                                                                                                                                      :threatED04_ContainerDiscovery .
+
+
+###  http://www.grsu.by/net/ACCTP/common#comp_ContainerSocket
+<http://www.grsu.by/net/ACCTP/common#comp_ContainerSocket> rdf:type <http://www.grsu.by/net/ACCTP/common#ContainerComponent> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerComponent> ,
+                                                                    owl:Thing ;
+                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf> :threatEA02_UseOfContainerSocket .
+
+
+###  http://www.grsu.by/net/ACCTP/common#comp_ContainerVolume
+<http://www.grsu.by/net/ACCTP/common#comp_ContainerVolume> rdf:type <http://www.grsu.by/net/ACCTP/common#ContainerComponent> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                    <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerComponent> ,
+                                                                    owl:Thing ;
+                                                           <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf> :threatEB01_WriteAccessToVolume ,
+                                                                                                                                            :threatEB02_DataLeakAtStorage ,
+                                                                                                                                            :threatEB03_DataCorruptionAtStorage .
+
+
 ###  http://www.grsu.by/net/ACCTP/common#comp_ExternalService
 <http://www.grsu.by/net/ACCTP/common#comp_ExternalService> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
                                                                     <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
@@ -1512,6 +1846,19 @@
                                                                     owl:Thing ;
                                                            <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf> :threatAB01_FailureOfCloudApplication ,
                                                                                                                                             :threatAB02_ConnectionLostToCloudApplication .
+
+
+###  http://www.grsu.by/net/ACCTP/common#comp_HostStorage
+<http://www.grsu.by/net/ACCTP/common#comp_HostStorage> rdf:type <http://www.grsu.by/net/ACCTP/common#ContainerComponent> ,
+                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Component> ,
+                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ContextParameter> ,
+                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#ServerComponent> ,
+                                                                owl:Thing ;
+                                                       <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#isAffectedComponentOf> :threatEA01_HostStorageUse ,
+                                                                                                                                        :threatEB01_WriteAccessToVolume ,
+                                                                                                                                        :threatEB02_DataLeakAtStorage ,
+                                                                                                                                        :threatEB03_DataCorruptionAtStorage .
 
 
 ###  http://www.grsu.by/net/ACCTP/common#comp_PaaSApplication
@@ -2096,6 +2443,12 @@
 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Client> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
                                                                                 <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
                                                                                 owl:Thing .
+
+
+###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Flow
+<http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Flow> rdf:type <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#Parameter> ,
+                                                                              <http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#SecurityParameter> ,
+                                                                              owl:Thing .
 
 
 ###  http://www.grsu.by/net/SecurityPatternCatalogNaiveSchema#role_Server

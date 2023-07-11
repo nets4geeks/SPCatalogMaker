@@ -1,0 +1,39 @@
+{
+  "id": "threatED01_AccessToContainerManagementInterface",
+  "metadata": {
+    "ns:textReviewContext": "Remote User interacts with Container",
+    "ns:textName": "ED01 Access to container management interface",
+    "ns:textReviewSolution": "",
+    "ns:textURL": "",
+    "ns:textReviewProblem": "Remote user can get access to container management interface (Web, CLI)",
+    "ns:textReference": "T1078: Valid accounts [ATT&CK]; Using Cloud credentials [MS];"
+  },
+  "organization": {
+    "ns:usesPattern": [],
+    "ns:hasGroup": [],
+    "ns:hasType": ["ns:type_ThreatPattern"],
+    "ns:hasTemplate": [],
+    "ns:relatesTo": [],
+    "ns:isChildOf": []
+  },
+  "common": {
+    "ns:hasArchitecturalLayer": [],
+    "ns:hasResponseType": [],
+    "ns:hasDomain": [],
+    "ns:hasSecurityLevel": [],
+    "ns:hasLifecycleStage": [],
+    "ns:hasConstraintLevel": []
+  },
+  "context": {
+    "ns:hasAffectedFunction": [],
+    "ns:hasAffectedComponent": ["su:comp_Container"]
+  },
+  "security": {
+    "ns:hasThreat": [],
+    "ns:hasAggressor": [ "su:comp_RemoteUser" ],
+    "ns:hasAggressorRole": ["ns:role_Client"],
+    "ns:hasWeakness": [],
+    "ns:hasSTRIDE": [],
+    "ns:hasSecurityConcern": []
+  }
+}

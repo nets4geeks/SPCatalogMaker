@@ -20,6 +20,10 @@ Declaration(Class(su:PrivacyManager))
 Declaration(Class(su:RemoteUser))
 Declaration(Class(su:SaaSApplication))
 Declaration(Class(su:VirtualMachine))
+Declaration(Class(su:ContainerComponent))
+Declaration(Class(su:Container))
+Declaration(Class(su:HostStorage))
+Declaration(Class(su:ContainerVolume))
 Declaration(NamedIndividual(su:comp_CloudApplication))
 Declaration(NamedIndividual(su:comp_CloudInfrastructure))
 Declaration(NamedIndividual(su:comp_ComplianceManager))
@@ -29,9 +33,15 @@ Declaration(NamedIndividual(su:comp_PriivacyManager))
 Declaration(NamedIndividual(su:comp_RemoteUser))
 Declaration(NamedIndividual(su:comp_SaaSApplication))
 Declaration(NamedIndividual(su:comp_VirtualMachine))
+Declaration(NamedIndividual(su:comp_Container))
+Declaration(NamedIndividual(su:comp_HostStorage))
+Declaration(NamedIndividual(su:comp_ContainerVolume))
+Declaration(NamedIndividual(su:comp_ContainerSocket))
 ############################
 #   Classes
 ############################
+
+
 
 # Class: su:CloudApplication (su:CloudApplication)
 
@@ -69,6 +79,12 @@ SubClassOf(su:SaaSApplication su:CloudApplication)
 
 SubClassOf(su:VirtualMachine su:CloudApplication)
 
+SubClassOf(su:ContainerComponent ns:ServerComponent)
+
+SubClassOf(su:Container su:ContainerComponent)
+SubClassOf(su:HostStorage su:ContainerComponent)
+SubClassOf(su:ContainerVolume su:ContainerComponent)
+SubClassOf(su:ContainerSocket su:ContainerComponent)
 
 ############################
 #   Named Individuals
@@ -109,6 +125,14 @@ ClassAssertion(su:SaaSApplication su:comp_SaaSApplication)
 # Individual: su:comp_VirtualMachine (su:comp_VirtualMachine)
 
 ClassAssertion(su:VirtualMachine su:comp_VirtualMachine)
+
+ClassAssertion(su:Container su:comp_Container)
+
+ClassAssertion(su:HostStorage su:comp_HostStorage)
+
+ClassAssertion(su:ContainerVolume su:comp_ContainerVolume)
+
+ClassAssertion(su:ContainerSocket su:comp_ContainerSocket)
 
 
 )

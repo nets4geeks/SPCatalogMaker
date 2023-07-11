@@ -16,25 +16,25 @@
           "title" : "Context (review)",
           "description" : "Pattern’s context (review)"
         },
-        "ns:textName" : {
-          "type" : "string",
-          "title" : "Name",
-          "description" : "Pattern’s primary name"
-        },
         "ns:textReviewProblem" : {
           "type" : "string",
           "title" : "Problem (review)",
           "description" : "Pattern’s problem (review)"
         },
-        "ns:textURL" : {
+        "ns:textName" : {
           "type" : "string",
-          "title" : "URL",
-          "description" : "URL(s) of pattern's webpage"
+          "title" : "Name",
+          "description" : "Pattern’s primary name"
         },
         "ns:textReference" : {
           "type" : "string",
           "title" : "Reference",
           "description" : "A bibliographic description"
+        },
+        "ns:textURL" : {
+          "type" : "string",
+          "title" : "URL",
+          "description" : "URL(s) of pattern's webpage"
         },
         "ns:textReviewSolution" : {
           "type" : "string",
@@ -47,18 +47,9 @@
       "title" : "Organization and scope section",
       "type" : "object",
       "properties" : {
-        "ns:relatesTo" : {
-          "title" : "Related Pattern",
-          "description" : "Enumerates patterns that are related to this one.",
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string"
-          }
-        },
-        "ns:hasGroup" : {
-          "title" : "Group",
-          "description" : "Pattern's group",
+        "ns:usesPattern" : {
+          "title" : "Used pattern",
+          "description" : "Enumerates patterns that are used by this one.",
           "type" : "array",
           "uniqueItems" : true,
           "items" : {
@@ -68,6 +59,15 @@
         "ns:isChildOf" : {
           "title" : "Parent pattern",
           "description" : "For a concrete pattern shows from which abstract pattern it has been made.",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "ns:relatesTo" : {
+          "title" : "Related Pattern",
+          "description" : "Enumerates patterns that are related to this one.",
           "type" : "array",
           "uniqueItems" : true,
           "items" : {
@@ -84,15 +84,6 @@
             "enum" : [ "ns:type_SecurityPattern", "ns:type_MisusePattern", "ns:type_ThreatPattern" ]
           }
         },
-        "ns:usesPattern" : {
-          "title" : "Used pattern",
-          "description" : "Enumerates patterns that are used by this one.",
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string"
-          }
-        },
         "ns:hasTemplate" : {
           "title" : "Template",
           "description" : "Template, used to describe a pattern.",
@@ -102,6 +93,15 @@
             "type" : "string",
             "enum" : [ "ns:template_POSA", "ns:template_GOF" ]
           }
+        },
+        "ns:hasGroup" : {
+          "title" : "Group",
+          "description" : "Pattern's group",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string"
+          }
         }
       }
     },
@@ -109,24 +109,6 @@
       "title" : "Common section",
       "type" : "object",
       "properties" : {
-        "ns:hasConstraintLevel" : {
-          "title" : "Constraint level",
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string",
-            "enum" : [ "ns:cl_OrganizationalLevel", "ns:cl_HumanLevel", "ns:cl_MechanismLevel", "ns:cl_RegulatoryLevel" ]
-          }
-        },
-        "ns:hasSecurityLevel" : {
-          "title" : "Security level",
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string",
-            "enum" : [ "ns:sl_PhysicalSecurity", "ns:sl_PersonnelSecurity", "ns:sl_CommunicationAndDataSecurity", "ns:sl_OperationalSecurity" ]
-          }
-        },
         "ns:hasResponseType" : {
           "title" : "Response type",
           "type" : "array",
@@ -136,13 +118,13 @@
             "enum" : [ "ns:rt_Prevention", "ns:rt_Forensics", "ns:rt_Recovery", "ns:rt_Mitigation", "ns:rt_Deterrence", "ns:rt_Avoidance", "ns:rt_Detection" ]
           }
         },
-        "ns:hasLifecycleStage" : {
-          "title" : "Lifecycle stage",
+        "ns:hasConstraintLevel" : {
+          "title" : "Constraint level",
           "type" : "array",
           "uniqueItems" : true,
           "items" : {
             "type" : "string",
-            "enum" : [ "ns:lc_ArchitectureAndDesign", "ns:lc_Deployment", "ns:lc_Operations", "ns:lc_Requirements", "ns:lc_Implementation", "ns:lc_BuildAndCompilation", "ns:lc_SystemConfiguration", "ns:lc_Installation" ]
+            "enum" : [ "ns:cl_OrganizationalLevel", "ns:cl_HumanLevel", "ns:cl_MechanismLevel", "ns:cl_RegulatoryLevel" ]
           }
         },
         "ns:hasArchitecturalLayer" : {
@@ -161,7 +143,25 @@
           "uniqueItems" : true,
           "items" : {
             "type" : "string",
-            "enum" : [ "ns:domain_SCADA", "ns:domain_Military", "ns:domain_PaaS", "ns:domain_FogComputing", "ns:domain_CloudComputing", "ns:domain_InternetOfThings", "ns:domain_GridComputing", "ns:domain_IaaS", "ns:domain_NFV", "ns:domain_SaaS", "ns:domain_EdgeComputing", "ns:domain_ECommerce" ]
+            "enum" : [ "ns:domain_Military", "ns:domain_PaaS", "ns:domain_SCADA", "ns:domain_FogComputing", "ns:domain_CloudComputing", "ns:domain_InternetOfThings", "ns:domain_GridComputing", "ns:domain_IaaS", "ns:domain_NFV", "ns:domain_SaaS", "ns:domain_EdgeComputing", "ns:domain_ECommerce" ]
+          }
+        },
+        "ns:hasLifecycleStage" : {
+          "title" : "Lifecycle stage",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:lc_ArchitectureAndDesign", "ns:lc_Deployment", "ns:lc_Operations", "ns:lc_Requirements", "ns:lc_Implementation", "ns:lc_BuildAndCompilation", "ns:lc_SystemConfiguration", "ns:lc_Installation" ]
+          }
+        },
+        "ns:hasSecurityLevel" : {
+          "title" : "Security level",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:sl_PhysicalSecurity", "ns:sl_PersonnelSecurity", "ns:sl_CommunicationAndDataSecurity", "ns:sl_OperationalSecurity" ]
           }
         }
       }
@@ -177,7 +177,7 @@
           "uniqueItems" : true,
           "items" : {
             "type" : "string",
-            "enum" : [ "su:comp_RemoteUser", "su:comp_CloudInfrastructure", "ns:component_Hardware", "su:comp_SaaSApplication", "su:comp_ExternalService", "ns:component_Actor", "su:comp_VirtualMachine", "ns:component_Software", "su:comp_PaaSApplication", "su:comp_ComplianceManager", "su:comp_CloudApplication", "su:comp_PriivacyManager" ]
+            "enum" : [ "su:comp_CloudInfrastructure", "su:comp_RemoteUser", "su:comp_Container", "su:comp_ExternalService", "su:comp_SaaSApplication", "ns:component_Actor", "su:comp_ContainerSocket", "su:comp_VirtualMachine", "su:comp_PaaSApplication", "su:comp_CloudApplication", "ns:component_Hardware", "su:comp_ContainerVolume", "ns:component_Software", "su:comp_ComplianceManager", "su:comp_PriivacyManager", "su:comp_HostStorage" ]
           }
         },
         "ns:hasAffectedFunction" : {
@@ -196,34 +196,6 @@
       "title" : "Security section",
       "type" : "object",
       "properties" : {
-        "ns:hasThreat" : {
-          "title" : "Threat (CAPEC-based)",
-          "description" : "Tells what threats (CAPEC attack patterns) a pattern describes with connection to component(s) and function(s",
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string",
-            "enum" : [ "ns:threat_txTargetedProcessCrashing", "ns:threat_txMessageReplay", "ns:threat_AuthenticationBypass", "ns:threat_EnvironmentManipulation", "ns:threat_txMessageIntegrityViolation", "ns:threat_txUnauthorizedAccess", "ns:threat_txPasswordAttacks", "ns:threat_InputDataManipulation", "ns:threat_txUnsafeCodeExecution", "ns:threat_SharedDataManipulation", "ns:threat_ProtocolAnalysis", "ns:threat_txProtocolStateExploitation", "ns:threat_ManInTheMiddle", "ns:threat_txIdentitySpoofing", "ns:threat_txMessageReuse", "ns:threat_ContentSpoofing", "ns:threat_txScanningInformationGathering", "ns:threat_Interception", "ns:threat_txProbingVulnerabilityChecking", "ns:threat_txMessageSecrecyViolation", "ns:threat_ExcessiveAllocation", "ns:threat_txAdvantageousIdentityAllocation", "ns:threat_txDataInference", "ns:threat_Flooding", "ns:threat_txSessionStatePoisoning", "ns:threat_txProcessOverflowAttack", "ns:threat_txBypassingControls", "ns:threat_Malware", "ns:threat_txRepudiation", "ns:threat_txExploitationOfTightComponentCoupling", "ns:threat_txTrackErasing", "ns:threat_txAbuseOfWeakAlgorithm", "ns:threat_txOutputInformationDisclosure", "ns:threat_txMessageFlooding", "ns:threat_txExploitingConcurrencyFlaws", "ns:threat_InformationGathering", "ns:threat_txUseOfDefaultCredentials", "ns:threat_txExploitingBadPolicies", "ns:threat_txUseOfAbnormalPacketSizes", "ns:threat_txRoutePoisoning", "ns:threat_Excavation", "ns:threat_txCorruption", "ns:threat_SessionManipulation", "ns:threat_txForgingCryptographicCredentials", "ns:threat_txMessageAuthenticityViolation", "ns:threat_txResourceExhaustion", "ns:threat_txUnauthorizedModificationOfRights", "ns:threat_txUseOfReservedProtocolPackets", "ns:threat_txLeveragingAuthorizationModel", "ns:threat_txExploitingVulnerableSecurityProtocol", "ns:threat_txInvokingUnauthorizedOperations", "ns:threat_txSessionHijacking", "ns:threat_PriviledgeEscalation", "ns:threat_txSpoofingPrivilegedProcesses", "ns:threat_Footprinting", "ns:threat_IdentitySpoofing", "ns:threat_txCovertNetworkChannel", "ns:threat_txTrafficAnalysisAndSniffing", "ns:threat_BufferManipulation", "ns:threat_CodeInjection", "ns:threat_txProtocolFieldModification", "ns:threat_ManipulationAPI", "ns:threat_txInjection" ]
-          }
-        },
-        "ns:hasAggressorRole" : {
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string",
-            "enum" : [ "ns:role_Server", "ns:role_Client" ]
-          }
-        },
-        "ns:hasAggressor" : {
-          "title" : "Aggressor",
-          "description" : "Possible aggressor",
-          "type" : "array",
-          "uniqueItems" : true,
-          "items" : {
-            "type" : "string",
-            "enum" : [ "su:comp_RemoteUser", "su:comp_CloudInfrastructure", "ns:component_Hardware", "su:comp_SaaSApplication", "su:comp_ExternalService", "ns:component_Actor", "su:comp_VirtualMachine", "ns:component_Software", "su:comp_PaaSApplication", "su:comp_ComplianceManager", "su:comp_CloudApplication", "su:comp_PriivacyManager" ]
-          }
-        },
         "ns:hasWeakness" : {
           "title" : "Weakness (CWE-based)",
           "description" : "Possible related weknesses (CWE-based)",
@@ -233,14 +205,14 @@
             "type" : "string"
           }
         },
-        "ns:hasSecurityConcern" : {
-          "title" : "Security concern",
-          "description" : "Tells which security concern(s) a pattern touches.",
+        "ns:hasAggressor" : {
+          "title" : "Aggressor",
+          "description" : "Possible aggressor",
           "type" : "array",
           "uniqueItems" : true,
           "items" : {
             "type" : "string",
-            "enum" : [ "ns:concern_RiskAssessment", "ns:concern_Maintenance", "ns:concern_MediaProtection", "ns:concern_AssessmentAuthorizationAndMonitoring", "ns:concern_SystemAndServicesAcquisition", "ns:concern_IdentificationAndAuthentication", "ns:concern_IncidentResponse", "ns:concern_AuditAndAccountability", "ns:concern_ConfigurationManagement", "ns:concern_SystemAndInformationIntegrity", "ns:concern_AwarenessAndTraining", "ns:concern_SystemAndCommunicationsProtection", "ns:concern_ContingencyPlanning", "ns:concern_Planning", "ns:concern_ProgramManagement", "ns:concern_AccessControl", "ns:concern_PhysicalAndEnvironmentalProtection", "ns:concern_PersonnelSecurity" ]
+            "enum" : [ "su:comp_CloudInfrastructure", "su:comp_RemoteUser", "su:comp_Container", "su:comp_ExternalService", "su:comp_SaaSApplication", "ns:component_Actor", "su:comp_ContainerSocket", "su:comp_VirtualMachine", "su:comp_PaaSApplication", "su:comp_CloudApplication", "ns:component_Hardware", "su:comp_ContainerVolume", "ns:component_Software", "su:comp_ComplianceManager", "su:comp_PriivacyManager", "su:comp_HostStorage" ]
           }
         },
         "ns:hasSTRIDE" : {
@@ -251,6 +223,34 @@
           "items" : {
             "type" : "string",
             "enum" : [ "ns:STRIDE_Repudiation", "ns:STRIDE_Tampering", "ns:STRIDE_Information_Disclosure", "ns:STRIDE_Spoofing", "ns:STRIDE_Elevation_of_Privilege", "ns:STRIDE_Denial_of_Service" ]
+          }
+        },
+        "ns:hasSecurityConcern" : {
+          "title" : "Security concern",
+          "description" : "Tells which security concern(s) a pattern touches.",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:concern_RiskAssessment", "ns:concern_Maintenance", "ns:concern_MediaProtection", "ns:concern_AssessmentAuthorizationAndMonitoring", "ns:concern_SystemAndServicesAcquisition", "ns:concern_IdentificationAndAuthentication", "ns:concern_IncidentResponse", "ns:concern_AuditAndAccountability", "ns:concern_SystemAndInformationIntegrity", "ns:concern_ConfigurationManagement", "ns:concern_AwarenessAndTraining", "ns:concern_SystemAndCommunicationsProtection", "ns:concern_ContingencyPlanning", "ns:concern_Planning", "ns:concern_ProgramManagement", "ns:concern_AccessControl", "ns:concern_PhysicalAndEnvironmentalProtection", "ns:concern_PersonnelSecurity" ]
+          }
+        },
+        "ns:hasAggressorRole" : {
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:role_Flow", "ns:role_Server", "ns:role_Client" ]
+          }
+        },
+        "ns:hasThreat" : {
+          "title" : "Threat (CAPEC-based)",
+          "description" : "Tells what threats (CAPEC attack patterns) a pattern describes with connection to component(s) and function(s",
+          "type" : "array",
+          "uniqueItems" : true,
+          "items" : {
+            "type" : "string",
+            "enum" : [ "ns:threat_txTargetedProcessCrashing", "ns:threat_AuthenticationBypass", "ns:threat_txMessageReplay", "ns:threat_EnvironmentManipulation", "ns:threat_txMessageIntegrityViolation", "ns:threat_txUnauthorizedAccess", "ns:threat_txPasswordAttacks", "ns:threat_txUnsafeCodeExecution", "ns:threat_InputDataManipulation", "ns:threat_SharedDataManipulation", "ns:threat_ProtocolAnalysis", "ns:threat_txProtocolStateExploitation", "ns:threat_ManInTheMiddle", "ns:threat_txIdentitySpoofing", "ns:threat_ContentSpoofing", "ns:threat_txMessageReuse", "ns:threat_txScanningInformationGathering", "ns:threat_Interception", "ns:threat_txProbingVulnerabilityChecking", "ns:threat_txMessageSecrecyViolation", "ns:threat_ExcessiveAllocation", "ns:threat_txDataInference", "ns:threat_txAdvantageousIdentityAllocation", "ns:threat_Flooding", "ns:threat_txSessionStatePoisoning", "ns:threat_txProcessOverflowAttack", "ns:threat_txBypassingControls", "ns:threat_Malware", "ns:threat_txRepudiation", "ns:threat_txExploitationOfTightComponentCoupling", "ns:threat_txTrackErasing", "ns:threat_txAbuseOfWeakAlgorithm", "ns:threat_txOutputInformationDisclosure", "ns:threat_txMessageFlooding", "ns:threat_txExploitingConcurrencyFlaws", "ns:threat_InformationGathering", "ns:threat_txUseOfDefaultCredentials", "ns:threat_txExploitingBadPolicies", "ns:threat_txUseOfAbnormalPacketSizes", "ns:threat_Excavation", "ns:threat_txRoutePoisoning", "ns:threat_txCorruption", "ns:threat_SessionManipulation", "ns:threat_txForgingCryptographicCredentials", "ns:threat_txMessageAuthenticityViolation", "ns:threat_txResourceExhaustion", "ns:threat_txUnauthorizedModificationOfRights", "ns:threat_txUseOfReservedProtocolPackets", "ns:threat_txExploitingVulnerableSecurityProtocol", "ns:threat_txLeveragingAuthorizationModel", "ns:threat_txInvokingUnauthorizedOperations", "ns:threat_txSessionHijacking", "ns:threat_PriviledgeEscalation", "ns:threat_txSpoofingPrivilegedProcesses", "ns:threat_Footprinting", "ns:threat_txCovertNetworkChannel", "ns:threat_IdentitySpoofing", "ns:threat_txTrafficAnalysisAndSniffing", "ns:threat_BufferManipulation", "ns:threat_CodeInjection", "ns:threat_txProtocolFieldModification", "ns:threat_ManipulationAPI", "ns:threat_txInjection" ]
           }
         }
       }
